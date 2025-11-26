@@ -13,7 +13,16 @@ RUN GOBIN=/deps/golang/bin ./install-tools.sh
 
 FROM registry.access.redhat.com/ubi10/ubi-minimal:10.1@sha256:28ec2f4662bdc4b0d4893ef0d8aebf36a5165dfb1d1dc9f46319bd8a03ed3365
 
-RUN microdnf -y --setopt install_weak_deps=0 reinstall bash && \
+RUN microdnf -y --setopt install_weak_deps=0 reinstall \
+        bash \
+        coreutils-single \
+        curl \
+        findutils \
+        gawk \
+        grep \
+        microdnf \
+        rpm \
+        sed && \
     microdnf clean all
 
 COPY --from=go-build /deps/golang/bin/syft /usr/local/bin/syft

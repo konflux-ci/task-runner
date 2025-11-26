@@ -8,6 +8,14 @@ contentOrigin:
 # even if they're already included in the base image.
 reinstallPackages:
   - bash
+  - coreutils-single
+  - curl
+  - findutils
+  - gawk
+  - grep
+  - microdnf
+  - rpm
+  - sed
 
 arches:
   - aarch64

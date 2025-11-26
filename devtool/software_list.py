@@ -120,6 +120,7 @@ def list_rpms(project_root: Path) -> list[Package]:
             case _:
                 raise ValueError(f"Mismatched or missing versions for {package_name} RPM: {evrs}")
 
-        packages.append(Package(name=package_name, version=evr, installed_with="rpm"))
+        _, _, version = evr.rpartition(":")  # drop the epoch, if any
+        packages.append(Package(name=package_name, version=version, installed_with="rpm"))
 
     return packages

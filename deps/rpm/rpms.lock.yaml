@@ -11,6 +11,62 @@ arches:
     name: bash
     evr: 5.2.26-6.el10
     sourcerpm: bash-5.2.26-6.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/c/coreutils-single-9.5-6.el10.aarch64.rpm
+    repoid: ubi-10-baseos-rpms
+    size: 659001
+    checksum: sha256:a8ff10ac9128b71d1ed2d124cceb154b87a13eac8e5ed6e614a7b66d3d14e016
+    name: coreutils-single
+    evr: 9.5-6.el10
+    sourcerpm: coreutils-9.5-6.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/c/curl-8.12.1-2.el10.aarch64.rpm
+    repoid: ubi-10-baseos-rpms
+    size: 221377
+    checksum: sha256:667c013cf8f0641d4f00c5c03cba4d0b1ffa182f2c83ba437909e1be2861eeb9
+    name: curl
+    evr: 8.12.1-2.el10
+    sourcerpm: curl-8.12.1-2.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/f/findutils-4.10.0-5.el10.aarch64.rpm
+    repoid: ubi-10-baseos-rpms
+    size: 572643
+    checksum: sha256:78c0cc979ad41e7a7935dd2b98a5a798b35d4e8310521857896105271b9838df
+    name: findutils
+    evr: 1:4.10.0-5.el10
+    sourcerpm: findutils-4.10.0-5.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/g/gawk-5.3.0-6.el10.aarch64.rpm
+    repoid: ubi-10-baseos-rpms
+    size: 1120487
+    checksum: sha256:719b69b92f0bef1d509097f4468d04fc5aa033d405df190670d64a05d43d6c18
+    name: gawk
+    evr: 5.3.0-6.el10
+    sourcerpm: gawk-5.3.0-6.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/g/grep-3.11-10.el10.aarch64.rpm
+    repoid: ubi-10-baseos-rpms
+    size: 309778
+    checksum: sha256:2f193e2da8b132b51f8084636f79977a8e1ac87622a9490756c4d3354797fab1
+    name: grep
+    evr: 3.11-10.el10
+    sourcerpm: grep-3.11-10.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/m/microdnf-3.10.1-1.el10.aarch64.rpm
+    repoid: ubi-10-baseos-rpms
+    size: 51772
+    checksum: sha256:d1a22486e5811f5c312de606939229187f185ef24fe9cb50d60833a6197d1b27
+    name: microdnf
+    evr: 3.10.1-1.el10
+    sourcerpm: microdnf-3.10.1-1.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/r/rpm-4.19.1.1-20.el10.aarch64.rpm
+    repoid: ubi-10-baseos-rpms
+    size: 575112
+    checksum: sha256:2bac1c3988d0092c00ce2ee39e4d63049d185df134c92930c9dc2ce3ec56cfcc
+    name: rpm
+    evr: 4.19.1.1-20.el10
+    sourcerpm: rpm-4.19.1.1-20.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/s/sed-4.9-3.el10.aarch64.rpm
+    repoid: ubi-10-baseos-rpms
+    size: 327529
+    checksum: sha256:4df0d3d737297c9f862004b9e2b38d79c7dffb60fbafb70dfdb988deaaa293eb
+    name: sed
+    evr: 4.9-3.el10
+    sourcerpm: sed-4.9-3.el10.src.rpm
   source:
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/source/SRPMS/Packages/b/bash-5.2.26-6.el10.src.rpm
     repoid: ubi-10-baseos-source-rpms
@@ -18,6 +74,54 @@ arches:
     checksum: sha256:247764e4d0f04040de5289564ae606e294ff0a97e09c837fdc8658c42776c0a8
     name: bash
     evr: 5.2.26-6.el10
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/source/SRPMS/Packages/c/coreutils-9.5-6.el10.src.rpm
+    repoid: ubi-10-baseos-source-rpms
+    size: 6210711
+    checksum: sha256:193b478d19c4b55672b37d2da3c5a3424a6256528409a09b6795e9ff204b9a3e
+    name: coreutils
+    evr: 9.5-6.el10
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/source/SRPMS/Packages/c/curl-8.12.1-2.el10.src.rpm
+    repoid: ubi-10-baseos-source-rpms
+    size: 2863008
+    checksum: sha256:2534b51e5d1975164354ceaab60dce2d3c145b3fe340645e3f58e7fb1c0f0622
+    name: curl
+    evr: 8.12.1-2.el10
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/source/SRPMS/Packages/f/findutils-4.10.0-5.el10.src.rpm
+    repoid: ubi-10-baseos-source-rpms
+    size: 2332687
+    checksum: sha256:eeb38bf66c9c3a560699c3b55a7f9737034189b81092d382c4b86b46809cde11
+    name: findutils
+    evr: 1:4.10.0-5.el10
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/source/SRPMS/Packages/g/gawk-5.3.0-6.el10.src.rpm
+    repoid: ubi-10-baseos-source-rpms
+    size: 3508473
+    checksum: sha256:64ee89ddb2ccdb1f8ca2b6c960d4939af1d94909bc3914e027bf854fae60b094
+    name: gawk
+    evr: 5.3.0-6.el10
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/source/SRPMS/Packages/g/grep-3.11-10.el10.src.rpm
+    repoid: ubi-10-baseos-source-rpms
+    size: 1949886
+    checksum: sha256:bad87120238f58dcad9d031e537f1aa27995573d77642fbc7979248420569b7a
+    name: grep
+    evr: 3.11-10.el10
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/source/SRPMS/Packages/m/microdnf-3.10.1-1.el10.src.rpm
+    repoid: ubi-10-baseos-source-rpms
+    size: 61377
+    checksum: sha256:e8f431100bd8a2942cae7248d347a7fa9af4fe61118c6487a0f27d246bb54fb0
+    name: microdnf
+    evr: 3.10.1-1.el10
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/source/SRPMS/Packages/r/rpm-4.19.1.1-20.el10.src.rpm
+    repoid: ubi-10-baseos-source-rpms
+    size: 6005977
+    checksum: sha256:a8cdf3e3d9b992ddb71fb1bcf7572f7730309a14281eb0e5dcce522fbe601d9e
+    name: rpm
+    evr: 4.19.1.1-20.el10
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/source/SRPMS/Packages/s/sed-4.9-3.el10.src.rpm
+    repoid: ubi-10-baseos-source-rpms
+    size: 1495212
+    checksum: sha256:6363571d56acf2698703085456baf909188609ceb0cedeb36231fe4bb980ba5f
+    name: sed
+    evr: 4.9-3.el10
   module_metadata: []
 - arch: x86_64
   packages:
@@ -28,6 +132,62 @@ arches:
     name: bash
     evr: 5.2.26-6.el10
     sourcerpm: bash-5.2.26-6.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/c/coreutils-single-9.5-6.el10.x86_64.rpm
+    repoid: ubi-10-baseos-rpms
+    size: 657072
+    checksum: sha256:277d210a6d9164ca28ae690d55c9992ad840a5e46f80360b889d09753bf88e47
+    name: coreutils-single
+    evr: 9.5-6.el10
+    sourcerpm: coreutils-9.5-6.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/c/curl-8.12.1-2.el10.x86_64.rpm
+    repoid: ubi-10-baseos-rpms
+    size: 224475
+    checksum: sha256:2685ff884efca3b8e808d1b66a3124496c514d69bed0c542603367f12351dfda
+    name: curl
+    evr: 8.12.1-2.el10
+    sourcerpm: curl-8.12.1-2.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/f/findutils-4.10.0-5.el10.x86_64.rpm
+    repoid: ubi-10-baseos-rpms
+    size: 568096
+    checksum: sha256:5e55a857ccbe5a7878d5d60b70066d44cd5e51f63e38ff7a64b7462e9538fe30
+    name: findutils
+    evr: 1:4.10.0-5.el10
+    sourcerpm: findutils-4.10.0-5.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/g/gawk-5.3.0-6.el10.x86_64.rpm
+    repoid: ubi-10-baseos-rpms
+    size: 1135797
+    checksum: sha256:54b07fa2eb9f4aa3de97661b66e86ed65a1d46fc2f1eb80d42cd2d901c0026f7
+    name: gawk
+    evr: 5.3.0-6.el10
+    sourcerpm: gawk-5.3.0-6.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/g/grep-3.11-10.el10.x86_64.rpm
+    repoid: ubi-10-baseos-rpms
+    size: 312193
+    checksum: sha256:a1ae83808b43411db9adf15a055a8305888304e6b50dff672df221792dd4bf87
+    name: grep
+    evr: 3.11-10.el10
+    sourcerpm: grep-3.11-10.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/m/microdnf-3.10.1-1.el10.x86_64.rpm
+    repoid: ubi-10-baseos-rpms
+    size: 53284
+    checksum: sha256:bf9e7299d8127e130463b04d0e7d1164bb19f44cea9326aee8d4e205860bf7b5
+    name: microdnf
+    evr: 3.10.1-1.el10
+    sourcerpm: microdnf-3.10.1-1.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/r/rpm-4.19.1.1-20.el10.x86_64.rpm
+    repoid: ubi-10-baseos-rpms
+    size: 573861
+    checksum: sha256:69b78108b4bb5e47a93619dd9858965d48a022af87f41c569371024229ed282f
+    name: rpm
+    evr: 4.19.1.1-20.el10
+    sourcerpm: rpm-4.19.1.1-20.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/s/sed-4.9-3.el10.x86_64.rpm
+    repoid: ubi-10-baseos-rpms
+    size: 329802
+    checksum: sha256:2e1440754395a1a211624ad3f46ae1e525bbceb0b14f7f3be1a4e9d4d6e799ae
+    name: sed
+    evr: 4.9-3.el10
+    sourcerpm: sed-4.9-3.el10.src.rpm
   source:
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/source/SRPMS/Packages/b/bash-5.2.26-6.el10.src.rpm
     repoid: ubi-10-baseos-source-rpms
@@ -35,4 +195,52 @@ arches:
     checksum: sha256:247764e4d0f04040de5289564ae606e294ff0a97e09c837fdc8658c42776c0a8
     name: bash
     evr: 5.2.26-6.el10
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/source/SRPMS/Packages/c/coreutils-9.5-6.el10.src.rpm
+    repoid: ubi-10-baseos-source-rpms
+    size: 6210711
+    checksum: sha256:193b478d19c4b55672b37d2da3c5a3424a6256528409a09b6795e9ff204b9a3e
+    name: coreutils
+    evr: 9.5-6.el10
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/source/SRPMS/Packages/c/curl-8.12.1-2.el10.src.rpm
+    repoid: ubi-10-baseos-source-rpms
+    size: 2863008
+    checksum: sha256:2534b51e5d1975164354ceaab60dce2d3c145b3fe340645e3f58e7fb1c0f0622
+    name: curl
+    evr: 8.12.1-2.el10
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/source/SRPMS/Packages/f/findutils-4.10.0-5.el10.src.rpm
+    repoid: ubi-10-baseos-source-rpms
+    size: 2332687
+    checksum: sha256:eeb38bf66c9c3a560699c3b55a7f9737034189b81092d382c4b86b46809cde11
+    name: findutils
+    evr: 1:4.10.0-5.el10
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/source/SRPMS/Packages/g/gawk-5.3.0-6.el10.src.rpm
+    repoid: ubi-10-baseos-source-rpms
+    size: 3508473
+    checksum: sha256:64ee89ddb2ccdb1f8ca2b6c960d4939af1d94909bc3914e027bf854fae60b094
+    name: gawk
+    evr: 5.3.0-6.el10
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/source/SRPMS/Packages/g/grep-3.11-10.el10.src.rpm
+    repoid: ubi-10-baseos-source-rpms
+    size: 1949886
+    checksum: sha256:bad87120238f58dcad9d031e537f1aa27995573d77642fbc7979248420569b7a
+    name: grep
+    evr: 3.11-10.el10
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/source/SRPMS/Packages/m/microdnf-3.10.1-1.el10.src.rpm
+    repoid: ubi-10-baseos-source-rpms
+    size: 61377
+    checksum: sha256:e8f431100bd8a2942cae7248d347a7fa9af4fe61118c6487a0f27d246bb54fb0
+    name: microdnf
+    evr: 3.10.1-1.el10
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/source/SRPMS/Packages/r/rpm-4.19.1.1-20.el10.src.rpm
+    repoid: ubi-10-baseos-source-rpms
+    size: 6005977
+    checksum: sha256:a8cdf3e3d9b992ddb71fb1bcf7572f7730309a14281eb0e5dcce522fbe601d9e
+    name: rpm
+    evr: 4.19.1.1-20.el10
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/source/SRPMS/Packages/s/sed-4.9-3.el10.src.rpm
+    repoid: ubi-10-baseos-source-rpms
+    size: 1495212
+    checksum: sha256:6363571d56acf2698703085456baf909188609ceb0cedeb36231fe4bb980ba5f
+    name: sed
+    evr: 4.9-3.el10
   module_metadata: []
