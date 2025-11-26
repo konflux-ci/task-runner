@@ -1,3 +1,7 @@
 # Python
 __pycache__/
 *.egg-info/
+
+# dotenv
+.env
+.envrc
