@@ -25,4 +25,4 @@ RUN microdnf -y --setopt install_weak_deps=0 reinstall \
         sed && \
     microdnf clean all
 
-COPY --from=go-build /deps/golang/bin/syft /usr/local/bin/syft
+COPY --from=go-build /deps/golang/bin/ /usr/local/bin/

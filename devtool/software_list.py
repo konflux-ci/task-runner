@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 import subprocess
 from dataclasses import asdict, dataclass
 from pathlib import Path
@@ -53,10 +54,15 @@ def list_go_packages(project_root: Path) -> list[Package]:
 
     for tool in go_mod["Tool"]:
         package_path = tool["Path"]
-        _, _, name = package_path.rpartition("/")
         module = find_parent_module(package_path)
         if not module:
             raise ValueError(f"{package_path} has no parent module in go.mod")
+
+        parts = package_path.split("/")
+        if re.fullmatch(r"v\d+", parts[-1]):
+            name = parts[-2]
+        else:
+            name = parts[-1]
 
         packages.append(
             Package(

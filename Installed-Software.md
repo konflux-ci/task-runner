@@ -12,3 +12,4 @@
 | rpm                            | 4.19.1.1-20.el10               | RPM                            |
 | sed                            | 4.9-3.el10                     | RPM                            |
 | syft                           | 1.38.0                         | `go install`                   |
+| yq                             | 4.49.2                         | `go install`                   |
