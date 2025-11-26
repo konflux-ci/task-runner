@@ -12,9 +12,19 @@ dependencies = [
 devtool = "devtool.__main__:main"
 
 
+[dependency-groups]
+rpm-lock = [
+    "rpm-lockfile-prototype",
+]
+
+
 [build-system]
 requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
+
+
+[tool.uv.sources]
+rpm-lockfile-prototype = { url = "https://github.com/konflux-ci/rpm-lockfile-prototype/archive/refs/tags/v0.18.0.tar.gz" }
 
 
 [tool.setuptools]
