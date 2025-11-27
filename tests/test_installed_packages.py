@@ -12,6 +12,11 @@ package_name_to_executable_name = {
     "gettext-envsubst": "envsubst",
 }
 
+# overrides for tools that don't support a simple --version flag
+version_arg_overrides = {
+    "tkn": ["version", "--component", "client"],
+}
+
 expected_packages = list_packages(REPO_ROOT)
 packages_param = [pytest.param(package, id=package.name) for package in expected_packages]
 
@@ -31,7 +36,8 @@ def test_package_returns_correct_version(
     if executable_name == "microdnf":
         pytest.skip("microdnf doesn't have a version flag")
 
-    proc = task_runner_container.run_cmd([executable_name, "--version"])
+    version_args = version_arg_overrides.get(executable_name, ["--version"])
+    proc = task_runner_container.run_cmd([executable_name, *version_args])
 
     if executable_name == "jq":
         pytest.xfail("jq from the RPM doesn't currently return a correct version string")

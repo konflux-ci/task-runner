@@ -7,7 +7,17 @@ set -o errexit -o nounset -o pipefail -o xtrace
 # Their purpose is to reduce the size of the binaries by omitting debug info.
 COMMON_LDFLAGS='-s -w'
 
-syft_version=$(go list -m -f '{{.Version}}' github.com/anchore/syft)
-go install -ldflags "$COMMON_LDFLAGS -X main.version=${syft_version#v}" github.com/anchore/syft/cmd/syft
+get_version() {
+    local module=$1
+    local version
+    version=$(go list -m -f '{{.Version}}' "$module")
+    echo "${version#v}"
+}
+
+syft_version=$(get_version github.com/anchore/syft)
+go install -ldflags "$COMMON_LDFLAGS -X main.version=$syft_version" github.com/anchore/syft/cmd/syft
 
 go install -ldflags "$COMMON_LDFLAGS" github.com/mikefarah/yq/v4
+
+tkn_version=$(get_version github.com/tektoncd/cli)
+go install -ldflags "$COMMON_LDFLAGS -X github.com/tektoncd/cli/pkg/cmd/version.clientVersion=$tkn_version" github.com/tektoncd/cli/cmd/tkn
