@@ -10,6 +10,7 @@ packages:
   - jq
   - make
   - openssl
+  - python3
   - skopeo
   - tar
   - zip

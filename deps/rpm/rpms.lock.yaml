@@ -326,6 +326,13 @@ arches:
     name: microdnf
     evr: 3.10.1-1.el10
     sourcerpm: microdnf-3.10.1-1.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/m/mpdecimal-2.5.1-12.el10.aarch64.rpm
+    repoid: ubi-10-baseos-rpms
+    size: 93297
+    checksum: sha256:905714f044ef591f654e923523aafd27521aac714de124ccc094dc846dc294ec
+    name: mpdecimal
+    evr: 2.5.1-12.el10
+    sourcerpm: mpdecimal-2.5.1-12.el10.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/n/nftables-1.1.1-6.el10_1.aarch64.rpm
     repoid: ubi-10-baseos-rpms
     size: 435050
@@ -382,6 +389,27 @@ arches:
     name: pam
     evr: 1.6.1-8.el10
     sourcerpm: pam-1.6.1-8.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/p/python3-3.12.11-3.el10.aarch64.rpm
+    repoid: ubi-10-baseos-rpms
+    size: 28774
+    checksum: sha256:7d52a13f81aa87f903fbc52cf79aaae15809833bc46c81f987903640e149f167
+    name: python3
+    evr: 3.12.11-3.el10
+    sourcerpm: python3.12-3.12.11-3.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/p/python3-libs-3.12.11-3.el10.aarch64.rpm
+    repoid: ubi-10-baseos-rpms
+    size: 9726232
+    checksum: sha256:3d404a6b71061a1cbe81696f5da6b68e2e96b2bdc58c4e729f8e54c32181f6e6
+    name: python3-libs
+    evr: 3.12.11-3.el10
+    sourcerpm: python3.12-3.12.11-3.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/p/python3-pip-wheel-23.3.2-7.el10.noarch.rpm
+    repoid: ubi-10-baseos-rpms
+    size: 1547196
+    checksum: sha256:0994934b978c00ec920ee0f3c96cd2a6a273c17338e3498474023b520accc159
+    name: python3-pip-wheel
+    evr: 23.3.2-7.el10
+    sourcerpm: python-pip-23.3.2-7.el10.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/r/rpm-4.19.1.1-20.el10.aarch64.rpm
     repoid: ubi-10-baseos-rpms
     size: 575112
@@ -424,6 +452,13 @@ arches:
     name: tpm2-tss
     evr: 4.1.3-5.el10
     sourcerpm: tpm2-tss-4.1.3-5.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/t/tzdata-2025b-2.el10.noarch.rpm
+    repoid: ubi-10-baseos-rpms
+    size: 923754
+    checksum: sha256:46fc235635824c6e18fe7eeb6788be01c6b703165b793d9d83a1194d057da36e
+    name: tzdata
+    evr: 2025b-2.el10
+    sourcerpm: tzdata-2025b-2.el10.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/u/unzip-6.0-69.el10.aarch64.rpm
     repoid: ubi-10-baseos-rpms
     size: 190760
@@ -705,6 +740,12 @@ arches:
     checksum: sha256:e8f431100bd8a2942cae7248d347a7fa9af4fe61118c6487a0f27d246bb54fb0
     name: microdnf
     evr: 3.10.1-1.el10
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/source/SRPMS/Packages/m/mpdecimal-2.5.1-12.el10.src.rpm
+    repoid: ubi-10-baseos-source-rpms
+    size: 3348959
+    checksum: sha256:92ce1e7def3d278230b4ed1cdae436769c4a2bd2185e418f9ae77e42d849e419
+    name: mpdecimal
+    evr: 2.5.1-12.el10
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/source/SRPMS/Packages/n/nftables-1.1.1-6.el10_1.src.rpm
     repoid: ubi-10-baseos-source-rpms
     size: 1093046
@@ -747,6 +788,18 @@ arches:
     checksum: sha256:d708b0703fbe7e2eb6fffbf42b8117a58d970c7a0f7b73d09b78af20a16bb87b
     name: pam
     evr: 1.6.1-8.el10
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/source/SRPMS/Packages/p/python-pip-23.3.2-7.el10.src.rpm
+    repoid: ubi-10-baseos-source-rpms
+    size: 9449675
+    checksum: sha256:51f5574649698fec78ebdd6b310435c1af347622b111b5d45cc04542b7a43a7a
+    name: python-pip
+    evr: 23.3.2-7.el10
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/source/SRPMS/Packages/p/python3.12-3.12.11-3.el10.src.rpm
+    repoid: ubi-10-baseos-source-rpms
+    size: 20663087
+    checksum: sha256:2c6d4e07d38e78db708188882fdf665d37e45b619717c4855a04174d493f2f58
+    name: python3.12
+    evr: 3.12.11-3.el10
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/source/SRPMS/Packages/r/rpm-4.19.1.1-20.el10.src.rpm
     repoid: ubi-10-baseos-source-rpms
     size: 6005977
@@ -777,6 +830,12 @@ arches:
     checksum: sha256:81c396177c2ca245d2475302ff5583ba554b92daef27c1e278118944d81c39c2
     name: tpm2-tss
     evr: 4.1.3-5.el10
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/source/SRPMS/Packages/t/tzdata-2025b-2.el10.src.rpm
+    repoid: ubi-10-baseos-source-rpms
+    size: 898116
+    checksum: sha256:249d44002e325cbd505da2fd97d1422b627fb27c351f1fa4c945c78d0daf7261
+    name: tzdata
+    evr: 2025b-2.el10
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/source/SRPMS/Packages/u/unzip-6.0-69.el10.src.rpm
     repoid: ubi-10-baseos-source-rpms
     size: 1469390
@@ -1120,6 +1179,13 @@ arches:
     name: microdnf
     evr: 3.10.1-1.el10
     sourcerpm: microdnf-3.10.1-1.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/m/mpdecimal-2.5.1-12.el10.x86_64.rpm
+    repoid: ubi-10-baseos-rpms
+    size: 93985
+    checksum: sha256:9dcf5d5b162c4642c48c66ad371f89b1bca8d3b4921ef0fa947c5bce9afab8b8
+    name: mpdecimal
+    evr: 2.5.1-12.el10
+    sourcerpm: mpdecimal-2.5.1-12.el10.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/n/nftables-1.1.1-6.el10_1.x86_64.rpm
     repoid: ubi-10-baseos-rpms
     size: 447191
@@ -1176,6 +1242,27 @@ arches:
     name: pam
     evr: 1.6.1-8.el10
     sourcerpm: pam-1.6.1-8.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/p/python3-3.12.11-3.el10.x86_64.rpm
+    repoid: ubi-10-baseos-rpms
+    size: 28665
+    checksum: sha256:6662e31feba6e5dea0c9792cc163ef021a2c04ec03d8eac19b1d726c63deb58e
+    name: python3
+    evr: 3.12.11-3.el10
+    sourcerpm: python3.12-3.12.11-3.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/p/python3-libs-3.12.11-3.el10.x86_64.rpm
+    repoid: ubi-10-baseos-rpms
+    size: 9901926
+    checksum: sha256:155e98b06b20c23c847f61f0b7f5d52772e6cd7619f9cb2850249eed733ffce3
+    name: python3-libs
+    evr: 3.12.11-3.el10
+    sourcerpm: python3.12-3.12.11-3.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/p/python3-pip-wheel-23.3.2-7.el10.noarch.rpm
+    repoid: ubi-10-baseos-rpms
+    size: 1547196
+    checksum: sha256:0994934b978c00ec920ee0f3c96cd2a6a273c17338e3498474023b520accc159
+    name: python3-pip-wheel
+    evr: 23.3.2-7.el10
+    sourcerpm: python-pip-23.3.2-7.el10.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/r/rpm-4.19.1.1-20.el10.x86_64.rpm
     repoid: ubi-10-baseos-rpms
     size: 573861
@@ -1218,6 +1305,13 @@ arches:
     name: tpm2-tss
     evr: 4.1.3-5.el10
     sourcerpm: tpm2-tss-4.1.3-5.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/t/tzdata-2025b-2.el10.noarch.rpm
+    repoid: ubi-10-baseos-rpms
+    size: 923754
+    checksum: sha256:46fc235635824c6e18fe7eeb6788be01c6b703165b793d9d83a1194d057da36e
+    name: tzdata
+    evr: 2025b-2.el10
+    sourcerpm: tzdata-2025b-2.el10.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/u/unzip-6.0-69.el10.x86_64.rpm
     repoid: ubi-10-baseos-rpms
     size: 194487
@@ -1499,6 +1593,12 @@ arches:
     checksum: sha256:e8f431100bd8a2942cae7248d347a7fa9af4fe61118c6487a0f27d246bb54fb0
     name: microdnf
     evr: 3.10.1-1.el10
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/source/SRPMS/Packages/m/mpdecimal-2.5.1-12.el10.src.rpm
+    repoid: ubi-10-baseos-source-rpms
+    size: 3348959
+    checksum: sha256:92ce1e7def3d278230b4ed1cdae436769c4a2bd2185e418f9ae77e42d849e419
+    name: mpdecimal
+    evr: 2.5.1-12.el10
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/source/SRPMS/Packages/n/nftables-1.1.1-6.el10_1.src.rpm
     repoid: ubi-10-baseos-source-rpms
     size: 1093046
@@ -1541,6 +1641,18 @@ arches:
     checksum: sha256:d708b0703fbe7e2eb6fffbf42b8117a58d970c7a0f7b73d09b78af20a16bb87b
     name: pam
     evr: 1.6.1-8.el10
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/source/SRPMS/Packages/p/python-pip-23.3.2-7.el10.src.rpm
+    repoid: ubi-10-baseos-source-rpms
+    size: 9449675
+    checksum: sha256:51f5574649698fec78ebdd6b310435c1af347622b111b5d45cc04542b7a43a7a
+    name: python-pip
+    evr: 23.3.2-7.el10
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/source/SRPMS/Packages/p/python3.12-3.12.11-3.el10.src.rpm
+    repoid: ubi-10-baseos-source-rpms
+    size: 20663087
+    checksum: sha256:2c6d4e07d38e78db708188882fdf665d37e45b619717c4855a04174d493f2f58
+    name: python3.12
+    evr: 3.12.11-3.el10
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/source/SRPMS/Packages/r/rpm-4.19.1.1-20.el10.src.rpm
     repoid: ubi-10-baseos-source-rpms
     size: 6005977
@@ -1571,6 +1683,12 @@ arches:
     checksum: sha256:81c396177c2ca245d2475302ff5583ba554b92daef27c1e278118944d81c39c2
     name: tpm2-tss
     evr: 4.1.3-5.el10
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/source/SRPMS/Packages/t/tzdata-2025b-2.el10.src.rpm
+    repoid: ubi-10-baseos-source-rpms
+    size: 898116
+    checksum: sha256:249d44002e325cbd505da2fd97d1422b627fb27c351f1fa4c945c78d0daf7261
+    name: tzdata
+    evr: 2025b-2.el10
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/source/SRPMS/Packages/u/unzip-6.0-69.el10.src.rpm
     repoid: ubi-10-baseos-source-rpms
     size: 1469390
