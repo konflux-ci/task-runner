@@ -15,7 +15,7 @@ class GoPackage:
     name: str
     module_path: str
     version: str
-    installed_with: Literal["go"]
+    installed_with: Literal["go"] = "go"
 
     def asdict(self) -> dict[str, Any]:
         return asdict(self)
@@ -25,7 +25,7 @@ class GoPackage:
 class RPMPackage:
     name: str
     version: str
-    installed_with: Literal["rpm"]
+    installed_with: Literal["rpm"] = "rpm"
 
     def asdict(self) -> dict[str, Any]:
         return asdict(self)
@@ -35,7 +35,7 @@ type Package = GoPackage | RPMPackage
 
 
 def list_packages(project_root: Path) -> list[Package]:
-    return list_go_tools(project_root) + list_rpms(project_root)
+    return list_go_tools(project_root) + list_go_submodules(project_root) + list_rpms(project_root)
 
 
 class _GoMod(TypedDict):
@@ -92,8 +92,44 @@ def _list_go_tools(tool_dir: Path) -> Iterable[GoPackage]:
             name=name,
             module_path=module["Path"],
             version=module["Version"].removeprefix("v"),
-            installed_with="go",
         )
+
+
+def list_go_submodules(project_root: Path) -> list[GoPackage]:
+    packages: list[GoPackage] = []
+
+    for path in sorted(project_root.joinpath("deps/go-submodules").iterdir()):
+        if not path.is_dir():
+            continue
+
+        name = path.name
+        if name == "kubernetes":
+            # We only install kubectl from the kubernetes repo
+            name = "kubectl"
+
+        proc = subprocess.run(
+            ["git", "tag", "--points-at=HEAD"],
+            stdout=subprocess.PIPE,
+            text=True,
+            check=True,
+            cwd=path,
+        )
+        tags = proc.stdout.splitlines()
+
+        if not tags:
+            raise ValueError(
+                f"The HEAD of the submodule at {path} doesn't have a tag! Please checkout to a semver tag."
+            )
+        if len(tags) > 1:
+            raise ValueError(
+                f"The HEAD of the submodule at {path} has multiple tags: {tags}. Aborting."
+            )
+
+        version = tags[0].removeprefix("v")
+        module_path = f"./{path.relative_to(project_root).as_posix()}"
+        packages.append(GoPackage(name=name, module_path=module_path, version=version))
+
+    return packages
 
 
 class _RpmsIn(TypedDict):
@@ -148,6 +184,6 @@ def list_rpms(project_root: Path) -> list[RPMPackage]:
                 raise ValueError(f"Mismatched or missing versions for {package_name} RPM: {evrs}")
 
         _, _, version = evr.rpartition(":")  # drop the epoch, if any
-        packages.append(RPMPackage(name=package_name, version=version, installed_with="rpm"))
+        packages.append(RPMPackage(name=package_name, version=version))
 
     return packages

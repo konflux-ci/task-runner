@@ -17,6 +17,7 @@ version_arg_overrides = {
     "tkn": ["version", "--component", "client"],
     "cosign": ["version"],
     "oras": ["version"],
+    "kubectl": ["version", "--client"],
 }
 
 expected_packages = list_packages(REPO_ROOT)

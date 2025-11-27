@@ -6,6 +6,13 @@ WORKDIR /deps/golang/tools
 COPY deps/go-tools/ .
 RUN GOBIN=/deps/golang/bin ./install-tools.sh
 
+# Have to copy the whole repo including .git now, because that's
+# where submodule tags are stored (and we need those for versioning)
+WORKDIR /repo
+COPY . .
+RUN cd deps/go-submodules && \
+    GOBIN=/deps/golang/bin ./install-submodules.sh
+
 
 FROM registry.access.redhat.com/ubi10/ubi-minimal:10.1@sha256:28ec2f4662bdc4b0d4893ef0d8aebf36a5165dfb1d1dc9f46319bd8a03ed3365
 

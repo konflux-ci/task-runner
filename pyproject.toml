@@ -35,5 +35,6 @@ packages = ["devtool"]
 
 
 [tool.pytest.ini_options]
+testpaths = ["tests"]
 addopts = ["-vv"]
 log_level = "debug"

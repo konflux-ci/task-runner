@@ -13,6 +13,7 @@
 | git-core                       | 2.47.3-1.el10_0                | RPM                            |
 | grep                           | 3.11-10.el10                   | RPM                            |
 | jq                             | 1.7.1-11.el10                  | RPM                            |
+| kubectl                        | 1.34.2                         | `go install`                   |
 | make                           | 4.4.1-9.el10                   | RPM                            |
 | microdnf                       | 3.10.1-1.el10                  | RPM                            |
 | openssl                        | 3.5.1-4.el10_1                 | RPM                            |

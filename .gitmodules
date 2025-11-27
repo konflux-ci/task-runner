@@ -1,0 +1,3 @@
+[submodule "deps/go-submodules/kubernetes"]
+	path = deps/go-submodules/kubernetes
+	url = https://github.com/kubernetes/kubernetes.git
