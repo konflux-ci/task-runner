@@ -1,6 +1,10 @@
 [submodule "deps/go-submodules/kubernetes"]
 	path = deps/go-submodules/kubernetes
 	url = https://github.com/kubernetes/kubernetes.git
+	# https://docs.renovatebot.com/modules/manager/git-submodules/#updating-to-specific-tag-values
+	# Note: breaks 'git submodule update --remote'. See the doc ^
+	branch = v1.34.2
 [submodule "deps/go-submodules/oc"]
 	path = deps/go-submodules/oc
 	url = https://github.com/openshift/oc.git
+	branch = openshift-clients-4.20.0-202509230043

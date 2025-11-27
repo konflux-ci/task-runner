@@ -6,6 +6,12 @@
   "extends": [
     "config:recommended"
   ],
+  "schedule": [
+    "* * 1,15 * *"
+  ],
+  "git-submodules": {
+    "enabled": true
+  },
   "packageRules": [
     {
       "matchManagers": [
@@ -26,7 +32,34 @@
         "github.com/mikefarah/yq/v4"
       ],
       "enabled": true,
-      "groupName": "Go dependencies"
+      "groupName": "Go tools"
+    },
+    {
+      "matchDatasources": [
+        "pypi"
+      ],
+      "groupName": "Python dependencies"
+    },
+    {
+      "matchManagers": [
+        "git-submodules"
+      ],
+      "groupName": "Git submodules"
+    },
+    {
+      "matchManagers": [
+        "git-submodules"
+      ],
+      "matchPackageNames": [
+        "https://github.com/openshift/oc.git"
+      ],
+      "versioning": "regex:^openshift-clients-(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)-(?<build>\\d+)$"
+    },
+    {
+      "matchPackageNames": [
+        "registry.access.redhat.com/ubi10/go-toolset"
+      ],
+      "allowedVersions": "< 2.0"
     }
   ],
   "postUpdateOptions": [

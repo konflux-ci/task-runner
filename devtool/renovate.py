@@ -7,6 +7,11 @@ def renovate_json(go_packages: list[GoPackage]) -> dict[str, Any]:
     return {
         "$schema": "https://docs.renovatebot.com/renovate-schema.json",
         "extends": ["config:recommended"],
+        # Run bi-weekly on the 1st and 15th of each month
+        "schedule": ["* * 1,15 * *"],
+        "git-submodules": {
+            "enabled": True,
+        },
         "packageRules": [
             {
                 "matchManagers": ["gomod"],
@@ -20,7 +25,26 @@ def renovate_json(go_packages: list[GoPackage]) -> dict[str, Any]:
                 "matchManagers": ["gomod"],
                 "matchPackageNames": [p.module_path for p in go_packages],
                 "enabled": True,
-                "groupName": "Go dependencies",
+                "groupName": "Go tools",
+            },
+            {
+                "matchDatasources": ["pypi"],
+                "groupName": "Python dependencies",
+            },
+            {
+                "matchManagers": ["git-submodules"],
+                "groupName": "Git submodules",
+            },
+            {
+                # Use regex versioning scheme for oc, which doesn't have proper semver tags
+                "matchManagers": ["git-submodules"],
+                "matchPackageNames": ["https://github.com/openshift/oc.git"],
+                "versioning": "regex:^openshift-clients-(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)-(?<build>\\d+)$",
+            },
+            {
+                # Follow Golang version tags (1.x), not RHEL version tags (10.x)
+                "matchPackageNames": ["registry.access.redhat.com/ubi10/go-toolset"],
+                "allowedVersions": "< 2.0",
             },
         ],
         # And run `go mod tidy` afterwards to update the dependencies of our direct
