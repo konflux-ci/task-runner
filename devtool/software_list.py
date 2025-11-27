@@ -11,13 +11,27 @@ import yaml
 
 
 @dataclass(frozen=True)
-class Package:
+class GoPackage:
     name: str
+    module_path: str
     version: str
-    installed_with: Literal["go", "rpm"]
+    installed_with: Literal["go"]
 
     def asdict(self) -> dict[str, Any]:
         return asdict(self)
+
+
+@dataclass(frozen=True)
+class RPMPackage:
+    name: str
+    version: str
+    installed_with: Literal["rpm"]
+
+    def asdict(self) -> dict[str, Any]:
+        return asdict(self)
+
+
+type Package = GoPackage | RPMPackage
 
 
 def list_packages(project_root: Path) -> list[Package]:
@@ -74,8 +88,9 @@ def _list_go_tools(tool_dir: Path) -> Iterable[Package]:
         else:
             name = parts[-1]
 
-        yield Package(
+        yield GoPackage(
             name=name,
+            module_path=module["Path"],
             version=module["Version"].removeprefix("v"),
             installed_with="go",
         )
@@ -133,6 +148,6 @@ def list_rpms(project_root: Path) -> list[Package]:
                 raise ValueError(f"Mismatched or missing versions for {package_name} RPM: {evrs}")
 
         _, _, version = evr.rpartition(":")  # drop the epoch, if any
-        packages.append(Package(name=package_name, version=version, installed_with="rpm"))
+        packages.append(RPMPackage(name=package_name, version=version, installed_with="rpm"))
 
     return packages
