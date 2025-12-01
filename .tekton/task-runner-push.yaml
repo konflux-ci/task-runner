@@ -29,6 +29,21 @@ spec:
     - linux/x86_64
   - name: dockerfile
     value: Containerfile
+  - name: hermetic
+    value: 'true'
+  - name: prefetch-input
+    value: |
+      [
+        {"type": "gomod", "path": "deps/go-submodules/kubernetes"},
+        {"type": "gomod", "path": "deps/go-submodules/oc"},
+        {"type": "gomod", "path": "deps/go-tools/conftest"},
+        {"type": "gomod", "path": "deps/go-tools/cosign"},
+        {"type": "gomod", "path": "deps/go-tools/oras"},
+        {"type": "gomod", "path": "deps/go-tools/syft"},
+        {"type": "gomod", "path": "deps/go-tools/tkn"},
+        {"type": "gomod", "path": "deps/go-tools/yq"},
+        {"type": "rpm", "path": "deps/rpm"}
+      ]
   pipelineRef:
     name: build-pipeline
   taskRunTemplate:
