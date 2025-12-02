@@ -108,25 +108,23 @@ def list_go_submodules(project_root: Path) -> list[GoPackage]:
             # We only install kubectl from the kubernetes repo
             name = "kubectl"
 
-        proc = subprocess.run(
-            ["git", "tag", "--points-at=HEAD"],
-            stdout=subprocess.PIPE,
-            text=True,
-            check=True,
-            cwd=path,
-        )
-        tags = proc.stdout.strip()
+        tags = _list_local_tags(path) or _fetch_remote_tags(path)
 
+        relpath = path.relative_to(project_root)
         if not tags:
             raise ValueError(
-                f"The HEAD of the submodule at {path} doesn't have a tag! "
+                f"The HEAD of the submodule at {relpath} doesn't have a tag! "
                 "Please checkout to a semver tag."
             )
-        version_match = re.search(r"\d+\.\d+\.\d", tags)
-        if not version_match:
+
+        try:
+            version_match = next(
+                match for tag in tags if (match := re.search(r"\d+\.\d+\.\d+", tag))
+            )
+        except StopIteration:
             raise ValueError(
-                f"None of the tags for the submodule at {path} match semver. "
-                f"Tags: {tags.replace('\n', ' ')}"
+                f"None of the tags for the submodule at {relpath} match semver. "
+                f"Tags: {' '.join(tags)}"
             )
 
         module_path = f"./{path.relative_to(project_root).as_posix()}"
@@ -140,6 +138,48 @@ def list_go_submodules(project_root: Path) -> list[GoPackage]:
         )
 
     return packages
+
+
+def _list_local_tags(submodule_path: Path) -> list[str]:
+    proc = subprocess.run(
+        ["git", "tag", "--points-at=HEAD"],
+        stdout=subprocess.PIPE,
+        text=True,
+        check=True,
+        cwd=submodule_path,
+    )
+    return proc.stdout.splitlines()
+
+
+def _fetch_remote_tags(submodule_path: Path) -> list[str]:
+    head_sha = subprocess.run(
+        ["git", "rev-parse", "HEAD"],
+        stdout=subprocess.PIPE,
+        text=True,
+        check=True,
+        cwd=submodule_path,
+    ).stdout.strip()
+
+    remote_tags = subprocess.run(
+        ["git", "ls-remote", "--tags", "origin"],
+        stdout=subprocess.PIPE,
+        text=True,
+        check=True,
+        cwd=submodule_path,
+    ).stdout.splitlines()
+
+    matching_tags: list[str] = []
+    for tag_line in remote_tags:
+        sha, tag = tag_line.split()
+        tag = tag.removesuffix("^{}")
+        if sha == head_sha:
+            subprocess.run(
+                ["git", "fetch", "origin", f"{tag}:{tag}"],
+                cwd=submodule_path,
+            )
+            matching_tags.append(tag.removeprefix("refs/tags/"))
+
+    return matching_tags
 
 
 class _RpmsIn(TypedDict):
