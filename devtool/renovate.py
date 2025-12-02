@@ -7,8 +7,7 @@ def renovate_json(go_packages: list[GoPackage]) -> dict[str, Any]:
     return {
         "$schema": "https://docs.renovatebot.com/renovate-schema.json",
         "extends": ["config:recommended"],
-        # Run bi-weekly on the 1st and 15th of each month
-        "schedule": ["* * 1,15 * *"],
+        "schedule": ["* * * * *"],
         "prHourlyLimit": 0,  # unlimited
         "git-submodules": {
             "enabled": True,
