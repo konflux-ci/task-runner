@@ -57,6 +57,12 @@
       "versioning": "regex:^openshift-clients-(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)-(?<build>\\d+)$"
     },
     {
+      "matchFileNames": [
+        "Containerfile"
+      ],
+      "groupName": "Base images"
+    },
+    {
       "matchPackageNames": [
         "registry.access.redhat.com/ubi10/go-toolset"
       ],

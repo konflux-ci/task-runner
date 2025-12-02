@@ -43,6 +43,10 @@ def renovate_json(go_packages: list[GoPackage]) -> dict[str, Any]:
                 "versioning": "regex:^openshift-clients-(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)-(?<build>\\d+)$",
             },
             {
+                "matchFileNames": ["Containerfile"],
+                "groupName": "Base images",
+            },
+            {
                 # Follow Golang version tags (1.x), not RHEL version tags (10.x)
                 "matchPackageNames": ["registry.access.redhat.com/ubi10/go-toolset"],
                 "allowedVersions": "< 2.0",
