@@ -146,6 +146,12 @@ Process:
 
 ### Setup
 
+Initialize/update git submodules:
+
+```sh
+make submodules
+```
+
 Create a virtual environment and install dependencies:
 
 ```sh

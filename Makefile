@@ -5,6 +5,10 @@ venv: .venv
 .venv:
 	uv sync --group dev
 
+.PHONY: submodules
+submodules:
+	git submodule update --init --depth=1
+
 .PHONY: rpms.lock.yaml
 rpms.lock.yaml:
 	# rpm-lockfile-prototype depends on dnf bindings (the python3-dnf package on fedora)
