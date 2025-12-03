@@ -236,6 +236,9 @@ When making a new release, bump the version according to the first matching rule
 To bump the version automatically based on the changes in installed software, use:
 
 ```sh
+# Assuming the remote for the upstream repo is called 'upstream'
+git fetch --tags upstream
+
 devtool prep-release
 ```
 
@@ -256,7 +259,8 @@ the release notes yourself.
 3. Once merged, if the Konflux release succeeds, create a GitHub release. In the
    release notes, describe the relevant changes. You can use the output of the
    `devtool prep-release` command. If you don't have that output available, use
-   `devtool diff --base-ref <previous_version> --changelog`.
+   `devtool diff --base-ref <previous_version> --changelog` (if this fails, you
+   may need to fetch tags first).
 
 [ADR-0046: Common Task Runner Image]: https://github.com/konflux-ci/architecture/blob/main/ADR/0046-common-task-runner-image.md
 [konflux-hermetic]: https://konflux-ci.dev/docs/building/hermetic-builds/
