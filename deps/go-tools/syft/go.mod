@@ -138,7 +138,7 @@ require (
 	github.com/google/go-cmp v0.7.0 // indirect
 	github.com/google/go-containerregistry v0.20.6 // indirect
 	github.com/google/licensecheck v0.3.1 // indirect
-	github.com/google/pprof v0.0.0-20250317173921-a4b03ec1a45e // indirect
+	github.com/google/pprof v0.0.0-20251114195745-4902fdda35c8 // indirect
 	github.com/google/s2a-go v0.1.8 // indirect
 	github.com/google/uuid v1.6.0 // indirect
 	github.com/googleapis/enterprise-certificate-proxy v0.3.4 // indirect
