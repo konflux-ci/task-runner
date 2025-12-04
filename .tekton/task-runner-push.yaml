@@ -2,7 +2,7 @@ apiVersion: tekton.dev/v1
 kind: PipelineRun
 metadata:
   annotations:
-    build.appstudio.openshift.io/repo: https://github.com/chmeliik/task-runner?rev={{revision}}
+    build.appstudio.openshift.io/repo: https://github.com/konflux-ci/task-runner?rev={{revision}}
     build.appstudio.redhat.com/commit_sha: '{{revision}}'
     build.appstudio.redhat.com/target_branch: '{{target_branch}}'
     pipelinesascode.tekton.dev/cancel-in-progress: "false"
@@ -16,7 +16,7 @@ metadata:
     appstudio.openshift.io/component: task-runner
     pipelines.appstudio.openshift.io/type: build
   name: task-runner-on-push
-  namespace: acmiel-tenant
+  namespace: rhtap-build-tenant
 spec:
   params:
   - name: git-url
@@ -24,7 +24,7 @@ spec:
   - name: revision
     value: '{{revision}}'
   - name: output-image
-    value: quay.io/redhat-user-workloads/acmiel-tenant/task-runner:{{revision}}
+    value: quay.io/redhat-user-workloads/rhtap-build-tenant/task-runner:{{revision}}
   - name: build-platforms
     value:
     - linux/x86_64
