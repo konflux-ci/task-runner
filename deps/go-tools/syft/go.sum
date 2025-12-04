@@ -112,8 +112,8 @@ github.com/alecthomas/units v0.0.0-20151022065526-2efee857e7cf/go.mod h1:ybxpYRF
 github.com/alecthomas/units v0.0.0-20190717042225-c3de453c63f4/go.mod h1:ybxpYRFXyAe+OPACYpWeL0wqObRcbAqCMya13uyzqw0=
 github.com/anchore/bubbly v0.0.0-20231115134915-def0aba654a9 h1:p0ZIe0htYOX284Y4axJaGBvXHU0VCCzLN5Wf5XbKStU=
 github.com/anchore/bubbly v0.0.0-20231115134915-def0aba654a9/go.mod h1:3ZsFB9tzW3vl4gEiUeuSOMDnwroWxIxJelOOHUp8dSw=
-github.com/anchore/clio v0.0.0-20250319180342-2cfe4b0cb716 h1:2sIdYJlQESEnyk3Y0WD2vXWW5eD2iMz9Ev8fj1Z8LNA=
-github.com/anchore/clio v0.0.0-20250319180342-2cfe4b0cb716/go.mod h1:Utb9i4kwiCWvqAIxZaJeMIXFO9uOgQXlvH2BfbfO/zI=
+github.com/anchore/clio v0.0.0-20251028140840-721eea5390a4 h1:ou5Co2rLHT5mqVdVmVE7QukGe2cCFTryAaaVzEEDnb0=
+github.com/anchore/clio v0.0.0-20251028140840-721eea5390a4/go.mod h1:Qps+CdrdcMx1k7GhKaJ1ZkKYZvRaIfbNmW6B8/5ONPs=
 github.com/anchore/fangs v0.0.0-20250319222917-446a1e748ec2 h1:GC2QaO0YsmjpsZ4rtVKv9DnproIxqqn+qkskpc+i8MA=
 github.com/anchore/fangs v0.0.0-20250319222917-446a1e748ec2/go.mod h1:XUbUECwVKuD3qYRUj+QZIOHjyyXua2gFmVjKA40iHXA=
 github.com/anchore/go-collections v0.0.0-20251016125210-a3c352120e8c h1:eoJXyC0n7DZ4YvySG/ETdYkTar2Due7eH+UmLK6FbrA=
