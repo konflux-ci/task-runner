@@ -110,8 +110,8 @@ github.com/alecthomas/template v0.0.0-20160405071501-a0175ee3bccc/go.mod h1:LOuy
 github.com/alecthomas/template v0.0.0-20190718012654-fb15b899a751/go.mod h1:LOuyumcjzFXgccqObfd/Ljyb9UuFJ6TxHnclSeseNhc=
 github.com/alecthomas/units v0.0.0-20151022065526-2efee857e7cf/go.mod h1:ybxpYRFXyAe+OPACYpWeL0wqObRcbAqCMya13uyzqw0=
 github.com/alecthomas/units v0.0.0-20190717042225-c3de453c63f4/go.mod h1:ybxpYRFXyAe+OPACYpWeL0wqObRcbAqCMya13uyzqw0=
-github.com/anchore/bubbly v0.0.0-20231115134915-def0aba654a9 h1:p0ZIe0htYOX284Y4axJaGBvXHU0VCCzLN5Wf5XbKStU=
-github.com/anchore/bubbly v0.0.0-20231115134915-def0aba654a9/go.mod h1:3ZsFB9tzW3vl4gEiUeuSOMDnwroWxIxJelOOHUp8dSw=
+github.com/anchore/bubbly v0.0.0-20250717181826-8a411f9d8cbf h1:UY7SQkfVVaeGUpPZrJxqmTc8M0ZSWc5ChiKF6I6aL3I=
+github.com/anchore/bubbly v0.0.0-20250717181826-8a411f9d8cbf/go.mod h1:w8Br1ZKk1Nk82YRSh10pcD7LO7avPyFmNnaY1TRPgs0=
 github.com/anchore/clio v0.0.0-20250319180342-2cfe4b0cb716 h1:2sIdYJlQESEnyk3Y0WD2vXWW5eD2iMz9Ev8fj1Z8LNA=
 github.com/anchore/clio v0.0.0-20250319180342-2cfe4b0cb716/go.mod h1:Utb9i4kwiCWvqAIxZaJeMIXFO9uOgQXlvH2BfbfO/zI=
 github.com/anchore/fangs v0.0.0-20250319222917-446a1e748ec2 h1:GC2QaO0YsmjpsZ4rtVKv9DnproIxqqn+qkskpc+i8MA=
