@@ -10,8 +10,8 @@ The Task Runner image consolidates multiple CLI tools into a single container
 image, simplifying Task creation and reducing the maintenance overhead of
 managing multiple tool-specific images.
 
-You can use it as the runtime image for Konflux Tasks
-or as a base image to extend it for more specialized use cases.
+You can use it directly as the runtime image for Konflux Tasks
+or as a base image for more specialized runner images.
 
 ## Included Tools
 
