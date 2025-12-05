@@ -15,74 +15,92 @@
     "github-actions[bot]@users.noreply.github.com"
   ],
   "git-submodules": {
-    "enabled": true
+    "enabled": true,
+    "packageRules": [
+      {
+        "matchManagers": [
+          "git-submodules"
+        ],
+        "groupName": "Runner software"
+      },
+      {
+        "matchManagers": [
+          "git-submodules"
+        ],
+        "matchPackageNames": [
+          "https://github.com/openshift/oc.git"
+        ],
+        "versioning": "regex:^openshift-clients-(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)-(?<build>\\d+)$"
+      }
+    ]
+  },
+  "gomod": {
+    "packageRules": [
+      {
+        "matchManagers": [
+          "gomod"
+        ],
+        "enabled": false
+      },
+      {
+        "matchManagers": [
+          "gomod"
+        ],
+        "matchPackageNames": [
+          "github.com/open-policy-agent/conftest",
+          "github.com/sigstore/cosign/v3",
+          "oras.land/oras",
+          "github.com/anchore/syft",
+          "github.com/tektoncd/cli",
+          "github.com/mikefarah/yq/v4"
+        ],
+        "enabled": true,
+        "groupName": "Runner software"
+      }
+    ]
+  },
+  "rpm-lockfile": {
+    "packageRules": [
+      {
+        "matchFileNames": [
+          "deps/rpm/*"
+        ],
+        "groupName": "Runner software"
+      }
+    ]
+  },
+  "dockerfile": {
+    "packageRules": [
+      {
+        "matchFileNames": [
+          "Containerfile"
+        ],
+        "groupName": "Base images"
+      },
+      {
+        "matchPackageNames": [
+          "registry.access.redhat.com/ubi10/go-toolset"
+        ],
+        "allowedVersions": "< 2.0"
+      }
+    ]
+  },
+  "github-actions": {
+    "packageRules": [
+      {
+        "matchManagers": [
+          "github-actions"
+        ],
+        "groupName": "GitHub Actions"
+      }
+    ]
   },
   "packageRules": [
-    {
-      "matchManagers": [
-        "gomod"
-      ],
-      "enabled": false
-    },
-    {
-      "matchManagers": [
-        "gomod"
-      ],
-      "matchPackageNames": [
-        "github.com/open-policy-agent/conftest",
-        "github.com/sigstore/cosign/v3",
-        "oras.land/oras",
-        "github.com/anchore/syft",
-        "github.com/tektoncd/cli",
-        "github.com/mikefarah/yq/v4"
-      ],
-      "enabled": true,
-      "groupName": "Runner software"
-    },
-    {
-      "matchManagers": [
-        "git-submodules"
-      ],
-      "groupName": "Runner software"
-    },
-    {
-      "matchFileNames": [
-        "deps/rpm/*"
-      ],
-      "groupName": "Runner software"
-    },
-    {
-      "matchFileNames": [
-        "Containerfile"
-      ],
-      "groupName": "Base images"
-    },
     {
       "matchDatasources": [
         "pypi"
       ],
       "groupName": "Python dependencies"
-    },
-    {
-      "matchManagers": [
-        "github-actions"
-      ],
-      "groupName": "GitHub Actions"
-    },
-    {
-      "matchManagers": [
-        "git-submodules"
-      ],
-      "matchPackageNames": [
-        "https://github.com/openshift/oc.git"
-      ],
-      "versioning": "regex:^openshift-clients-(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)-(?<build>\\d+)$"
-    },
-    {
-      "matchPackageNames": [
-        "registry.access.redhat.com/ubi10/go-toolset"
-      ],
-      "allowedVersions": "< 2.0"
     }
   ],
   "postUpdateOptions": [
