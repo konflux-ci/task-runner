@@ -85,7 +85,7 @@ def renovate_json(go_packages: list[GoPackage]) -> dict[str, Any]:
                 "groupName": "Python dependencies",
             },
         ],
-        # And run `go mod tidy` afterwards to update the dependencies of our direct
-        #  dependencies **when necessary** (according to Go's Minimal Version Selection).
+        # Run `go mod tidy` to update the dependencies of our direct dependencies
+        # **when necessary** (according to Go's Minimal Version Selection).
         "postUpdateOptions": ["gomodTidy"],
     }
