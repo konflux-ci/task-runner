@@ -119,18 +119,6 @@ def prepare_release(base_ref: str | None) -> int:
     if base_ref is None:
         base_ref = f"v{previous_version}"
 
-        proc = subprocess.run(
-            ["git", "rev-parse", base_ref],
-            stdout=subprocess.DEVNULL,
-            stderr=subprocess.DEVNULL,
-        )
-        if proc.returncode != 0:
-            print(
-                f"{base_ref} tag doesn't exist, can't determine changes from previous version",
-                file=sys.stderr,
-            )
-            return 1
-
     changes = diff_software(repo_root, base_ref=base_ref)
     if not changes:
         print(f"There are no significant changes since version {previous_version}", file=sys.stderr)
