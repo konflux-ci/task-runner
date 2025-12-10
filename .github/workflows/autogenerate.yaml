@@ -45,7 +45,7 @@ jobs:
         env:
           PR_AUTHOR: ${{ github.event.pull_request.user.login }}
         run: |
-          if [[ "$PR_AUTHOR" == *renovate* ]]; then
+          if [[ "$PR_AUTHOR" == *renovate* || "$PR_AUTHOR" == *red-hat-konflux* ]]; then
             echo "IS_RENOVATE=true" >> "$GITHUB_ENV"
           else
             echo "IS_RENOVATE=false" >> "$GITHUB_ENV"
