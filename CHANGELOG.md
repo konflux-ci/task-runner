@@ -7,7 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+*Nothing yet.*
+
+## 0.1.0
+
+Date: 2025-12-10
+
+The initial release of the task-runner image! 🎉
+
 ### Added
 
 - All the software listed in
-  <https://github.com/konflux-ci/task-runner/blob/main/Installed-Software.md>
+  <https://github.com/konflux-ci/task-runner/blob/v0.1.0/Installed-Software.md>
