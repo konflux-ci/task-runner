@@ -60,8 +60,10 @@ def diff_software(
         proc.check_returncode()
         return proc.stdout
 
+    _fetch_version_tag_if_needed(repo_root, base_ref)
     old_versions = parse_package_table(git_show(base_ref, "Installed-Software.md"))
     if head_ref:
+        _fetch_version_tag_if_needed(repo_root, head_ref)
         new_versions = parse_package_table(git_show(head_ref, "Installed-Software.md"))
     else:
         new_versions = {pkg.name: pkg.version for pkg in list_packages(repo_root)}
@@ -76,3 +78,50 @@ def diff_software(
 
     changed_packages.sort(key=lambda pkg: pkg.name)
     return changed_packages
+
+
+def _fetch_version_tag_if_needed(repo_root: Path, ref: str) -> None:
+    try:
+        Version.parse(ref.removeprefix("v"))
+    except ValueError:
+        # ref is not a version tag
+        return
+
+    proc = subprocess.run(
+        ["git", "rev-parse", ref],
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL,
+        cwd=repo_root,
+    )
+    if proc.returncode == 0:
+        # already have the tag
+        return
+
+    upstream = _find_upstream_remote(repo_root)
+    if upstream is None:
+        raise RuntimeError(
+            "No remote found for konflux-ci/task-runner. "
+            "Run 'git remote add upstream https://github.com/konflux-ci/task-runner.git'"
+        )
+
+    subprocess.run(
+        ["git", "fetch", upstream, f"refs/tags/{ref}:refs/tags/{ref}"],
+        cwd=repo_root,
+        check=True,
+    )
+
+
+def _find_upstream_remote(repo_root: Path) -> str | None:
+    proc = subprocess.run(
+        ["git", "remote", "-v"],
+        cwd=repo_root,
+        stdout=subprocess.PIPE,
+        text=True,
+        check=True,
+    )
+    for line in proc.stdout.splitlines():
+        name, repo, *_ = line.split()
+        if "konflux-ci/task-runner" in repo:
+            return name
+
+    return None
