@@ -48,7 +48,7 @@
         ],
         "matchPackageNames": [
           "github.com/open-policy-agent/conftest",
-          "github.com/sigstore/cosign/v3",
+          "github.com/sigstore/cosign/v2",
           "oras.land/oras",
           "github.com/anchore/syft",
           "github.com/tektoncd/cli",
