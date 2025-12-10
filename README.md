@@ -221,11 +221,11 @@ This uses [rpm-lockfile-prototype] to resolve and lock package versions.
 
 ### Versioning
 
-The version of the runner image is tracked in the VERSION file.
-
-The Konflux build pipeline automatically sets the `org.opencontainer.image.version`
-annotation (and label as well) on the built image using our custom
-`.tekton/tasks/get-build-params.yaml` Task.
+- The version of the runner image is tracked in the [VERSION](./VERSION) file
+  - The Konflux build pipeline automatically sets the `org.opencontainer.image.version`
+    annotation (and label as well) on the built image using our custom
+    `.tekton/tasks/get-build-params.yaml` Task
+- All notable changes are tracked in the [CHANGELOG.md](./CHANGELOG.md) file
 
 When making a new release, bump the version according to the first matching rule:
 
@@ -243,24 +243,23 @@ devtool prep-release
 ```
 
 The tool will automatically update the VERSION file and output a markdown list with
-the changes since the last release. Include this list when creating the GitHub release
-later.
+the changes since the last release. Include this list when updating CHANGELOG.md.
 
 If there are no relevant changes to the installed software (i.e. the `Installed-Software.md`
 file did not change), the tool will abort without doing any changes. In that case,
 if you do want to do a release, please update the VERSION file manually and write
-the release notes yourself.
+the changelog content yourself.
 
 ### Release process
 
-1. Determine what has changed since last release and update the VERSION file accordingly
-   (see above).
-2. Send a PR to update the version.
-3. Once merged, if the Konflux release succeeds, create a GitHub release. In the
-   release notes, describe the relevant changes. You can use the output of the
-   `devtool prep-release` command. If you don't have that output available, use
-   `devtool diff --base-ref <previous_version> --changelog` (if this fails, you
-   may need to fetch tags first).
+1. Determine what has changed since last release and update the VERSION and CHANGELOG.md
+   files accordingly (see above).
+2. Send a PR to update the version and changelog.
+3. Once merged, create the GitHub release as `v{version}` (e.g. `v0.1.0`).
+   In the release notes, just link the relevant heading in CHANGELOG.md.
+4. Merging the PR will have triggered a Konflux on-push pipeline, which will
+   automatically trigger a release to <https://quay.io/konflux-ci/task-runner>
+   upon success. Verify that the build and release succeed.
 
 [ADR-0046: Common Task Runner Image]: https://github.com/konflux-ci/architecture/blob/main/ADR/0046-common-task-runner-image.md
 [konflux-hermetic]: https://konflux-ci.dev/docs/building/hermetic-builds/
