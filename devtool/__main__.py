@@ -117,7 +117,7 @@ def prepare_release(base_ref: str | None) -> int:
     previous_version = Version.parse(version_file.read_text().strip())
 
     if base_ref is None:
-        base_ref = str(previous_version)
+        base_ref = f"v{previous_version}"
 
         proc = subprocess.run(
             ["git", "rev-parse", base_ref],
@@ -126,7 +126,7 @@ def prepare_release(base_ref: str | None) -> int:
         )
         if proc.returncode != 0:
             print(
-                f"{previous_version} tag doesn't exist, can't determine changes from previous version",
+                f"{base_ref} tag doesn't exist, can't determine changes from previous version",
                 file=sys.stderr,
             )
             return 1
@@ -146,8 +146,9 @@ def prepare_release(base_ref: str | None) -> int:
     print()
     print(f"Bumped version to {new_version}")
     print()
-    print("Please commit the VERSION file change and open a PR.")
-    print("After the PR is merged, create a GitHub release (use the release notes above).")
+    print(
+        "Please update the CHANGELOG.md with the content above, commit the changes and open a PR."
+    )
 
     version_file.write_text(f"{new_version}\n")
     return 0
