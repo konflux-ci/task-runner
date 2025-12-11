@@ -1,6 +1,7 @@
 # Task Runner Image
 
 A container image with CLI tools commonly used by Konflux Tasks.
+Released to [quay.io/konflux-ci/task-runner](https://quay.io/konflux-ci/task-runner).
 
 This project implements [ADR-0046: Common Task Runner Image].
 
