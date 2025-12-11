@@ -19,6 +19,11 @@ or as a base image for more specialized runner images.
 See [Installed-Software.md](Installed-Software.md) for the complete list of
 tools and their versions.
 
+> [!NOTE]
+> In `main`, this file is always up to date with the latest commit.
+> To see the software installed in a specific version of the runner image,
+> switch to the corresponding version tag.
+
 ## Adding New Tools
 
 ### Criteria
