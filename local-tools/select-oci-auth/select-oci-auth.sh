@@ -63,8 +63,8 @@ get_image_repo() {
 }
 
 print_auth() {
-    local -r registry=$1
-    local -r token=$2
+    local -r registry=${1:-""}
+    local -r token=${2:-""}
     if [[ -n "$registry" && -n "$token" ]]; then
         printf '{"auths": {"%s": %s}}' "$registry" "$token"
     else
