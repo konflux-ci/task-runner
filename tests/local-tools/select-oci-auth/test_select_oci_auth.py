@@ -1,8 +1,8 @@
 import json
-import subprocess
 import pytest
 import re
 import tempfile
+from pathlib import Path
 from subprocess import run
 from subprocess import CompletedProcess
 from typing import Final
@@ -11,7 +11,6 @@ from tests.constants import REPO_ROOT
 
 SCRIPT_FILE: Final = "select-oci-auth.sh"
 SCRIPT_DIR: Final = REPO_ROOT / "local-tools" / "select-oci-auth"
-AUTH_FILE: Final = tempfile.mkstemp(suffix="-select-oci-auth-file")
 
 
 @pytest.fixture
@@ -20,11 +19,12 @@ def auth_file(tmp_path) -> str:
     auths = json.dumps(
         {
             "auths": {
-                "https://index.docker.io/v1/": {"auth": "docker secret"},
+                "docker.io": {"auth": "docker.io secret"},
+                "https://index.docker.io/v1/": {"auth": "index.docker.io secret"},
                 "quay.io/konflux-ci/foo": {"auth": "konflux-ci/foo secret"},
                 "quay.io": {"auth": "quay secret"},
                 "reg.io": {"auth": "reg.io secret"},
-                "reg.io/foo/bar": {"auth": "reg.io/foo/bar secret"}
+                "reg.io/foo/bar": {"auth": "reg.io/foo/bar secret"},
             }
         }
     )
@@ -60,7 +60,7 @@ def test_print_usage():
 @pytest.mark.parametrize(
     "image_ref,expected_auth",
     [
-        ["docker.io/library/debian:latest", '{"auths": {"https://index.docker.io/v1/": {"auth": "docker secret"}}}'],
+        ["docker.io/library/debian:latest", '{"auths": {"docker.io": {"auth": "docker.io secret"}}}'],
         ["quay.io", '{"auths": {"quay.io": {"auth": "quay secret"}}}'],
         ["quay.io/foo", '{"auths": {"quay.io": {"auth": "quay secret"}}}'],
         ["quay.io/foo:0.1", '{"auths": {"quay.io": {"auth": "quay secret"}}}'],
@@ -82,3 +82,15 @@ def test_select_auth(image_ref, expected_auth, auth_file):
     proc = run_script(image_ref, auth_file=auth_file)
     assert proc.returncode == 0
     assert proc.stdout.strip() == expected_auth
+
+
+def test_fallback_search_for_docker_io(auth_file):
+    # remove registry docker.io from auth file
+    auths = json.loads(Path(auth_file).read_text())
+    del auths["auths"]["docker.io"]
+    Path(auth_file).write_text(json.dumps(auths))
+
+    proc = run_script("docker.io/library/postgres", auth_file=auth_file)
+    assert proc.returncode == 0
+    expected = '{"auths": {"https://index.docker.io/v1/": {"auth": "index.docker.io secret"}}}'
+    assert proc.stdout.strip() == expected

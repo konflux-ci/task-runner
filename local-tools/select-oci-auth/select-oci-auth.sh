@@ -79,6 +79,21 @@ select_auth() {
     registry="${repo/\/*}"
 
     if [[ -f "$AUTHFILE" ]]; then
+        while true; do
+            token=$(< "$AUTHFILE" yq ".auths[\"$repo\"]")
+            if [[ "$token" != "null" ]]; then
+                >&2 printf "Using token for %s\n" "$repo"
+                print_auth "$registry" "$token" | yq .
+                exit 0
+            fi
+
+            if [[ "$repo" != *"/"* ]]; then
+                break
+            fi
+
+            repo="${repo%*/*}"
+        done
+
         # For docker.io, the auth key is always https://index.docker.io/v1/
         if [ "$registry" = "docker.io" ]; then
             registry="https://index.docker.io/v1/"
@@ -88,21 +103,6 @@ select_auth() {
                 print_auth "$registry" "$token" | yq .
                 exit 0
             fi
-        else
-            while true; do
-                token=$(< "$AUTHFILE" yq ".auths[\"$repo\"]")
-                if [[ "$token" != "null" ]]; then
-                    >&2 printf "Using token for %s\n" "$repo"
-                    print_auth "$registry" "$token" | yq .
-                    exit 0
-                fi
-
-                if [[ "$repo" != *"/"* ]]; then
-                    break
-                fi
-
-                repo="${repo%*/*}"
-            done
         fi
     fi
 
