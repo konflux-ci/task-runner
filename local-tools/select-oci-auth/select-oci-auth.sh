@@ -4,7 +4,7 @@ set -o errexit
 set -o nounset
 set -o pipefail
 
-VERSION="0.0.0"
+VERSION="1.0.0"
 declare -r VERSION
 
 AUTHFILE="${AUTHFILE:-$HOME/.docker/config.json}"
@@ -94,7 +94,8 @@ select_auth() {
             repo="${repo%*/*}"
         done
 
-        # For docker.io, the auth key is always https://index.docker.io/v1/
+        # For docker.io, check auth key https://index.docker.io/v1/
+        # oras-login writes this key.
         if [ "$registry" = "docker.io" ]; then
             registry="https://index.docker.io/v1/"
             token=$(< "$AUTHFILE" yq '.auths["'$registry'"]')

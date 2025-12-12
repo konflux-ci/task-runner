@@ -1,5 +1,5 @@
 # Changelog
 
-## Unreleased
+## 1.0.0
 
-- Add script select-oci-auth.sh
+- The initial version of the `select-oci-auth` tool
