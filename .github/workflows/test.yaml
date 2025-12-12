@@ -50,3 +50,6 @@ jobs:
           TEST_IMAGE: localhost/task-runner:latest
         run: |
           .venv/bin/pytest --color=yes
+
+      - name: Test select-oci-auth
+        run: bash local-tools/select-oci-auth_test.sh

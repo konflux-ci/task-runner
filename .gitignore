@@ -5,3 +5,6 @@ __pycache__/
 # dotenv
 .env
 .envrc
+
+# temp files
+*~
