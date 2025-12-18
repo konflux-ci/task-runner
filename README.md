@@ -150,6 +150,8 @@ Konflux Tasks have come to depend on two crucial scripts:
   do not handle [containers-auth.json] correctly (such as `oras` and `cosign`)
 - [retry](./local-tools/retry) for retrying commands, especially those that interact
   with quay.io as this interaction can be rather unreliable
+  - Note: the image sets `RETRY_STOP_IF_STDERR_MATCHES=unauthorized` for backwards
+    compatibility with the original retry script, which would abort on 'unauthorized'
 
 While including arbitrary Bash scripts goes against the [Criteria](#criteria) for
 tool inclusion, these two are so ubiquitous that, for practicality, the runner image
