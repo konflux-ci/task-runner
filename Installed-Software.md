@@ -28,7 +28,7 @@ Re-generate with:
 | python3                        | 3.12.11-3.el10                 | RPM                            |
 | rpm                            | 4.19.1.1-20.el10               | RPM                            |
 | sed                            | 4.9-3.el10                     | RPM                            |
-| skopeo                         | 1.20.0-1.el10                  | RPM                            |
+| skopeo                         | 1.20.0-2.el10_1                | RPM                            |
 | syft                           | 1.38.2                         | `go install`                   |
 | tar                            | 1.35-7.el10                    | RPM                            |
 | tkn                            | 0.43.0                         | `go install`                   |

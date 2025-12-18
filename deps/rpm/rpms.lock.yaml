@@ -32,13 +32,13 @@ arches:
     name: netavark
     evr: 2:1.16.0-1.el10
     sourcerpm: netavark-1.16.0-1.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/appstream/os/Packages/s/skopeo-1.20.0-1.el10.aarch64.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/appstream/os/Packages/s/skopeo-1.20.0-2.el10_1.aarch64.rpm
     repoid: ubi-10-for-aarch64-appstream-rpms
-    size: 7358718
-    checksum: sha256:bdf92f61f2daf19ea54170b7a1da3b2acba6618e419ee10a8ebd4df985a82579
+    size: 7360189
+    checksum: sha256:a23cd1c2f3aaf612a66016f9c2d40df0c95622fd1c8837a16cdfcaf8c9378340
     name: skopeo
-    evr: 2:1.20.0-1.el10
-    sourcerpm: skopeo-1.20.0-1.el10.src.rpm
+    evr: 2:1.20.0-2.el10_1
+    sourcerpm: skopeo-1.20.0-2.el10_1.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/a/authselect-1.5.0-8.el10.aarch64.rpm
     repoid: ubi-10-for-aarch64-baseos-rpms
     size: 151301
@@ -519,13 +519,13 @@ arches:
     name: netavark
     evr: 2:1.16.0-1.el10
     sourcerpm: netavark-1.16.0-1.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/appstream/os/Packages/s/skopeo-1.20.0-1.el10.ppc64le.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/appstream/os/Packages/s/skopeo-1.20.0-2.el10_1.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-appstream-rpms
-    size: 7368020
-    checksum: sha256:ca99ceb9e3fa08553d6fe0dc43f06faa2cc073a9e2933f15a7adca06efa526b0
+    size: 7432964
+    checksum: sha256:fe6204a783c639756734082c395e13640a0795c45c3f2218f00c1df81a183991
     name: skopeo
-    evr: 2:1.20.0-1.el10
-    sourcerpm: skopeo-1.20.0-1.el10.src.rpm
+    evr: 2:1.20.0-2.el10_1
+    sourcerpm: skopeo-1.20.0-2.el10_1.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/a/authselect-1.5.0-8.el10.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-baseos-rpms
     size: 152408
@@ -1020,13 +1020,13 @@ arches:
     name: netavark
     evr: 2:1.16.0-1.el10
     sourcerpm: netavark-1.16.0-1.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/appstream/os/Packages/s/skopeo-1.20.0-1.el10.s390x.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/appstream/os/Packages/s/skopeo-1.20.0-2.el10_1.s390x.rpm
     repoid: ubi-10-for-s390x-appstream-rpms
-    size: 8037564
-    checksum: sha256:6988ae8f11759dd300343c0ed9c12fffe34569ed985c0bc66864445e64ae4dcb
+    size: 8105511
+    checksum: sha256:8ebd9a64b49d1334097577ac8923401a3602830ca08a00092ccfca23676272ad
     name: skopeo
-    evr: 2:1.20.0-1.el10
-    sourcerpm: skopeo-1.20.0-1.el10.src.rpm
+    evr: 2:1.20.0-2.el10_1
+    sourcerpm: skopeo-1.20.0-2.el10_1.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/a/authselect-1.5.0-8.el10.s390x.rpm
     repoid: ubi-10-for-s390x-baseos-rpms
     size: 150791
@@ -1500,13 +1500,13 @@ arches:
     name: netavark
     evr: 2:1.16.0-1.el10
     sourcerpm: netavark-1.16.0-1.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/appstream/os/Packages/s/skopeo-1.20.0-1.el10.x86_64.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/appstream/os/Packages/s/skopeo-1.20.0-2.el10_1.x86_64.rpm
     repoid: ubi-10-for-x86_64-appstream-rpms
-    size: 8181842
-    checksum: sha256:59f2d0d11737fdeddcfac06bc2afced1f106718d61336c2e3cae8b564335b3bd
+    size: 8245401
+    checksum: sha256:10a3796a643608f3ad407baef8c9edc9e24435a4517d9196b521f851c29dfc24
     name: skopeo
-    evr: 2:1.20.0-1.el10
-    sourcerpm: skopeo-1.20.0-1.el10.src.rpm
+    evr: 2:1.20.0-2.el10_1
+    sourcerpm: skopeo-1.20.0-2.el10_1.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/a/authselect-1.5.0-8.el10.x86_64.rpm
     repoid: ubi-10-for-x86_64-baseos-rpms
     size: 151602
