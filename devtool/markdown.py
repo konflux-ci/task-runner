@@ -1,7 +1,7 @@
 from typing import IO, assert_never
 import re
 
-from devtool.software_list import Package
+from devtool.software_list import LocalPackage, Package
 
 
 def print_packages_table(packages: list[Package], outfile: IO[str]) -> None:
@@ -13,6 +13,9 @@ def print_packages_table(packages: list[Package], outfile: IO[str]) -> None:
                 return "Git submodule (Go)"
             case "rpm":
                 return "RPM"
+            case "local":
+                assert isinstance(package, LocalPackage)
+                return f"[local](./{package.dir_path})"
             case _:
                 assert_never(package.type)
 

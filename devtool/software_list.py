@@ -31,11 +31,27 @@ class RPMPackage:
         return asdict(self)
 
 
-type Package = GoPackage | RPMPackage
+@dataclass(frozen=True)
+class LocalPackage:
+    name: str
+    version: str
+    dir_path: str
+    type: Literal["local"] = "local"
+
+    def asdict(self) -> dict[str, Any]:
+        return asdict(self)
+
+
+type Package = GoPackage | RPMPackage | LocalPackage
 
 
 def list_packages(project_root: Path) -> list[Package]:
-    return list_go_tools(project_root) + list_go_submodules(project_root) + list_rpms(project_root)
+    return (
+        list_go_tools(project_root)
+        + list_go_submodules(project_root)
+        + list_rpms(project_root)
+        + list_local_tools(project_root)
+    )
 
 
 class _GoMod(TypedDict):
@@ -237,3 +253,40 @@ def list_rpms(project_root: Path) -> list[RPMPackage]:
         packages.append(RPMPackage(name=package_name, version=version))
 
     return packages
+
+
+def list_local_tools(project_root: Path) -> list[LocalPackage]:
+    local_tools: list[LocalPackage] = []
+    version_re = re.compile(r"^VERSION=['\"]?(\d+\.\d+(\.\d+)?)['\"]?", re.MULTILINE)
+
+    for local_tool_dir in sorted(project_root.joinpath("local-tools").iterdir()):
+        if not local_tool_dir.is_dir():
+            continue
+
+        script = local_tool_dir / f"{local_tool_dir.name}.sh"
+        if not script.exists():
+            raise ValueError(
+                f"Expected {script.name} to exist in {local_tool_dir.relative_to(project_root)}"
+            )
+
+        content = script.read_text()
+        match = version_re.search(content)
+
+        if not match:
+            raise ValueError(
+                f"Did not find VERSION line in {script.relative_to(project_root)} "
+                "(must be in the form ^VERSION=x.y[.z], optionally with quotes)"
+            )
+
+        name = local_tool_dir.name
+        version = match.group(1)
+
+        local_tools.append(
+            LocalPackage(
+                name=name,
+                version=version,
+                dir_path=local_tool_dir.relative_to(project_root).as_posix(),
+            )
+        )
+
+    return local_tools
