@@ -25,3 +25,5 @@ RUN cd /tmp/rpm-installation && \
 
 COPY local-tools/select-oci-auth/select-oci-auth.sh /usr/local/bin/select-oci-auth
 COPY local-tools/retry/retry.sh                     /usr/local/bin/retry
+
+ENV RETRY_STOP_IF_STDERR_MATCHES='unauthorized'
