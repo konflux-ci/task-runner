@@ -38,7 +38,7 @@ Tools must meet the following requirements for inclusion:
 
 ### Installation Methods
 
-Tools are organized under `deps/` by installation method:
+Tools are organized by installation method:
 
 #### RPM Packages
 
@@ -142,6 +142,27 @@ Process:
    devtool gen --all
    ```
 
+#### Local Tools
+
+Konflux Tasks have come to depend on two crucial scripts:
+
+- [select-oci-auth](./local-tools/select-oci-auth), a workaround for tools that
+  do not handle [containers-auth.json] correctly (such as `oras` and `cosign`)
+- [retry](./local-tools/retry) for retrying commands, especially those that interact
+  with quay.io as this interaction can be rather unreliable
+
+While including arbitrary Bash scripts goes against the [Criteria](#criteria) for
+tool inclusion, these two are so ubiquitous that, for practicality, the runner image
+has to include them.
+
+They have, at least, become more legitimate standalone tools:
+
+- They each have their own version and CHANGELOG.md
+- They will be following semantic versioning
+- They have tests (in `tests/local-tools`)
+
+These two are an exception to the rule. We don't intend to add more local tools.
+
 ## Development Workflow
 
 ### Prerequisites
@@ -186,10 +207,21 @@ For production: we use Konflux CI. See the pipelines in `.tekton/`.
 
 ### Testing
 
-Run tests to verify tool installations:
+There are two types of tests:
+
+- Tests for the built task-runner image
+- Tests for local tools (in `tests/local-tools`)
+
+Run them all at once with:
 
 ```sh
 pytest
+```
+
+#### Tests for the built image
+
+```sh
+pytest --ignore=tests/local-tools
 ```
 
 By default, tests build the image and tag it `localhost/task-runner:test`.
@@ -212,6 +244,15 @@ code in `devtool/software_list.py`. If a new package isn't detected properly,
 you may need to update the discovery logic there. You may also need to update
 test configuration (e.g. `version_arg_overrides` in `tests/test_installed_packages.py`
 for tools that don't support the standard `--version` flag).
+
+#### Tests for local tools
+
+```sh
+pytest tests/local-tools
+```
+
+These are tests for the tools in `local-tools/`. They execute the tools directly
+on your machine and verify the expected behavior.
 
 ### Updating RPM Lockfile
 
@@ -271,3 +312,4 @@ the changelog content yourself.
 [konflux-hermetic]: https://konflux-ci.dev/docs/building/hermetic-builds/
 [rpm-lockfile]: https://hermetoproject.github.io/hermeto/rpm/
 [rpm-lockfile-prototype]: https://github.com/konflux-ci/rpm-lockfile-prototype
+[containers-auth.json]: https://man.archlinux.org/man/containers-auth.json.5
