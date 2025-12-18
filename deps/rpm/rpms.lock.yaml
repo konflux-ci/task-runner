@@ -361,20 +361,20 @@ arches:
     name: openldap
     evr: 2.6.9-1.el10
     sourcerpm: openldap-2.6.9-1.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/o/openssh-9.9p1-11.el10.aarch64.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/o/openssh-9.9p1-12.el10_1.aarch64.rpm
     repoid: ubi-10-for-aarch64-baseos-rpms
-    size: 354713
-    checksum: sha256:c495be09d11ab0c68c3dd33689159c70ff8593dc818b8fc85dc282de76e0d5c0
+    size: 353453
+    checksum: sha256:192204ff2ce6e71a7db394f434d8be281975b74ae90701208ebc9d938994ebb9
     name: openssh
-    evr: 9.9p1-11.el10
-    sourcerpm: openssh-9.9p1-11.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/o/openssh-clients-9.9p1-11.el10.aarch64.rpm
+    evr: 9.9p1-12.el10_1
+    sourcerpm: openssh-9.9p1-12.el10_1.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/o/openssh-clients-9.9p1-12.el10_1.aarch64.rpm
     repoid: ubi-10-for-aarch64-baseos-rpms
-    size: 755325
-    checksum: sha256:ada88f315931f7c15101a554db698d044db43bf8ca151649c650e43960fd45ef
+    size: 754161
+    checksum: sha256:9a9565b4e2310e5e253f7260007fdf191c8a6d4e9bc1407b282b75e930eb0195
     name: openssh-clients
-    evr: 9.9p1-11.el10
-    sourcerpm: openssh-9.9p1-11.el10.src.rpm
+    evr: 9.9p1-12.el10_1
+    sourcerpm: openssh-9.9p1-12.el10_1.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/o/openssl-3.5.1-4.el10_1.aarch64.rpm
     repoid: ubi-10-for-aarch64-baseos-rpms
     size: 1301046
@@ -452,13 +452,13 @@ arches:
     name: tpm2-tss
     evr: 4.1.3-5.el10
     sourcerpm: tpm2-tss-4.1.3-5.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/t/tzdata-2025b-2.el10.noarch.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/t/tzdata-2025c-1.el10.noarch.rpm
     repoid: ubi-10-for-aarch64-baseos-rpms
-    size: 923754
-    checksum: sha256:46fc235635824c6e18fe7eeb6788be01c6b703165b793d9d83a1194d057da36e
+    size: 925672
+    checksum: sha256:8e550d18b34a76c5378320a9229cef97146e8391ae5d0e943164934755bd6c3d
     name: tzdata
-    evr: 2025b-2.el10
-    sourcerpm: tzdata-2025b-2.el10.src.rpm
+    evr: 2025c-1.el10
+    sourcerpm: tzdata-2025c-1.el10.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/u/unzip-6.0-69.el10.aarch64.rpm
     repoid: ubi-10-for-aarch64-baseos-rpms
     size: 190760
@@ -855,20 +855,20 @@ arches:
     name: openldap
     evr: 2.6.9-1.el10
     sourcerpm: openldap-2.6.9-1.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/o/openssh-9.9p1-11.el10.ppc64le.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/o/openssh-9.9p1-12.el10_1.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-baseos-rpms
-    size: 372904
-    checksum: sha256:489770ee87577ce5416b003154d37cd785a8be4b82c0b1e098deea9b614e02be
+    size: 371304
+    checksum: sha256:ddb3e91d203c2a17fa41329cfd3f65c1795688f8230bb85b62bd9b31682f5328
     name: openssh
-    evr: 9.9p1-11.el10
-    sourcerpm: openssh-9.9p1-11.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/o/openssh-clients-9.9p1-11.el10.ppc64le.rpm
+    evr: 9.9p1-12.el10_1
+    sourcerpm: openssh-9.9p1-12.el10_1.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/o/openssh-clients-9.9p1-12.el10_1.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-baseos-rpms
-    size: 814417
-    checksum: sha256:50be78b073c61ca4d893cf4c9d29d334ceade976af8589ebed9984bc82c92c2d
+    size: 812945
+    checksum: sha256:6c57e9d25d3f88727daae390ad59f4dd2bb681c55843d7998dd67dd09bb2efff
     name: openssh-clients
-    evr: 9.9p1-11.el10
-    sourcerpm: openssh-9.9p1-11.el10.src.rpm
+    evr: 9.9p1-12.el10_1
+    sourcerpm: openssh-9.9p1-12.el10_1.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/o/openssl-3.5.1-4.el10_1.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-baseos-rpms
     size: 1329043
@@ -946,13 +946,13 @@ arches:
     name: tpm2-tss
     evr: 4.1.3-5.el10
     sourcerpm: tpm2-tss-4.1.3-5.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/t/tzdata-2025b-2.el10.noarch.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/t/tzdata-2025c-1.el10.noarch.rpm
     repoid: ubi-10-for-ppc64le-baseos-rpms
-    size: 923754
-    checksum: sha256:46fc235635824c6e18fe7eeb6788be01c6b703165b793d9d83a1194d057da36e
+    size: 925672
+    checksum: sha256:8e550d18b34a76c5378320a9229cef97146e8391ae5d0e943164934755bd6c3d
     name: tzdata
-    evr: 2025b-2.el10
-    sourcerpm: tzdata-2025b-2.el10.src.rpm
+    evr: 2025c-1.el10
+    sourcerpm: tzdata-2025c-1.el10.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/u/unzip-6.0-69.el10.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-baseos-rpms
     size: 196729
@@ -1342,20 +1342,20 @@ arches:
     name: openldap
     evr: 2.6.9-1.el10
     sourcerpm: openldap-2.6.9-1.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/o/openssh-9.9p1-11.el10.s390x.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/o/openssh-9.9p1-12.el10_1.s390x.rpm
     repoid: ubi-10-for-s390x-baseos-rpms
-    size: 359840
-    checksum: sha256:6d82e344d66f81f78c4e5bbf7e97f97bd8d0edd6922e7b4a857695c479f9a32b
+    size: 358096
+    checksum: sha256:ce60f723d2763b704b384e2f68e664eb79dfd628e2013f13fb80bc71266d24bc
     name: openssh
-    evr: 9.9p1-11.el10
-    sourcerpm: openssh-9.9p1-11.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/o/openssh-clients-9.9p1-11.el10.s390x.rpm
+    evr: 9.9p1-12.el10_1
+    sourcerpm: openssh-9.9p1-12.el10_1.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/o/openssh-clients-9.9p1-12.el10_1.s390x.rpm
     repoid: ubi-10-for-s390x-baseos-rpms
-    size: 788743
-    checksum: sha256:6c6fb64b8a708662c4ccb8d7ef3d5a61f621b53689e8703c8e08c28cfa76e292
+    size: 787671
+    checksum: sha256:6f7b22ae9556bc467dda55ec93000749760c9a31f92bed7ad8479e89e8d485b9
     name: openssh-clients
-    evr: 9.9p1-11.el10
-    sourcerpm: openssh-9.9p1-11.el10.src.rpm
+    evr: 9.9p1-12.el10_1
+    sourcerpm: openssh-9.9p1-12.el10_1.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/o/openssl-3.5.1-4.el10_1.s390x.rpm
     repoid: ubi-10-for-s390x-baseos-rpms
     size: 1342704
@@ -1433,13 +1433,13 @@ arches:
     name: tpm2-tss
     evr: 4.1.3-5.el10
     sourcerpm: tpm2-tss-4.1.3-5.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/t/tzdata-2025b-2.el10.noarch.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/t/tzdata-2025c-1.el10.noarch.rpm
     repoid: ubi-10-for-s390x-baseos-rpms
-    size: 923754
-    checksum: sha256:46fc235635824c6e18fe7eeb6788be01c6b703165b793d9d83a1194d057da36e
+    size: 925672
+    checksum: sha256:8e550d18b34a76c5378320a9229cef97146e8391ae5d0e943164934755bd6c3d
     name: tzdata
-    evr: 2025b-2.el10
-    sourcerpm: tzdata-2025b-2.el10.src.rpm
+    evr: 2025c-1.el10
+    sourcerpm: tzdata-2025c-1.el10.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/u/unzip-6.0-69.el10.s390x.rpm
     repoid: ubi-10-for-s390x-baseos-rpms
     size: 202214
@@ -1829,20 +1829,20 @@ arches:
     name: openldap
     evr: 2.6.9-1.el10
     sourcerpm: openldap-2.6.9-1.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/o/openssh-9.9p1-11.el10.x86_64.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/o/openssh-9.9p1-12.el10_1.x86_64.rpm
     repoid: ubi-10-for-x86_64-baseos-rpms
-    size: 361276
-    checksum: sha256:c6b55fe45e79f657839330d6bf41f115c303de9377091ff7e79c23d9d5c7c74b
+    size: 359221
+    checksum: sha256:b216643e62a1c55d33e8beb94a9db7a40377121b76f45ef7deb91930dc5ffd0f
     name: openssh
-    evr: 9.9p1-11.el10
-    sourcerpm: openssh-9.9p1-11.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/o/openssh-clients-9.9p1-11.el10.x86_64.rpm
+    evr: 9.9p1-12.el10_1
+    sourcerpm: openssh-9.9p1-12.el10_1.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/o/openssh-clients-9.9p1-12.el10_1.x86_64.rpm
     repoid: ubi-10-for-x86_64-baseos-rpms
-    size: 782022
-    checksum: sha256:68d6d9ffb2d4ea8dfd5c736f177d7b2de30e26e67b7c7e9f028d714d6cefa81e
+    size: 779690
+    checksum: sha256:693bce2d3cc006c704a5795eec86a826e794647a48ad079338dbcb96ac2bcb9d
     name: openssh-clients
-    evr: 9.9p1-11.el10
-    sourcerpm: openssh-9.9p1-11.el10.src.rpm
+    evr: 9.9p1-12.el10_1
+    sourcerpm: openssh-9.9p1-12.el10_1.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/o/openssl-3.5.1-4.el10_1.x86_64.rpm
     repoid: ubi-10-for-x86_64-baseos-rpms
     size: 1323842
@@ -1920,13 +1920,13 @@ arches:
     name: tpm2-tss
     evr: 4.1.3-5.el10
     sourcerpm: tpm2-tss-4.1.3-5.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/t/tzdata-2025b-2.el10.noarch.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/t/tzdata-2025c-1.el10.noarch.rpm
     repoid: ubi-10-for-x86_64-baseos-rpms
-    size: 923754
-    checksum: sha256:46fc235635824c6e18fe7eeb6788be01c6b703165b793d9d83a1194d057da36e
+    size: 925672
+    checksum: sha256:8e550d18b34a76c5378320a9229cef97146e8391ae5d0e943164934755bd6c3d
     name: tzdata
-    evr: 2025b-2.el10
-    sourcerpm: tzdata-2025b-2.el10.src.rpm
+    evr: 2025c-1.el10
+    sourcerpm: tzdata-2025c-1.el10.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/u/unzip-6.0-69.el10.x86_64.rpm
     repoid: ubi-10-for-x86_64-baseos-rpms
     size: 194487
