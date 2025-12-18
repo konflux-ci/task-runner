@@ -19,7 +19,7 @@ Re-generate with:
 | git-core                       | 2.47.3-1.el10_0                | RPM                            |
 | grep                           | 3.11-10.el10                   | RPM                            |
 | jq                             | 1.7.1-11.el10                  | RPM                            |
-| kubectl                        | 1.34.3                         | Git submodule (Go)             |
+| kubectl                        | 1.35.0                         | Git submodule (Go)             |
 | make                           | 4.4.1-9.el10                   | RPM                            |
 | microdnf                       | 3.10.1-1.el10                  | RPM                            |
 | oc                             | 4.20.0                         | Git submodule (Go)             |
@@ -32,5 +32,5 @@ Re-generate with:
 | syft                           | 1.38.2                         | `go install`                   |
 | tar                            | 1.35-7.el10                    | RPM                            |
 | tkn                            | 0.43.0                         | `go install`                   |
-| yq                             | 4.49.2                         | `go install`                   |
+| yq                             | 4.50.1                         | `go install`                   |
 | zip                            | 3.0-45.el10                    | RPM                            |
