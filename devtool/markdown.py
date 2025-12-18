@@ -26,8 +26,8 @@ def print_packages_table(packages: list[Package], outfile: IO[str]) -> None:
     }
 
     # Hardcoded to generate smaller diffs. Increase if any package name is longer than this.
-    column_width = 30
-    print_markdown_table(columns, outfile, column_widths=column_width)
+    column_widths = [30, 30, 40]
+    print_markdown_table(columns, outfile, column_widths=column_widths)
 
 
 def parse_package_table(content: str) -> dict[str, str]:
