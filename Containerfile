@@ -22,3 +22,6 @@ COPY deps/rpm/ /tmp/rpm-installation/
 RUN cd /tmp/rpm-installation && \
     ./install-rpms.sh && \
     rm -r /tmp/rpm-installation
+
+COPY local-tools/select-oci-auth/select-oci-auth.sh /usr/local/bin/select-oci-auth
+COPY local-tools/retry/retry.sh                     /usr/local/bin/retry
