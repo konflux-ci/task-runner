@@ -60,6 +60,13 @@ arches:
     name: bash
     evr: 5.2.26-6.el10
     sourcerpm: bash-5.2.26-6.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/b/bc-1.07.1-23.el10.aarch64.rpm
+    repoid: ubi-10-for-aarch64-baseos-rpms
+    size: 128840
+    checksum: sha256:1fac21eb8e5c928bb4fa64ee03c7bb820d75dfcd7195a75df22245015c32bb07
+    name: bc
+    evr: 1.07.1-23.el10
+    sourcerpm: bc-1.07.1-23.el10.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/c/coreutils-single-9.5-6.el10.aarch64.rpm
     repoid: ubi-10-for-aarch64-baseos-rpms
     size: 659001
@@ -547,6 +554,13 @@ arches:
     name: bash
     evr: 5.2.26-6.el10
     sourcerpm: bash-5.2.26-6.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/b/bc-1.07.1-23.el10.ppc64le.rpm
+    repoid: ubi-10-for-ppc64le-baseos-rpms
+    size: 133512
+    checksum: sha256:d81e20fdd45f8fec0db23a411713aaf2e4c22a9083c6ab18246e6c1ab02ac25d
+    name: bc
+    evr: 1.07.1-23.el10
+    sourcerpm: bc-1.07.1-23.el10.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/c/coreutils-single-9.5-6.el10.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-baseos-rpms
     size: 709329
@@ -1048,6 +1062,13 @@ arches:
     name: bash
     evr: 5.2.26-6.el10
     sourcerpm: bash-5.2.26-6.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/b/bc-1.07.1-23.el10.s390x.rpm
+    repoid: ubi-10-for-s390x-baseos-rpms
+    size: 135736
+    checksum: sha256:c876acaad17b09c9f35cf92df0cebde4cbb9cbdb0cc476b2fe0616506dc07ce2
+    name: bc
+    evr: 1.07.1-23.el10
+    sourcerpm: bc-1.07.1-23.el10.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/c/coreutils-single-9.5-6.el10.s390x.rpm
     repoid: ubi-10-for-s390x-baseos-rpms
     size: 717233
@@ -1528,6 +1549,13 @@ arches:
     name: bash
     evr: 5.2.26-6.el10
     sourcerpm: bash-5.2.26-6.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/b/bc-1.07.1-23.el10.x86_64.rpm
+    repoid: ubi-10-for-x86_64-baseos-rpms
+    size: 130042
+    checksum: sha256:95fcf3c41c55a88462568e660e29962559e4fee829b003bc6f812339492d73c4
+    name: bc
+    evr: 1.07.1-23.el10
+    sourcerpm: bc-1.07.1-23.el10.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/c/coreutils-single-9.5-6.el10.x86_64.rpm
     repoid: ubi-10-for-x86_64-baseos-rpms
     size: 657072

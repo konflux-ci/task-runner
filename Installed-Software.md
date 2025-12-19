@@ -9,6 +9,7 @@ Re-generate with:
 | Name                           | Version                        | Install Method                 |
 | ------------------------------ | ------------------------------ | ------------------------------ |
 | bash                           | 5.2.26-6.el10                  | RPM                            |
+| bc                             | 1.07.1-23.el10                 | RPM                            |
 | conftest                       | 0.65.0                         | `go install`                   |
 | coreutils-single               | 9.5-6.el10                     | RPM                            |
 | cosign                         | 2.6.1                          | `go install`                   |

@@ -5,6 +5,7 @@ contentOrigin:
     - ./ubi.repo
 
 packages:
+  - bc
   - gettext-envsubst
   - git-core
   - jq
