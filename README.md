@@ -285,9 +285,6 @@ When making a new release, bump the version according to the first matching rule
 To bump the version automatically based on the changes in installed software, use:
 
 ```sh
-# Assuming the remote for the upstream repo is called 'upstream'
-git fetch --tags upstream
-
 devtool prep-release
 ```
 
