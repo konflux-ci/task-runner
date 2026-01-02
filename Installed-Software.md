@@ -26,13 +26,13 @@ Re-generate with:
 | oc                             | 4.20.0                         | Git submodule (Go)                       |
 | openssl                        | 3.5.1-4.el10_1                 | RPM                                      |
 | oras                           | 1.3.0                          | `go install`                             |
-| python3                        | 3.12.11-3.el10                 | RPM                                      |
+| python3                        | 3.12.12-1.el10_1               | RPM                                      |
 | retry                          | 1.0.0                          | [local](./local-tools/retry)             |
 | rpm                            | 4.19.1.1-20.el10               | RPM                                      |
 | sed                            | 4.9-3.el10                     | RPM                                      |
 | select-oci-auth                | 1.0.0                          | [local](./local-tools/select-oci-auth)   |
 | skopeo                         | 1.20.0-2.el10_1                | RPM                                      |
-| syft                           | 1.38.2                         | `go install`                             |
+| syft                           | 1.39.0                         | `go install`                             |
 | tar                            | 1.35-7.el10                    | RPM                                      |
 | tkn                            | 0.43.0                         | `go install`                             |
 | yq                             | 4.50.1                         | `go install`                             |
