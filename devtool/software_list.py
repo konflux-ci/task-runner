@@ -304,36 +304,60 @@ def list_local_tools(project_root: Path) -> list[LocalPackage]:
 
 
 def list_pip_packages(project_root: Path) -> list[PipPackage]:
-    pip_packages: list[PipPackage] = []
-    requirements_file = project_root / "deps" / "pip" / "requirements.txt"
+    """List pip packages by reading names from requirements.in and versions from requirements.txt.
 
-    if not requirements_file.exists():
-        return pip_packages
+    Similar to how RPMs are handled with rpms.in.yaml (package names) and rpms.lock.yaml (versions).
+    """
+    pip_dir = project_root / "deps" / "pip"
+    requirements_in = pip_dir / "requirements.in"
+    requirements_txt = pip_dir / "requirements.txt"
 
-    for line_num, line in enumerate(requirements_file.read_text().splitlines(), start=1):
+    if not requirements_in.exists():
+        return []
+
+    # Parse package names from requirements.in (direct dependencies)
+    package_names: list[str] = []
+    for line in requirements_in.read_text().splitlines():
         line = line.strip()
         # Skip empty lines and comments
         if not line or line.startswith("#"):
             continue
-
-        # Strip inline comments (e.g., "awscli==1.44.12 # AWS CLI")
+        # Strip inline comments
         if " #" in line:
             line = line.split(" #")[0].strip()
+        # Package names can have version specifiers, but we only want the name
+        # Handle cases like "awscli" or "awscli>=1.0"
+        package_name = re.split(r"[<>=!]", line)[0].strip()
+        if package_name:
+            package_names.append(package_name.lower())
 
+    if not package_names:
+        return []
+
+    # Parse resolved versions from requirements.txt
+    resolved_versions: dict[str, str] = {}
+    for line in requirements_txt.read_text().splitlines():
+        line = line.strip()
+        # Skip empty lines, comments, and indented lines (dependency annotations)
+        if not line or line.startswith("#") or line.startswith(" "):
+            continue
+        # Strip inline comments
+        if " #" in line:
+            line = line.split(" #")[0].strip()
         # Parse package==version format
-        if "==" not in line:
+        if "==" in line:
+            name, version = line.split("==", 1)
+            resolved_versions[name.strip().lower()] = version.strip()
+
+    # Match package names from requirements.in with versions from requirements.txt
+    pip_packages: list[PipPackage] = []
+    for package_name in package_names:
+        version = resolved_versions.get(package_name)
+        if version is None:
             raise ValueError(
-                f"Unpinned package in {requirements_file.name}:{line_num}: {line!r}. "
-                "All packages must use exact pinning (package==version)."
+                f"Package {package_name!r} from requirements.in not found in requirements.txt. "
+                "Please regenerate requirements.txt with: uv pip compile requirements.in -o requirements.txt"
             )
-
-        package_name, version = line.split("==", 1)
-
-        pip_packages.append(
-            PipPackage(
-                name=package_name.strip(),
-                version=version.strip(),
-            )
-        )
+        pip_packages.append(PipPackage(name=package_name, version=version))
 
     return pip_packages

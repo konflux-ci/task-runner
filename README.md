@@ -144,19 +144,27 @@ Process:
 
 #### Pip Packages
 
-For Python-based CLI tools available on PyPI, use pip installation with pinned
-versions. Konflux's [cachi2] can pre-fetch pip packages from `requirements.txt`
-for hermetic builds.
+Pip packages use a lockfile-based approach similar to [RPM packages](#rpm-packages).
+Direct dependencies go in `requirements.in`, and resolved transitive dependencies
+go in `requirements.txt`. Konflux's [Hermeto] can pre-fetch pip packages from
+`requirements.txt` for hermetic builds.
 
 Process:
 
-1. Add the package with a pinned version to `deps/pip/requirements.txt`:
+1. Add the package name to `deps/pip/requirements.in`:
 
    ```
-   awscli==1.44.12
+   awscli
    ```
 
-2. If the executable name differs from the package name, add a mapping in
+2. Regenerate `requirements.txt` with all transitive dependencies:
+
+   ```sh
+   cd deps/pip
+   uv pip compile requirements.in -o requirements.txt
+   ```
+
+3. If the executable name differs from the package name, add a mapping in
    `tests/test_installed_packages.py`:
 
    ```python
@@ -166,7 +174,7 @@ Process:
    }
    ```
 
-3. Regenerate auto-generated files:
+4. Regenerate auto-generated files:
 
    ```sh
    devtool gen --all
@@ -344,5 +352,5 @@ the changelog content yourself.
 [konflux-hermetic]: https://konflux-ci.dev/docs/building/hermetic-builds/
 [rpm-lockfile]: https://hermetoproject.github.io/hermeto/rpm/
 [rpm-lockfile-prototype]: https://github.com/konflux-ci/rpm-lockfile-prototype
-[cachi2]: https://github.com/containerbuildsystem/cachi2
+[Hermeto]: https://github.com/hermetoproject/hermeto
 [containers-auth.json]: https://man.archlinux.org/man/containers-auth.json.5

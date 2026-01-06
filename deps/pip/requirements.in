@@ -1,0 +1,10 @@
+# Direct pip dependencies for task-runner image
+#
+# Add packages here and regenerate requirements.txt with:
+#   uv pip compile requirements.in -o requirements.txt
+#
+# Only add direct dependencies - transitive dependencies will be
+# resolved automatically when regenerating requirements.txt.
+
+awscli
+
