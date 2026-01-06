@@ -42,7 +42,17 @@ class LocalPackage:
         return asdict(self)
 
 
-type Package = GoPackage | RPMPackage | LocalPackage
+@dataclass(frozen=True)
+class PipPackage:
+    name: str
+    version: str
+    type: Literal["pip"] = "pip"
+
+    def asdict(self) -> dict[str, Any]:
+        return asdict(self)
+
+
+type Package = GoPackage | RPMPackage | LocalPackage | PipPackage
 
 
 def list_packages(project_root: Path) -> list[Package]:
@@ -50,6 +60,7 @@ def list_packages(project_root: Path) -> list[Package]:
         list_go_tools(project_root)
         + list_go_submodules(project_root)
         + list_rpms(project_root)
+        + list_pip_packages(project_root)
         + list_local_tools(project_root)
     )
 
@@ -290,3 +301,39 @@ def list_local_tools(project_root: Path) -> list[LocalPackage]:
         )
 
     return local_tools
+
+
+def list_pip_packages(project_root: Path) -> list[PipPackage]:
+    pip_packages: list[PipPackage] = []
+    requirements_file = project_root / "deps" / "pip" / "requirements.txt"
+
+    if not requirements_file.exists():
+        return pip_packages
+
+    for line_num, line in enumerate(requirements_file.read_text().splitlines(), start=1):
+        line = line.strip()
+        # Skip empty lines and comments
+        if not line or line.startswith("#"):
+            continue
+
+        # Strip inline comments (e.g., "awscli==1.44.12 # AWS CLI")
+        if " #" in line:
+            line = line.split(" #")[0].strip()
+
+        # Parse package==version format
+        if "==" not in line:
+            raise ValueError(
+                f"Unpinned package in {requirements_file.name}:{line_num}: {line!r}. "
+                "All packages must use exact pinning (package==version)."
+            )
+
+        package_name, version = line.split("==", 1)
+
+        pip_packages.append(
+            PipPackage(
+                name=package_name.strip(),
+                version=version.strip(),
+            )
+        )
+
+    return pip_packages

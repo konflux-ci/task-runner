@@ -12,6 +12,7 @@ packages:
   - make
   - openssl
   - python3
+  - python3-pip
   - skopeo
   - tar
   - zip

@@ -10,6 +10,7 @@ package_name_to_executable_name = {
     "findutils": "find",
     "gawk": "awk",
     "gettext-envsubst": "envsubst",
+    "awscli": "aws",
 }
 
 # overrides for tools that don't support a simple --version flag

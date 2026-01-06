@@ -1,0 +1,10 @@
+# Pip packages to install in the task-runner image
+#
+# IMPORTANT: All packages MUST use exact version pinning (package==version).
+# Unpinned packages will cause devtool to fail.
+#
+# Versions are pinned for reproducibility. Konflux's cachi2 will pre-fetch
+# these for hermetic builds.
+
+awscli==1.44.12
+

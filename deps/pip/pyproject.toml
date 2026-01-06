@@ -1,0 +1,7 @@
+# Minimal pyproject.toml for cachi2 pip prefetching
+# This file helps cachi2 identify the package for SBOM generation
+
+[project]
+name = "task-runner-pip-deps"
+version = "0.0.0"
+

@@ -142,6 +142,36 @@ Process:
    devtool gen --all
    ```
 
+#### Pip Packages
+
+For Python-based CLI tools available on PyPI, use pip installation with pinned
+versions. Konflux's [cachi2] can pre-fetch pip packages from `requirements.txt`
+for hermetic builds.
+
+Process:
+
+1. Add the package with a pinned version to `deps/pip/requirements.txt`:
+
+   ```
+   awscli==1.44.12
+   ```
+
+2. If the executable name differs from the package name, add a mapping in
+   `tests/test_installed_packages.py`:
+
+   ```python
+   package_name_to_executable_name = {
+       ...
+       "awscli": "aws",
+   }
+   ```
+
+3. Regenerate auto-generated files:
+
+   ```sh
+   devtool gen --all
+   ```
+
 #### Local Tools
 
 Konflux Tasks have come to depend on two crucial scripts:
@@ -314,4 +344,5 @@ the changelog content yourself.
 [konflux-hermetic]: https://konflux-ci.dev/docs/building/hermetic-builds/
 [rpm-lockfile]: https://hermetoproject.github.io/hermeto/rpm/
 [rpm-lockfile-prototype]: https://github.com/konflux-ci/rpm-lockfile-prototype
+[cachi2]: https://github.com/containerbuildsystem/cachi2
 [containers-auth.json]: https://man.archlinux.org/man/containers-auth.json.5

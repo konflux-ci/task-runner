@@ -16,6 +16,8 @@ def print_packages_table(packages: list[Package], outfile: IO[str]) -> None:
             case "local":
                 assert isinstance(package, LocalPackage)
                 return f"[local](./{package.dir_path})"
+            case "pip":
+                return "`pip install`"
             case _:
                 assert_never(package.type)
 
