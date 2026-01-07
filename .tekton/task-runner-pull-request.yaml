@@ -54,7 +54,7 @@ spec:
         {"type": "gomod", "path": "deps/go-tools/syft"},
         {"type": "gomod", "path": "deps/go-tools/tkn"},
         {"type": "gomod", "path": "deps/go-tools/yq"},
-        {"type": "pip", "path": "deps/pip", "requirements_files": ["requirements.txt"]},
+        {"type": "pip", "path": "deps/pip", "requirements_files": ["requirements.txt"], "requirements_build_files": ["requirements-build.txt"]},
         {"type": "rpm", "path": "deps/rpm"}
       ]
   pipelineRef:
