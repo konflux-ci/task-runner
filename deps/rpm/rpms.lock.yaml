@@ -32,6 +32,13 @@ arches:
     name: netavark
     evr: 2:1.16.0-1.el10
     sourcerpm: netavark-1.16.0-1.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/appstream/os/Packages/p/python3-pip-23.3.2-7.el10.noarch.rpm
+    repoid: ubi-10-for-aarch64-appstream-rpms
+    size: 3397252
+    checksum: sha256:4421f205888ae7297aaa6cd49c36cf4aaeb271401ff939c6c671119530f17e1c
+    name: python3-pip
+    evr: 23.3.2-7.el10
+    sourcerpm: python-pip-23.3.2-7.el10.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/appstream/os/Packages/s/skopeo-1.20.0-2.el10_1.aarch64.rpm
     repoid: ubi-10-for-aarch64-appstream-rpms
     size: 7360189
@@ -445,13 +452,13 @@ arches:
     name: shadow-utils-subid
     evr: 2:4.15.0-8.el10
     sourcerpm: shadow-utils-4.15.0-8.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/t/tar-1.35-7.el10.aarch64.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/t/tar-1.35-9.el10_1.aarch64.rpm
     repoid: ubi-10-for-aarch64-baseos-rpms
-    size: 878593
-    checksum: sha256:d314caea95b2fff4a696acfdfddd578ca920e9c937bedba9b8a80fc46a204d9f
+    size: 877110
+    checksum: sha256:ae24df4cf1c3cfc18c7777fdf75537c59675f0c7b0ea7339b7ad8f00c0a2ac6d
     name: tar
-    evr: 2:1.35-7.el10
-    sourcerpm: tar-1.35-7.el10.src.rpm
+    evr: 2:1.35-9.el10_1
+    sourcerpm: tar-1.35-9.el10_1.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/t/tpm2-tss-4.1.3-5.el10.aarch64.rpm
     repoid: ubi-10-for-aarch64-baseos-rpms
     size: 423998
@@ -526,6 +533,13 @@ arches:
     name: netavark
     evr: 2:1.16.0-1.el10
     sourcerpm: netavark-1.16.0-1.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/appstream/os/Packages/p/python3-pip-23.3.2-7.el10.noarch.rpm
+    repoid: ubi-10-for-ppc64le-appstream-rpms
+    size: 3397252
+    checksum: sha256:4421f205888ae7297aaa6cd49c36cf4aaeb271401ff939c6c671119530f17e1c
+    name: python3-pip
+    evr: 23.3.2-7.el10
+    sourcerpm: python-pip-23.3.2-7.el10.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/appstream/os/Packages/s/skopeo-1.20.0-2.el10_1.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-appstream-rpms
     size: 7432964
@@ -946,13 +960,13 @@ arches:
     name: shadow-utils-subid
     evr: 2:4.15.0-8.el10
     sourcerpm: shadow-utils-4.15.0-8.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/t/tar-1.35-7.el10.ppc64le.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/t/tar-1.35-9.el10_1.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-baseos-rpms
-    size: 907499
-    checksum: sha256:cf8705d17d81940c95b131098b95e1e4808a99d0953f5c7ee913b5de59dcdacd
+    size: 906959
+    checksum: sha256:58a23a9bf48df3e6e3368e55ddea28a6e282345d52e020410a98e09eac12eea3
     name: tar
-    evr: 2:1.35-7.el10
-    sourcerpm: tar-1.35-7.el10.src.rpm
+    evr: 2:1.35-9.el10_1
+    sourcerpm: tar-1.35-9.el10_1.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/t/tpm2-tss-4.1.3-5.el10.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-baseos-rpms
     size: 412384
@@ -1034,6 +1048,13 @@ arches:
     name: netavark
     evr: 2:1.16.0-1.el10
     sourcerpm: netavark-1.16.0-1.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/appstream/os/Packages/p/python3-pip-23.3.2-7.el10.noarch.rpm
+    repoid: ubi-10-for-s390x-appstream-rpms
+    size: 3397252
+    checksum: sha256:4421f205888ae7297aaa6cd49c36cf4aaeb271401ff939c6c671119530f17e1c
+    name: python3-pip
+    evr: 23.3.2-7.el10
+    sourcerpm: python-pip-23.3.2-7.el10.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/appstream/os/Packages/s/skopeo-1.20.0-2.el10_1.s390x.rpm
     repoid: ubi-10-for-s390x-appstream-rpms
     size: 8105511
@@ -1440,13 +1461,13 @@ arches:
     name: shadow-utils-subid
     evr: 2:4.15.0-8.el10
     sourcerpm: shadow-utils-4.15.0-8.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/t/tar-1.35-7.el10.s390x.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/t/tar-1.35-9.el10_1.s390x.rpm
     repoid: ubi-10-for-s390x-baseos-rpms
-    size: 905889
-    checksum: sha256:1ba8db62eb0dabea84aca04f27754435cbf89f739920740f85f3ab344029c3e8
+    size: 902491
+    checksum: sha256:233cf8ef40eab1f23853d7a9b452750b854ef191cac130605087b3b30063478d
     name: tar
-    evr: 2:1.35-7.el10
-    sourcerpm: tar-1.35-7.el10.src.rpm
+    evr: 2:1.35-9.el10_1
+    sourcerpm: tar-1.35-9.el10_1.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/t/tpm2-tss-4.1.3-5.el10.s390x.rpm
     repoid: ubi-10-for-s390x-baseos-rpms
     size: 446702
@@ -1521,6 +1542,13 @@ arches:
     name: netavark
     evr: 2:1.16.0-1.el10
     sourcerpm: netavark-1.16.0-1.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/appstream/os/Packages/p/python3-pip-23.3.2-7.el10.noarch.rpm
+    repoid: ubi-10-for-x86_64-appstream-rpms
+    size: 3397252
+    checksum: sha256:4421f205888ae7297aaa6cd49c36cf4aaeb271401ff939c6c671119530f17e1c
+    name: python3-pip
+    evr: 23.3.2-7.el10
+    sourcerpm: python-pip-23.3.2-7.el10.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/appstream/os/Packages/s/skopeo-1.20.0-2.el10_1.x86_64.rpm
     repoid: ubi-10-for-x86_64-appstream-rpms
     size: 8245401
@@ -1934,13 +1962,13 @@ arches:
     name: shadow-utils-subid
     evr: 2:4.15.0-8.el10
     sourcerpm: shadow-utils-4.15.0-8.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/t/tar-1.35-7.el10.x86_64.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/t/tar-1.35-9.el10_1.x86_64.rpm
     repoid: ubi-10-for-x86_64-baseos-rpms
-    size: 887097
-    checksum: sha256:94c290cb710327c72aa792e65a78de5c3f561b225d3cf9d038373328d527a36c
+    size: 886497
+    checksum: sha256:5baf4aceabe3b95bf74f4a7b206f2bc5b7f5a8f526fd7e5020edbf49646941a6
     name: tar
-    evr: 2:1.35-7.el10
-    sourcerpm: tar-1.35-7.el10.src.rpm
+    evr: 2:1.35-9.el10_1
+    sourcerpm: tar-1.35-9.el10_1.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/t/tpm2-tss-4.1.3-5.el10.x86_64.rpm
     repoid: ubi-10-for-x86_64-baseos-rpms
     size: 453124
