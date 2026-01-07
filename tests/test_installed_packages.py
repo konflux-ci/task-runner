@@ -11,7 +11,6 @@ package_name_to_executable_name = {
     "gawk": "awk",
     "gettext-envsubst": "envsubst",
     "awscli": "aws",
-    "python3-pip": "pip3",
 }
 
 # overrides for tools that don't support a simple --version flag
