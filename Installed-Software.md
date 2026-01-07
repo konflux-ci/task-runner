@@ -28,7 +28,6 @@ Re-generate with:
 | openssl                        | 3.5.1-4.el10_1                 | RPM                                      |
 | oras                           | 1.3.0                          | `go install`                             |
 | python3                        | 3.12.12-1.el10_1               | RPM                                      |
-| python3-pip                    | 23.3.2-7.el10                  | RPM                                      |
 | retry                          | 1.0.0                          | [local](./local-tools/retry)             |
 | rpm                            | 4.19.1.1-20.el10               | RPM                                      |
 | sed                            | 4.9-3.el10                     | RPM                                      |
