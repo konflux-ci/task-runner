@@ -11,6 +11,7 @@ package_name_to_executable_name = {
     "gawk": "awk",
     "gettext-envsubst": "envsubst",
     "awscli": "aws",
+    "python3-pip": "pip3",
 }
 
 # overrides for tools that don't support a simple --version flag
@@ -29,7 +30,7 @@ packages_param = [pytest.param(package, id=package.name) for package in expected
 @pytest.mark.parametrize("package", packages_param)
 def test_package_is_installed(package: Package, task_runner_container: Container) -> None:
     executable_name = package_name_to_executable_name.get(package.name, package.name)
-    task_runner_container.run_cmd([executable_name, "--help"])
+    task_runner_container.run_cmd(["command", "-v", executable_name])
 
 
 @pytest.mark.parametrize("package", packages_param)

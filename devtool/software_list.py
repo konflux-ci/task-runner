@@ -356,7 +356,7 @@ def list_pip_packages(project_root: Path) -> list[PipPackage]:
         if version is None:
             raise ValueError(
                 f"Package {package_name!r} from requirements.in not found in requirements.txt. "
-                "Please regenerate requirements.txt with: uv pip compile requirements.in -o requirements.txt"
+                "Please regenerate requirements.txt with: uv pip compile --generate-hashes requirements.in -o requirements.txt"
             )
         pip_packages.append(PipPackage(name=package_name, version=version))
 

@@ -161,20 +161,10 @@ Process:
 
    ```sh
    cd deps/pip
-   uv pip compile requirements.in -o requirements.txt
+   uv pip compile --generate-hashes requirements.in -o requirements.txt
    ```
 
-3. If the executable name differs from the package name, add a mapping in
-   `tests/test_installed_packages.py`:
-
-   ```python
-   package_name_to_executable_name = {
-       ...
-       "awscli": "aws",
-   }
-   ```
-
-4. Regenerate auto-generated files:
+3. Regenerate auto-generated files:
 
    ```sh
    devtool gen --all
