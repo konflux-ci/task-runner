@@ -25,7 +25,9 @@ RUN cd /tmp/rpm-installation && \
 
 COPY deps/pip/requirements.txt /tmp/requirements.txt
 RUN pip3 install --no-cache-dir -r /tmp/requirements.txt && \
-    rm /tmp/requirements.txt
+    rm /tmp/requirements.txt && \
+    microdnf -y remove gcc python3-devel && \
+    microdnf clean all
 
 COPY local-tools/select-oci-auth/select-oci-auth.sh /usr/local/bin/select-oci-auth
 COPY local-tools/retry/retry.sh                     /usr/local/bin/retry
