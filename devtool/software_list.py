@@ -347,6 +347,8 @@ def list_pip_packages(project_root: Path) -> list[PipPackage]:
         # Parse package==version format
         if "==" in line:
             name, version = line.split("==", 1)
+            # Strip trailing backslash used for line continuation (before hashes)
+            version = version.rstrip(" \\")
             resolved_versions[name.strip().lower()] = version.strip()
 
     # Match package names from requirements.in with versions from requirements.txt
