@@ -9,6 +9,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 *Nothing yet.*
 
+## 1.1.0
+
+Date: 2026-01-08
+
+- `awscli` added (1.44.12)
+- `conftest` 0.65.0 => 0.66.0
+- `syft` 1.38.2 => 1.39.0
+- `python3` 3.12.11-3.el10 => 3.12.12-1.el10_1
+- `tar` 1.35-7.el10 => 1.35-9.el10_1
+
 ## 1.0.0
 
 Date: 2025-12-19
