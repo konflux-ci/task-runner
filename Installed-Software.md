@@ -11,7 +11,7 @@ Re-generate with:
 | awscli                         | 1.44.12                        | `pip install`                            |
 | bash                           | 5.2.26-6.el10                  | RPM                                      |
 | bc                             | 1.07.1-23.el10                 | RPM                                      |
-| conftest                       | 0.65.0                         | `go install`                             |
+| conftest                       | 0.66.0                         | `go install`                             |
 | coreutils-single               | 9.5-6.el10                     | RPM                                      |
 | cosign                         | 2.6.1                          | `go install`                             |
 | curl                           | 8.12.1-2.el10                  | RPM                                      |
