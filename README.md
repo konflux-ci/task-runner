@@ -149,6 +149,10 @@ Direct dependencies go in `requirements.in`, and resolved transitive dependencie
 go in `requirements.txt`. Konflux's [Hermeto] can pre-fetch pip packages from
 `requirements.txt` for hermetic builds.
 
+Because we re-build the packages from source rather than using pre-built wheels,
+we also need a `requirements-build.txt` file listing the build dependencies. Both
+of the `requirements*.txt` files can be auto-generated with `make pip-requirements`.
+
 Process:
 
 1. Add the package name to `deps/pip/requirements.in`:
@@ -157,11 +161,10 @@ Process:
    awscli
    ```
 
-2. Regenerate `requirements.txt` with all transitive dependencies:
+2. Regenerate `requirements.txt` and `requirements-build.txt`
 
    ```sh
-   cd deps/pip
-   uv pip compile --generate-hashes requirements.in -o requirements.txt
+   make pip-requirements
    ```
 
 3. Regenerate auto-generated files:
