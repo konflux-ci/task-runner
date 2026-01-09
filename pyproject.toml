@@ -16,6 +16,7 @@ devtool = "devtool.__main__:main"
 dev = [
     "pytest>=9.0.1",
     "pybuild-deps",
+    # pybuild-deps==0.5.0 doesn't work with pip>=25.1
     "pip<25.1",
 ]
 rpm-lock = [
