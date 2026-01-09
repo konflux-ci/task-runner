@@ -52,6 +52,14 @@ def renovate_json(go_packages: list[GoPackage]) -> dict[str, Any]:
                 },
             ]
         },
+        "pip_requirements": {
+            "packageRules": [
+                {
+                    "matchFileNames": ["deps/pip/*"],
+                    "groupName": "Runner software",
+                },
+            ]
+        },
         "dockerfile": {
             "packageRules": [
                 {
