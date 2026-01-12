@@ -46,13 +46,88 @@
         "matchManagers": [
           "gomod"
         ],
+        "matchFileNames": [
+          "deps/go-tools/buildah/*"
+        ],
         "matchPackageNames": [
-          "github.com/containers/buildah",
-          "github.com/open-policy-agent/conftest",
-          "github.com/sigstore/cosign/v2",
-          "oras.land/oras",
-          "github.com/anchore/syft",
-          "github.com/tektoncd/cli",
+          "github.com/containers/buildah"
+        ],
+        "enabled": true,
+        "groupName": "Runner software"
+      },
+      {
+        "matchManagers": [
+          "gomod"
+        ],
+        "matchFileNames": [
+          "deps/go-tools/conftest/*"
+        ],
+        "matchPackageNames": [
+          "github.com/open-policy-agent/conftest"
+        ],
+        "enabled": true,
+        "groupName": "Runner software"
+      },
+      {
+        "matchManagers": [
+          "gomod"
+        ],
+        "matchFileNames": [
+          "deps/go-tools/cosign/*"
+        ],
+        "matchPackageNames": [
+          "github.com/sigstore/cosign/v2"
+        ],
+        "enabled": true,
+        "groupName": "Runner software"
+      },
+      {
+        "matchManagers": [
+          "gomod"
+        ],
+        "matchFileNames": [
+          "deps/go-tools/oras/*"
+        ],
+        "matchPackageNames": [
+          "oras.land/oras"
+        ],
+        "enabled": true,
+        "groupName": "Runner software"
+      },
+      {
+        "matchManagers": [
+          "gomod"
+        ],
+        "matchFileNames": [
+          "deps/go-tools/syft/*"
+        ],
+        "matchPackageNames": [
+          "github.com/anchore/syft"
+        ],
+        "enabled": true,
+        "groupName": "Runner software"
+      },
+      {
+        "matchManagers": [
+          "gomod"
+        ],
+        "matchFileNames": [
+          "deps/go-tools/tkn/*"
+        ],
+        "matchPackageNames": [
+          "github.com/tektoncd/cli"
+        ],
+        "enabled": true,
+        "groupName": "Runner software"
+      },
+      {
+        "matchManagers": [
+          "gomod"
+        ],
+        "matchFileNames": [
+          "deps/go-tools/yq/*"
+        ],
+        "matchPackageNames": [
           "github.com/mikefarah/yq/v4"
         ],
         "enabled": true,

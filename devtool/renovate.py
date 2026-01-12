@@ -4,6 +4,27 @@ from devtool.software_list import GoPackage
 
 
 def renovate_json(go_packages: list[GoPackage]) -> dict[str, Any]:
+    # Don't update any Go dependencies unless they're the direct dependencies
+    # that we care about. Updating indirect dependencies could cause unexpected
+    # behavior when the upstream tool builds with an older version of a library
+    # and we build with a newer version.
+    go_package_rules = [
+        {
+            "matchManagers": ["gomod"],
+            "enabled": False,
+        },
+    ]
+    go_package_rules.extend(
+        {
+            "matchManagers": ["gomod"],
+            "matchFileNames": [f"deps/go-tools/{p.name}/*"],
+            "matchPackageNames": [p.module_path],
+            "enabled": True,
+            "groupName": "Runner software",
+        }
+        for p in go_packages
+    )
+
     return {
         "$schema": "https://docs.renovatebot.com/renovate-schema.json",
         "extends": ["config:recommended", "helpers:pinGitHubActionDigestsToSemver"],
@@ -27,22 +48,7 @@ def renovate_json(go_packages: list[GoPackage]) -> dict[str, Any]:
             ],
         },
         "gomod": {
-            "packageRules": [
-                {
-                    "matchManagers": ["gomod"],
-                    "enabled": False,
-                },
-                {
-                    # Don't update any Go dependencies unless they're the direct dependencies
-                    # that we care about. Updating indirect dependencies could cause unexpected
-                    # behavior when the upstream tool builds with an older version of a library
-                    # and we build with a newer version.
-                    "matchManagers": ["gomod"],
-                    "matchPackageNames": [p.module_path for p in go_packages],
-                    "enabled": True,
-                    "groupName": "Runner software",
-                },
-            ]
+            "packageRules": go_package_rules,
         },
         "rpm-lockfile": {
             "packageRules": [
