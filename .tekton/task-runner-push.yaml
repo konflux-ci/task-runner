@@ -40,6 +40,7 @@ spec:
       [
         {"type": "gomod", "path": "deps/go-submodules/kubernetes"},
         {"type": "gomod", "path": "deps/go-submodules/oc"},
+        {"type": "gomod", "path": "deps/go-tools/buildah"},
         {"type": "gomod", "path": "deps/go-tools/conftest"},
         {"type": "gomod", "path": "deps/go-tools/cosign"},
         {"type": "gomod", "path": "deps/go-tools/oras"},
@@ -48,7 +49,8 @@ spec:
         {"type": "gomod", "path": "deps/go-tools/yq"},
         {"type": "pip", "path": "deps/pip", "requirements_files": ["requirements.txt"], "requirements_build_files": ["requirements-build.txt"]},
         {"type": "rpm", "path": "deps/rpm"},
-        {"type": "rpm", "path": "deps/rpm/python-builddeps"}
+        {"type": "rpm", "path": "deps/rpm/python-builddeps"},
+        {"type": "rpm", "path": "deps/rpm/go-builddeps"}
       ]
   pipelineRef:
     name: build-pipeline

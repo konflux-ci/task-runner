@@ -47,6 +47,7 @@
           "gomod"
         ],
         "matchPackageNames": [
+          "github.com/containers/buildah",
           "github.com/open-policy-agent/conftest",
           "github.com/sigstore/cosign/v2",
           "oras.land/oras",

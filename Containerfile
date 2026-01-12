@@ -2,6 +2,14 @@ FROM registry.access.redhat.com/ubi10/go-toolset:1.25.3@sha256:4d65503c0066e26df
 
 USER 0
 
+# Install dependencies for compiling buildah
+RUN dnf -y install \
+        bzip2 \
+        glib2-devel \
+        gpgme-devel \
+        libassuan-devel \
+        libseccomp-devel
+
 WORKDIR /deps/golang/tools
 COPY deps/go-tools/ .
 RUN GOBIN=/deps/golang/bin ./install-tools.sh

@@ -1,0 +1,272 @@
+---
+lockfileVersion: 1
+lockfileVendor: redhat
+arches:
+- arch: aarch64
+  packages:
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/appstream/os/Packages/l/libseccomp-devel-2.5.6-1.el10.aarch64.rpm
+    repoid: ubi-10-for-aarch64-appstream-rpms
+    size: 60297
+    checksum: sha256:8dd001816a272090aa1ec5d85cb416dbf5572e6b7bc27393ca8ace4de59e2f8a
+    name: libseccomp-devel
+    evr: 2.5.6-1.el10
+    sourcerpm: libseccomp-2.5.6-1.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/g/gnupg2-2.4.5-2.el10.aarch64.rpm
+    repoid: ubi-10-for-aarch64-baseos-rpms
+    size: 2802297
+    checksum: sha256:f44f96499e68d88964fc14695042d781abbbb4d27ff6f2c2bd1e44b752bc5e30
+    name: gnupg2
+    evr: 2.4.5-2.el10
+    sourcerpm: gnupg2-2.4.5-2.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/g/gpgme-1.23.2-6.el10.aarch64.rpm
+    repoid: ubi-10-for-aarch64-baseos-rpms
+    size: 219778
+    checksum: sha256:1b884c740525d5ab7fef8b6a582707a335f716ebe6bb44677a8d4a35467ec07d
+    name: gpgme
+    evr: 1.23.2-6.el10
+    sourcerpm: gpgme-1.23.2-6.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/l/libassuan-2.5.6-6.el10.aarch64.rpm
+    repoid: ubi-10-for-aarch64-baseos-rpms
+    size: 71812
+    checksum: sha256:18735a9e660a5900b473c5210f7cce84a6054bd75be7b7148e4dc2177061ce0f
+    name: libassuan
+    evr: 2.5.6-6.el10
+    sourcerpm: libassuan-2.5.6-6.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/l/libgcrypt-1.11.0-5.el10.aarch64.rpm
+    repoid: ubi-10-for-aarch64-baseos-rpms
+    size: 526700
+    checksum: sha256:c546b3ddc1d112c0dfadf5e6a1b4158e1dc16f8ea86341df15c6521fb13005d9
+    name: libgcrypt
+    evr: 1.11.0-5.el10
+    sourcerpm: libgcrypt-1.11.0-5.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/l/libksba-1.6.7-2.el10.aarch64.rpm
+    repoid: ubi-10-for-aarch64-baseos-rpms
+    size: 165309
+    checksum: sha256:05897309ec77280487f16c7c83c7477ad2feb5f1f6c9a1881026bcc19bf40e8c
+    name: libksba
+    evr: 1.6.7-2.el10
+    sourcerpm: libksba-1.6.7-2.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/n/npth-1.6-21.el10.aarch64.rpm
+    repoid: ubi-10-for-aarch64-baseos-rpms
+    size: 27652
+    checksum: sha256:df1e79408ddcf833b7666fcde2f921be6cd55edd140a14bcd5cd1a9883460c46
+    name: npth
+    evr: 1.6-21.el10
+    sourcerpm: npth-1.6-21.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/codeready-builder/os/Packages/g/gpgme-devel-1.23.2-6.el10.aarch64.rpm
+    repoid: codeready-builder-for-ubi-10-aarch64-rpms
+    size: 174457
+    checksum: sha256:2676a3045dce4da74740c8b424cbc74e0663e04f0d84f9caa60a9726cfce0b9a
+    name: gpgme-devel
+    evr: 1.23.2-6.el10
+    sourcerpm: gpgme-1.23.2-6.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/codeready-builder/os/Packages/l/libassuan-devel-2.5.6-6.el10.aarch64.rpm
+    repoid: codeready-builder-for-ubi-10-aarch64-rpms
+    size: 66634
+    checksum: sha256:a307523614bc628ebe93173f9df5d10b19c125d3c2b4938017db706ddcea1e66
+    name: libassuan-devel
+    evr: 2.5.6-6.el10
+    sourcerpm: libassuan-2.5.6-6.el10.src.rpm
+  source: []
+  module_metadata: []
+- arch: ppc64le
+  packages:
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/appstream/os/Packages/l/libseccomp-devel-2.5.6-1.el10.ppc64le.rpm
+    repoid: ubi-10-for-ppc64le-appstream-rpms
+    size: 60304
+    checksum: sha256:e89d06aad7f0d7fdb0b71b2196b2eda6a53ce64bda98b38cd59dddeed7249c21
+    name: libseccomp-devel
+    evr: 2.5.6-1.el10
+    sourcerpm: libseccomp-2.5.6-1.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/g/gnupg2-2.4.5-2.el10.ppc64le.rpm
+    repoid: ubi-10-for-ppc64le-baseos-rpms
+    size: 3001482
+    checksum: sha256:2d71405d07c8466b1c4eb5a98bb40642ff4828d8dcadd04377a85eb189729ebd
+    name: gnupg2
+    evr: 2.4.5-2.el10
+    sourcerpm: gnupg2-2.4.5-2.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/g/gpgme-1.23.2-6.el10.ppc64le.rpm
+    repoid: ubi-10-for-ppc64le-baseos-rpms
+    size: 243360
+    checksum: sha256:8942fa95568e577a17de1d45b25ff077154da20138663db6a46903fb8a7bfe06
+    name: gpgme
+    evr: 1.23.2-6.el10
+    sourcerpm: gpgme-1.23.2-6.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/l/libassuan-2.5.6-6.el10.ppc64le.rpm
+    repoid: ubi-10-for-ppc64le-baseos-rpms
+    size: 76107
+    checksum: sha256:4bfb610665e0a810885d8d1495cbe01231ae47075c1aa32b6f011828ed857c00
+    name: libassuan
+    evr: 2.5.6-6.el10
+    sourcerpm: libassuan-2.5.6-6.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/l/libgcrypt-1.11.0-5.el10.ppc64le.rpm
+    repoid: ubi-10-for-ppc64le-baseos-rpms
+    size: 626583
+    checksum: sha256:4439074a5b7bf168d7b9b64e2d438e70f6e38cef8756596862ca12eba858e071
+    name: libgcrypt
+    evr: 1.11.0-5.el10
+    sourcerpm: libgcrypt-1.11.0-5.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/l/libksba-1.6.7-2.el10.ppc64le.rpm
+    repoid: ubi-10-for-ppc64le-baseos-rpms
+    size: 182359
+    checksum: sha256:fd5211a5cda86e5796b79588c5ff68f3f1b3865ac80969299f83be02c649973a
+    name: libksba
+    evr: 1.6.7-2.el10
+    sourcerpm: libksba-1.6.7-2.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/n/npth-1.6-21.el10.ppc64le.rpm
+    repoid: ubi-10-for-ppc64le-baseos-rpms
+    size: 27832
+    checksum: sha256:5effe943f3cf1a091b52381a2aa8714cbbdf40d4f98d66bf21bd0b53746065ae
+    name: npth
+    evr: 1.6-21.el10
+    sourcerpm: npth-1.6-21.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/codeready-builder/os/Packages/g/gpgme-devel-1.23.2-6.el10.ppc64le.rpm
+    repoid: codeready-builder-for-ubi-10-ppc64le-rpms
+    size: 177186
+    checksum: sha256:59cd5525591072a4f8492a6fcb650a0b8d86b008b1c98c6024d87121765bee7b
+    name: gpgme-devel
+    evr: 1.23.2-6.el10
+    sourcerpm: gpgme-1.23.2-6.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/codeready-builder/os/Packages/l/libassuan-devel-2.5.6-6.el10.ppc64le.rpm
+    repoid: codeready-builder-for-ubi-10-ppc64le-rpms
+    size: 66612
+    checksum: sha256:3ae2de95d10af993d16755d4e2a0289e8255d80f13f94f22a4cd85ed87441780
+    name: libassuan-devel
+    evr: 2.5.6-6.el10
+    sourcerpm: libassuan-2.5.6-6.el10.src.rpm
+  source: []
+  module_metadata: []
+- arch: s390x
+  packages:
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/appstream/os/Packages/l/libseccomp-devel-2.5.6-1.el10.s390x.rpm
+    repoid: ubi-10-for-s390x-appstream-rpms
+    size: 60184
+    checksum: sha256:429fad006cb027cad077ba6276bf9b6c4328c32991d12fa9c7e0f461dae0a5c1
+    name: libseccomp-devel
+    evr: 2.5.6-1.el10
+    sourcerpm: libseccomp-2.5.6-1.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/g/gnupg2-2.4.5-2.el10.s390x.rpm
+    repoid: ubi-10-for-s390x-baseos-rpms
+    size: 2910529
+    checksum: sha256:a5de734ec423ff3a6a33f9b8cec9e50538b59efa2d174d0039c09f217c7de6eb
+    name: gnupg2
+    evr: 2.4.5-2.el10
+    sourcerpm: gnupg2-2.4.5-2.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/g/gpgme-1.23.2-6.el10.s390x.rpm
+    repoid: ubi-10-for-s390x-baseos-rpms
+    size: 234610
+    checksum: sha256:ca179a7dc83f890505762eb874a1cf907db04228aefe4e9c692f7bc2f7aaf1a6
+    name: gpgme
+    evr: 1.23.2-6.el10
+    sourcerpm: gpgme-1.23.2-6.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/l/libassuan-2.5.6-6.el10.s390x.rpm
+    repoid: ubi-10-for-s390x-baseos-rpms
+    size: 72643
+    checksum: sha256:92a8c2716cb6cea36efcf78a15f3d5d3085d2c6ce3a0ffcc5dafa0f64c6c808e
+    name: libassuan
+    evr: 2.5.6-6.el10
+    sourcerpm: libassuan-2.5.6-6.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/l/libgcrypt-1.11.0-5.el10.s390x.rpm
+    repoid: ubi-10-for-s390x-baseos-rpms
+    size: 571047
+    checksum: sha256:0825843e9abe8e3bd95b4e0a0d3b6ae4438a67951777d2fdbd7b913a867f16be
+    name: libgcrypt
+    evr: 1.11.0-5.el10
+    sourcerpm: libgcrypt-1.11.0-5.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/l/libksba-1.6.7-2.el10.s390x.rpm
+    repoid: ubi-10-for-s390x-baseos-rpms
+    size: 172502
+    checksum: sha256:2d33e9ad55fe41fa42947664c331be998ad706f27de623cc04d9c5d205b447fe
+    name: libksba
+    evr: 1.6.7-2.el10
+    sourcerpm: libksba-1.6.7-2.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/n/npth-1.6-21.el10.s390x.rpm
+    repoid: ubi-10-for-s390x-baseos-rpms
+    size: 27471
+    checksum: sha256:dacb5ff5bb1d3fb215bf8b15c66ca006dcba9ff21988ba961220108c7c5c3d8f
+    name: npth
+    evr: 1.6-21.el10
+    sourcerpm: npth-1.6-21.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/codeready-builder/os/Packages/g/gpgme-devel-1.23.2-6.el10.s390x.rpm
+    repoid: codeready-builder-for-ubi-10-s390x-rpms
+    size: 176918
+    checksum: sha256:f05a14ae28bc386dd6d36b8c401ac37aa1adae95c93379f63f743c8a3bea3741
+    name: gpgme-devel
+    evr: 1.23.2-6.el10
+    sourcerpm: gpgme-1.23.2-6.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/codeready-builder/os/Packages/l/libassuan-devel-2.5.6-6.el10.s390x.rpm
+    repoid: codeready-builder-for-ubi-10-s390x-rpms
+    size: 66606
+    checksum: sha256:2e56a05568c17b410270c240e118df1e758497afc8e908ce37a60a945f037d1c
+    name: libassuan-devel
+    evr: 2.5.6-6.el10
+    sourcerpm: libassuan-2.5.6-6.el10.src.rpm
+  source: []
+  module_metadata: []
+- arch: x86_64
+  packages:
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/appstream/os/Packages/l/libseccomp-devel-2.5.6-1.el10.x86_64.rpm
+    repoid: ubi-10-for-x86_64-appstream-rpms
+    size: 60388
+    checksum: sha256:3fac2f7b6905882e7ea2d60c824e2b5f9ada0adee154e7aafddd3530518858c8
+    name: libseccomp-devel
+    evr: 2.5.6-1.el10
+    sourcerpm: libseccomp-2.5.6-1.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/g/gnupg2-2.4.5-2.el10.x86_64.rpm
+    repoid: ubi-10-for-x86_64-baseos-rpms
+    size: 2840853
+    checksum: sha256:0881f22fa98da739f18d3fc15a876bb9da0126778f0f5aae26d366aec7a0fac1
+    name: gnupg2
+    evr: 2.4.5-2.el10
+    sourcerpm: gnupg2-2.4.5-2.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/g/gpgme-1.23.2-6.el10.x86_64.rpm
+    repoid: ubi-10-for-x86_64-baseos-rpms
+    size: 227902
+    checksum: sha256:31260f9083d91ebcc843175feb75e9694b0a8ea15a81ff071ad18222e300a06d
+    name: gpgme
+    evr: 1.23.2-6.el10
+    sourcerpm: gpgme-1.23.2-6.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/l/libassuan-2.5.6-6.el10.x86_64.rpm
+    repoid: ubi-10-for-x86_64-baseos-rpms
+    size: 73193
+    checksum: sha256:cd48f3f30fd39373d00d82f22848d8e92717929fcb94f78f5d10093f2cdf2ce6
+    name: libassuan
+    evr: 2.5.6-6.el10
+    sourcerpm: libassuan-2.5.6-6.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/l/libgcrypt-1.11.0-5.el10.x86_64.rpm
+    repoid: ubi-10-for-x86_64-baseos-rpms
+    size: 603055
+    checksum: sha256:8df67cb1f6e950e27164a01879ab9ae28d61f88deba46d1f20ae9ccea94800c9
+    name: libgcrypt
+    evr: 1.11.0-5.el10
+    sourcerpm: libgcrypt-1.11.0-5.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/l/libksba-1.6.7-2.el10.x86_64.rpm
+    repoid: ubi-10-for-x86_64-baseos-rpms
+    size: 167004
+    checksum: sha256:b6f586b627a8e0aa6aab1d390b372806c6abace9335e6db57a41b3805c6eb9e2
+    name: libksba
+    evr: 1.6.7-2.el10
+    sourcerpm: libksba-1.6.7-2.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/n/npth-1.6-21.el10.x86_64.rpm
+    repoid: ubi-10-for-x86_64-baseos-rpms
+    size: 27877
+    checksum: sha256:928bfce204f95b55f964ebcb61b00eed2eefab910b1e6305f484b4489c8ec8f4
+    name: npth
+    evr: 1.6-21.el10
+    sourcerpm: npth-1.6-21.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/codeready-builder/os/Packages/g/gpgme-devel-1.23.2-6.el10.x86_64.rpm
+    repoid: codeready-builder-for-ubi-10-x86_64-rpms
+    size: 175777
+    checksum: sha256:5f051ac52394bd41272330b622a9bbe9956209ac5dd6b75436921b5c0c7a5196
+    name: gpgme-devel
+    evr: 1.23.2-6.el10
+    sourcerpm: gpgme-1.23.2-6.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/codeready-builder/os/Packages/l/libassuan-devel-2.5.6-6.el10.x86_64.rpm
+    repoid: codeready-builder-for-ubi-10-x86_64-rpms
+    size: 66656
+    checksum: sha256:787d4ae3be5bf5eda26da6f6a5f6d4d3e5638b6ba8a24ccc59a81c8a14e25639
+    name: libassuan-devel
+    evr: 2.5.6-6.el10
+    sourcerpm: libassuan-2.5.6-6.el10.src.rpm
+  source: []
+  module_metadata: []

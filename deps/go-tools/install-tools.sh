@@ -9,7 +9,27 @@ COMMON_LDFLAGS='-s -w'
 
 install_tool() {
     local name=$1
-    local version_attribute=${2:-}
+    shift
+
+    local version_attribute=""
+    local tags=""
+
+    while [[ $# -gt 0 ]]; do
+        case $1 in
+            --version-attr)
+                version_attribute=$2
+                shift 2
+                ;;
+            --tags)
+                tags=$2
+                shift 2
+                ;;
+            *)
+                echo "unknown argument: $1" >&2
+                return 1
+                ;;
+        esac
+    done
 
     cd "$name"
 
@@ -21,20 +41,22 @@ install_tool() {
             ldflags+=" -X ${version_attribute}=${version#v}"
         fi
 
-        go install -ldflags "$ldflags" "$tool_pkg"
+        go install -ldflags "$ldflags" -tags "$tags" "$tool_pkg"
     done
 
     cd ..
 }
 
-install_tool syft "main.version"
+install_tool syft --version-attr "main.version"
 
 install_tool yq
 
-install_tool tkn "github.com/tektoncd/cli/pkg/cmd/version.clientVersion"
+install_tool tkn --version-attr "github.com/tektoncd/cli/pkg/cmd/version.clientVersion"
 
-install_tool cosign "sigs.k8s.io/release-utils/version.gitVersion"
+install_tool cosign --version-attr "sigs.k8s.io/release-utils/version.gitVersion"
 
-install_tool oras "oras.land/oras/internal/version.BuildMetadata"
+install_tool oras --version-attr "oras.land/oras/internal/version.BuildMetadata"
 
-install_tool conftest "github.com/open-policy-agent/conftest/internal/version.Version"
+install_tool conftest --version-attr "github.com/open-policy-agent/conftest/internal/version.Version"
+
+install_tool buildah --tags "seccomp,libsqlite3,exclude_graphdriver_btrfs"

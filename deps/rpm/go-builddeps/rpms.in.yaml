@@ -1,0 +1,28 @@
+# https://github.com/konflux-ci/rpm-lockfile-prototype
+
+contentOrigin:
+  repofiles:
+    - ../ubi.repo
+
+# Build dependencies for buildah were taken from
+# https://github.com/containers/buildah/blob/main/install.md#installation-from-github
+# (after applying judgement to determine which ones are really needed for compilation
+# and which ones are runtime dependencies or just for docs generation).
+packages:
+  # - btrfs-progs-devel  # is an optional buildah dependency, but not available in UBI repos
+  - bzip2
+  - glib2-devel
+  - gpgme-devel
+  - libassuan-devel
+  - libseccomp-devel
+
+arches:
+  - aarch64
+  - x86_64
+  - s390x
+  - ppc64le
+
+context:
+  image: registry.access.redhat.com/ubi10/go-toolset:1.25.3@sha256:4d65503c0066e26df81fbfe93203f0e7dbc23cf503ca2972fef01cdc13cd813c
+
+installWeakDeps: false
