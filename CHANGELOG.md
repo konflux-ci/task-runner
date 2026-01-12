@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
-*Nothing yet.*
+- `openssl` 3.5.1-4.el10_1 => 3.5.1-5.el10_1
 
 ## 1.1.0
 
