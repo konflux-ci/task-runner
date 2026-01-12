@@ -8,12 +8,12 @@ Re-generate with:
 
 | Name                           | Version                        | Install Method                           |
 | ------------------------------ | ------------------------------ | ---------------------------------------- |
-| awscli                         | 1.44.12                        | `pip install`                            |
+| awscli                         | 1.44.15                        | `pip install`                            |
 | bash                           | 5.2.26-6.el10                  | RPM                                      |
 | bc                             | 1.07.1-23.el10                 | RPM                                      |
 | conftest                       | 0.66.0                         | `go install`                             |
 | coreutils-single               | 9.5-6.el10                     | RPM                                      |
-| cosign                         | 2.6.1                          | `go install`                             |
+| cosign                         | 2.6.2                          | `go install`                             |
 | curl                           | 8.12.1-2.el10                  | RPM                                      |
 | findutils                      | 4.10.0-5.el10                  | RPM                                      |
 | gawk                           | 5.3.0-6.el10                   | RPM                                      |
@@ -33,7 +33,7 @@ Re-generate with:
 | sed                            | 4.9-3.el10                     | RPM                                      |
 | select-oci-auth                | 1.0.0                          | [local](./local-tools/select-oci-auth)   |
 | skopeo                         | 1.20.0-2.el10_1                | RPM                                      |
-| syft                           | 1.39.0                         | `go install`                             |
+| syft                           | 1.40.0                         | `go install`                             |
 | tar                            | 1.35-9.el10_1                  | RPM                                      |
 | tkn                            | 0.43.0                         | `go install`                             |
 | yq                             | 4.50.1                         | `go install`                             |
