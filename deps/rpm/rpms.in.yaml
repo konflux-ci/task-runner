@@ -6,15 +6,12 @@ contentOrigin:
 
 packages:
   - bc
-  - gcc  # build-only: needed to compile pip package C extensions, removed after pip install
   - gettext-envsubst
   - git-core
   - jq
   - make
   - openssl
   - python3
-  - python3-devel  # build-only: needed to compile pip package C extensions, removed after pip install
-  - python3-pip
   - skopeo
   - tar
   - zip

@@ -24,7 +24,8 @@ RUN cd /tmp/rpm-installation && \
     rm -r /tmp/rpm-installation
 
 COPY deps/pip/requirements.txt /tmp/requirements.txt
-RUN pip3 install --no-binary :all: --no-cache-dir -r /tmp/requirements.txt && \
+RUN microdnf -y install gcc python3-devel python3-pip && \
+    pip3 install --no-binary :all: --no-cache-dir -r /tmp/requirements.txt && \
     rm /tmp/requirements.txt && \
     microdnf -y remove gcc python3-devel python3-pip && \
     microdnf clean all

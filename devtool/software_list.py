@@ -230,11 +230,6 @@ class _RpmsLockPackage(TypedDict):
     evr: str
 
 
-# RPMs that are installed only for building (e.g. compiling C extensions)
-# and removed afterwards. These should not appear in Installed-Software.md.
-_BUILD_ONLY_RPMS = {"gcc", "python3-devel", "python3-pip"}
-
-
 def list_rpms(project_root: Path) -> list[RPMPackage]:
     rpms_dir = project_root / "deps" / "rpm"
 
@@ -249,8 +244,6 @@ def list_rpms(project_root: Path) -> list[RPMPackage]:
     )
 
     for package_name in package_names:
-        if package_name in _BUILD_ONLY_RPMS:
-            continue
         evrs: dict[str, str | None] = {}
         for arch in rpms_lock["arches"]:
             try:
