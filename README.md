@@ -55,7 +55,7 @@ Process:
 2. Regenerate the lockfile:
 
    ```sh
-   make rpms.lock.yaml
+   make deps/rpm/rpms.lock.yaml
    ```
 
 3. Regenerate auto-generated files:
@@ -287,12 +287,19 @@ pytest tests/local-tools
 These are tests for the tools in `local-tools/`. They execute the tools directly
 on your machine and verify the expected behavior.
 
-### Updating RPM Lockfile
+### Updating RPM Lockfiles
 
-After modifying `deps/rpm/rpms.in.yaml`:
+After modifying a `${subdirectory}/rpms.in.yaml` file, regenerate the corresponding
+lockfile:
 
 ```sh
-make rpms.lock.yaml
+make ${subdirectory}/rpms.lock.yaml
+```
+
+Or update all the lockfiles at the same time:
+
+```sh
+make all-rpm-locks
 ```
 
 This uses [rpm-lockfile-prototype] to resolve and lock package versions.
