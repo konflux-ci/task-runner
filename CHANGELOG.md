@@ -7,7 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
-*Nothing yet.*
+- `buildah` added (1.42.2)
+- `crun` added (1.23.1-1.el10_0)
+- `fuse-overlayfs` added (1.16-1.el10_1)
+
+Note that using `buildah` may require extra configuration on the user's side.
+See [docs/buildah.md](./docs/buildah.md) for more details.
 
 ## 1.1.1
 
