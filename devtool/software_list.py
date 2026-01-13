@@ -244,6 +244,11 @@ def list_rpms(project_root: Path) -> list[RPMPackage]:
     )
 
     for package_name in package_names:
+        if package_name.startswith("containers-common"):
+            # These are "meta packages" that group together the dependencies
+            # for skopeo/podman/buildah, not real packages
+            continue
+
         evrs: dict[str, str | None] = {}
         for arch in rpms_lock["arches"]:
             try:

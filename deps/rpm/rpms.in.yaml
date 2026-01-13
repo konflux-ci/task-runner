@@ -6,6 +6,9 @@ contentOrigin:
 
 packages:
   - bc
+  - containers-common-extra  # A set of dependencies for buildah
+  - crun  # For buildah, enables isolation mechanisms other than chroot
+  - fuse-overlayfs  # For buildah, enables overlayfs if kernel-native implementation is not usable
   - gettext-envsubst
   - git-core
   - jq

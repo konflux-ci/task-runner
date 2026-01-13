@@ -15,8 +15,10 @@ Re-generate with:
 | conftest                       | 0.66.0                         | `go install`                             |
 | coreutils-single               | 9.5-6.el10                     | RPM                                      |
 | cosign                         | 2.6.1                          | `go install`                             |
+| crun                           | 1.23.1-1.el10_0                | RPM                                      |
 | curl                           | 8.12.1-2.el10                  | RPM                                      |
 | findutils                      | 4.10.0-5.el10                  | RPM                                      |
+| fuse-overlayfs                 | 1.16-1.el10_1                  | RPM                                      |
 | gawk                           | 5.3.0-6.el10                   | RPM                                      |
 | gettext-envsubst               | 0.22.5-6.el10                  | RPM                                      |
 | git-core                       | 2.47.3-1.el10_0                | RPM                                      |
