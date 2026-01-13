@@ -47,8 +47,17 @@ ENV RETRY_STOP_IF_STDERR_MATCHES='unauthorized'
 RUN useradd -u 1000 -g 0 -s /bin/sh -d /home/taskuser taskuser && \
     chown -R 1000:0 /home/taskuser && \
     chmod -R 770 /home/taskuser
+
+# Define subuid and subgid ranges that fit within 2^16 for root and taskuser.
+# Without this, attempting to run containers inside the task-runner container would
+# likely result in failure when trying to use a UID that isn't available in the userns.
+RUN echo "root:1:65535" | tee /etc/sub{uid,gid} && \
+    echo "taskuser:1001:64535" | tee -a /etc/sub{uid,gid}
+
 USER 1000
 # Set HOME variable to a writable location.
 # By default it's `/` and causes 'permission denied' problems when writing files.
 # The above can cause issue to credentials propagation into Tekton task pods.
 ENV HOME=/home/taskuser
+
+ENV BUILDAH_ISOLATION=chroot

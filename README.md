@@ -24,6 +24,11 @@ tools and their versions.
 > To see the software installed in a specific version of the runner image,
 > switch to the corresponding version tag.
 
+You can find more information about specific tools (in cases where more information
+is necessary) in the `docs/` folder:
+
+- [docs/buildah.md](./docs/buildah.md)
+
 ## Adding New Tools
 
 ### Criteria
