@@ -33,3 +33,13 @@ COPY local-tools/select-oci-auth/select-oci-auth.sh /usr/local/bin/select-oci-au
 COPY local-tools/retry/retry.sh                     /usr/local/bin/retry
 
 ENV RETRY_STOP_IF_STDERR_MATCHES='unauthorized'
+
+# Create a non root user whos home directory belongs to the root group.
+RUN useradd -u 1000 -g 0 -s /bin/sh -d /home/taskuser taskuser && \
+    chown -R 1000:0 /home/taskuser && \
+    chmod -R 770 /home/taskuser
+USER 1000
+# Set HOME variable to a writable location.
+# By default it's `/` and causes 'permission denied' problems when writing files.
+# The above can cause issue to credentials propagation into Tekton task pods.
+ENV HOME=/home/taskuser

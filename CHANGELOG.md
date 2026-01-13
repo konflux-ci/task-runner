@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+*Nothing yet.*
+
+## 1.1.1
+
+Date: 2026-01-14
+
+- Create a non root `taskuser` user to run task pod with.
+- Set `HOME` environment variable to `/home/taskuser`
+  and allow access to it to all users in the `root` group to avoid permission issues.
+  It's needed in case the orchestrator changes user ID the container runs with.
+  This is also important for Tekton credentials propagation into the task pods.
 - `openssl` 3.5.1-4.el10_1 => 3.5.1-5.el10_1
 
 ## 1.1.0
