@@ -66,11 +66,6 @@ def renovate_json(go_packages: list[GoPackage]) -> dict[str, Any]:
                     "matchFileNames": ["Containerfile"],
                     "groupName": "Base images",
                 },
-                {
-                    # Follow Golang version tags (1.x), not RHEL version tags (10.x)
-                    "matchPackageNames": ["registry.access.redhat.com/ubi10/go-toolset"],
-                    "allowedVersions": "< 2.0",
-                },
             ]
         },
         "github-actions": {
@@ -81,6 +76,17 @@ def renovate_json(go_packages: list[GoPackage]) -> dict[str, Any]:
                 },
             ]
         },
+        "customManagers": [
+            {
+                "customType": "regex",
+                "fileMatch": [r".*/rpms\.in\.yaml$"],
+                "matchStrings": [
+                    r"image:\s+(?<depName>[^:]+):(?<currentValue>[^@]+)@(?<currentDigest>sha256:[a-f0-9]+)"
+                ],
+                "datasourceTemplate": "docker",
+                "autoReplaceStringTemplate": "image: {{{depName}}}:{{{newValue}}}@{{{newDigest}}}",
+            },
+        ],
         # IMPORTANT: keep the top-level packageRules as minimal as possible!
         # When possible, nest the rules under $pkg_manager.packageRules.
         # Otherwise, there's a high risk that MintMaker's default configuration
@@ -92,6 +98,18 @@ def renovate_json(go_packages: list[GoPackage]) -> dict[str, Any]:
             {
                 "matchDatasources": ["pypi"],
                 "groupName": "Python dependencies",
+            },
+            {
+                "matchManagers": ["custom.regex"],
+                "matchFileNames": ["**/rpms.in.yaml"],
+                # The 'image' attribute in rpms.in.yaml refers to a base image,
+                # update them in the same PR that updates base images.
+                "groupName": "Base images",
+            },
+            {
+                # Follow Golang version tags (1.x), not RHEL version tags (10.x)
+                "matchPackageNames": ["registry.access.redhat.com/ubi10/go-toolset"],
+                "allowedVersions": "< 2.0",
             },
         ],
         # Run `go mod tidy` to update the dependencies of our direct dependencies

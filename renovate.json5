@@ -87,12 +87,6 @@
           "Containerfile"
         ],
         "groupName": "Base images"
-      },
-      {
-        "matchPackageNames": [
-          "registry.access.redhat.com/ubi10/go-toolset"
-        ],
-        "allowedVersions": "< 2.0"
       }
     ]
   },
@@ -106,12 +100,40 @@
       }
     ]
   },
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": [
+        ".*/rpms\\.in\\.yaml$"
+      ],
+      "matchStrings": [
+        "image:\\s+(?<depName>[^:]+):(?<currentValue>[^@]+)@(?<currentDigest>sha256:[a-f0-9]+)"
+      ],
+      "datasourceTemplate": "docker",
+      "autoReplaceStringTemplate": "image: {{{depName}}}:{{{newValue}}}@{{{newDigest}}}"
+    }
+  ],
   "packageRules": [
     {
       "matchDatasources": [
         "pypi"
       ],
       "groupName": "Python dependencies"
+    },
+    {
+      "matchManagers": [
+        "custom.regex"
+      ],
+      "matchFileNames": [
+        "**/rpms.in.yaml"
+      ],
+      "groupName": "Base images"
+    },
+    {
+      "matchPackageNames": [
+        "registry.access.redhat.com/ubi10/go-toolset"
+      ],
+      "allowedVersions": "< 2.0"
     }
   ],
   "postUpdateOptions": [
