@@ -208,6 +208,7 @@ These two are an exception to the rule. We don't intend to add more local tools.
 - Python 3.12+
 - [uv](https://docs.astral.sh/uv/) (Python package manager)
 - Podman
+- Skopeo
 
 ### Setup
 
