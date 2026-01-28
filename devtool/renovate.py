@@ -85,7 +85,7 @@ def renovate_json(go_packages: list[GoPackage]) -> dict[str, Any]:
         "customManagers": [
             {
                 "customType": "regex",
-                "fileMatch": [r".*/rpms\.in\.yaml$"],
+                "managerFilePatterns": ["**/rpms.in.yaml"],
                 "matchStrings": [
                     r"image:\s+(?<depName>[^:]+):(?<currentValue>[^@]+)@(?<currentDigest>sha256:[a-f0-9]+)"
                 ],

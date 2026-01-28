@@ -178,8 +178,8 @@
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": [
-        ".*/rpms\\.in\\.yaml$"
+      "managerFilePatterns": [
+        "**/rpms.in.yaml"
       ],
       "matchStrings": [
         "image:\\s+(?<depName>[^:]+):(?<currentValue>[^@]+)@(?<currentDigest>sha256:[a-f0-9]+)"
