@@ -28,7 +28,7 @@ Re-generate with:
 | make                           | 4.4.1-9.el10                   | RPM                                      |
 | microdnf                       | 3.10.1-1.el10                  | RPM                                      |
 | oc                             | 4.20.0                         | Git submodule (Go)                       |
-| openssl                        | 3.5.1-5.el10_1                 | RPM                                      |
+| openssl                        | 3.5.1-7.el10_1                 | RPM                                      |
 | oras                           | 1.3.0                          | `go install`                             |
 | python3                        | 3.12.12-1.el10_1               | RPM                                      |
 | retry                          | 1.0.0                          | [local](./local-tools/retry)             |
