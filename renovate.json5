@@ -21,7 +21,7 @@
         "matchManagers": [
           "git-submodules"
         ],
-        "groupName": "Runner software"
+        "groupName": "Non-RPM dependencies"
       },
       {
         "matchManagers": [
@@ -53,7 +53,7 @@
           "github.com/containers/buildah"
         ],
         "enabled": true,
-        "groupName": "Runner software"
+        "groupName": "Non-RPM dependencies"
       },
       {
         "matchManagers": [
@@ -66,7 +66,7 @@
           "github.com/open-policy-agent/conftest"
         ],
         "enabled": true,
-        "groupName": "Runner software"
+        "groupName": "Non-RPM dependencies"
       },
       {
         "matchManagers": [
@@ -79,7 +79,7 @@
           "github.com/sigstore/cosign/v2"
         ],
         "enabled": true,
-        "groupName": "Runner software"
+        "groupName": "Non-RPM dependencies"
       },
       {
         "matchManagers": [
@@ -92,7 +92,7 @@
           "oras.land/oras"
         ],
         "enabled": true,
-        "groupName": "Runner software"
+        "groupName": "Non-RPM dependencies"
       },
       {
         "matchManagers": [
@@ -105,7 +105,7 @@
           "github.com/anchore/syft"
         ],
         "enabled": true,
-        "groupName": "Runner software"
+        "groupName": "Non-RPM dependencies"
       },
       {
         "matchManagers": [
@@ -118,7 +118,7 @@
           "github.com/tektoncd/cli"
         ],
         "enabled": true,
-        "groupName": "Runner software"
+        "groupName": "Non-RPM dependencies"
       },
       {
         "matchManagers": [
@@ -131,7 +131,7 @@
           "github.com/mikefarah/yq/v4"
         ],
         "enabled": true,
-        "groupName": "Runner software"
+        "groupName": "Non-RPM dependencies"
       }
     ]
   },
@@ -139,9 +139,9 @@
     "packageRules": [
       {
         "matchFileNames": [
-          "deps/rpm/*"
+          "deps/rpm/**"
         ],
-        "groupName": "Runner software"
+        "groupName": "RPMs"
       }
     ]
   },
@@ -151,7 +151,7 @@
         "matchFileNames": [
           "deps/pip/*"
         ],
-        "groupName": "Runner software"
+        "groupName": "Non-RPM dependencies"
       }
     ]
   },

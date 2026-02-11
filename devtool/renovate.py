@@ -20,7 +20,7 @@ def renovate_json(go_packages: list[GoPackage]) -> dict[str, Any]:
             "matchFileNames": [f"deps/go-tools/{p.name}/*"],
             "matchPackageNames": [p.module_path],
             "enabled": True,
-            "groupName": "Runner software",
+            "groupName": "Non-RPM dependencies",
         }
         for p in go_packages
     )
@@ -37,7 +37,7 @@ def renovate_json(go_packages: list[GoPackage]) -> dict[str, Any]:
             "packageRules": [
                 {
                     "matchManagers": ["git-submodules"],
-                    "groupName": "Runner software",
+                    "groupName": "Non-RPM dependencies",
                 },
                 {
                     # Use regex versioning scheme for oc, which doesn't have proper semver tags
@@ -53,8 +53,8 @@ def renovate_json(go_packages: list[GoPackage]) -> dict[str, Any]:
         "rpm-lockfile": {
             "packageRules": [
                 {
-                    "matchFileNames": ["deps/rpm/*"],
-                    "groupName": "Runner software",
+                    "matchFileNames": ["deps/rpm/**"],
+                    "groupName": "RPMs",
                 },
             ]
         },
@@ -62,7 +62,7 @@ def renovate_json(go_packages: list[GoPackage]) -> dict[str, Any]:
             "packageRules": [
                 {
                     "matchFileNames": ["deps/pip/*"],
-                    "groupName": "Runner software",
+                    "groupName": "Non-RPM dependencies",
                 },
             ]
         },
