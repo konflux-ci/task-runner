@@ -212,7 +212,7 @@ def _fetch_remote_tags(submodule_path: Path) -> list[str]:
 class _RpmsIn(TypedDict):
     packages: NotRequired[list[str]]
     reinstallPackages: NotRequired[list[str]]
-    updatePackages: NotRequired[list[str]]
+    upgradePackages: NotRequired[list[str]]
     arches: list[str]
 
 
@@ -237,10 +237,19 @@ def list_rpms(project_root: Path) -> list[RPMPackage]:
     rpms_lock: _RpmsLock = yaml.safe_load((rpms_dir / "rpms.lock.yaml").read_text())
 
     packages: list[RPMPackage] = []
+
+    packages_to_reinstall = rpms_in.get("reinstallPackages", [])
+    packages_to_upgrade = rpms_in.get("upgradePackages", [])
+
+    # All packages that are supposed to be upgraded are expected to also be reinstalled in order to fill the lockfile
+    if set(packages_to_reinstall) != set(packages_to_upgrade):
+        raise ValueError(
+            f"At least one package is not included in both 'reinstallPackages' and 'upgradePackages': "
+            f"{set(packages_to_reinstall).symmetric_difference(packages_to_upgrade)}")
+
     package_names = (
         rpms_in.get("packages", [])
-        + rpms_in.get("reinstallPackages", [])
-        + rpms_in.get("updatePackages", [])
+        + packages_to_reinstall
     )
 
     for package_name in package_names:
