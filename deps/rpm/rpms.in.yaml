@@ -32,6 +32,19 @@ reinstallPackages:
   - rpm
   - sed
 
+# Same ones as in reinstallPackages
+# If there is a newer version than in the image, update it
+upgradePackages:
+  - bash
+  - coreutils-single
+  - curl
+  - findutils
+  - gawk
+  - grep
+  - microdnf
+  - rpm
+  - sed
+
 arches:
   - aarch64
   - x86_64
