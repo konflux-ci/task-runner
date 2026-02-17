@@ -193,13 +193,13 @@ arches:
     name: gettext-envsubst
     evr: 0.22.5-6.el10
     sourcerpm: gettext-0.22.5-6.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/g/gnupg2-2.4.5-3.el10_1.aarch64.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/g/gnupg2-2.4.5-4.el10_1.aarch64.rpm
     repoid: ubi-10-for-aarch64-baseos-rpms
-    size: 2803284
-    checksum: sha256:2ec552226dbadfbc319cff274f52f40f80fe9973342553055395c11c1fe26e32
+    size: 2803616
+    checksum: sha256:2c243053d1603333295e103180cbb7b967a7e079ebc113048a64cb824383f48c
     name: gnupg2
-    evr: 2.4.5-3.el10_1
-    sourcerpm: gnupg2-2.4.5-3.el10_1.src.rpm
+    evr: 2.4.5-4.el10_1
+    sourcerpm: gnupg2-2.4.5-4.el10_1.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/g/gpgme-1.23.2-6.el10.aarch64.rpm
     repoid: ubi-10-for-aarch64-baseos-rpms
     size: 219778
@@ -1314,13 +1314,13 @@ arches:
     name: gdbm-libs
     evr: 1:1.23-12.el10_0
     sourcerpm: gdbm-1.23-12.el10_0.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/g/gnupg2-2.4.5-3.el10_1.s390x.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/g/gnupg2-2.4.5-4.el10_1.s390x.rpm
     repoid: ubi-10-for-s390x-baseos-rpms
-    size: 2913263
-    checksum: sha256:5cac504ff763ea6daabb18e7bd411a96da401098e39fbf2a749eb387b8da2025
+    size: 2913766
+    checksum: sha256:980a52309f4848914c373be2804f79eb17bb70ac8bf51ac6c13f44a99ef6fcbb
     name: gnupg2
-    evr: 2.4.5-3.el10_1
-    sourcerpm: gnupg2-2.4.5-3.el10_1.src.rpm
+    evr: 2.4.5-4.el10_1
+    sourcerpm: gnupg2-2.4.5-4.el10_1.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/g/gpgme-1.23.2-6.el10.s390x.rpm
     repoid: ubi-10-for-s390x-baseos-rpms
     size: 234610
@@ -1871,13 +1871,13 @@ arches:
     name: gettext-envsubst
     evr: 0.22.5-6.el10
     sourcerpm: gettext-0.22.5-6.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/g/gnupg2-2.4.5-3.el10_1.x86_64.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/g/gnupg2-2.4.5-4.el10_1.x86_64.rpm
     repoid: ubi-10-for-x86_64-baseos-rpms
-    size: 2847681
-    checksum: sha256:fd1923465d4c51c430c6a2a1d1a5eb9aef343c4e7865677295619c323f4b1f09
+    size: 2848836
+    checksum: sha256:d7a616421952eafd27811264477b1a599b92b6bf59f4e1a1de5561b2c3a0caee
     name: gnupg2
-    evr: 2.4.5-3.el10_1
-    sourcerpm: gnupg2-2.4.5-3.el10_1.src.rpm
+    evr: 2.4.5-4.el10_1
+    sourcerpm: gnupg2-2.4.5-4.el10_1.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/g/gpgme-1.23.2-6.el10.x86_64.rpm
     repoid: ubi-10-for-x86_64-baseos-rpms
     size: 227902

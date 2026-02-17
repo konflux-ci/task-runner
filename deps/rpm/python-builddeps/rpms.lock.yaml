@@ -25,13 +25,13 @@ arches:
     name: glibc-devel
     evr: 2.39-58.el10_1.7
     sourcerpm: glibc-2.39-58.el10_1.7.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/appstream/os/Packages/k/kernel-headers-6.12.0-124.35.1.el10_1.aarch64.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/appstream/os/Packages/k/kernel-headers-6.12.0-124.38.1.el10_1.aarch64.rpm
     repoid: ubi-10-for-aarch64-appstream-rpms
-    size: 3369249
-    checksum: sha256:06ee9b2daa7be6c0ca46c586c557d85177631f057af86a9506c9b600c9208041
+    size: 3370785
+    checksum: sha256:3a3a07c453fc71fdeb48f866c1754df16349a2a0164b999c3c5382b0f565637c
     name: kernel-headers
-    evr: 6.12.0-124.35.1.el10_1
-    sourcerpm: kernel-6.12.0-124.35.1.el10_1.src.rpm
+    evr: 6.12.0-124.38.1.el10_1
+    sourcerpm: kernel-6.12.0-124.38.1.el10_1.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/appstream/os/Packages/l/libasan-14.3.1-2.1.el10.aarch64.rpm
     repoid: ubi-10-for-aarch64-appstream-rpms
     size: 535873
@@ -481,13 +481,13 @@ arches:
     name: glibc-devel
     evr: 2.39-58.el10_1.7
     sourcerpm: glibc-2.39-58.el10_1.7.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/appstream/os/Packages/k/kernel-headers-6.12.0-124.35.1.el10_1.s390x.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/appstream/os/Packages/k/kernel-headers-6.12.0-124.38.1.el10_1.s390x.rpm
     repoid: ubi-10-for-s390x-appstream-rpms
-    size: 3398689
-    checksum: sha256:487421895b103c6c3d1fa779d16f3161e6871f1bd0eedad6831e54c447b76faf
+    size: 3400205
+    checksum: sha256:5439f94343e4422a7fe392bd25fdb3e6227fdf86681825f414f66f67609684fa
     name: kernel-headers
-    evr: 6.12.0-124.35.1.el10_1
-    sourcerpm: kernel-6.12.0-124.35.1.el10_1.src.rpm
+    evr: 6.12.0-124.38.1.el10_1
+    sourcerpm: kernel-6.12.0-124.38.1.el10_1.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/appstream/os/Packages/l/libasan-14.3.1-2.1.el10.s390x.rpm
     repoid: ubi-10-for-s390x-appstream-rpms
     size: 573474
@@ -709,13 +709,13 @@ arches:
     name: glibc-devel
     evr: 2.39-58.el10_1.7
     sourcerpm: glibc-2.39-58.el10_1.7.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/appstream/os/Packages/k/kernel-headers-6.12.0-124.35.1.el10_1.x86_64.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/appstream/os/Packages/k/kernel-headers-6.12.0-124.38.1.el10_1.x86_64.rpm
     repoid: ubi-10-for-x86_64-appstream-rpms
-    size: 3407029
-    checksum: sha256:fffa63db19c5f804a5a18b16c76ad07263ad46399c5496a279ea85ebd36aebb1
+    size: 3408573
+    checksum: sha256:fa11cd6ddeb439e40a2175f1d84d16a80319ddd3cae53ed9f1314e7f417214f5
     name: kernel-headers
-    evr: 6.12.0-124.35.1.el10_1
-    sourcerpm: kernel-6.12.0-124.35.1.el10_1.src.rpm
+    evr: 6.12.0-124.38.1.el10_1
+    sourcerpm: kernel-6.12.0-124.38.1.el10_1.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/appstream/os/Packages/l/libmpc-1.3.1-7.el10.x86_64.rpm
     repoid: ubi-10-for-x86_64-appstream-rpms
     size: 75330
