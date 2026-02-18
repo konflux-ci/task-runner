@@ -36,7 +36,7 @@ Re-generate with:
 | sed                            | 4.9-3.el10                     | RPM                                      |
 | select-oci-auth                | 1.0.0                          | [local](./local-tools/select-oci-auth)   |
 | skopeo                         | 1.20.0-2.el10_1                | RPM                                      |
-| syft                           | 1.41.1                         | `go install`                             |
+| syft                           | 1.42.1                         | `go install`                             |
 | tar                            | 1.35-9.el10_1                  | RPM                                      |
 | tkn                            | 0.43.0                         | `go install`                             |
 | yq                             | 4.52.2                         | `go install`                             |
