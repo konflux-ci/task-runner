@@ -78,13 +78,13 @@ arches:
     name: libseccomp-devel
     evr: 2.5.6-1.el10
     sourcerpm: libseccomp-2.5.6-1.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/g/gnupg2-2.4.5-3.el10_1.ppc64le.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/g/gnupg2-2.4.5-4.el10_1.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-baseos-rpms
-    size: 3006453
-    checksum: sha256:83ad31f5df04bee037b6479da538efe236876e95027f6f5ffe81d09a49c8592e
+    size: 3005701
+    checksum: sha256:f3fa77c029a06138d7843129a2ca8ca071d008e14cab6bd44f362fb262e9a761
     name: gnupg2
-    evr: 2.4.5-3.el10_1
-    sourcerpm: gnupg2-2.4.5-3.el10_1.src.rpm
+    evr: 2.4.5-4.el10_1
+    sourcerpm: gnupg2-2.4.5-4.el10_1.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/g/gpgme-1.23.2-6.el10.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-baseos-rpms
     size: 243360
