@@ -31,11 +31,10 @@ fi
 dnf_cmd+=(-y --setopt install_weak_deps=0)
 
 mapfile -t packages < <(list_packages_with_evrs packages)
-if [[ ${#packages[@]} -gt 0 ]]; then
-    "${dnf_cmd[@]}" install "${packages[@]}"
-fi
-
 mapfile -t reinstall_packages < <(list_packages_with_evrs reinstallPackages)
-if [[ ${#reinstall_packages[@]} -gt 0 ]]; then
-    "${dnf_cmd[@]}" reinstall "${reinstall_packages[@]}"
-fi
+mapfile -t upgrade_packages < <(list_packages_with_evrs upgradePackages)
+
+all_packages=("${packages[@]}" "${reinstall_packages[@]}" "${upgrade_packages[@]}")
+
+"${dnf_cmd[@]}" install "${all_packages[@]}"
+
