@@ -9,6 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - *Nothing yet.*
 
+## 1.4.0
+
+Date: 2026-02-19
+
+- `syft` 1.41.1 => 1.42.1
+- `curl` 8.12.1-2.el10 => 8.12.1-2.el10_1.2
+- `python3` 3.12.12-1.el10_1 => 3.12.12-3.el10_1
+
 ## 1.3.0
 
 Date: 2026-02-03
