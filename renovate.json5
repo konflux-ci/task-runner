@@ -142,7 +142,8 @@
         "matchFileNames": [
           "deps/rpm/**"
         ],
-        "groupName": "RPMs"
+        "groupName": "RPMs",
+        "automerge": true
       }
     ]
   },
