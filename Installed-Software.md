@@ -35,7 +35,7 @@ Re-generate with:
 | rpm                            | 4.19.1.1-20.el10               | RPM                                      |
 | sed                            | 4.9-3.el10                     | RPM                                      |
 | select-oci-auth                | 1.0.0                          | [local](./local-tools/select-oci-auth)   |
-| skopeo                         | 1.20.0-2.el10_1                | RPM                                      |
+| skopeo                         | 1.20.0-3.el10_1                | RPM                                      |
 | syft                           | 1.42.1                         | `go install`                             |
 | tar                            | 1.35-9.el10_1                  | RPM                                      |
 | tkn                            | 0.43.0                         | `go install`                             |
