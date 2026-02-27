@@ -60,13 +60,13 @@ arches:
     name: passt
     evr: 0^20250512.g8ec1341-4.el10_1
     sourcerpm: passt-0^20250512.g8ec1341-4.el10_1.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/appstream/os/Packages/s/skopeo-1.20.0-2.el10_1.aarch64.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/appstream/os/Packages/s/skopeo-1.20.0-3.el10_1.aarch64.rpm
     repoid: ubi-10-for-aarch64-appstream-rpms
-    size: 7360189
-    checksum: sha256:a23cd1c2f3aaf612a66016f9c2d40df0c95622fd1c8837a16cdfcaf8c9378340
+    size: 7367206
+    checksum: sha256:dcfe8a8aeec5e631995877e8e5280b123c0259f55d5b2685b5014a759c1358bb
     name: skopeo
-    evr: 2:1.20.0-2.el10_1
-    sourcerpm: skopeo-1.20.0-2.el10_1.src.rpm
+    evr: 2:1.20.0-3.el10_1
+    sourcerpm: skopeo-1.20.0-3.el10_1.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/a/authselect-1.5.0-8.el10.aarch64.rpm
     repoid: ubi-10-for-aarch64-baseos-rpms
     size: 151301
@@ -221,13 +221,13 @@ arches:
     name: gzip
     evr: 1.13-3.el10
     sourcerpm: gzip-1.13-3.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/i/iptables-libs-1.8.11-11.el10.aarch64.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/i/iptables-libs-1.8.11-12.el10_1.aarch64.rpm
     repoid: ubi-10-for-aarch64-baseos-rpms
-    size: 473984
-    checksum: sha256:ad54d6a53fa44c59f11c32a89ecf4157322c72fc01eb146d02c42e00a1c69c9c
+    size: 472434
+    checksum: sha256:c9e6f19c824195c8fb5252ddfadbbaa8dd1d73cfa3b01fca819acdcd530f4811
     name: iptables-libs
-    evr: 1.8.11-11.el10
-    sourcerpm: iptables-1.8.11-11.el10.src.rpm
+    evr: 1.8.11-12.el10_1
+    sourcerpm: iptables-1.8.11-12.el10_1.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/j/jansson-2.14-3.el10.aarch64.rpm
     repoid: ubi-10-for-aarch64-baseos-rpms
     size: 50745
@@ -403,13 +403,13 @@ arches:
     name: mpdecimal
     evr: 2.5.1-12.el10
     sourcerpm: mpdecimal-2.5.1-12.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/n/nftables-1.1.1-6.el10_1.aarch64.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/n/nftables-1.1.1-9.el10_1.aarch64.rpm
     repoid: ubi-10-for-aarch64-baseos-rpms
-    size: 435050
-    checksum: sha256:e1a82e80e2926c56fc2b664896414c7507800684e4af3d517d5009641a609d08
+    size: 435272
+    checksum: sha256:bb3252ccfdbad990e80e019f055a027c37eda3553279982260d3d9512a389de2
     name: nftables
-    evr: 1:1.1.1-6.el10_1
-    sourcerpm: nftables-1.1.1-6.el10_1.src.rpm
+    evr: 1:1.1.1-9.el10_1
+    sourcerpm: nftables-1.1.1-9.el10_1.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/n/npth-1.6-21.el10.aarch64.rpm
     repoid: ubi-10-for-aarch64-baseos-rpms
     size: 27652
@@ -617,13 +617,13 @@ arches:
     name: passt
     evr: 0^20250512.g8ec1341-4.el10_1
     sourcerpm: passt-0^20250512.g8ec1341-4.el10_1.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/appstream/os/Packages/s/skopeo-1.20.0-2.el10_1.ppc64le.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/appstream/os/Packages/s/skopeo-1.20.0-3.el10_1.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-appstream-rpms
-    size: 7432964
-    checksum: sha256:fe6204a783c639756734082c395e13640a0795c45c3f2218f00c1df81a183991
+    size: 7438323
+    checksum: sha256:f11fab87eac4dd790a799b3b5577fa67352c03236d9a9854a59bafde5ae90200
     name: skopeo
-    evr: 2:1.20.0-2.el10_1
-    sourcerpm: skopeo-1.20.0-2.el10_1.src.rpm
+    evr: 2:1.20.0-3.el10_1
+    sourcerpm: skopeo-1.20.0-3.el10_1.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/a/authselect-1.5.0-8.el10.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-baseos-rpms
     size: 152408
@@ -778,13 +778,13 @@ arches:
     name: gzip
     evr: 1.13-3.el10
     sourcerpm: gzip-1.13-3.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/i/iptables-libs-1.8.11-11.el10.ppc64le.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/i/iptables-libs-1.8.11-12.el10_1.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-baseos-rpms
-    size: 486374
-    checksum: sha256:e4defda3f03173d1abfd78573d229756d2a86dbf99551bc66e9e1337cb15d13c
+    size: 483010
+    checksum: sha256:1feb8062c5e43ec6a6c1530e3d0e2c4b39bf18c8dd495feadc640d54932c5aca
     name: iptables-libs
-    evr: 1.8.11-11.el10
-    sourcerpm: iptables-1.8.11-11.el10.src.rpm
+    evr: 1.8.11-12.el10_1
+    sourcerpm: iptables-1.8.11-12.el10_1.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/j/jansson-2.14-3.el10.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-baseos-rpms
     size: 54545
@@ -967,13 +967,13 @@ arches:
     name: mpdecimal
     evr: 2.5.1-12.el10
     sourcerpm: mpdecimal-2.5.1-12.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/n/nftables-1.1.1-6.el10_1.ppc64le.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/n/nftables-1.1.1-9.el10_1.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-baseos-rpms
-    size: 467846
-    checksum: sha256:f73a455260edebdb5778b1d609dbaa184ce641384e08b955e5dbe7f257ed6a9e
+    size: 468083
+    checksum: sha256:bdbe3c015bd98e0fc753eb4e347bc2d731a449b2c42f92fe3e24bc6825d2889c
     name: nftables
-    evr: 1:1.1.1-6.el10_1
-    sourcerpm: nftables-1.1.1-6.el10_1.src.rpm
+    evr: 1:1.1.1-9.el10_1
+    sourcerpm: nftables-1.1.1-9.el10_1.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/n/npth-1.6-21.el10.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-baseos-rpms
     size: 27832
@@ -1188,13 +1188,13 @@ arches:
     name: passt
     evr: 0^20250512.g8ec1341-4.el10_1
     sourcerpm: passt-0^20250512.g8ec1341-4.el10_1.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/appstream/os/Packages/s/skopeo-1.20.0-2.el10_1.s390x.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/appstream/os/Packages/s/skopeo-1.20.0-3.el10_1.s390x.rpm
     repoid: ubi-10-for-s390x-appstream-rpms
-    size: 8105511
-    checksum: sha256:8ebd9a64b49d1334097577ac8923401a3602830ca08a00092ccfca23676272ad
+    size: 8105779
+    checksum: sha256:4a0bffda1d07c5a168b634bd50b079089f3a5270c0d1c0d8f57cb18db30c845c
     name: skopeo
-    evr: 2:1.20.0-2.el10_1
-    sourcerpm: skopeo-1.20.0-2.el10_1.src.rpm
+    evr: 2:1.20.0-3.el10_1
+    sourcerpm: skopeo-1.20.0-3.el10_1.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/a/authselect-1.5.0-8.el10.s390x.rpm
     repoid: ubi-10-for-s390x-baseos-rpms
     size: 150791
@@ -1342,13 +1342,13 @@ arches:
     name: gzip
     evr: 1.13-3.el10
     sourcerpm: gzip-1.13-3.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/i/iptables-libs-1.8.11-11.el10.s390x.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/i/iptables-libs-1.8.11-12.el10_1.s390x.rpm
     repoid: ubi-10-for-s390x-baseos-rpms
-    size: 472321
-    checksum: sha256:5922c610a037898718f9723396f67855fb0c9ab64fdbbd6601a95ce80aea7d39
+    size: 470474
+    checksum: sha256:fa549c093225276aaf1f522aff118f9a3d030d35914a1cee51e3fae4fabc3378
     name: iptables-libs
-    evr: 1.8.11-11.el10
-    sourcerpm: iptables-1.8.11-11.el10.src.rpm
+    evr: 1.8.11-12.el10_1
+    sourcerpm: iptables-1.8.11-12.el10_1.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/j/jansson-2.14-3.el10.s390x.rpm
     repoid: ubi-10-for-s390x-baseos-rpms
     size: 49596
@@ -1524,13 +1524,13 @@ arches:
     name: mpdecimal
     evr: 2.5.1-12.el10
     sourcerpm: mpdecimal-2.5.1-12.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/n/nftables-1.1.1-6.el10_1.s390x.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/n/nftables-1.1.1-9.el10_1.s390x.rpm
     repoid: ubi-10-for-s390x-baseos-rpms
-    size: 470289
-    checksum: sha256:3707480941bf52ddc7f70bcc09e03d15e4a2bac5562d4b3e719733e6e1dae3d6
+    size: 470575
+    checksum: sha256:bde08cfc18d4f3812838a3d6ad6529f16147a7f37c68732a2e663f4f07d0e361
     name: nftables
-    evr: 1:1.1.1-6.el10_1
-    sourcerpm: nftables-1.1.1-6.el10_1.src.rpm
+    evr: 1:1.1.1-9.el10_1
+    sourcerpm: nftables-1.1.1-9.el10_1.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/n/npth-1.6-21.el10.s390x.rpm
     repoid: ubi-10-for-s390x-baseos-rpms
     size: 27471
@@ -1738,13 +1738,13 @@ arches:
     name: passt
     evr: 0^20250512.g8ec1341-4.el10_1
     sourcerpm: passt-0^20250512.g8ec1341-4.el10_1.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/appstream/os/Packages/s/skopeo-1.20.0-2.el10_1.x86_64.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/appstream/os/Packages/s/skopeo-1.20.0-3.el10_1.x86_64.rpm
     repoid: ubi-10-for-x86_64-appstream-rpms
-    size: 8245401
-    checksum: sha256:10a3796a643608f3ad407baef8c9edc9e24435a4517d9196b521f851c29dfc24
+    size: 8251808
+    checksum: sha256:f8e127f1190e70d8be466a730e07808895ff7fbae706d23ca4fa8435b5b89842
     name: skopeo
-    evr: 2:1.20.0-2.el10_1
-    sourcerpm: skopeo-1.20.0-2.el10_1.src.rpm
+    evr: 2:1.20.0-3.el10_1
+    sourcerpm: skopeo-1.20.0-3.el10_1.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/a/authselect-1.5.0-8.el10.x86_64.rpm
     repoid: ubi-10-for-x86_64-baseos-rpms
     size: 151602
@@ -1899,13 +1899,13 @@ arches:
     name: gzip
     evr: 1.13-3.el10
     sourcerpm: gzip-1.13-3.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/i/iptables-libs-1.8.11-11.el10.x86_64.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/i/iptables-libs-1.8.11-12.el10_1.x86_64.rpm
     repoid: ubi-10-for-x86_64-baseos-rpms
-    size: 458915
-    checksum: sha256:989991dbfee7aeeb3e4aad19c4a90ad6c99e5936edea83bf2b5546e230cc435a
+    size: 457603
+    checksum: sha256:6c432bd72858f15f6122121f20735c156be929dbd14477ed5eb90a0d27412d04
     name: iptables-libs
-    evr: 1.8.11-11.el10
-    sourcerpm: iptables-1.8.11-11.el10.src.rpm
+    evr: 1.8.11-12.el10_1
+    sourcerpm: iptables-1.8.11-12.el10_1.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/j/jansson-2.14-3.el10.x86_64.rpm
     repoid: ubi-10-for-x86_64-baseos-rpms
     size: 49616
@@ -2081,13 +2081,13 @@ arches:
     name: mpdecimal
     evr: 2.5.1-12.el10
     sourcerpm: mpdecimal-2.5.1-12.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/n/nftables-1.1.1-6.el10_1.x86_64.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/n/nftables-1.1.1-9.el10_1.x86_64.rpm
     repoid: ubi-10-for-x86_64-baseos-rpms
-    size: 447191
-    checksum: sha256:28e86d157d974bd487324dd477fd7418306d7f4e8a13b87cafde2f94875c03d3
+    size: 447362
+    checksum: sha256:4f090c509c6df755b9903cc2715af92c892b9766e680a03a596931e31b16c3b9
     name: nftables
-    evr: 1:1.1.1-6.el10_1
-    sourcerpm: nftables-1.1.1-6.el10_1.src.rpm
+    evr: 1:1.1.1-9.el10_1
+    sourcerpm: nftables-1.1.1-9.el10_1.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/n/npth-1.6-21.el10.x86_64.rpm
     repoid: ubi-10-for-x86_64-baseos-rpms
     size: 27877
