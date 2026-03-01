@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/ubi10/go-toolset:1.25.5-1770726582@sha256:1edf7bd8e7175ec53a5eefb4e0008adfe30cb7b5ad6834ed7eeef1df9f1920dd AS go-build
+FROM registry.access.redhat.com/ubi10/go-toolset:1.25.7@sha256:c8d35a1ae1fc7ee3adf85fe379e90faf1fe6f30820a24e3ea8973bbb524a0409 AS go-build
 
 USER 0
 
