@@ -8,10 +8,10 @@ Re-generate with:
 
 | Name                           | Version                        | Install Method                           |
 | ------------------------------ | ------------------------------ | ---------------------------------------- |
-| awscli                         | 1.44.29                        | `pip install`                            |
+| awscli                         | 1.44.49                        | `pip install`                            |
 | bash                           | 5.2.26-6.el10                  | RPM                                      |
 | bc                             | 1.07.1-23.el10                 | RPM                                      |
-| buildah                        | 1.42.2                         | `go install`                             |
+| buildah                        | 1.43.0                         | `go install`                             |
 | conftest                       | 0.66.0                         | `go install`                             |
 | coreutils-single               | 9.5-6.el10                     | RPM                                      |
 | cosign                         | 2.6.2                          | `go install`                             |
@@ -24,10 +24,10 @@ Re-generate with:
 | git-core                       | 2.47.3-1.el10_0                | RPM                                      |
 | grep                           | 3.11-10.el10                   | RPM                                      |
 | jq                             | 1.7.1-11.el10                  | RPM                                      |
-| kubectl                        | 1.35.0                         | Git submodule (Go)                       |
+| kubectl                        | 1.35.2                         | Git submodule (Go)                       |
 | make                           | 4.4.1-9.el10                   | RPM                                      |
 | microdnf                       | 3.10.1-1.el10                  | RPM                                      |
-| oc                             | 4.20.0                         | Git submodule (Go)                       |
+| oc                             | 4.21.0                         | Git submodule (Go)                       |
 | openssl                        | 3.5.1-7.el10_1                 | RPM                                      |
 | oras                           | 1.3.0                          | `go install`                             |
 | python3                        | 3.12.12-3.el10_1               | RPM                                      |
@@ -38,6 +38,6 @@ Re-generate with:
 | skopeo                         | 1.20.0-3.el10_1                | RPM                                      |
 | syft                           | 1.42.1                         | `go install`                             |
 | tar                            | 1.35-9.el10_1                  | RPM                                      |
-| tkn                            | 0.43.0                         | `go install`                             |
+| tkn                            | 0.44.0                         | `go install`                             |
 | yq                             | 4.52.2                         | `go install`                             |
 | zip                            | 3.0-45.el10                    | RPM                                      |
