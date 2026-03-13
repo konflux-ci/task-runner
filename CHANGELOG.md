@@ -9,6 +9,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - *Nothing yet.*
 
+## 1.5.0
+
+Date: 2026-03-13
+
+- `buildah` 1.42.2 => 1.43.0
+- `tkn` 0.43.0 => 0.44.0
+- `awscli` 1.44.29 => 1.44.49
+- `skopeo` 1.20.0-2.el10_1 => 1.20.0-3.el10_1
+
 ## 1.4.1
 
 Date: 2026-02-19
