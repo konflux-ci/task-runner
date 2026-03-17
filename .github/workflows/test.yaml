@@ -1,6 +1,9 @@
 name: Test
 
 "on":
+  push:
+    branches:
+      - main
   pull_request:
     branches:
       - main
@@ -8,6 +11,8 @@ name: Test
 jobs:
   test:
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
 
     steps:
       - name: Checkout code
@@ -49,4 +54,12 @@ jobs:
         env:
           TEST_IMAGE: localhost/task-runner:latest
         run: |
-          .venv/bin/pytest --color=yes
+          .venv/bin/pytest --color=yes --cov --cov-report=xml:coverage.xml
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v5
+        with:
+          use_oidc: true
+          flags: unit-tests
+          files: coverage.xml
+          fail_ci_if_error: false
