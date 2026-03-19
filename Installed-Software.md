@@ -23,6 +23,7 @@ Re-generate with:
 | gettext-envsubst               | 0.22.5-6.el10                  | RPM                                      |
 | git-core                       | 2.47.3-1.el10_0                | RPM                                      |
 | grep                           | 3.11-10.el10                   | RPM                                      |
+| huggingface-hub                | 1.7.1                          | `pip install`                            |
 | jq                             | 1.7.1-11.el10                  | RPM                                      |
 | kubectl                        | 1.35.2                         | Git submodule (Go)                       |
 | make                           | 4.4.1-9.el10                   | RPM                                      |
