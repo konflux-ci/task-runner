@@ -53,35 +53,97 @@ flit-core==3.12.0 \
     --hash=sha256:18f63100d6f94385c6ed57a72073443e1a71a4acb4339491615d0f16d6ff01b2 \
     --hash=sha256:e7a0304069ea895172e3c7bb703292e992c5d1555dd1233ab7b5621b5b69e62c
     # via
+    #   click
+    #   idna
+    #   markdown-it-py
+    #   mdurl
     #   packaging
     #   pathspec
     #   typing-extensions
     #   wheel
+hatch-fancy-pypi-readme==25.1.0 \
+    --hash=sha256:9c58ed3dff90d51f43414ce37009ad1d5b0f08ffc9fc216998a06380f01c0045 \
+    --hash=sha256:ce0134c40d63d874ac48f48ccc678b8f3b62b8e50e9318520d2bffc752eedaf3
+    # via
+    #   httpcore
+    #   httpx
+    #   pydantic
 hatch-vcs==0.5.0 \
     --hash=sha256:0395fa126940340215090c344a2bf4e2a77bcbe7daab16f41b37b98c95809ff9 \
     --hash=sha256:b49677dbdc597460cc22d01b27ab3696f5e16a21ecf2700fb01bc28e1f2a04a7
-    # via urllib3
+    # via
+    #   filelock
+    #   fsspec
+    #   urllib3
 hatchling==1.29.0 \
     --hash=sha256:50af9343281f34785fab12da82e445ed987a6efb34fd8c2fc0f6e6630dbcc1b0 \
     --hash=sha256:793c31816d952cee405b83488ce001c719f325d9cda69f1fc4cd750527640ea6
     # via
+    #   annotated-types
     #   colorama
+    #   filelock
+    #   fsspec
+    #   hatch-fancy-pypi-readme
     #   hatch-vcs
+    #   httpcore
+    #   httpx
+    #   pydantic
+    #   pygments
+    #   typing-inspection
     #   urllib3
+maturin==1.12.6 \
+    --hash=sha256:06fc8d089f98623ce924c669b70911dfed30f9a29956c362945f727f9abc546b \
+    --hash=sha256:2cb41139295eed6411d3cdafc7430738094c2721f34b7eeb44f33cac516115dc \
+    --hash=sha256:351f3af1488a7cbdcff3b6d8482c17164273ac981378a13a4a9937a49aec7d71 \
+    --hash=sha256:3f32e0a3720b81423c9d35c14e728cb1f954678124749776dc72d533ea1115e8 \
+    --hash=sha256:6892b4176992fcc143f9d1c1c874a816e9a041248eef46433db87b0f0aff4278 \
+    --hash=sha256:6dbddfe4dc7ddee60bbac854870bd7cfec660acb54d015d24597d59a1c828f61 \
+    --hash=sha256:75133e56274d43b9227fd49dca9a86e32f1fd56a7b55544910c4ce978c2bb5aa \
+    --hash=sha256:8fdb0f63e77ee3df0f027a120e9af78dbc31edf0eb0f263d55783c250c33b728 \
+    --hash=sha256:977290159d252db946054a0555263c59b3d0c7957135c69e690f4b1558ee9983 \
+    --hash=sha256:bae91976cdc8148038e13c881e1e844e5c63e58e026e8b9945aa2d19b3b4ae89 \
+    --hash=sha256:c0c742beeeef7fb93b6a81bd53e75507887e396fd1003c45117658d063812dad \
+    --hash=sha256:d37be3a811a7f2ee28a0fa0964187efa50e90f21da0c6135c27787fa0b6a89db \
+    --hash=sha256:e90dc12bc6a38e9495692a36c9e231c4d7e0c9bfde60719468ab7d8673db3c45 \
+    --hash=sha256:fa84b7493a2e80759cacc2e668fa5b444d55b9994e90707c42904f55d6322c1e
+    # via
+    #   hf-xet
+    #   pydantic-core
 packaging==26.0 \
     --hash=sha256:00243ae351a257117b6a241061796684b084ed1c516a08c48a3f7e147a9d80b4 \
     --hash=sha256:b36f1fef9334a5588b4166f8bcd26a14e521f2b55e6b9de3aaa80d3ff7a37529
     # via
     #   hatchling
     #   setuptools-scm
+    #   wheel
 pathspec==1.0.4 \
     --hash=sha256:0210e2ae8a21a9137c0d470578cb0e595af87edaa6ebf12ff176f14a02e0e645 \
     --hash=sha256:fb6ae2fd4e7c921a165808a552060e722767cfa526f99ca5156ed2ce45a5c723
     # via hatchling
+pdm-backend==2.4.7 \
+    --hash=sha256:1599e3afa6f229b30cb4d3bd9caeca42229c42eb5730abd13e0b5256ec93c9f7 \
+    --hash=sha256:a509d083850378ce919d41e7a2faddfc57a1764d376913c66731125d6b14110f
+    # via
+    #   annotated-doc
+    #   typer
 pluggy==1.6.0 \
     --hash=sha256:7dcc130b76258d33b90f61b658791dede3486c3e6bfb003ee5c9bfb396dd22f3 \
     --hash=sha256:e920276dd6813095e9377c0bc5566d94c932c33b27a3e3945d8389c374dd4746
     # via hatchling
+poetry-core==2.3.1 \
+    --hash=sha256:96f791d5d7d4e040f3983d76779425cf9532690e2756a24fd5ca0f86af19ef82 \
+    --hash=sha256:db1cf63b782570deb38bfba61e2304a553eef0740dc17959a50cc0f5115ee634
+    # via
+    #   olot
+    #   rich
+semantic-version==2.10.0 \
+    --hash=sha256:bdabb6d336998cbb378d4b9db3a4b56a1e3235701dc05ea2690d9a997ed5041c \
+    --hash=sha256:de78a3b8e0feda74cabc54aab2da702113e33ac9d9eb9d2389bcf1f58b7d9177
+    # via setuptools-rust
+setuptools-rust==1.12.0 \
+    --hash=sha256:7e7db90547f224a835b45f5ad90c983340828a345554a9a660bdb2de8605dcdd \
+    --hash=sha256:d94a93f0c97751c17014565f07bdc324bee45d396cd1bba83d8e7af92b945f0c
+    # via maturin
 setuptools-scm==7.1.0 \
     --hash=sha256:6c508345a771aad7d56ebff0e70628bf2b0ec7573762be9960214730de278f27 \
     --hash=sha256:73988b6d848709e2af142aa48c986ea29592bbcfca5375678064708205253d8e
@@ -90,7 +152,11 @@ setuptools-scm==9.2.2 \
     --hash=sha256:1c674ab4665686a0887d7e24c03ab25f24201c213e82ea689d2f3e169ef7ef57 \
     --hash=sha256:30e8f84d2ab1ba7cb0e653429b179395d0c33775d54807fc5f1dd6671801aef7
     # via
+    #   anyio
+    #   hatch-vcs
     #   pluggy
+    #   setuptools-rust
+    #   tqdm
     #   urllib3
 trove-classifiers==2026.1.14.14 \
     --hash=sha256:00492545a1402b09d4858605ba190ea33243d361e2b01c9c296ce06b5c3325f3 \
@@ -103,18 +169,26 @@ typing-extensions==4.15.0 \
 wheel==0.46.3 \
     --hash=sha256:4b399d56c9d9338230118d705d9737a2a468ccca63d5e813e2a4fc7815d8bc4d \
     --hash=sha256:e3e79874b07d776c40bd6033f8ddf76a7dad46a7b8aa1b2787a83083519a1803
-    # via python-dateutil
+    # via
+    #   python-dateutil
+    #   shellingham
 
 # The following packages are considered to be unsafe in a requirements file:
 setuptools==82.0.1 \
     --hash=sha256:7d872682c5d01cfde07da7bccc7b65469d3dca203318515ada1de5eda35efbf9 \
     --hash=sha256:a59e362652f08dcd477c78bb6e7bd9d80a7995bc73ce773050228a348ce2e5bb
     # via
+    #   anyio
     #   calver
+    #   certifi
+    #   maturin
     #   pathspec
     #   pluggy
     #   pyasn1
     #   python-dateutil
     #   pyyaml
+    #   setuptools-rust
     #   setuptools-scm
+    #   shellingham
+    #   tqdm
     #   trove-classifiers
