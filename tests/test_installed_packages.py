@@ -11,6 +11,7 @@ package_name_to_executable_name = {
     "gawk": "awk",
     "gettext-envsubst": "envsubst",
     "awscli": "aws",
+    "huggingface-hub": "hf",
 }
 
 # overrides for tools that don't support a simple --version flag
@@ -20,6 +21,7 @@ version_arg_overrides = {
     "oras": ["version"],
     "kubectl": ["version", "--client"],
     "oc": ["version", "--client"],
+    "hf": ["version"],
 }
 
 expected_packages = list_packages(REPO_ROOT)
@@ -38,8 +40,8 @@ def test_package_returns_correct_version(
 ) -> None:
     executable_name = package_name_to_executable_name.get(package.name, package.name)
 
-    if executable_name == "microdnf":
-        pytest.skip("microdnf doesn't have a version flag")
+    if executable_name in ("microdnf", "olot"):
+        pytest.skip(f"{executable_name} doesn't have a version flag")
 
     version_args = version_arg_overrides.get(executable_name, ["--version"])
     proc = task_runner_container.run_cmd([executable_name, *version_args])

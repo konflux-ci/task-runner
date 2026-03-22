@@ -32,10 +32,10 @@ RUN cd /tmp/rpm-installation && \
     rm -r /tmp/rpm-installation
 
 COPY deps/pip/requirements.txt /tmp/requirements.txt
-RUN microdnf -y install gcc python3-devel python3-pip && \
+RUN microdnf -y install cargo gcc python3-devel python3-pip rust && \
     pip3 install --no-binary :all: --no-cache-dir -r /tmp/requirements.txt && \
     rm /tmp/requirements.txt && \
-    microdnf -y remove gcc python3-devel python3-pip && \
+    microdnf -y remove cargo gcc python3-devel python3-pip rust && \
     microdnf clean all
 
 COPY local-tools/select-oci-auth/select-oci-auth.sh /usr/local/bin/select-oci-auth

@@ -4,6 +4,13 @@ lockfileVendor: redhat
 arches:
 - arch: aarch64
   packages:
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/appstream/os/Packages/c/cargo-1.88.0-1.el10.aarch64.rpm
+    repoid: ubi-10-for-aarch64-appstream-rpms
+    size: 7043304
+    checksum: sha256:2295df1cba035cfaff09878cdd2623b28bcbcd1009ba0930e241193cdd4f540f
+    name: cargo
+    evr: 1.88.0-1.el10
+    sourcerpm: rust-1.88.0-1.el10.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/appstream/os/Packages/c/cpp-14.3.1-2.1.el10.aarch64.rpm
     repoid: ubi-10-for-aarch64-appstream-rpms
     size: 11952488
@@ -60,6 +67,20 @@ arches:
     name: libxcrypt-devel
     evr: 4.4.36-10.el10
     sourcerpm: libxcrypt-4.4.36-10.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/appstream/os/Packages/l/llvm-filesystem-20.1.8-1.el10.aarch64.rpm
+    repoid: ubi-10-for-aarch64-appstream-rpms
+    size: 11151
+    checksum: sha256:444f6c4e242af992d34c9889b69bfc732fd06be610c499155dace57c92c151f7
+    name: llvm-filesystem
+    evr: 20.1.8-1.el10
+    sourcerpm: llvm-20.1.8-1.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/appstream/os/Packages/l/llvm-libs-20.1.8-1.el10.aarch64.rpm
+    repoid: ubi-10-for-aarch64-appstream-rpms
+    size: 29134502
+    checksum: sha256:018b7cfe5fd773a16e1c0a82a59596a70359436e3ba023224f878916f2b3f666
+    name: llvm-libs
+    evr: 20.1.8-1.el10
+    sourcerpm: llvm-20.1.8-1.el10.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/appstream/os/Packages/p/python3-devel-3.12.12-3.el10_1.1.aarch64.rpm
     repoid: ubi-10-for-aarch64-appstream-rpms
     size: 343878
@@ -74,6 +95,20 @@ arches:
     name: python3-pip
     evr: 23.3.2-7.el10
     sourcerpm: python-pip-23.3.2-7.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/appstream/os/Packages/r/rust-1.88.0-1.el10.aarch64.rpm
+    repoid: ubi-10-for-aarch64-appstream-rpms
+    size: 28645185
+    checksum: sha256:42b4ac056c13b9c6c5f40cb1723d5dfaeed7481bf7dda541552cba58e90e90c1
+    name: rust
+    evr: 1.88.0-1.el10
+    sourcerpm: rust-1.88.0-1.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/appstream/os/Packages/r/rust-std-static-1.88.0-1.el10.aarch64.rpm
+    repoid: ubi-10-for-aarch64-appstream-rpms
+    size: 39706635
+    checksum: sha256:3cde994f92974542594e1f4975976cc949805593064ffc6268679a420aa728bb
+    name: rust-std-static
+    evr: 1.88.0-1.el10
+    sourcerpm: rust-1.88.0-1.el10.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/b/binutils-2.41-58.el10_1.2.aarch64.rpm
     repoid: ubi-10-for-aarch64-baseos-rpms
     size: 7009394
@@ -144,6 +179,13 @@ arches:
     name: libatomic
     evr: 14.3.1-2.1.el10
     sourcerpm: gcc-14.3.1-2.1.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/l/libedit-3.1-52.20230828cvs.el10.aarch64.rpm
+    repoid: ubi-10-for-aarch64-baseos-rpms
+    size: 111166
+    checksum: sha256:edede3ee0501345f472dbca12e9f1fdec315dcf023ee9de175ae046820013067
+    name: libedit
+    evr: 3.1-52.20230828cvs.el10
+    sourcerpm: libedit-3.1-52.20230828cvs.el10.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/l/libgomp-14.3.1-2.1.el10.aarch64.rpm
     repoid: ubi-10-for-aarch64-baseos-rpms
     size: 368792
@@ -232,6 +274,13 @@ arches:
   module_metadata: []
 - arch: ppc64le
   packages:
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/appstream/os/Packages/c/cargo-1.88.0-1.el10.ppc64le.rpm
+    repoid: ubi-10-for-ppc64le-appstream-rpms
+    size: 7616372
+    checksum: sha256:f142e43b94dde42ec2355b9e2e5860e181a42036a71c741d36bcfabf521c3adc
+    name: cargo
+    evr: 1.88.0-1.el10
+    sourcerpm: rust-1.88.0-1.el10.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/appstream/os/Packages/c/cpp-14.3.1-2.1.el10.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-appstream-rpms
     size: 11551144
@@ -288,6 +337,20 @@ arches:
     name: libxcrypt-devel
     evr: 4.4.36-10.el10
     sourcerpm: libxcrypt-4.4.36-10.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/appstream/os/Packages/l/llvm-filesystem-20.1.8-1.el10.ppc64le.rpm
+    repoid: ubi-10-for-ppc64le-appstream-rpms
+    size: 11167
+    checksum: sha256:dfbe7694a1b0fc002866af3a661661f8cf62cec4c78ac22b214c17dfdf6a2b5f
+    name: llvm-filesystem
+    evr: 20.1.8-1.el10
+    sourcerpm: llvm-20.1.8-1.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/appstream/os/Packages/l/llvm-libs-20.1.8-1.el10.ppc64le.rpm
+    repoid: ubi-10-for-ppc64le-appstream-rpms
+    size: 31272938
+    checksum: sha256:a4898ace0c995c474753a6269307699e16db9e972d9b792fd0c3190430b8e4a9
+    name: llvm-libs
+    evr: 20.1.8-1.el10
+    sourcerpm: llvm-20.1.8-1.el10.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/appstream/os/Packages/p/python3-devel-3.12.12-3.el10_1.1.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-appstream-rpms
     size: 343963
@@ -302,6 +365,20 @@ arches:
     name: python3-pip
     evr: 23.3.2-7.el10
     sourcerpm: python-pip-23.3.2-7.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/appstream/os/Packages/r/rust-1.88.0-1.el10.ppc64le.rpm
+    repoid: ubi-10-for-ppc64le-appstream-rpms
+    size: 26081736
+    checksum: sha256:5ee80296a7ac5342cc3c171f796f1c40f2ce806efc90f1bf7ec36e948189e748
+    name: rust
+    evr: 1.88.0-1.el10
+    sourcerpm: rust-1.88.0-1.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/appstream/os/Packages/r/rust-std-static-1.88.0-1.el10.ppc64le.rpm
+    repoid: ubi-10-for-ppc64le-appstream-rpms
+    size: 37566656
+    checksum: sha256:d712be8d1047c68e204dd9ebba8589d79347f5b1421dec8f37cca05a376eace1
+    name: rust-std-static
+    evr: 1.88.0-1.el10
+    sourcerpm: rust-1.88.0-1.el10.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/b/binutils-2.41-58.el10_1.2.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-baseos-rpms
     size: 6677456
@@ -372,6 +449,13 @@ arches:
     name: libatomic
     evr: 14.3.1-2.1.el10
     sourcerpm: gcc-14.3.1-2.1.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/l/libedit-3.1-52.20230828cvs.el10.ppc64le.rpm
+    repoid: ubi-10-for-ppc64le-baseos-rpms
+    size: 124284
+    checksum: sha256:9516cda7f44b487b3df0c50bf2fd091ed0f2b0cfc380cfc92aeaae3d6293519a
+    name: libedit
+    evr: 3.1-52.20230828cvs.el10
+    sourcerpm: libedit-3.1-52.20230828cvs.el10.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/l/libgomp-14.3.1-2.1.el10.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-baseos-rpms
     size: 390042
@@ -460,6 +544,13 @@ arches:
   module_metadata: []
 - arch: s390x
   packages:
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/appstream/os/Packages/c/cargo-1.88.0-1.el10.s390x.rpm
+    repoid: ubi-10-for-s390x-appstream-rpms
+    size: 8033967
+    checksum: sha256:33e836c3bae797dc45d39ae60cf85671693a3f5093924b533b52dc33dfeec7c1
+    name: cargo
+    evr: 1.88.0-1.el10
+    sourcerpm: rust-1.88.0-1.el10.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/appstream/os/Packages/c/cpp-14.3.1-2.1.el10.s390x.rpm
     repoid: ubi-10-for-s390x-appstream-rpms
     size: 10585003
@@ -516,6 +607,20 @@ arches:
     name: libxcrypt-devel
     evr: 4.4.36-10.el10
     sourcerpm: libxcrypt-4.4.36-10.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/appstream/os/Packages/l/llvm-filesystem-20.1.8-1.el10.s390x.rpm
+    repoid: ubi-10-for-s390x-appstream-rpms
+    size: 11159
+    checksum: sha256:ab9e67df303dcfc5639f365a129d28b9b74a61dc29aa35e49f9b4565347e2ce9
+    name: llvm-filesystem
+    evr: 20.1.8-1.el10
+    sourcerpm: llvm-20.1.8-1.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/appstream/os/Packages/l/llvm-libs-20.1.8-1.el10.s390x.rpm
+    repoid: ubi-10-for-s390x-appstream-rpms
+    size: 32944115
+    checksum: sha256:26d17eaafd675f1b6ed4cdae902aaf9a1b810981b446fc868767570c5a65d095
+    name: llvm-libs
+    evr: 20.1.8-1.el10
+    sourcerpm: llvm-20.1.8-1.el10.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/appstream/os/Packages/p/python3-devel-3.12.12-3.el10_1.1.s390x.rpm
     repoid: ubi-10-for-s390x-appstream-rpms
     size: 343889
@@ -530,6 +635,20 @@ arches:
     name: python3-pip
     evr: 23.3.2-7.el10
     sourcerpm: python-pip-23.3.2-7.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/appstream/os/Packages/r/rust-1.88.0-1.el10.s390x.rpm
+    repoid: ubi-10-for-s390x-appstream-rpms
+    size: 31169804
+    checksum: sha256:f5746168f1bc732cc5502f1e0ea63211c7afdb6ea96a1deb7bbac35ec4279011
+    name: rust
+    evr: 1.88.0-1.el10
+    sourcerpm: rust-1.88.0-1.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/appstream/os/Packages/r/rust-std-static-1.88.0-1.el10.s390x.rpm
+    repoid: ubi-10-for-s390x-appstream-rpms
+    size: 39201729
+    checksum: sha256:adbe507d4082804ee52357567b8b072d833b9eb56a5f249de0244e40a3cf6697
+    name: rust-std-static
+    evr: 1.88.0-1.el10
+    sourcerpm: rust-1.88.0-1.el10.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/b/binutils-2.41-58.el10_1.2.s390x.rpm
     repoid: ubi-10-for-s390x-baseos-rpms
     size: 6289599
@@ -600,6 +719,13 @@ arches:
     name: libatomic
     evr: 14.3.1-2.1.el10
     sourcerpm: gcc-14.3.1-2.1.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/l/libedit-3.1-52.20230828cvs.el10.s390x.rpm
+    repoid: ubi-10-for-s390x-baseos-rpms
+    size: 122805
+    checksum: sha256:690168588b9366b38cd2e61bdbb0e1c564ede71d7c9660ab7237231acfc2c2c8
+    name: libedit
+    evr: 3.1-52.20230828cvs.el10
+    sourcerpm: libedit-3.1-52.20230828cvs.el10.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/l/libgomp-14.3.1-2.1.el10.s390x.rpm
     repoid: ubi-10-for-s390x-baseos-rpms
     size: 380966
@@ -688,6 +814,13 @@ arches:
   module_metadata: []
 - arch: x86_64
   packages:
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/appstream/os/Packages/c/cargo-1.88.0-1.el10.x86_64.rpm
+    repoid: ubi-10-for-x86_64-appstream-rpms
+    size: 7648464
+    checksum: sha256:e887c9524d6c68388c0632b249d36da8b12f3ac07b5a8fbeebc7a944af2cf8a9
+    name: cargo
+    evr: 1.88.0-1.el10
+    sourcerpm: rust-1.88.0-1.el10.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/appstream/os/Packages/c/cpp-14.3.1-2.1.el10.x86_64.rpm
     repoid: ubi-10-for-x86_64-appstream-rpms
     size: 13442056
@@ -730,6 +863,20 @@ arches:
     name: libxcrypt-devel
     evr: 4.4.36-10.el10
     sourcerpm: libxcrypt-4.4.36-10.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/appstream/os/Packages/l/llvm-filesystem-20.1.8-1.el10.x86_64.rpm
+    repoid: ubi-10-for-x86_64-appstream-rpms
+    size: 11179
+    checksum: sha256:96f1fef903bcf3233e134dc31abdfecdc5d1e368f6eb9d859d9c5d8e75461956
+    name: llvm-filesystem
+    evr: 20.1.8-1.el10
+    sourcerpm: llvm-20.1.8-1.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/appstream/os/Packages/l/llvm-libs-20.1.8-1.el10.x86_64.rpm
+    repoid: ubi-10-for-x86_64-appstream-rpms
+    size: 31512338
+    checksum: sha256:10065a75e326acfecffe562b68d83f562867a879806422422e9987074ba6631d
+    name: llvm-libs
+    evr: 20.1.8-1.el10
+    sourcerpm: llvm-20.1.8-1.el10.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/appstream/os/Packages/p/python3-devel-3.12.12-3.el10_1.1.x86_64.rpm
     repoid: ubi-10-for-x86_64-appstream-rpms
     size: 344012
@@ -744,6 +891,20 @@ arches:
     name: python3-pip
     evr: 23.3.2-7.el10
     sourcerpm: python-pip-23.3.2-7.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/appstream/os/Packages/r/rust-1.88.0-1.el10.x86_64.rpm
+    repoid: ubi-10-for-x86_64-appstream-rpms
+    size: 30953779
+    checksum: sha256:3ed8d4bfe38eb788e1d4a047ce3d3be5d88d72837706456aab36dc59268b8286
+    name: rust
+    evr: 1.88.0-1.el10
+    sourcerpm: rust-1.88.0-1.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/appstream/os/Packages/r/rust-std-static-1.88.0-1.el10.x86_64.rpm
+    repoid: ubi-10-for-x86_64-appstream-rpms
+    size: 41239850
+    checksum: sha256:6e17fbff6fffaed2fa195509297ee630dc558d062ac4449b1daf7916b00ef93f
+    name: rust-std-static
+    evr: 1.88.0-1.el10
+    sourcerpm: rust-1.88.0-1.el10.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/b/binutils-2.41-58.el10_1.2.x86_64.rpm
     repoid: ubi-10-for-x86_64-baseos-rpms
     size: 6709343
@@ -807,6 +968,13 @@ arches:
     name: jansson
     evr: 2.14-3.el10
     sourcerpm: jansson-2.14-3.el10.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/l/libedit-3.1-52.20230828cvs.el10.x86_64.rpm
+    repoid: ubi-10-for-x86_64-baseos-rpms
+    size: 110822
+    checksum: sha256:d984e5aa4856820528bd2829f086c2f3883173b91daa0a304af215e3a0c6a6be
+    name: libedit
+    evr: 3.1-52.20230828cvs.el10
+    sourcerpm: libedit-3.1-52.20230828cvs.el10.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/l/libgomp-14.3.1-2.1.el10.x86_64.rpm
     repoid: ubi-10-for-x86_64-baseos-rpms
     size: 377295
