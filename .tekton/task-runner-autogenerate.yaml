@@ -1,0 +1,48 @@
+apiVersion: tekton.dev/v1
+kind: PipelineRun
+metadata:
+  annotations:
+    pipelinesascode.tekton.dev/cancel-in-progress: "true"
+    pipelinesascode.tekton.dev/max-keep-runs: "3"
+    pipelinesascode.tekton.dev/on-cel-expression: |
+      event == "pull_request" && target_branch == "main"
+  labels:
+    appstudio.openshift.io/application: task-runner
+    appstudio.openshift.io/component: task-runner
+  name: task-runner-autogenerate
+  namespace: rhtap-build-tenant
+spec:
+  params:
+    - name: source-url
+      value: "{{ source_url }}"
+    - name: source-branch
+      value: "{{ source_branch }}"
+    - name: pr-author
+      value: "{{ body.pull_request.user.login }}"
+  pipelineSpec:
+    params:
+      - name: source-url
+      - name: source-branch
+      - name: pr-author
+    workspaces:
+      - name: git-auth
+    tasks:
+      - name: autogenerate
+        taskRef:
+          name: autogenerate
+        workspaces:
+          - name: git-auth
+            workspace: git-auth
+        params:
+          - name: source-url
+            value: "$(params.source-url)"
+          - name: source-branch
+            value: "$(params.source-branch)"
+          - name: pr-author
+            value: "$(params.pr-author)"
+  taskRunTemplate:
+    serviceAccountName: build-pipeline-task-runner
+  workspaces:
+    - name: git-auth
+      secret:
+        secretName: "{{ git_auth_secret }}"
