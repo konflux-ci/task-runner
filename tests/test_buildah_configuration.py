@@ -6,6 +6,7 @@ from textwrap import dedent
 
 import pytest
 
+from tests.constants import REPO_ROOT
 from tests.utils.container import Container
 
 
@@ -45,10 +46,18 @@ def context_dir(tmp_path_factory: pytest.TempPathFactory) -> Path:
     return contextdir
 
 
-def test_buildah_uses_native_overlay(task_runner_container: Container) -> None:
+@pytest.fixture(scope="session")
+def host_dir() -> Path:
+    hostdir = REPO_ROOT / ".test-containers-storage"
+    hostdir.mkdir(exist_ok=True)
+    hostdir.chmod(0o777)
+    return hostdir
+
+
+def test_buildah_uses_native_overlay(task_runner_container: Container, host_dir: Path) -> None:
     proc = task_runner_container.run_cmd(
         ["buildah", "info", "--log-level=debug"],
-        volumes=["/home/taskuser/.local/share/containers"],
+        volumes=[f"{host_dir}:/home/taskuser/.local/share/containers"],
     )
     info = json.loads(proc.stdout)
 
@@ -60,10 +69,10 @@ def test_buildah_uses_native_overlay(task_runner_container: Container) -> None:
 
 
 @pytest.mark.xfail(reason="https://github.com/containers/buildah/issues/6640")
-def test_buildah_uses_native_overlay_as_root(task_runner_container: Container) -> None:
+def test_buildah_uses_native_overlay_as_root(task_runner_container: Container, host_dir: Path) -> None:
     proc = task_runner_container.run_cmd(
         ["buildah", "info", "--log-level=debug"],
-        volumes=["/var/lib/containers"],
+        volumes=[f"{host_dir}:/var/lib/containers"],
         user="0",
     )
     info = json.loads(proc.stdout)
@@ -100,12 +109,12 @@ def test_buildah_falls_back_to_fuse_overlayfs(user: str, task_runner_container: 
     [pytest.param(True, id="native_overlay"), pytest.param(False, id="fuse_overlayfs")],
 )
 def test_buildah_build_works(
-    use_native_overlay: bool, task_runner_container: Container, context_dir: Path
+    use_native_overlay: bool, task_runner_container: Container, context_dir: Path, host_dir: Path
 ) -> None:
     volumes = [f"{context_dir}:{context_dir}"]
     devices = []
     if use_native_overlay:
-        volumes.append("/home/taskuser/.local/share/containers")
+        volumes.append(f"{host_dir}:/home/taskuser/.local/share/containers")
     else:
         devices.append("/dev/fuse")
 
@@ -124,12 +133,12 @@ def test_buildah_build_works(
     [pytest.param(True, id="native_overlay"), pytest.param(False, id="fuse_overlayfs")],
 )
 def test_buildah_build_works_as_root(
-    use_native_overlay: bool, task_runner_container: Container, context_dir: Path
+    use_native_overlay: bool, task_runner_container: Container, context_dir: Path, host_dir: Path
 ) -> None:
     volumes = [f"{context_dir}:{context_dir}"]
     devices = []
     if use_native_overlay:
-        volumes.append("/var/lib/containers")
+        volumes.append(f"{host_dir}:/var/lib/containers")
     else:
         devices.append("/dev/fuse")
 
@@ -139,19 +148,19 @@ def test_buildah_build_works_as_root(
         devices=devices,
         workdir=context_dir,
         cap_drop=["ALL"],
-        cap_add=["SETUID", "SETGID", "SYS_CHROOT", "SETFCAP"],
+        cap_add=["SETUID", "SETGID", "SYS_CHROOT", "SETFCAP", "SYS_ADMIN", "DAC_OVERRIDE", "CHOWN", "FOWNER"],
         user="0",
     )
 
 
 @pytest.mark.parametrize("isolation", ["rootless", "oci"])
 def test_buildah_can_use_stronger_isolation(
-    isolation: str, task_runner_container: Container, context_dir: Path
+    isolation: str, task_runner_container: Container, context_dir: Path, host_dir: Path
 ) -> None:
     task_runner_container.run_cmd(
         ["buildah", "build", f"--isolation={isolation}", "."],
         volumes=[
-            "/home/taskuser/.local/share/containers",
+            f"{str(host_dir)}:/home/taskuser/.local/share/containers",
             f"{context_dir}:{context_dir}",
         ],
         workdir=context_dir,
@@ -161,12 +170,12 @@ def test_buildah_can_use_stronger_isolation(
 
 @pytest.mark.parametrize("isolation", ["rootless", "oci"])
 def test_buildah_can_use_stronger_isolation_as_root(
-    isolation: str, task_runner_container: Container, context_dir: Path
+    isolation: str, task_runner_container: Container, context_dir: Path, host_dir: Path
 ) -> None:
     task_runner_container.run_cmd(
         ["buildah", "build", f"--isolation={isolation}", "."],
         volumes=[
-            "/var/lib/containers",
+            f"{host_dir}:/var/lib/containers",
             f"{context_dir}:{context_dir}",
         ],
         workdir=context_dir,
@@ -176,11 +185,11 @@ def test_buildah_can_use_stronger_isolation_as_root(
 
 
 @pytest.mark.xfail(reason="Unfortunately, there is no easy way to make it work for arbitrary UIDs.")
-def test_buildah_works_for_other_uids(task_runner_container: Container, context_dir: Path) -> None:
+def test_buildah_works_for_other_uids(task_runner_container: Container, context_dir: Path, host_dir: Path) -> None:
     task_runner_container.run_cmd(
         ["buildah", "build", "."],
         volumes=[
-            "/home/taskuser/.local/share/containers",
+            f"{host_dir}:/home/taskuser/.local/share/containers",
             f"{context_dir}:{context_dir}",
         ],
         workdir=context_dir,
