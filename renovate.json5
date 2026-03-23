@@ -13,7 +13,8 @@
   ],
   "prHourlyLimit": 0,
   "gitIgnoredAuthors": [
-    "github-actions[bot]@users.noreply.github.com"
+    "github-actions[bot]@users.noreply.github.com",
+    "autogenerator[bot]@noreply.konflux-ci.dev"
   ],
   "git-submodules": {
     "enabled": true,

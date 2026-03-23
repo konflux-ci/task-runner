@@ -1,0 +1,67 @@
+apiVersion: tekton.dev/v1
+kind: Task
+metadata:
+  name: autogenerate
+spec:
+  workspaces:
+    - name: git-auth
+  params:
+    - name: source-url
+    - name: source-branch
+    - name: pr-author
+  steps:
+    - name: autogenerate
+      image: quay.io/konflux-ci/task-runner:1.5.0@sha256:200019314a50be5b6dd06f362c794c92a700583a522c5eee9a41e3eab7f706c5
+      env:
+        - name: SOURCE_URL
+          value: "$(params.source-url)"
+        - name: SOURCE_BRANCH
+          value: "$(params.source-branch)"
+        - name: PR_AUTHOR
+          value: "$(params.pr-author)"
+        - name: WORKSPACE_GIT_AUTH_PATH
+          value: $(workspaces.git-auth.path)
+      securityContext:
+        runAsUser: 0
+      script: |
+        #!/bin/bash
+        set -o errexit -o nounset -o pipefail
+
+        # Install additional dependencies
+        microdnf -y install golang python3-pip
+        pip install uv
+
+        # Set up git credentials
+        cp "$WORKSPACE_GIT_AUTH_PATH/.gitconfig" "${HOME}/.gitconfig"
+        cp "$WORKSPACE_GIT_AUTH_PATH/.git-credentials" "${HOME}/.git-credentials"
+
+        # Clone the repo
+        git clone --branch "$SOURCE_BRANCH" "$SOURCE_URL" repo
+        cd repo
+        make submodules
+
+        # Run the generator
+        make .venv
+        source .venv/bin/activate
+        devtool gen --all
+
+        # Check for changes
+        if git diff --quiet; then
+          echo "No changes detected, nothing to do."
+          exit 0
+        fi
+
+        # If the author isn't Renovate/MintMaker, show the diff and fail
+        if ! [[ "$PR_AUTHOR" == *renovate* || "$PR_AUTHOR" == *red-hat-konflux* ]]; then
+          echo "Error: generated files are out of date"
+          echo "Please run locally:"
+          echo "  make venv && .venv/bin/devtool gen --all"
+          exit 1
+        fi
+
+        # Commit the changes to the PR
+        git config user.name "autogenerator[bot]"
+        git config user.email "autogenerator[bot]@noreply.konflux-ci.dev"
+        git add .
+        git commit -m "Update generated files"
+        git push origin "$SOURCE_BRANCH"
