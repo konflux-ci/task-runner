@@ -1,3 +1,5 @@
+FROM quay.io/konflux-ci/rust-builder:1.94.0@sha256:7fac96c3f4d035a8b4bf3cd482f7d224a451f5663da3534acde9eb854a949a04 AS rust-builder
+
 FROM registry.access.redhat.com/ubi10/go-toolset:1.25.7@sha256:c8d35a1ae1fc7ee3adf85fe379e90faf1fe6f30820a24e3ea8973bbb524a0409 AS go-build
 
 USER 0
@@ -31,11 +33,14 @@ RUN cd /tmp/rpm-installation && \
     ./install-rpms.sh && \
     rm -r /tmp/rpm-installation
 
+COPY --from=rust-builder /usr/local/share/rust /usr/local/share/rust
 COPY deps/pip/requirements.txt /tmp/requirements.txt
-RUN microdnf -y install cargo gcc python3-devel python3-pip rust && \
+RUN microdnf -y install gcc python3-devel python3-pip && \
+    export PATH="$PATH:/usr/local/share/rust/bin" && \
     pip3 install --no-binary :all: --no-cache-dir -r /tmp/requirements.txt && \
     rm /tmp/requirements.txt && \
-    microdnf -y remove cargo gcc python3-devel python3-pip rust && \
+    rm -r /usr/local/share/rust && \
+    microdnf -y remove gcc python3-devel python3-pip && \
     microdnf clean all
 
 COPY local-tools/select-oci-auth/select-oci-auth.sh /usr/local/bin/select-oci-auth
