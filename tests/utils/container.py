@@ -8,6 +8,21 @@ from typing import Self, Sequence
 log = logging.getLogger(__name__)
 
 
+def run(
+    cmd: list[str | os.PathLike[str]], check: bool = True, capture_output: bool = True
+) -> subprocess.CompletedProcess[str]:
+    log.debug("%s", shlex.join(map(str, cmd)))
+    proc = subprocess.run(cmd, capture_output=capture_output, text=True)
+    if capture_output:
+        if stdout := proc.stdout.rstrip("\n"):
+            log.debug("stdout>\n%s", stdout)
+        if stderr := proc.stderr.rstrip("\n"):
+            log.error("stderr>\n%s", stderr)
+    if check:
+        proc.check_returncode()
+    return proc
+
+
 class Container:
     def __init__(self, image_name: str) -> None:
         self._image_name = image_name
@@ -18,8 +33,8 @@ class Container:
 
     @classmethod
     def build_image(cls, context_dir: Path, image_name: str) -> Self:
-        subprocess.run(
-            ["podman", "build", "--tag", image_name, context_dir],
+        run(
+            ["buildah", "bud", "--tag", image_name, context_dir],
             check=True,
         )
         return cls(image_name)
@@ -57,49 +72,38 @@ class Container:
         :param cap_add: A list of capabilities to add with --cap-add.
         :param cap_drop: A list of capabilities to drop with --cap-drop.
         """
-        podman_cmd: list[str | os.PathLike[str]] = [
-            "podman",
-            "run",
-            "--rm",
-        ]
+        buildah_from: list[str | os.PathLike[str]] = ["buildah", "from"]
 
         for volume in volumes:
             if volume.count(":") == 1:
                 # This is /host-dir:/container-dir, add :z to avoid SELinux problems
                 volume += ":z"
-            podman_cmd.append(f"--volume={volume}")
+            buildah_from.append(f"--volume={volume}")
 
         for device in devices:
-            podman_cmd.append(f"--device={device}")
+            buildah_from.append(f"--device={device}")
 
-        if workdir:
-            podman_cmd.append(f"--workdir={workdir}")
-
-        if user:
-            podman_cmd.append(f"--user={user}")
-
-        if privileged:
-            podman_cmd.append("--privileged")
+        # Fixed later. buildah commands do not have this argument.
+        # if privileged:
+        #     podman_cmd.append("--privileged")
 
         for cap in cap_add:
-            podman_cmd.append(f"--cap-add={cap}")
+            buildah_from.append(f"--cap-add={cap}")
 
         for cap in cap_drop:
-            podman_cmd.append(f"--cap-drop={cap}")
+            buildah_from.append(f"--cap-drop={cap}")
 
-        podman_cmd.append(self._image_name)
-        podman_cmd.extend(cmd)
+        buildah_from.append(self._image_name)
 
-        log.debug("%s", shlex.join(map(str, podman_cmd)))
-        proc = subprocess.run(podman_cmd, capture_output=capture_output, text=True)
+        container_id = run(buildah_from).stdout.strip()
 
-        if capture_output:
-            if stdout := proc.stdout.rstrip("\n"):
-                log.debug("stdout>\n%s", stdout)
-            if stderr := proc.stderr.rstrip("\n"):
-                log.error("stderr>\n%s", stderr)
+        buildah_run: list[str | os.PathLike[str]] = ["buildah", "run", container_id, "--", *cmd]
+        if workdir:
+            buildah_run.insert(2, f"--workingdir={str(workdir)}")
+        if user:
+            buildah_run.insert(2, f"--user={user}")
 
-        if check:
-            proc.check_returncode()
-
-        return proc
+        try:
+            return run(buildah_run, check=check, capture_output=capture_output)
+        finally:
+            run(["buildah", "rm", container_id])
