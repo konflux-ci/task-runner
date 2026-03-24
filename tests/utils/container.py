@@ -74,6 +74,8 @@ class Container:
         """
         buildah_from: list[str | os.PathLike[str]] = ["buildah", "from"]
 
+        buildah_from.extend(["--security-opt", "label=type:container_runtime_t"])
+
         for volume in volumes:
             if volume.count(":") == 1:
                 # This is /host-dir:/container-dir, add :z to avoid SELinux problems
