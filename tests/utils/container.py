@@ -85,9 +85,8 @@ class Container:
         for device in devices:
             buildah_from.append(f"--device={device}")
 
-        # Fixed later. buildah commands do not have this argument.
-        # if privileged:
-        #     podman_cmd.append("--privileged")
+        if privileged:
+            buildah_from.append("--cap-add=ALL")
 
         for cap in cap_add:
             buildah_from.append(f"--cap-add={cap}")

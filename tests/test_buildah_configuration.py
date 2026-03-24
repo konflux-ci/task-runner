@@ -172,8 +172,11 @@ def test_buildah_can_use_stronger_isolation(
 def test_buildah_can_use_stronger_isolation_as_root(
     isolation: str, task_runner_container: Container, context_dir: Path, host_dir: Path
 ) -> None:
+    cmd = ["buildah", "build", f"--isolation={isolation}", "."]
+    if isolation == "oci":
+        cmd.insert(-1, "--network=none")
     task_runner_container.run_cmd(
-        ["buildah", "build", f"--isolation={isolation}", "."],
+        cmd,
         volumes=[
             f"{host_dir}:/var/lib/containers",
             f"{context_dir}:{context_dir}",
