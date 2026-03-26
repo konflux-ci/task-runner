@@ -6,7 +6,7 @@ from textwrap import dedent
 
 import pytest
 
-from tests.utils.container import Container
+from tests.with_container.utils.container import Container
 
 
 @pytest.fixture(scope="module")

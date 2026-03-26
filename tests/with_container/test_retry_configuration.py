@@ -1,4 +1,4 @@
-from tests.utils.container import Container
+from tests.with_container.utils.container import Container
 
 
 def test_retries_stop_on_unauthorized(task_runner_container: Container) -> None:

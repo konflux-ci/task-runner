@@ -39,14 +39,71 @@ jobs:
           echo "Disk space after cleanup:"
           df -h /
 
-      - name: Build runner image
-        uses: redhat-actions/buildah-build@7a95fa7ee0f02d552a32753e7414641a04307056 # v2.13
-        with:
-          tags: localhost/task-runner:latest
-          containerfiles: ./Containerfile
+      - name: Run non-container-related tests
+        env:
+          TEST_IMAGE: quay.io/redhat-user-workloads/rhtap-build-tenant/task-runner:on-pr-${{ github.event.pull_request.head.sha }}
+        run: |
+          .venv/bin/python3 -m pytest --color=yes --ignore=tests/with_container
+
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@22103cc46bda19c2b464ffe86db46df6922fd323 # v47.0.5
+
+      - name: Determine if container-related tests should run
+        id: run-container-related-tests
+        env:
+          ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
+        run: |
+          for file in ${ALL_CHANGED_FILES}; do
+            printf "changed file: %s\n" "$file"
+            if [[ $file =~ ^deps/ ]] || [[ $file =~ ^Containerfile$ ]] || [[ $file =~ ^tests/with_container/ ]]; then
+              printf "should_run=1\n" >>$GITHUB_OUTPUT
+              exit 0
+            fi
+          done
+          printf "should_run=0\n" >>$GITHUB_OUTPUT
+
+      - name: Wait for build pipeline finishes image build
+        if: steps.run-container-related-tests.outputs.should_run == '1'
+        env:
+          RETRY_INTERVAL: 180  # 3 Minutes
+          TIMEOUT: 5400  # 1.5 Hour
+          IMAGE: quay.io/redhat-user-workloads/rhtap-build-tenant/task-runner:on-pr-${{ github.event.pull_request.head.sha }}
+          REVISION: ${{ github.event.pull_request.head.sha }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          total_wait=0  # in seconds
+          while true; do
+            if [[ $total_wait -ge $TIMEOUT ]]; then
+              printf "Timeout: build pipeline does not finish within %s seconds to build the image.\n" "$TIMEOUT"
+              printf "Wait it to finish and re-run this job.\n"
+              exit 1
+            fi
+            printf "Wait %s seconds to see if build pipeline finishes ...\n" "$RETRY_INTERVAL"
+            sleep $RETRY_INTERVAL
+            total_wait=$((total_wait+$RETRY_INTERVAL))
+            printf "Checking build pipeline ...\n"
+            gh api "repos/konflux-ci/task-runner/commits/${REVISION}/check-runs" >/tmp/checkruns.json
+            conclusion=$(
+              jq --arg name "Red Hat Konflux / task-runner-on-pull-request" -r \
+                '.check_runs[] | select(.name == $name and .status == "completed") | .conclusion' </tmp/checkruns.json
+            )
+            if [[ -n "$conclusion" ]]; then
+              if skopeo inspect --retry-times 3 --raw "docker://${IMAGE}"; then
+                printf "Image is present in the registry.\n"
+                exit 0
+              fi
+            fi
+            if [[ $conclusion == failure ]]; then
+              printf "Build pipeline failed.\n"
+              exit 1
+            fi
+          done
 
       - name: Run tests
+        if: steps.run-container-related-tests.outputs.should_run == '1'
         env:
-          TEST_IMAGE: localhost/task-runner:latest
+          TEST_IMAGE: quay.io/redhat-user-workloads/rhtap-build-tenant/task-runner:on-pr-${{ github.event.pull_request.head.sha }}
         run: |
-          .venv/bin/pytest --color=yes
+          .venv/bin/python3 -m pytest --color=yes tests/with_container

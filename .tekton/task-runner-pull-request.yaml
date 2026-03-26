@@ -17,6 +17,7 @@ metadata:
         || ".tekton/build-pipeline.yaml".pathChanged()
         || ".tekton/task-runner-pull-request.yaml".pathChanged()
         || "VERSION".pathChanged()
+        || "tests/with_container/**".pathChanged()
       )
   creationTimestamp: null
   labels:

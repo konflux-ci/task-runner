@@ -3,7 +3,7 @@ import os
 
 import pytest
 
-from tests.utils.container import Container
+from tests.with_container.utils.container import Container
 from tests.constants import REPO_ROOT
 
 

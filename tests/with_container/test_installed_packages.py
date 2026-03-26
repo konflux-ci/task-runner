@@ -2,7 +2,7 @@ import pytest
 
 from devtool.software_list import Package, list_packages
 from tests.constants import REPO_ROOT
-from tests.utils.container import Container
+from tests.with_container.utils.container import Container
 
 package_name_to_executable_name = {
     "coreutils-single": "coreutils",
