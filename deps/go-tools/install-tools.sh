@@ -60,3 +60,5 @@ install_tool oras --version-attr "oras.land/oras/internal/version.BuildMetadata"
 install_tool conftest --version-attr "github.com/open-policy-agent/conftest/internal/version.Version"
 
 install_tool buildah --tags "seccomp,libsqlite3,exclude_graphdriver_btrfs"
+
+install_tool kustomize

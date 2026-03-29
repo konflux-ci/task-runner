@@ -22,10 +22,12 @@ Re-generate with:
 | gawk                           | 5.3.0-6.el10                   | RPM                                      |
 | gettext-envsubst               | 0.22.5-6.el10                  | RPM                                      |
 | git-core                       | 2.47.3-1.el10_0                | RPM                                      |
+| golang                         | 1.25.8-1.el10_1                | RPM                                      |
 | grep                           | 3.11-10.el10                   | RPM                                      |
 | huggingface-hub                | 1.7.1                          | `pip install`                            |
 | jq                             | 1.7.1-11.el10                  | RPM                                      |
 | kubectl                        | 1.35.2                         | Git submodule (Go)                       |
+| kustomize                      | 5.8.1                          | `go install`                             |
 | make                           | 4.4.1-9.el10                   | RPM                                      |
 | microdnf                       | 3.10.1-1.el10                  | RPM                                      |
 | oc                             | 4.21.0                         | Git submodule (Go)                       |

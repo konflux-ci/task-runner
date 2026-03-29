@@ -11,6 +11,7 @@ packages:
   - fuse-overlayfs  # For buildah, enables overlayfs if kernel-native implementation is not usable
   - gettext-envsubst
   - git-core
+  - golang
   - jq
   - make
   - openssl
