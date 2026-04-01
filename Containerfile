@@ -1,6 +1,6 @@
-FROM quay.io/konflux-ci/rust-builder:1.94.1@sha256:4725fa86899c50c609df546fa10953db958d8afd4caddc7f7b744a407114152c AS rust-builder
+FROM quay.io/konflux-ci/rust-builder:1.94.1@sha256:55ad5d73cbf519c1b7a10c0f8ecc8eb6421610a4b4b67630b4ed8958ad04ed04 AS rust-builder
 
-FROM registry.access.redhat.com/ubi10/go-toolset:1.25.8@sha256:3e1506bc72f7a00c904223d66e460ab714ebbd359371e16e77ca9489585f8cd4 AS go-build
+FROM registry.access.redhat.com/ubi10/go-toolset:1.25.8@sha256:3abf7f309f5c9fa6956585557ba0bf2a92e39807caff735721debc77ca5d1d1a AS go-build
 
 USER 0
 
