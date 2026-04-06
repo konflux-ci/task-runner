@@ -25,13 +25,13 @@ arches:
     name: containers-common-extra
     evr: 5:0.64.0-5.el10_1
     sourcerpm: containers-common-0.64.0-5.el10_1.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/appstream/os/Packages/c/crun-1.23.1-1.el10_0.aarch64.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/appstream/os/Packages/c/crun-1.27-1.el10_1.aarch64.rpm
     repoid: ubi-10-for-aarch64-appstream-rpms
-    size: 250893
-    checksum: sha256:07e9224ad8d4c190ac05327ded3a62722636073f21eb867e43f37ee68f2cd615
+    size: 269070
+    checksum: sha256:cb4bf2641229aebc805ca5f83af68c714c42ac5a00831fcee0e4ff3bf5adda52
     name: crun
-    evr: 1.23.1-1.el10_0
-    sourcerpm: crun-1.23.1-1.el10_0.src.rpm
+    evr: 1.27-1.el10_1
+    sourcerpm: crun-1.27-1.el10_1.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/appstream/os/Packages/f/fuse-overlayfs-1.16-1.el10_1.aarch64.rpm
     repoid: ubi-10-for-aarch64-appstream-rpms
     size: 64857
@@ -582,13 +582,13 @@ arches:
     name: containers-common-extra
     evr: 5:0.64.0-5.el10_1
     sourcerpm: containers-common-0.64.0-5.el10_1.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/appstream/os/Packages/c/crun-1.23.1-1.el10_0.ppc64le.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/appstream/os/Packages/c/crun-1.27-1.el10_1.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-appstream-rpms
-    size: 290474
-    checksum: sha256:af110e6f9b188c53c401856b814cf8097b3202e74a7ac04e72433a2c16605da2
+    size: 310937
+    checksum: sha256:6d2d8cf0f2e38d3ec05e24579ac4cb3c6c72f9c880844615e4cc12a595621a1c
     name: crun
-    evr: 1.23.1-1.el10_0
-    sourcerpm: crun-1.23.1-1.el10_0.src.rpm
+    evr: 1.27-1.el10_1
+    sourcerpm: crun-1.27-1.el10_1.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/appstream/os/Packages/f/fuse-overlayfs-1.16-1.el10_1.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-appstream-rpms
     size: 69765
@@ -1146,13 +1146,13 @@ arches:
     name: containers-common-extra
     evr: 5:0.64.0-5.el10_1
     sourcerpm: containers-common-0.64.0-5.el10_1.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/appstream/os/Packages/c/crun-1.23.1-1.el10_0.s390x.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/appstream/os/Packages/c/crun-1.27-1.el10_1.s390x.rpm
     repoid: ubi-10-for-s390x-appstream-rpms
-    size: 265039
-    checksum: sha256:96092c038b560c80e58cce1db412afd3c4e02cb3a8f9c073f1791bd36e80c5e5
+    size: 283270
+    checksum: sha256:65636f8a0a931788ac776c9ab67f356d9d06eff17d0e2c0f7652d7567cd88974
     name: crun
-    evr: 1.23.1-1.el10_0
-    sourcerpm: crun-1.23.1-1.el10_0.src.rpm
+    evr: 1.27-1.el10_1
+    sourcerpm: crun-1.27-1.el10_1.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/appstream/os/Packages/f/fuse-overlayfs-1.16-1.el10_1.s390x.rpm
     repoid: ubi-10-for-s390x-appstream-rpms
     size: 67180
@@ -1703,13 +1703,13 @@ arches:
     name: containers-common-extra
     evr: 5:0.64.0-5.el10_1
     sourcerpm: containers-common-0.64.0-5.el10_1.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/appstream/os/Packages/c/crun-1.23.1-1.el10_0.x86_64.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/appstream/os/Packages/c/crun-1.27-1.el10_1.x86_64.rpm
     repoid: ubi-10-for-x86_64-appstream-rpms
-    size: 266120
-    checksum: sha256:aaff41748b8283687c6abeb53bd90aee6547342c804dad4aea68d3cac6120ffd
+    size: 284552
+    checksum: sha256:8fd5fcc16e3200419a32d5f37348fecebeaa323a3580e475e8877977d4304ffd
     name: crun
-    evr: 1.23.1-1.el10_0
-    sourcerpm: crun-1.23.1-1.el10_0.src.rpm
+    evr: 1.27-1.el10_1
+    sourcerpm: crun-1.27-1.el10_1.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/appstream/os/Packages/f/fuse-overlayfs-1.16-1.el10_1.x86_64.rpm
     repoid: ubi-10-for-x86_64-appstream-rpms
     size: 68747
