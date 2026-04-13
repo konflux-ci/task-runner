@@ -146,7 +146,7 @@ spec:
       - name: name
         value: prefetch-dependencies-oci-ta
       - name: bundle
-        value: quay.io/konflux-ci/tekton-catalog/task-prefetch-dependencies-oci-ta:0.3@sha256:9917d11f0a38c844184042d504b3d5605c009e6e43785fa113caae8b4c99b75e
+        value: quay.io/acmiel-test/tekton-catalog/task-prefetch-dependencies-oci-ta:prefetch.env
       - name: kind
         value: task
       resolver: bundles
@@ -194,7 +194,7 @@ spec:
     - name: BUILDAH_FORMAT
       value: $(params.buildah-format)
     - name: SOURCE_ARTIFACT
-      value: $(tasks.prefetch-dependencies.results.SOURCE_ARTIFACT)
+      value: $(tasks.run-script.results.SCRIPT_ARTIFACT)
     - name: CACHI2_ARTIFACT
       value: $(tasks.prefetch-dependencies.results.CACHI2_ARTIFACT)
     - name: IMAGE_APPEND_PLATFORM
@@ -209,8 +209,11 @@ spec:
       value: $(tasks.init.results.http-proxy)
     - name: NO_PROXY
       value: $(tasks.init.results.no-proxy)
+    - name: ADDITIONAL_BASE_IMAGES
+      value:
+      - $(tasks.run-script.results.SCRIPT_RUNNER_IMAGE_REFERENCE)
     runAfter:
-    - prefetch-dependencies
+    - run-script
     taskRef:
       params:
       - name: name
@@ -541,7 +544,7 @@ spec:
     - name: CONTEXT
       value: $(params.path-context)
     - name: SOURCE_ARTIFACT
-      value: $(tasks.prefetch-dependencies.results.SOURCE_ARTIFACT)
+      value: $(tasks.run-script.results.SCRIPT_ARTIFACT)
     runAfter:
     - build-image-index
     taskRef:
@@ -575,6 +578,39 @@ spec:
       operator: in
       values:
       - "false"
+  - name: run-script
+    taskRef:
+      resolver: bundles
+      params:
+      - name: kind
+        value: task
+      - name: name
+        value: run-script-oci-ta
+      - name: bundle
+        value: quay.io/acmiel-test/tekton-catalog/task-run-script-oci-ta:prefetch.env
+    params:
+    - name: ociStorage
+      value: $(params.output-image).script
+    - name: ociArtifactExpiresAfter
+      value: $(params.image-expires-after)
+    - name: SCRIPT_RUNNER_IMAGE
+      value: quay.io/konflux-ci/task-runner:1.6.0
+    - name: SCRIPT
+      value: |
+        #!/bin/bash
+        set -euo pipefail
+
+        ls /cachi2
+
+        echo $PIP_FIND_LINKS
+    - name: HERMETIC
+      value: $(params.hermetic)
+    - name: SOURCE_ARTIFACT
+      value: $(tasks.prefetch-dependencies.results.SOURCE_ARTIFACT)
+    - name: PREFETCH_ARTIFACT
+      value: $(tasks.prefetch-dependencies.results.CACHI2_ARTIFACT)
+    runAfter:
+    - prefetch-dependencies
   workspaces:
   - name: git-auth
     optional: true
