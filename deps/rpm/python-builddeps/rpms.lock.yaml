@@ -60,13 +60,13 @@ arches:
     name: libxcrypt-devel
     evr: 4.4.36-10.el10
     sourcerpm: libxcrypt-4.4.36-10.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/appstream/os/Packages/p/python3-devel-3.12.12-3.el10_1.2.aarch64.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/appstream/os/Packages/p/python3-devel-3.12.12-3.el10_1.3.aarch64.rpm
     repoid: ubi-10-for-aarch64-appstream-rpms
-    size: 343787
-    checksum: sha256:0d331271b66d53261075910d18a7ae63956dd69e3f1241d2489cc9948fa190d2
+    size: 343862
+    checksum: sha256:011c752fa0bf15af980c8a6d3b15d273e62447221d1c9e409a40390e70aff1ec
     name: python3-devel
-    evr: 3.12.12-3.el10_1.2
-    sourcerpm: python3.12-3.12.12-3.el10_1.2.src.rpm
+    evr: 3.12.12-3.el10_1.3
+    sourcerpm: python3.12-3.12.12-3.el10_1.3.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/appstream/os/Packages/p/python3-pip-23.3.2-7.el10.noarch.rpm
     repoid: ubi-10-for-aarch64-appstream-rpms
     size: 3397252
@@ -200,20 +200,20 @@ arches:
     name: pkgconf-pkg-config
     evr: 2.1.0-3.el10
     sourcerpm: pkgconf-2.1.0-3.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/p/python3-3.12.12-3.el10_1.2.aarch64.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/p/python3-3.12.12-3.el10_1.3.aarch64.rpm
     repoid: ubi-10-for-aarch64-baseos-rpms
-    size: 34905
-    checksum: sha256:c9269c157e0b23b1d169f3b3e9fa0dcccd31a28580b7d575634f3ec7cd45fcc3
+    size: 35087
+    checksum: sha256:88f3ea6bfa6f068d3d6a12b204a54b26d508dd6cba61c5ab07af96c6246c6eb3
     name: python3
-    evr: 3.12.12-3.el10_1.2
-    sourcerpm: python3.12-3.12.12-3.el10_1.2.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/p/python3-libs-3.12.12-3.el10_1.2.aarch64.rpm
+    evr: 3.12.12-3.el10_1.3
+    sourcerpm: python3.12-3.12.12-3.el10_1.3.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/p/python3-libs-3.12.12-3.el10_1.3.aarch64.rpm
     repoid: ubi-10-for-aarch64-baseos-rpms
-    size: 9733470
-    checksum: sha256:d7c46c7f6de55fffdd4627c5d96083f2511afb44747f7607fa89c61338468b1a
+    size: 9735945
+    checksum: sha256:76b55ebd99e0b1a0d6807f752bbfe82b49c2e2c94c7dada96b23573c52c6ca76
     name: python3-libs
-    evr: 3.12.12-3.el10_1.2
-    sourcerpm: python3.12-3.12.12-3.el10_1.2.src.rpm
+    evr: 3.12.12-3.el10_1.3
+    sourcerpm: python3.12-3.12.12-3.el10_1.3.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/p/python3-pip-wheel-23.3.2-7.el10.noarch.rpm
     repoid: ubi-10-for-aarch64-baseos-rpms
     size: 1547196
@@ -288,13 +288,13 @@ arches:
     name: libxcrypt-devel
     evr: 4.4.36-10.el10
     sourcerpm: libxcrypt-4.4.36-10.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/appstream/os/Packages/p/python3-devel-3.12.12-3.el10_1.2.ppc64le.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/appstream/os/Packages/p/python3-devel-3.12.12-3.el10_1.3.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-appstream-rpms
-    size: 343714
-    checksum: sha256:d0b0a641787feb8c37033dd0c6b394d3e0df42ce34302c13facfdda45e70f456
+    size: 343853
+    checksum: sha256:9101e302469172334de7cb03cbb227246396524fb41f2a65d8f2a6644740885d
     name: python3-devel
-    evr: 3.12.12-3.el10_1.2
-    sourcerpm: python3.12-3.12.12-3.el10_1.2.src.rpm
+    evr: 3.12.12-3.el10_1.3
+    sourcerpm: python3.12-3.12.12-3.el10_1.3.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/appstream/os/Packages/p/python3-pip-23.3.2-7.el10.noarch.rpm
     repoid: ubi-10-for-ppc64le-appstream-rpms
     size: 3397252
@@ -428,20 +428,20 @@ arches:
     name: pkgconf-pkg-config
     evr: 2.1.0-3.el10
     sourcerpm: pkgconf-2.1.0-3.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/p/python3-3.12.12-3.el10_1.2.ppc64le.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/p/python3-3.12.12-3.el10_1.3.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-baseos-rpms
-    size: 34841
-    checksum: sha256:3bb7e63e45e4a380a4583b288012cf401124373957ca9117bc97471bf60ca48a
+    size: 35019
+    checksum: sha256:9633c54e1cda6dbed72a0aca6a0f8063f6044da3dc12a3902f4deb90ec3b40fd
     name: python3
-    evr: 3.12.12-3.el10_1.2
-    sourcerpm: python3.12-3.12.12-3.el10_1.2.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/p/python3-libs-3.12.12-3.el10_1.2.ppc64le.rpm
+    evr: 3.12.12-3.el10_1.3
+    sourcerpm: python3.12-3.12.12-3.el10_1.3.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/p/python3-libs-3.12.12-3.el10_1.3.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-baseos-rpms
-    size: 9950996
-    checksum: sha256:df3e06a49937c0565569b04069523e09df68021d37496438ffebeb3672e848c2
+    size: 9947553
+    checksum: sha256:4007d3dc35227ad465c56644fd24d2bd6ed7c766cb152557db94498f3dbf0202
     name: python3-libs
-    evr: 3.12.12-3.el10_1.2
-    sourcerpm: python3.12-3.12.12-3.el10_1.2.src.rpm
+    evr: 3.12.12-3.el10_1.3
+    sourcerpm: python3.12-3.12.12-3.el10_1.3.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/p/python3-pip-wheel-23.3.2-7.el10.noarch.rpm
     repoid: ubi-10-for-ppc64le-baseos-rpms
     size: 1547196
@@ -516,13 +516,13 @@ arches:
     name: libxcrypt-devel
     evr: 4.4.36-10.el10
     sourcerpm: libxcrypt-4.4.36-10.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/appstream/os/Packages/p/python3-devel-3.12.12-3.el10_1.2.s390x.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/appstream/os/Packages/p/python3-devel-3.12.12-3.el10_1.3.s390x.rpm
     repoid: ubi-10-for-s390x-appstream-rpms
-    size: 343683
-    checksum: sha256:6f8f7996d04d514a483536f1526793f7537f5da74cab8bec953e52a158625440
+    size: 343767
+    checksum: sha256:c5cbd3057b397444f81d589e2a0c0a1f496826cea588ba581a215e0383374a6b
     name: python3-devel
-    evr: 3.12.12-3.el10_1.2
-    sourcerpm: python3.12-3.12.12-3.el10_1.2.src.rpm
+    evr: 3.12.12-3.el10_1.3
+    sourcerpm: python3.12-3.12.12-3.el10_1.3.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/appstream/os/Packages/p/python3-pip-23.3.2-7.el10.noarch.rpm
     repoid: ubi-10-for-s390x-appstream-rpms
     size: 3397252
@@ -656,20 +656,20 @@ arches:
     name: pkgconf-pkg-config
     evr: 2.1.0-3.el10
     sourcerpm: pkgconf-2.1.0-3.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/p/python3-3.12.12-3.el10_1.2.s390x.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/p/python3-3.12.12-3.el10_1.3.s390x.rpm
     repoid: ubi-10-for-s390x-baseos-rpms
-    size: 34582
-    checksum: sha256:cc9c009f4c71ab78bb4ca5268726e341c6e329669b2ed1499db763a75b928c6f
+    size: 34766
+    checksum: sha256:7367a79f764b253c8fe46c9fe5ec5d2e835f778a5e8dd656887cb01ee84eff2f
     name: python3
-    evr: 3.12.12-3.el10_1.2
-    sourcerpm: python3.12-3.12.12-3.el10_1.2.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/p/python3-libs-3.12.12-3.el10_1.2.s390x.rpm
+    evr: 3.12.12-3.el10_1.3
+    sourcerpm: python3.12-3.12.12-3.el10_1.3.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/p/python3-libs-3.12.12-3.el10_1.3.s390x.rpm
     repoid: ubi-10-for-s390x-baseos-rpms
-    size: 9973902
-    checksum: sha256:4740d722f45f1317c085b2eadf643ba4d56ad14d5154b06581be0bf8be643b3f
+    size: 9971055
+    checksum: sha256:4fb67bd950f401b75c7c32257ecd5e291b4b7d20dfceff55385d5f6f6305ed1f
     name: python3-libs
-    evr: 3.12.12-3.el10_1.2
-    sourcerpm: python3.12-3.12.12-3.el10_1.2.src.rpm
+    evr: 3.12.12-3.el10_1.3
+    sourcerpm: python3.12-3.12.12-3.el10_1.3.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/p/python3-pip-wheel-23.3.2-7.el10.noarch.rpm
     repoid: ubi-10-for-s390x-baseos-rpms
     size: 1547196
@@ -730,13 +730,13 @@ arches:
     name: libxcrypt-devel
     evr: 4.4.36-10.el10
     sourcerpm: libxcrypt-4.4.36-10.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/appstream/os/Packages/p/python3-devel-3.12.12-3.el10_1.2.x86_64.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/appstream/os/Packages/p/python3-devel-3.12.12-3.el10_1.3.x86_64.rpm
     repoid: ubi-10-for-x86_64-appstream-rpms
-    size: 343749
-    checksum: sha256:5a3fa6dbe96a24d8ed3a78689cca8c19228b8424564a0e97b098a1860b03dfd4
+    size: 343846
+    checksum: sha256:396e969249006ad341360593e05b060ab6628ab317071ce3aa2d8efec6b5ebcf
     name: python3-devel
-    evr: 3.12.12-3.el10_1.2
-    sourcerpm: python3.12-3.12.12-3.el10_1.2.src.rpm
+    evr: 3.12.12-3.el10_1.3
+    sourcerpm: python3.12-3.12.12-3.el10_1.3.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/appstream/os/Packages/p/python3-pip-23.3.2-7.el10.noarch.rpm
     repoid: ubi-10-for-x86_64-appstream-rpms
     size: 3397252
@@ -863,20 +863,20 @@ arches:
     name: pkgconf-pkg-config
     evr: 2.1.0-3.el10
     sourcerpm: pkgconf-2.1.0-3.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/p/python3-3.12.12-3.el10_1.2.x86_64.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/p/python3-3.12.12-3.el10_1.3.x86_64.rpm
     repoid: ubi-10-for-x86_64-baseos-rpms
-    size: 34771
-    checksum: sha256:f4fec243c0e9843f8316fd1606947d1f5fd570df678bd2c52fee3c78586a3f06
+    size: 34948
+    checksum: sha256:56e856f6cfee1c79e977b64af8482bbb98634613d398dca2613c2bf83a82ba97
     name: python3
-    evr: 3.12.12-3.el10_1.2
-    sourcerpm: python3.12-3.12.12-3.el10_1.2.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/p/python3-libs-3.12.12-3.el10_1.2.x86_64.rpm
+    evr: 3.12.12-3.el10_1.3
+    sourcerpm: python3.12-3.12.12-3.el10_1.3.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/p/python3-libs-3.12.12-3.el10_1.3.x86_64.rpm
     repoid: ubi-10-for-x86_64-baseos-rpms
-    size: 9912391
-    checksum: sha256:6e61e271e96a34e41a3efd1e2f496271b367427f3f774f2179b4b82299128a4f
+    size: 9910938
+    checksum: sha256:80bd81132d618b914c96a1b7398a0fc80dc0705daa71e0281fc31740f68b33a6
     name: python3-libs
-    evr: 3.12.12-3.el10_1.2
-    sourcerpm: python3.12-3.12.12-3.el10_1.2.src.rpm
+    evr: 3.12.12-3.el10_1.3
+    sourcerpm: python3.12-3.12.12-3.el10_1.3.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/p/python3-pip-wheel-23.3.2-7.el10.noarch.rpm
     repoid: ubi-10-for-x86_64-baseos-rpms
     size: 1547196
