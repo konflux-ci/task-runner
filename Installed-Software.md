@@ -32,7 +32,7 @@ Re-generate with:
 | olot                           | 0.1.16                         | `pip install`                            |
 | openssl                        | 3.5.1-7.el10_1                 | RPM                                      |
 | oras                           | 1.3.0                          | `go install`                             |
-| python3                        | 3.12.12-3.el10_1.2             | RPM                                      |
+| python3                        | 3.12.12-3.el10_1.3             | RPM                                      |
 | retry                          | 1.0.0                          | [local](./local-tools/retry)             |
 | rpm                            | 4.19.1.1-20.el10               | RPM                                      |
 | sed                            | 4.9-3.el10                     | RPM                                      |
