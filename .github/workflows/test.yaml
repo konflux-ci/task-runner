@@ -45,26 +45,17 @@ jobs:
         run: |
           .venv/bin/python3 -m pytest --color=yes --ignore=tests/with_container
 
-      - name: Get changed files
-        id: changed-files
+      - name: Check if the PR changes any files that should trigger container tests
+        id: changed-container-files
         uses: tj-actions/changed-files@22103cc46bda19c2b464ffe86db46df6922fd323 # v47.0.5
-
-      - name: Determine if container-related tests should run
-        id: run-container-related-tests
-        env:
-          ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
-        run: |
-          for file in ${ALL_CHANGED_FILES}; do
-            printf "changed file: %s\n" "$file"
-            if [[ $file =~ ^deps/ ]] || [[ $file =~ ^Containerfile$ ]] || [[ $file =~ ^tests/with_container/ ]]; then
-              printf "should_run=1\n" >>$GITHUB_OUTPUT
-              exit 0
-            fi
-          done
-          printf "should_run=0\n" >>$GITHUB_OUTPUT
+        with:
+          files: |
+            Containerfile
+            deps/**
+            tests/with_container/**
 
       - name: Wait for build pipeline finishes image build
-        if: steps.run-container-related-tests.outputs.should_run == '1'
+        if: steps.changed-container-files.outputs.any_changed == 'true'
         env:
           RETRY_INTERVAL: 180  # 3 Minutes
           TIMEOUT: 5400  # 1.5 Hour
@@ -102,7 +93,7 @@ jobs:
           done
 
       - name: Run tests
-        if: steps.run-container-related-tests.outputs.should_run == '1'
+        if: steps.changed-container-files.outputs.any_changed == 'true'
         env:
           TEST_IMAGE: quay.io/redhat-user-workloads/rhtap-build-tenant/task-runner:on-pr-${{ github.event.pull_request.head.sha }}
         run: |
