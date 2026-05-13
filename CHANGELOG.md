@@ -12,6 +12,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - The container image now has a floating `v1` tag pointing to the latest 1.x release:
   [`quay.io/konflux-ci/task-runner:v1`](https://quay.io/konflux-ci/task-runner:v1)
 
+### Fixed
+
+- The `version` label in the container image is now correct
+  (previously, this label was inherited from the UBI base image)
+
 ## 1.6.0
 
 Date: 2026-03-24

@@ -40,5 +40,6 @@ spec:
         printf '["org.opencontainers.image.version=%s"]' "$version" > "$ANNOTATIONS_RESULT"
         printf '[
           "org.opencontainers.image.version=%s",
+          "version=%s",
           "version.major=%d"
-        ]' "$version" "$version_major" > "$LABELS_RESULT"
+        ]' "$version" "$version" "$version_major" > "$LABELS_RESULT"
