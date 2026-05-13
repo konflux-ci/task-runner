@@ -35,6 +35,10 @@ spec:
         set -euo pipefail
 
         version=$(cat VERSION)
+        version_major=$(cut -d . -f 1 <<< "$version")
 
         printf '["org.opencontainers.image.version=%s"]' "$version" > "$ANNOTATIONS_RESULT"
-        printf '["org.opencontainers.image.version=%s"]' "$version" > "$LABELS_RESULT"
+        printf '[
+          "org.opencontainers.image.version=%s",
+          "version.major=%d"
+        ]' "$version" "$version_major" > "$LABELS_RESULT"

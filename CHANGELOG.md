@@ -7,7 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
-- *Nothing yet.*
+### Added
+
+- The container image now has a floating `v1` tag pointing to the latest 1.x release:
+  [`quay.io/konflux-ci/task-runner:v1`](https://quay.io/konflux-ci/task-runner:v1)
 
 ## 1.6.0
 
