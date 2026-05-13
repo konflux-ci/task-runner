@@ -221,13 +221,13 @@ arches:
     name: gzip
     evr: 1.13-3.el10
     sourcerpm: gzip-1.13-3.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/i/iptables-libs-1.8.11-12.el10_1.aarch64.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/i/iptables-libs-1.8.11-13.el10_1.aarch64.rpm
     repoid: ubi-10-for-aarch64-baseos-rpms
-    size: 472434
-    checksum: sha256:c9e6f19c824195c8fb5252ddfadbbaa8dd1d73cfa3b01fca819acdcd530f4811
+    size: 477298
+    checksum: sha256:0e405b3d08bbd90b945e6d3443dc2d0772f6dad1cb51438ca4224a0f88a34b31
     name: iptables-libs
-    evr: 1.8.11-12.el10_1
-    sourcerpm: iptables-1.8.11-12.el10_1.src.rpm
+    evr: 1.8.11-13.el10_1
+    sourcerpm: iptables-1.8.11-13.el10_1.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/j/jansson-2.14-3.el10.aarch64.rpm
     repoid: ubi-10-for-aarch64-baseos-rpms
     size: 50745
@@ -806,13 +806,13 @@ arches:
     name: gzip
     evr: 1.13-3.el10
     sourcerpm: gzip-1.13-3.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/i/iptables-libs-1.8.11-12.el10_1.ppc64le.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/i/iptables-libs-1.8.11-13.el10_1.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-baseos-rpms
-    size: 483010
-    checksum: sha256:1feb8062c5e43ec6a6c1530e3d0e2c4b39bf18c8dd495feadc640d54932c5aca
+    size: 489652
+    checksum: sha256:1412a071987f1d38310a34da00eb125eac64a91f7b0fddbe35c9b112174ffaec
     name: iptables-libs
-    evr: 1.8.11-12.el10_1
-    sourcerpm: iptables-1.8.11-12.el10_1.src.rpm
+    evr: 1.8.11-13.el10_1
+    sourcerpm: iptables-1.8.11-13.el10_1.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/j/jansson-2.14-3.el10.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-baseos-rpms
     size: 54545
@@ -1398,13 +1398,13 @@ arches:
     name: gzip
     evr: 1.13-3.el10
     sourcerpm: gzip-1.13-3.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/i/iptables-libs-1.8.11-12.el10_1.s390x.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/i/iptables-libs-1.8.11-13.el10_1.s390x.rpm
     repoid: ubi-10-for-s390x-baseos-rpms
-    size: 470474
-    checksum: sha256:fa549c093225276aaf1f522aff118f9a3d030d35914a1cee51e3fae4fabc3378
+    size: 477338
+    checksum: sha256:a23028491472a1f4ec43937af10b6b0952648f73a5de84a6d0a452373fbcb87e
     name: iptables-libs
-    evr: 1.8.11-12.el10_1
-    sourcerpm: iptables-1.8.11-12.el10_1.src.rpm
+    evr: 1.8.11-13.el10_1
+    sourcerpm: iptables-1.8.11-13.el10_1.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/j/jansson-2.14-3.el10.s390x.rpm
     repoid: ubi-10-for-s390x-baseos-rpms
     size: 49596
@@ -1983,13 +1983,13 @@ arches:
     name: gzip
     evr: 1.13-3.el10
     sourcerpm: gzip-1.13-3.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/i/iptables-libs-1.8.11-12.el10_1.x86_64.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/i/iptables-libs-1.8.11-13.el10_1.x86_64.rpm
     repoid: ubi-10-for-x86_64-baseos-rpms
-    size: 457603
-    checksum: sha256:6c432bd72858f15f6122121f20735c156be929dbd14477ed5eb90a0d27412d04
+    size: 464280
+    checksum: sha256:8b9a43bfe3e1438065de8fee114afa7d8af75493e3a800016ab726a39e92d56c
     name: iptables-libs
-    evr: 1.8.11-12.el10_1
-    sourcerpm: iptables-1.8.11-12.el10_1.src.rpm
+    evr: 1.8.11-13.el10_1
+    sourcerpm: iptables-1.8.11-13.el10_1.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/j/jansson-2.14-3.el10.x86_64.rpm
     repoid: ubi-10-for-x86_64-baseos-rpms
     size: 49616
