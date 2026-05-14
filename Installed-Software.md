@@ -24,7 +24,7 @@ Re-generate with:
 | git-core                       | 2.47.3-1.el10_0                | RPM                                      |
 | grep                           | 3.11-10.el10                   | RPM                                      |
 | huggingface-hub                | 1.13.0                         | `pip install`                            |
-| jq                             | 1.7.1-11.el10                  | RPM                                      |
+| jq                             | 1.7.1-11.el10_1.0.2            | RPM                                      |
 | kubectl                        | 1.35.2                         | Git submodule (Go)                       |
 | make                           | 4.4.1-9.el10                   | RPM                                      |
 | microdnf                       | 3.10.1-1.el10                  | RPM                                      |
