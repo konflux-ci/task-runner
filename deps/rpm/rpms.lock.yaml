@@ -235,13 +235,13 @@ arches:
     name: jansson
     evr: 2.14-3.el10
     sourcerpm: jansson-2.14-3.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/j/jq-1.7.1-11.el10.aarch64.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/j/jq-1.7.1-11.el10_1.0.2.aarch64.rpm
     repoid: ubi-10-for-aarch64-baseos-rpms
-    size: 200426
-    checksum: sha256:34ace935cb241858839de48dda53b2d21da6a0f61fe1a06d18b89df527e99460
+    size: 206451
+    checksum: sha256:672eea21d7a30546d3af9ca3a2e08dc1b19a69b99cc66e0f13337a6aa8016c7a
     name: jq
-    evr: 1.7.1-11.el10
-    sourcerpm: jq-1.7.1-11.el10.src.rpm
+    evr: 1.7.1-11.el10_1.0.2
+    sourcerpm: jq-1.7.1-11.el10_1.0.2.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/k/kmod-31-12.el10.aarch64.rpm
     repoid: ubi-10-for-aarch64-baseos-rpms
     size: 137069
@@ -820,13 +820,13 @@ arches:
     name: jansson
     evr: 2.14-3.el10
     sourcerpm: jansson-2.14-3.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/j/jq-1.7.1-11.el10.ppc64le.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/j/jq-1.7.1-11.el10_1.0.2.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-baseos-rpms
-    size: 220721
-    checksum: sha256:21c770c7798fd415321dbdcc00a3472802c4dce1cc8e677e757eb5161cd7922c
+    size: 226905
+    checksum: sha256:8ee1c800e1b0dc803eb6da9a252d42aa2bdf24949e7152e16569bc34e2bf63ae
     name: jq
-    evr: 1.7.1-11.el10
-    sourcerpm: jq-1.7.1-11.el10.src.rpm
+    evr: 1.7.1-11.el10_1.0.2
+    sourcerpm: jq-1.7.1-11.el10_1.0.2.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/k/kmod-31-12.el10.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-baseos-rpms
     size: 150716
@@ -1412,13 +1412,13 @@ arches:
     name: jansson
     evr: 2.14-3.el10
     sourcerpm: jansson-2.14-3.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/j/jq-1.7.1-11.el10.s390x.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/j/jq-1.7.1-11.el10_1.0.2.s390x.rpm
     repoid: ubi-10-for-s390x-baseos-rpms
-    size: 237443
-    checksum: sha256:083b8c9357797ded430515e688032aff4f9ca9d5e95b07f92a2e14d815ae3a81
+    size: 243412
+    checksum: sha256:e02dab98c0e761e1f5707b1281322b09d2376eb125684050c2c360d9b85546b1
     name: jq
-    evr: 1.7.1-11.el10
-    sourcerpm: jq-1.7.1-11.el10.src.rpm
+    evr: 1.7.1-11.el10_1.0.2
+    sourcerpm: jq-1.7.1-11.el10_1.0.2.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/k/kmod-31-12.el10.s390x.rpm
     repoid: ubi-10-for-s390x-baseos-rpms
     size: 143744
@@ -1997,13 +1997,13 @@ arches:
     name: jansson
     evr: 2.14-3.el10
     sourcerpm: jansson-2.14-3.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/j/jq-1.7.1-11.el10.x86_64.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/j/jq-1.7.1-11.el10_1.0.2.x86_64.rpm
     repoid: ubi-10-for-x86_64-baseos-rpms
-    size: 206578
-    checksum: sha256:83eae38b8fc0c3255a12ea0301ae9f53d4dca505cb19ed93c223a1178ecf5494
+    size: 212796
+    checksum: sha256:ebf65b51b3648d65d2bf5671109d209f7855b8cf12b2aeb1cd371f80222e4dc2
     name: jq
-    evr: 1.7.1-11.el10
-    sourcerpm: jq-1.7.1-11.el10.src.rpm
+    evr: 1.7.1-11.el10_1.0.2
+    sourcerpm: jq-1.7.1-11.el10_1.0.2.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/k/kmod-31-12.el10.x86_64.rpm
     repoid: ubi-10-for-x86_64-baseos-rpms
     size: 139642
