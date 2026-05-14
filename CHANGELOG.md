@@ -7,8 +7,33 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+*Nothing yet.*
+
+## 1.7.0
+
+Date: 2026-05-14
+
+### Installed Software
+
+- `openssh-clients` added (9.9p1-14.el10_1)
+- `rsync` added (3.4.1-2.el10_1.2)
+- `subscription-manager` added (1.30.10.1-1.el10_1)
+- `awscli` 1.44.49 => 1.45.2
+- `conftest` 0.66.0 => 0.68.2
+- `crun` 1.23.1-1.el10_0 => 1.27-1.el10_1
+- `huggingface-hub` 1.7.1 => 1.13.0
+- `syft` 1.42.1 => 1.44.0
+- `yq` 4.52.2 => 4.53.2
+- `buildah` 1.43.0 => 1.43.1
+- `cosign` 2.6.2 => 2.6.3
+- `jq` 1.7.1-11.el10 => 1.7.1-11.el10_1.0.2
+- `olot` 0.1.16 => 0.1.17
+- `python3` 3.12.12-3.el10_1.1 => 3.12.12-3.el10_1.3
+- `tkn` 0.44.0 => 0.44.1
+
 ### Added
 
+- `rsync`, `ssh` and `subscription-manager`
 - The container image now has a floating `v1` tag pointing to the latest 1.x release:
   [`quay.io/konflux-ci/task-runner:v1`](https://quay.io/konflux-ci/task-runner:v1)
 
