@@ -29,6 +29,15 @@ fmt-py:
 autofix-py:
 	uv run ruff check --fix
 
+.PHONY: shellcheck
+shellcheck:
+	@if ! command -v shellcheck >/dev/null; then \
+		echo "Please install shellcheck. It is likely packaged for your system:"; \
+		echo "  https://github.com/koalaman/shellcheck#installing"; \
+		exit 1; \
+	fi
+	shellcheck local-tools/**/*.sh
+
 RPM_IN_FILES = $(shell find . -name rpms.in.yaml)
 RPM_LOCK_FILES = $(patsubst %/rpms.in.yaml,%/rpms.lock.yaml,$(RPM_IN_FILES))
 
