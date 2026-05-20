@@ -60,7 +60,10 @@ def test_print_usage():
 @pytest.mark.parametrize(
     "image_ref,expected_auth",
     [
-        ["docker.io/library/debian:latest", '{"auths": {"docker.io": {"auth": "docker.io secret"}}}'],
+        [
+            "docker.io/library/debian:latest",
+            '{"auths": {"docker.io": {"auth": "docker.io secret"}}}',
+        ],
         ["quay.io", '{"auths": {"quay.io": {"auth": "quay secret"}}}'],
         ["quay.io/foo", '{"auths": {"quay.io": {"auth": "quay secret"}}}'],
         ["quay.io/foo:0.1", '{"auths": {"quay.io": {"auth": "quay secret"}}}'],
@@ -68,8 +71,14 @@ def test_print_usage():
         ["quay.io/konflux-ci", '{"auths": {"quay.io": {"auth": "quay secret"}}}'],
         ["quay.io/konflux-ci/foo", '{"auths": {"quay.io": {"auth": "konflux-ci/foo secret"}}}'],
         ["quay.io/konflux-ci/foo:0.3", '{"auths": {"quay.io": {"auth": "konflux-ci/foo secret"}}}'],
-        ["quay.io/konflux-ci/foo@sha256:1234567", '{"auths": {"quay.io": {"auth": "konflux-ci/foo secret"}}}'],
-        ["quay.io/konflux-ci/foo:0.3@sha256:1234567", '{"auths": {"quay.io": {"auth": "konflux-ci/foo secret"}}}'],
+        [
+            "quay.io/konflux-ci/foo@sha256:1234567",
+            '{"auths": {"quay.io": {"auth": "konflux-ci/foo secret"}}}',
+        ],
+        [
+            "quay.io/konflux-ci/foo:0.3@sha256:1234567",
+            '{"auths": {"quay.io": {"auth": "konflux-ci/foo secret"}}}',
+        ],
         ["quay.io/konflux-ci/foo/bar", '{"auths": {"quay.io": {"auth": "konflux-ci/foo secret"}}}'],
         ["reg.io", '{"auths": {"reg.io": {"auth": "reg.io secret"}}}'],
         ["reg.io/foo", '{"auths": {"reg.io": {"auth": "reg.io secret"}}}'],

@@ -245,12 +245,10 @@ def list_rpms(project_root: Path) -> list[RPMPackage]:
     if set(packages_to_reinstall) != set(packages_to_upgrade):
         raise ValueError(
             f"At least one package is not included in both 'reinstallPackages' and 'upgradePackages': "
-            f"{set(packages_to_reinstall).symmetric_difference(packages_to_upgrade)}")
+            f"{set(packages_to_reinstall).symmetric_difference(packages_to_upgrade)}"
+        )
 
-    package_names = (
-        rpms_in.get("packages", [])
-        + packages_to_reinstall
-    )
+    package_names = rpms_in.get("packages", []) + packages_to_reinstall
 
     for package_name in package_names:
         if package_name.startswith("containers-common"):

@@ -12,6 +12,14 @@ venv: .venv
 submodules:
 	git submodule update --init --depth=1
 
+.PHONY: check-py
+check-py:
+	uv run ruff format --check --diff
+
+.PHONY: fmt-py
+fmt-py:
+	uv run ruff format
+
 RPM_IN_FILES = $(shell find . -name rpms.in.yaml)
 RPM_LOCK_FILES = $(patsubst %/rpms.in.yaml,%/rpms.lock.yaml,$(RPM_IN_FILES))
 
