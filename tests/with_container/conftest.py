@@ -3,9 +3,8 @@ import os
 
 import pytest
 
-from tests.with_container.utils.container import Container
 from tests.constants import REPO_ROOT
-
+from tests.with_container.utils.container import Container
 
 log = logging.getLogger(__name__)
 

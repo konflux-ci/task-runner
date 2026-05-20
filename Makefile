@@ -14,11 +14,18 @@ submodules:
 
 .PHONY: check-py
 check-py:
+	# formatting
 	uv run ruff format --check --diff
+	# lint
+	uv run ruff check
 
 .PHONY: fmt-py
 fmt-py:
 	uv run ruff format
+
+.PHONY: autofix-py
+autofix-py:
+	uv run ruff check --fix
 
 RPM_IN_FILES = $(shell find . -name rpms.in.yaml)
 RPM_LOCK_FILES = $(patsubst %/rpms.in.yaml,%/rpms.lock.yaml,$(RPM_IN_FILES))

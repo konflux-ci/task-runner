@@ -1,5 +1,5 @@
-from typing import IO, assert_never
 import re
+from typing import IO, assert_never
 
 from devtool.software_list import LocalPackage, Package
 

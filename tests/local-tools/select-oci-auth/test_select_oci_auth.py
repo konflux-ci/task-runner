@@ -1,11 +1,10 @@
 import json
-import pytest
 import re
-import tempfile
 from pathlib import Path
-from subprocess import run
-from subprocess import CompletedProcess
+from subprocess import CompletedProcess, run
 from typing import Final
+
+import pytest
 
 from tests.constants import REPO_ROOT
 

@@ -47,3 +47,8 @@ log_level = "debug"
 [tool.ruff]
 line-length = 100
 include = ["devtool/**/*.py", "tests/**/*.py"]
+
+[tool.ruff.lint]
+extend-select = [
+    "I",  # isort (sorted imports)
+]
