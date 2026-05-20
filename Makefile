@@ -18,6 +18,8 @@ check-py:
 	uv run ruff format --check --diff
 	# lint
 	uv run ruff check
+	# type-check
+	uv run pyright
 
 .PHONY: fmt-py
 fmt-py:
