@@ -43,6 +43,6 @@ Re-generate with:
 | subscription-manager           | 1.30.12-1.el10                 | RPM                                      |
 | syft                           | 1.44.0                         | `go install`                             |
 | tar                            | 1.35-11.el10                   | RPM                                      |
-| tkn                            | 0.45.0                         | `go install`                             |
+| tkn                            | 0.44.1                         | `go install`                             |
 | yq                             | 4.53.2                         | `go install`                             |
 | zip                            | 3.0-45.el10                    | RPM                                      |
