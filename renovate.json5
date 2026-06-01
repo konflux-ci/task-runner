@@ -52,7 +52,7 @@
           "deps/go-tools/buildah/*"
         ],
         "matchPackageNames": [
-          "github.com/containers/buildah"
+          "go.podman.io/buildah"
         ],
         "enabled": true,
         "groupName": "Non-RPM dependencies"
