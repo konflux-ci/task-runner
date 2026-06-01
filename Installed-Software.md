@@ -8,10 +8,10 @@ Re-generate with:
 
 | Name                           | Version                        | Install Method                           |
 | ------------------------------ | ------------------------------ | ---------------------------------------- |
-| awscli                         | 1.45.2                         | `pip install`                            |
+| awscli                         | 1.45.18                        | `pip install`                            |
 | bash                           | 5.2.26-6.el10                  | RPM                                      |
 | bc                             | 1.07.1-23.el10                 | RPM                                      |
-| buildah                        | 1.43.1                         | `go install`                             |
+| buildah                        | 1.44.0                         | `go install`                             |
 | conftest                       | 0.68.2                         | `go install`                             |
 | coreutils-single               | 9.5-7.el10                     | RPM                                      |
 | cosign                         | 2.6.3                          | `go install`                             |
@@ -23,16 +23,16 @@ Re-generate with:
 | gettext-envsubst               | 0.22.5-6.el10                  | RPM                                      |
 | git-core                       | 2.52.0-1.el10                  | RPM                                      |
 | grep                           | 3.11-10.el10                   | RPM                                      |
-| huggingface-hub                | 1.13.0                         | `pip install`                            |
+| huggingface-hub                | 1.17.0                         | `pip install`                            |
 | jq                             | 1.7.1-11.el10_2.2              | RPM                                      |
-| kubectl                        | 1.35.2                         | Git submodule (Go)                       |
+| kubectl                        | 1.36.1                         | Git submodule (Go)                       |
 | make                           | 4.4.1-9.el10                   | RPM                                      |
 | microdnf                       | 3.10.1-1.el10                  | RPM                                      |
 | oc                             | 4.21.0                         | Git submodule (Go)                       |
 | olot                           | 0.1.17                         | `pip install`                            |
 | openssh-clients                | 9.9p1-23.el10_2                | RPM                                      |
 | openssl                        | 3.5.5-3.el10_2                 | RPM                                      |
-| oras                           | 1.3.0                          | `go install`                             |
+| oras                           | 1.3.2                          | `go install`                             |
 | python3                        | 3.12.13-2.el10_2               | RPM                                      |
 | retry                          | 1.0.0                          | [local](./local-tools/retry)             |
 | rpm                            | 4.19.1.1-23.el10               | RPM                                      |
@@ -43,6 +43,6 @@ Re-generate with:
 | subscription-manager           | 1.30.12-1.el10                 | RPM                                      |
 | syft                           | 1.44.0                         | `go install`                             |
 | tar                            | 1.35-11.el10                   | RPM                                      |
-| tkn                            | 0.44.1                         | `go install`                             |
+| tkn                            | 0.45.0                         | `go install`                             |
 | yq                             | 4.53.2                         | `go install`                             |
 | zip                            | 3.0-45.el10                    | RPM                                      |
