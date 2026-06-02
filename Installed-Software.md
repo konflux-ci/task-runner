@@ -31,7 +31,7 @@ Re-generate with:
 | oc                             | 4.21.0                         | Git submodule (Go)                       |
 | olot                           | 0.1.17                         | `pip install`                            |
 | openssh-clients                | 9.9p1-23.el10_2                | RPM                                      |
-| openssl                        | 3.5.5-2.el10_2                 | RPM                                      |
+| openssl                        | 3.5.5-3.el10_2                 | RPM                                      |
 | oras                           | 1.3.0                          | `go install`                             |
 | python3                        | 3.12.13-2.el10_2               | RPM                                      |
 | retry                          | 1.0.0                          | [local](./local-tools/retry)             |
