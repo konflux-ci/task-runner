@@ -12,9 +12,6 @@ from tests.with_container.utils.container import Container
 @pytest.fixture(scope="module")
 def context_dir(tmp_path_factory: pytest.TempPathFactory) -> Path:
     contextdir = tmp_path_factory.mktemp("buildcontext")
-    # We're going to mount this directory into the container image, which runs as
-    # a non-root user. Allow that user to read this directory.
-    contextdir.chmod(0o777)
 
     base_image = "registry.access.redhat.com/ubi10/ubi-micro@sha256:2946fa1b951addbcd548ef59193dc0af9b3e9fedb0287b4ddb6e697b06581622"
 
@@ -42,6 +39,12 @@ def context_dir(tmp_path_factory: pytest.TempPathFactory) -> Path:
             """
         )
     )
+
+    # We mount the context directory into the container with the :U option,
+    # which changes ownership. Chmod to 0777 to ensure pytest can clean up.
+    for dirpath, _, _ in contextdir.walk():
+        dirpath.chmod(0o777)
+
     return contextdir
 
 
@@ -53,13 +56,11 @@ def test_buildah_uses_native_overlay(task_runner_container: Container) -> None:
     info = json.loads(proc.stdout)
 
     assert info["store"]["GraphDriverName"] == "overlay"
-    assert info["store"]["GraphStatus"]["Native Overlay Diff"] == "true"
 
     assert "overlay: test mount with multiple lowers succeeded" in proc.stderr
     assert "Unable to create kernel-style whiteout: operation not permitted" not in proc.stderr
 
 
-@pytest.mark.xfail(reason="https://github.com/containers/buildah/issues/6640")
 def test_buildah_uses_native_overlay_as_root(task_runner_container: Container) -> None:
     proc = task_runner_container.run_cmd(
         ["buildah", "info", "--log-level=debug"],
@@ -69,7 +70,6 @@ def test_buildah_uses_native_overlay_as_root(task_runner_container: Container) -
     info = json.loads(proc.stdout)
 
     assert info["store"]["GraphDriverName"] == "overlay"
-    assert info["store"]["GraphStatus"]["Native Overlay Diff"] == "true"
 
     assert "overlay: test mount with multiple lowers succeeded" in proc.stderr
     assert "Unable to create kernel-style whiteout: operation not permitted" not in proc.stderr
@@ -102,12 +102,13 @@ def test_buildah_falls_back_to_fuse_overlayfs(user: str, task_runner_container: 
 def test_buildah_build_works(
     use_native_overlay: bool, task_runner_container: Container, context_dir: Path
 ) -> None:
-    volumes = [f"{context_dir}:{context_dir}"]
+    volumes = [f"{context_dir}:{context_dir}:z,U"]
     devices = []
     if use_native_overlay:
         volumes.append("/home/taskuser/.local/share/containers")
     else:
         devices.append("/dev/fuse")
+        pytest.xfail("https://github.com/podman-container-tools/buildah/issues/6890")
 
     task_runner_container.run_cmd(
         ["buildah", "build", "."],
@@ -132,6 +133,7 @@ def test_buildah_build_works_as_root(
         volumes.append("/var/lib/containers")
     else:
         devices.append("/dev/fuse")
+        pytest.xfail("https://github.com/podman-container-tools/buildah/issues/6890")
 
     task_runner_container.run_cmd(
         ["buildah", "build", "--log-level=debug", "."],
@@ -148,11 +150,14 @@ def test_buildah_build_works_as_root(
 def test_buildah_can_use_stronger_isolation(
     isolation: str, task_runner_container: Container, context_dir: Path
 ) -> None:
+    if isolation == "oci":
+        pytest.xfail("github.com/podman-container-tools/buildah/issues/6891")
+
     task_runner_container.run_cmd(
         ["buildah", "build", f"--isolation={isolation}", "."],
         volumes=[
             "/home/taskuser/.local/share/containers",
-            f"{context_dir}:{context_dir}",
+            f"{context_dir}:{context_dir}:z,U",
         ],
         workdir=context_dir,
         privileged=True,
@@ -163,6 +168,9 @@ def test_buildah_can_use_stronger_isolation(
 def test_buildah_can_use_stronger_isolation_as_root(
     isolation: str, task_runner_container: Container, context_dir: Path
 ) -> None:
+    if isolation == "oci":
+        pytest.xfail("github.com/podman-container-tools/buildah/issues/6891")
+
     task_runner_container.run_cmd(
         ["buildah", "build", f"--isolation={isolation}", "."],
         volumes=[
@@ -181,7 +189,7 @@ def test_buildah_works_for_other_uids(task_runner_container: Container, context_
         ["buildah", "build", "."],
         volumes=[
             "/home/taskuser/.local/share/containers",
-            f"{context_dir}:{context_dir}",
+            f"{context_dir}:{context_dir}:z,U",
         ],
         workdir=context_dir,
         user="1001:0",

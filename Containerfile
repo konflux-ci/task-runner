@@ -59,6 +59,28 @@ RUN useradd -u 1000 -g 0 -s /bin/sh -d /home/taskuser taskuser && \
 RUN echo "root:1:65535" | tee /etc/sub{uid,gid} && \
     echo "taskuser:1001:64535" | tee -a /etc/sub{uid,gid}
 
+COPY <<'EOF' /etc/containers/containers.conf.d/01-set-tmp-dir.conf
+[engine]
+# Workaround for https://github.com/podman-container-tools/buildah/issues/6892
+image_copy_tmp_dir = "/var/lib/containers/storage"
+EOF
+
+COPY <<'EOF' /etc/containers/containers.rootless.conf.d/01-set-tmp-dir.conf
+[engine]
+# Workaround for https://github.com/podman-container-tools/buildah/issues/6892
+image_copy_tmp_dir = "/home/taskuser/.local/share/containers/storage"
+EOF
+
+COPY <<'EOF' /etc/containers/storage.rootless.conf.d/01-set-rootless-paths.conf
+[storage]
+# Set the rootless storage paths explicitly.
+# Version 1.44.0 changed the config file handling and the containers-common RPM
+# (as of the time of writing) doesn't yet ship correctly modified configs.
+# See also https://github.com/podman-container-tools/buildah/issues/6880
+graphroot = "/home/taskuser/.local/share/containers/storage"
+runroot = "/var/tmp/storage-run-taskuser/containers"
+EOF
+
 USER 1000
 # Set HOME variable to a writable location.
 # By default it's `/` and causes 'permission denied' problems when writing files.
