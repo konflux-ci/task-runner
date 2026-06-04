@@ -39,6 +39,7 @@ jobs:
         with:
           files: |
             Containerfile
+            VERSION
             deps/**
             tests/with_container/**
 
