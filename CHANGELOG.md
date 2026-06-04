@@ -9,6 +9,55 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 *Nothing yet.*
 
+## 1.8.0
+
+Date: 2026-06-05
+
+### Installed Software
+
+- `buildah` 1.43.1 => 1.44.0
+- `git-core` 2.47.3-1.el10_0 => 2.52.0-1.el10
+- `huggingface-hub` 1.13.0 => 1.17.0
+- `kubectl` 1.35.2 => 1.36.1
+- `skopeo` 1.20.0-3.el10_1 => 1.22.2-1.el10_2
+- `awscli` 1.45.2 => 1.45.18
+- `coreutils-single` 9.5-6.el10 => 9.5-7.el10
+- `crun` 1.27-1.el10_1 => 1.27-2.el10_2
+- `curl` 8.12.1-2.el10_1.2 => 8.12.1-4.el10
+- `jq` 1.7.1-11.el10_1.0.2 => 1.7.1-11.el10_2.2
+- `openssh-clients` 9.9p1-14.el10_1 => 9.9p1-23.el10_2
+- `openssl` 3.5.1-7.el10_1 => 3.5.5-3.el10_2
+- `oras` 1.3.0 => 1.3.2
+- `python3` 3.12.12-3.el10_1.3 => 3.12.13-2.el10_2
+- `rpm` 4.19.1.1-20.el10 => 4.19.1.1-23.el10
+- `rsync` 3.4.1-2.el10_1.2 => 3.4.1-6.el10_2
+- `sed` 4.9-3.el10 => 4.9-5.el10
+- `subscription-manager` 1.30.10.1-1.el10_1 => 1.30.12-1.el10
+- `tar` 1.35-9.el10_1 => 1.35-11.el10
+
+### Changed
+
+- Buildah configuration:
+  - Set `engine.image_copy_tmp_dir = <containers storage path>` in [containers.conf]
+    to work around [buildah#6892]. This results in some temporary files being written
+    to the storage root (`/var/lib/containers/storage` for the root user).
+    Buildah does seem to clean them up after every build.
+
+### Known Issues
+
+- Buildah:
+  - `BUILDAH_ISOLATION=oci` doesn't work due to [buildah#6891]. If you're overriding
+    the task-runner default (`BUILDAH_ISOLATION=chroot`), please use `rootless` instead.
+  - Due to [buildah#6890], `buildah build` is unable to fall back to `fuse-overlayfs`
+    when the kernel-native overlay implementation is unavailable. Please see
+    [docs/buildah.md](docs/buildah.md) for guidance on how to enable native overlay
+    or alternatives.
+
+[containers.conf]: https://www.mankier.com/5/containers.conf
+[buildah#6890]: https://github.com/podman-container-tools/buildah/issues/6890
+[buildah#6891]: https://github.com/podman-container-tools/buildah/issues/6891
+[buildah#6892]: https://github.com/podman-container-tools/buildah/issues/6892
+
 ## 1.7.0
 
 Date: 2026-05-14
