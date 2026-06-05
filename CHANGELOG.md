@@ -9,7 +9,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 *Nothing yet.*
 
+## 1.8.1
+
+Date: 2026-06-05
+
+Re-release of 1.8.0 with no changes. The 1.8.0 release did not trigger CI pipelines.
+
 ## 1.8.0
+
+> [!WARNING]
+> This release did not properly trigger CI pipelines, re-released as 1.8.1.
 
 Date: 2026-06-05
 
