@@ -571,20 +571,20 @@ arches:
     name: openssh-clients
     evr: 9.9p1-23.el10_2
     sourcerpm: openssh-9.9p1-23.el10_2.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/o/openssl-3.5.5-3.el10_2.aarch64.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/o/openssl-3.5.5-4.el10_2.aarch64.rpm
     repoid: ubi-10-for-aarch64-baseos-rpms
-    size: 1310391
-    checksum: sha256:ade68f31e4908bc9fdbde936721375bee1de30975c30aa116b6319b62d941ee4
+    size: 1310979
+    checksum: sha256:1a2bdc1cea5bd7a3d62a28ad368ffbc7bdca42bfae65ac38b7713a3e7cc087d5
     name: openssl
-    evr: 1:3.5.5-3.el10_2
-    sourcerpm: openssl-3.5.5-3.el10_2.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/o/openssl-libs-3.5.5-3.el10_2.aarch64.rpm
+    evr: 1:3.5.5-4.el10_2
+    sourcerpm: openssl-3.5.5-4.el10_2.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/o/openssl-libs-3.5.5-4.el10_2.aarch64.rpm
     repoid: ubi-10-for-aarch64-baseos-rpms
-    size: 2231439
-    checksum: sha256:b7b66a9839a70934e911a82509fc45f92a72ac1658a63965e465544a0d354c73
+    size: 2233582
+    checksum: sha256:198b4ca99e8a3f64010496f2b51b71734a5b075ef4d7db71b6009640c42e8ea7
     name: openssl-libs
-    evr: 1:3.5.5-3.el10_2
-    sourcerpm: openssl-3.5.5-3.el10_2.src.rpm
+    evr: 1:3.5.5-4.el10_2
+    sourcerpm: openssl-3.5.5-4.el10_2.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/p/pam-1.6.1-9.el10.aarch64.rpm
     repoid: ubi-10-for-aarch64-baseos-rpms
     size: 603171
@@ -795,13 +795,13 @@ arches:
     name: rpm-sign-libs
     evr: 4.19.1.1-23.el10
     sourcerpm: rpm-4.19.1.1-23.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/r/rsync-3.4.1-6.el10_2.aarch64.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/r/rsync-3.4.4-1.el10_2.aarch64.rpm
     repoid: ubi-10-for-aarch64-baseos-rpms
-    size: 427680
-    checksum: sha256:dac3a05371b5d185f670f1d2dadfec17c2529ea4afefec97f874608ec50b7879
+    size: 435030
+    checksum: sha256:221d3a758faa133d357797f6807a82d840ada4281347b1b99b86c5409d4c0d58
     name: rsync
-    evr: 3.4.1-6.el10_2
-    sourcerpm: rsync-3.4.1-6.el10_2.src.rpm
+    evr: 3.4.4-1.el10_2
+    sourcerpm: rsync-3.4.4-1.el10_2.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/s/sed-4.9-5.el10.aarch64.rpm
     repoid: ubi-10-for-aarch64-baseos-rpms
     size: 330200
@@ -1492,20 +1492,20 @@ arches:
     name: openssh-clients
     evr: 9.9p1-23.el10_2
     sourcerpm: openssh-9.9p1-23.el10_2.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/o/openssl-3.5.5-3.el10_2.ppc64le.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/o/openssl-3.5.5-4.el10_2.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-baseos-rpms
-    size: 1338756
-    checksum: sha256:0be23b1280adf925c9797a1d7d8ebca2e660e567d07ab42417401c0557cc6416
+    size: 1339462
+    checksum: sha256:60c9050994493306576324e63f3abb2d13fc627de9eff6e73571b4a41dfa0f58
     name: openssl
-    evr: 1:3.5.5-3.el10_2
-    sourcerpm: openssl-3.5.5-3.el10_2.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/o/openssl-libs-3.5.5-3.el10_2.ppc64le.rpm
+    evr: 1:3.5.5-4.el10_2
+    sourcerpm: openssl-3.5.5-4.el10_2.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/o/openssl-libs-3.5.5-4.el10_2.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-baseos-rpms
-    size: 2497754
-    checksum: sha256:ba584502f172f97199ea2dac103e5e442456fe9d9ca2d22444560d17beaeeb09
+    size: 2498585
+    checksum: sha256:3e8d7cfe6e31e91859cb2b789bdbd9ca2333905196f4474fb6e18e1de044fc60
     name: openssl-libs
-    evr: 1:3.5.5-3.el10_2
-    sourcerpm: openssl-3.5.5-3.el10_2.src.rpm
+    evr: 1:3.5.5-4.el10_2
+    sourcerpm: openssl-3.5.5-4.el10_2.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/p/pam-1.6.1-9.el10.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-baseos-rpms
     size: 635154
@@ -1716,13 +1716,13 @@ arches:
     name: rpm-sign-libs
     evr: 4.19.1.1-23.el10
     sourcerpm: rpm-4.19.1.1-23.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/r/rsync-3.4.1-6.el10_2.ppc64le.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/r/rsync-3.4.4-1.el10_2.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-baseos-rpms
-    size: 454152
-    checksum: sha256:a86ea6d066a2d94be2e07ce67447ec90f65f8f2dd22e93510eb0f2a0bcee30e7
+    size: 461752
+    checksum: sha256:c23e5a272f6b84469bdf8c7493a920111be128be8d56f6ca057701139d8e2e23
     name: rsync
-    evr: 3.4.1-6.el10_2
-    sourcerpm: rsync-3.4.1-6.el10_2.src.rpm
+    evr: 3.4.4-1.el10_2
+    sourcerpm: rsync-3.4.4-1.el10_2.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/s/sed-4.9-5.el10.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-baseos-rpms
     size: 336796
@@ -2406,20 +2406,20 @@ arches:
     name: openssh-clients
     evr: 9.9p1-23.el10_2
     sourcerpm: openssh-9.9p1-23.el10_2.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/o/openssl-3.5.5-3.el10_2.s390x.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/o/openssl-3.5.5-4.el10_2.s390x.rpm
     repoid: ubi-10-for-s390x-baseos-rpms
-    size: 1353208
-    checksum: sha256:338a4a44195797c666950a695b636a49a50d8aab31c3aa390365025f8ae211c4
+    size: 1353810
+    checksum: sha256:76280eca2096768ef3e5fdba74ce816f56f347ff588846239430d8a799361f6e
     name: openssl
-    evr: 1:3.5.5-3.el10_2
-    sourcerpm: openssl-3.5.5-3.el10_2.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/o/openssl-libs-3.5.5-3.el10_2.s390x.rpm
+    evr: 1:3.5.5-4.el10_2
+    sourcerpm: openssl-3.5.5-4.el10_2.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/o/openssl-libs-3.5.5-4.el10_2.s390x.rpm
     repoid: ubi-10-for-s390x-baseos-rpms
-    size: 2148200
-    checksum: sha256:faaf7132848df756ff423de96702c4928f87af59a7ebe2d7c7f746ce47f014d5
+    size: 2148921
+    checksum: sha256:18a8ea4d0dabec6cce0a4003d9ad573e12d083b446a3a5630c0528d714efffdb
     name: openssl-libs
-    evr: 1:3.5.5-3.el10_2
-    sourcerpm: openssl-3.5.5-3.el10_2.src.rpm
+    evr: 1:3.5.5-4.el10_2
+    sourcerpm: openssl-3.5.5-4.el10_2.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/p/pam-1.6.1-9.el10.s390x.rpm
     repoid: ubi-10-for-s390x-baseos-rpms
     size: 607853
@@ -2630,13 +2630,13 @@ arches:
     name: rpm-sign-libs
     evr: 4.19.1.1-23.el10
     sourcerpm: rpm-4.19.1.1-23.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/r/rsync-3.4.1-6.el10_2.s390x.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/r/rsync-3.4.4-1.el10_2.s390x.rpm
     repoid: ubi-10-for-s390x-baseos-rpms
-    size: 454012
-    checksum: sha256:69232a2c7a4fd3037d28f6f9baa0792326dffaff736f93d5ebeeb337f822ac79
+    size: 460686
+    checksum: sha256:5dd09b0853ca550094ce423a10914f867a05fe7d373560568d57cb5e36ec982a
     name: rsync
-    evr: 3.4.1-6.el10_2
-    sourcerpm: rsync-3.4.1-6.el10_2.src.rpm
+    evr: 3.4.4-1.el10_2
+    sourcerpm: rsync-3.4.4-1.el10_2.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/s/sed-4.9-5.el10.s390x.rpm
     repoid: ubi-10-for-s390x-baseos-rpms
     size: 335489
@@ -3327,20 +3327,20 @@ arches:
     name: openssh-clients
     evr: 9.9p1-23.el10_2
     sourcerpm: openssh-9.9p1-23.el10_2.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/o/openssl-3.5.5-3.el10_2.x86_64.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/o/openssl-3.5.5-4.el10_2.x86_64.rpm
     repoid: ubi-10-for-x86_64-baseos-rpms
-    size: 1332492
-    checksum: sha256:e4ab5c9c8c705e233098ce9ea99c3b0e657e0bdc3a60a6ed9605cc679f2a9ddb
+    size: 1333124
+    checksum: sha256:657e695031897bee1f613edf4df55567a660e5fa583a732d064d241af6f1ebe0
     name: openssl
-    evr: 1:3.5.5-3.el10_2
-    sourcerpm: openssl-3.5.5-3.el10_2.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/o/openssl-libs-3.5.5-3.el10_2.x86_64.rpm
+    evr: 1:3.5.5-4.el10_2
+    sourcerpm: openssl-3.5.5-4.el10_2.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/o/openssl-libs-3.5.5-4.el10_2.x86_64.rpm
     repoid: ubi-10-for-x86_64-baseos-rpms
-    size: 2370988
-    checksum: sha256:586462274e7b135eb1398f4fd33e610a6da6382b9ed41cecd293c2dc2d0f753b
+    size: 2372448
+    checksum: sha256:ddb70c0189e80a5accff9cf326a1d9d31e8a92b0ec6b53e0d6ba0feb5587e5d8
     name: openssl-libs
-    evr: 1:3.5.5-3.el10_2
-    sourcerpm: openssl-3.5.5-3.el10_2.src.rpm
+    evr: 1:3.5.5-4.el10_2
+    sourcerpm: openssl-3.5.5-4.el10_2.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/p/pam-1.6.1-9.el10.x86_64.rpm
     repoid: ubi-10-for-x86_64-baseos-rpms
     size: 598152
@@ -3551,13 +3551,13 @@ arches:
     name: rpm-sign-libs
     evr: 4.19.1.1-23.el10
     sourcerpm: rpm-4.19.1.1-23.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/r/rsync-3.4.1-6.el10_2.x86_64.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/r/rsync-3.4.4-1.el10_2.x86_64.rpm
     repoid: ubi-10-for-x86_64-baseos-rpms
-    size: 433746
-    checksum: sha256:18b32d39889e7d7b23c21c3f60fe7860901d4e8855fcf12d5a6c8b8bb061d1e7
+    size: 441167
+    checksum: sha256:b91fd5a05ad72423e2a99535f53ac875aa1f7a4f3c7d4193cac8ee03c0464d26
     name: rsync
-    evr: 3.4.1-6.el10_2
-    sourcerpm: rsync-3.4.1-6.el10_2.src.rpm
+    evr: 3.4.4-1.el10_2
+    sourcerpm: rsync-3.4.4-1.el10_2.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/s/sed-4.9-5.el10.x86_64.rpm
     repoid: ubi-10-for-x86_64-baseos-rpms
     size: 332533
