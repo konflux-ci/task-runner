@@ -31,15 +31,15 @@ Re-generate with:
 | oc                             | 4.21.0                         | Git submodule (Go)                       |
 | olot                           | 0.1.17                         | `pip install`                            |
 | openssh-clients                | 9.9p1-23.el10_2                | RPM                                      |
-| openssl                        | 3.5.5-3.el10_2                 | RPM                                      |
+| openssl                        | 3.5.5-4.el10_2                 | RPM                                      |
 | oras                           | 1.3.2                          | `go install`                             |
 | python3                        | 3.12.13-2.el10_2               | RPM                                      |
 | retry                          | 1.0.0                          | [local](./local-tools/retry)             |
 | rpm                            | 4.19.1.1-23.el10               | RPM                                      |
-| rsync                          | 3.4.1-6.el10_2                 | RPM                                      |
+| rsync                          | 3.4.4-1.el10_2                 | RPM                                      |
 | sed                            | 4.9-5.el10                     | RPM                                      |
 | select-oci-auth                | 1.0.0                          | [local](./local-tools/select-oci-auth)   |
-| skopeo                         | 1.22.2-1.el10_2                | RPM                                      |
+| skopeo                         | 1.22.2-2.el10_2                | RPM                                      |
 | subscription-manager           | 1.30.12-1.el10                 | RPM                                      |
 | syft                           | 1.44.0                         | `go install`                             |
 | tar                            | 1.35-11.el10                   | RPM                                      |
