@@ -18,20 +18,20 @@ arches:
     name: gcc
     evr: 14.3.1-4.4.el10
     sourcerpm: gcc-14.3.1-4.4.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/appstream/os/Packages/g/glibc-devel-2.39-124.el10_2.aarch64.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/appstream/os/Packages/g/glibc-devel-2.39-126.el10_2.aarch64.rpm
     repoid: ubi-10-for-aarch64-appstream-rpms
-    size: 596601
-    checksum: sha256:8a3db786bb0725f4821f142917a277c80a17d7555a4f0ce4621c966994771752
+    size: 595424
+    checksum: sha256:ae11ddafe8260793ff2279caf5234790b861cc26f1d5f9be0350d35ef7f1729a
     name: glibc-devel
-    evr: 2.39-124.el10_2
-    sourcerpm: glibc-2.39-124.el10_2.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/appstream/os/Packages/k/kernel-headers-6.12.0-211.18.1.el10_2.aarch64.rpm
+    evr: 2.39-126.el10_2
+    sourcerpm: glibc-2.39-126.el10_2.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/appstream/os/Packages/k/kernel-headers-6.12.0-211.30.1.el10_2.aarch64.rpm
     repoid: ubi-10-for-aarch64-appstream-rpms
-    size: 3611669
-    checksum: sha256:7d29ea8cb5640d83bc43dc9992921299c558a0a85272b4ae21d4401aa42812d2
+    size: 3629841
+    checksum: sha256:234cb57a7c09fb8036a85b8868aa858019d52ca08c57f00ca66930b013c04d6e
     name: kernel-headers
-    evr: 6.12.0-211.18.1.el10_2
-    sourcerpm: kernel-6.12.0-211.18.1.el10_2.src.rpm
+    evr: 6.12.0-211.30.1.el10_2
+    sourcerpm: kernel-6.12.0-211.30.1.el10_2.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/appstream/os/Packages/l/libasan-14.3.1-4.4.el10.aarch64.rpm
     repoid: ubi-10-for-aarch64-appstream-rpms
     size: 543502
@@ -130,6 +130,27 @@ arches:
     name: gdbm-libs
     evr: 1:1.23-12.el10_0
     sourcerpm: gdbm-1.23-12.el10_0.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/g/glibc-2.39-126.el10_2.aarch64.rpm
+    repoid: ubi-10-for-aarch64-baseos-rpms
+    size: 1862780
+    checksum: sha256:1a274352c20482cd0b6cc700bac334dc0a42328d3390d67a22371199e6e0b2a3
+    name: glibc
+    evr: 2.39-126.el10_2
+    sourcerpm: glibc-2.39-126.el10_2.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/g/glibc-common-2.39-126.el10_2.aarch64.rpm
+    repoid: ubi-10-for-aarch64-baseos-rpms
+    size: 320885
+    checksum: sha256:b7a02faadfe7b6454c3724c1d93c67210becd26c504b3e1c107c3553e58088ac
+    name: glibc-common
+    evr: 2.39-126.el10_2
+    sourcerpm: glibc-2.39-126.el10_2.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/g/glibc-minimal-langpack-2.39-126.el10_2.aarch64.rpm
+    repoid: ubi-10-for-aarch64-baseos-rpms
+    size: 31957
+    checksum: sha256:ac5a2336a8a99cdcb657305aa4bba9e0a837fb53e2c789b61c37e71060069dac
+    name: glibc-minimal-langpack
+    evr: 2.39-126.el10_2
+    sourcerpm: glibc-2.39-126.el10_2.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/j/jansson-2.14-3.el10.aarch64.rpm
     repoid: ubi-10-for-aarch64-baseos-rpms
     size: 50745
@@ -246,20 +267,20 @@ arches:
     name: gcc
     evr: 14.3.1-4.4.el10
     sourcerpm: gcc-14.3.1-4.4.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/appstream/os/Packages/g/glibc-devel-2.39-124.el10_2.ppc64le.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/appstream/os/Packages/g/glibc-devel-2.39-126.el10_2.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-appstream-rpms
-    size: 606467
-    checksum: sha256:0cc7e5c4eee22d40aadae03168f81b72c00cfede494cea65d580aeb94330ce19
+    size: 605292
+    checksum: sha256:30fdd95bb8d9426a3b62ffabfad18ed832e6af8723186cc274dabd43876b1984
     name: glibc-devel
-    evr: 2.39-124.el10_2
-    sourcerpm: glibc-2.39-124.el10_2.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/appstream/os/Packages/k/kernel-headers-6.12.0-211.18.1.el10_2.ppc64le.rpm
+    evr: 2.39-126.el10_2
+    sourcerpm: glibc-2.39-126.el10_2.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/appstream/os/Packages/k/kernel-headers-6.12.0-211.30.1.el10_2.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-appstream-rpms
-    size: 3631217
-    checksum: sha256:b0ccb778d58f7dbffd4a09014ca901bfbb8de004ca09765462be8eb2da4c7be9
+    size: 3649469
+    checksum: sha256:dc8be77d43fbecf6cbfeeaf8cc4838499a3d0b029b12286743927a8fb708b378
     name: kernel-headers
-    evr: 6.12.0-211.18.1.el10_2
-    sourcerpm: kernel-6.12.0-211.18.1.el10_2.src.rpm
+    evr: 6.12.0-211.30.1.el10_2
+    sourcerpm: kernel-6.12.0-211.30.1.el10_2.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/appstream/os/Packages/l/libasan-14.3.1-4.4.el10.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-appstream-rpms
     size: 552598
@@ -358,6 +379,27 @@ arches:
     name: gdbm-libs
     evr: 1:1.23-12.el10_0
     sourcerpm: gdbm-1.23-12.el10_0.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/g/glibc-2.39-126.el10_2.ppc64le.rpm
+    repoid: ubi-10-for-ppc64le-baseos-rpms
+    size: 3029175
+    checksum: sha256:d77d27e234ced0a8e331aa56297f34fb138df8ea82dd4960b1651d92d73d20d5
+    name: glibc
+    evr: 2.39-126.el10_2
+    sourcerpm: glibc-2.39-126.el10_2.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/g/glibc-common-2.39-126.el10_2.ppc64le.rpm
+    repoid: ubi-10-for-ppc64le-baseos-rpms
+    size: 339938
+    checksum: sha256:0e2df008dd4853dbf80dbdb5d577c496ca064d4aca34d9b55998e13978cc3fc3
+    name: glibc-common
+    evr: 2.39-126.el10_2
+    sourcerpm: glibc-2.39-126.el10_2.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/g/glibc-minimal-langpack-2.39-126.el10_2.ppc64le.rpm
+    repoid: ubi-10-for-ppc64le-baseos-rpms
+    size: 31941
+    checksum: sha256:f152fa8068b8a2f07d0fd5fc07fef087c55ce97090b983f8c094d48a630a3f98
+    name: glibc-minimal-langpack
+    evr: 2.39-126.el10_2
+    sourcerpm: glibc-2.39-126.el10_2.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/j/jansson-2.14-3.el10.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-baseos-rpms
     size: 54545
@@ -474,20 +516,20 @@ arches:
     name: gcc
     evr: 14.3.1-4.4.el10
     sourcerpm: gcc-14.3.1-4.4.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/appstream/os/Packages/g/glibc-devel-2.39-124.el10_2.s390x.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/appstream/os/Packages/g/glibc-devel-2.39-126.el10_2.s390x.rpm
     repoid: ubi-10-for-s390x-appstream-rpms
-    size: 602661
-    checksum: sha256:f82a37dabf92c529351e81824ea15ca54ce06f44620a94c550e9625d187d902a
+    size: 601471
+    checksum: sha256:ce6716f2695bbca729b72f49a9fc0ad491401925a3f425af7aed6ce68228ac7c
     name: glibc-devel
-    evr: 2.39-124.el10_2
-    sourcerpm: glibc-2.39-124.el10_2.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/appstream/os/Packages/k/kernel-headers-6.12.0-211.18.1.el10_2.s390x.rpm
+    evr: 2.39-126.el10_2
+    sourcerpm: glibc-2.39-126.el10_2.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/appstream/os/Packages/k/kernel-headers-6.12.0-211.30.1.el10_2.s390x.rpm
     repoid: ubi-10-for-s390x-appstream-rpms
-    size: 3640777
-    checksum: sha256:7bbbb2e3305ff867f03b7e02e13a4e4182c844dfe40e80dfdeb5beb86905f1cc
+    size: 3659129
+    checksum: sha256:68ce1312023c62ce266cf445f6130b5427bfc3bbfdd0d67e48d09ac99207f9f0
     name: kernel-headers
-    evr: 6.12.0-211.18.1.el10_2
-    sourcerpm: kernel-6.12.0-211.18.1.el10_2.src.rpm
+    evr: 6.12.0-211.30.1.el10_2
+    sourcerpm: kernel-6.12.0-211.30.1.el10_2.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/appstream/os/Packages/l/libasan-14.3.1-4.4.el10.s390x.rpm
     repoid: ubi-10-for-s390x-appstream-rpms
     size: 573505
@@ -586,6 +628,27 @@ arches:
     name: gdbm-libs
     evr: 1:1.23-12.el10_0
     sourcerpm: gdbm-1.23-12.el10_0.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/g/glibc-2.39-126.el10_2.s390x.rpm
+    repoid: ubi-10-for-s390x-baseos-rpms
+    size: 1909582
+    checksum: sha256:b55797e2b136bfcc456ab5853d6cc4ac1932eb72155188671028dfbf33062bda
+    name: glibc
+    evr: 2.39-126.el10_2
+    sourcerpm: glibc-2.39-126.el10_2.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/g/glibc-common-2.39-126.el10_2.s390x.rpm
+    repoid: ubi-10-for-s390x-baseos-rpms
+    size: 347322
+    checksum: sha256:227d6a4ffefe5f15768a108fa8e477fb1ae74d7e7f4ff915765c1299eecdb0a7
+    name: glibc-common
+    evr: 2.39-126.el10_2
+    sourcerpm: glibc-2.39-126.el10_2.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/g/glibc-minimal-langpack-2.39-126.el10_2.s390x.rpm
+    repoid: ubi-10-for-s390x-baseos-rpms
+    size: 31925
+    checksum: sha256:fc6dd5a85308646a266b6d91bf6f1523ac6dfd6ac7a5eae3766c64350f838263
+    name: glibc-minimal-langpack
+    evr: 2.39-126.el10_2
+    sourcerpm: glibc-2.39-126.el10_2.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/j/jansson-2.14-3.el10.s390x.rpm
     repoid: ubi-10-for-s390x-baseos-rpms
     size: 49596
@@ -702,20 +765,20 @@ arches:
     name: gcc
     evr: 14.3.1-4.4.el10
     sourcerpm: gcc-14.3.1-4.4.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/appstream/os/Packages/g/glibc-devel-2.39-124.el10_2.x86_64.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/appstream/os/Packages/g/glibc-devel-2.39-126.el10_2.x86_64.rpm
     repoid: ubi-10-for-x86_64-appstream-rpms
-    size: 605497
-    checksum: sha256:62d7dda74a4dbe6d4969fa4385c1bbbf958e566b297a8905393995851b2e0c51
+    size: 604263
+    checksum: sha256:b605f67bd7fa18826e2ee552ff41c8116f9ac35feaacf25e749b6e6f85d629b2
     name: glibc-devel
-    evr: 2.39-124.el10_2
-    sourcerpm: glibc-2.39-124.el10_2.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/appstream/os/Packages/k/kernel-headers-6.12.0-211.18.1.el10_2.x86_64.rpm
+    evr: 2.39-126.el10_2
+    sourcerpm: glibc-2.39-126.el10_2.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/appstream/os/Packages/k/kernel-headers-6.12.0-211.30.1.el10_2.x86_64.rpm
     repoid: ubi-10-for-x86_64-appstream-rpms
-    size: 3649813
-    checksum: sha256:35fa5150e866d09b2da3a8ca214a0cad4aac9f43fcead2848ca81b5c99002eb0
+    size: 3668069
+    checksum: sha256:f86d74e498db208e5aa086d36868366f81f490b13a8fdc64a34e2228ef7987ea
     name: kernel-headers
-    evr: 6.12.0-211.18.1.el10_2
-    sourcerpm: kernel-6.12.0-211.18.1.el10_2.src.rpm
+    evr: 6.12.0-211.30.1.el10_2
+    sourcerpm: kernel-6.12.0-211.30.1.el10_2.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/appstream/os/Packages/l/libmpc-1.3.1-7.el10.x86_64.rpm
     repoid: ubi-10-for-x86_64-appstream-rpms
     size: 75330
@@ -800,6 +863,27 @@ arches:
     name: gdbm-libs
     evr: 1:1.23-12.el10_0
     sourcerpm: gdbm-1.23-12.el10_0.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/g/glibc-2.39-126.el10_2.x86_64.rpm
+    repoid: ubi-10-for-x86_64-baseos-rpms
+    size: 2207034
+    checksum: sha256:758caa64942e66d9c902cf574a2d681271d9b5acf7ab9d4762e41f961ad4987e
+    name: glibc
+    evr: 2.39-126.el10_2
+    sourcerpm: glibc-2.39-126.el10_2.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/g/glibc-common-2.39-126.el10_2.x86_64.rpm
+    repoid: ubi-10-for-x86_64-baseos-rpms
+    size: 333367
+    checksum: sha256:b8c5d31097662a733ea36443b4ba474717cbac0a402781620b0d4ab400dc8bc6
+    name: glibc-common
+    evr: 2.39-126.el10_2
+    sourcerpm: glibc-2.39-126.el10_2.src.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/g/glibc-minimal-langpack-2.39-126.el10_2.x86_64.rpm
+    repoid: ubi-10-for-x86_64-baseos-rpms
+    size: 31973
+    checksum: sha256:cdb85f12c0380125b18ad24915fb47cdaab7c16a817b31d4c05b8a0c8da7ae4f
+    name: glibc-minimal-langpack
+    evr: 2.39-126.el10_2
+    sourcerpm: glibc-2.39-126.el10_2.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/j/jansson-2.14-3.el10.x86_64.rpm
     repoid: ubi-10-for-x86_64-baseos-rpms
     size: 49616
