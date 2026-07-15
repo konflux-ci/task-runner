@@ -11,4 +11,4 @@
 
 awscli==1.45.40
 huggingface-hub==1.22.0
-olot==0.1.18
+olot==1.0.0
