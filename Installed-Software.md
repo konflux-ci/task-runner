@@ -22,7 +22,7 @@ Re-generate with:
 | gawk                           | 5.3.0-6.el10                   | RPM                                      |
 | gettext-envsubst               | 0.22.5-6.el10                  | RPM                                      |
 | git-core                       | 2.52.0-1.el10                  | RPM                                      |
-| git-lfs                        | 3.7.1-5.el10_2.5               | RPM                                      |
+| git-lfs                        | 3.7.1-5.el10_2.6               | RPM                                      |
 | grep                           | 3.11-10.el10                   | RPM                                      |
 | huggingface-hub                | 1.23.0                         | `pip install`                            |
 | jq                             | 1.7.1-11.el10_2.2              | RPM                                      |
@@ -32,9 +32,9 @@ Re-generate with:
 | oc                             | 4.22.0                         | Git submodule (Go)                       |
 | olot                           | 0.1.18                         | `pip install`                            |
 | openssh-clients                | 9.9p1-23.el10_2                | RPM                                      |
-| openssl                        | 3.5.5-4.el10_2                 | RPM                                      |
+| openssl                        | 3.5.5-5.el10_2                 | RPM                                      |
 | oras                           | 1.3.3                          | `go install`                             |
-| python3                        | 3.12.13-2.el10_2               | RPM                                      |
+| python3                        | 3.12.13-2.el10_2.1             | RPM                                      |
 | retry                          | 1.0.0                          | [local](./local-tools/retry)             |
 | rpm                            | 4.19.1.1-23.el10               | RPM                                      |
 | rsync                          | 3.4.4-1.el10_2                 | RPM                                      |
