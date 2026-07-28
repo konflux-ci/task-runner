@@ -45,24 +45,24 @@ spec:
   - name: dockerfile
     value: Containerfile
   - name: hermetic
-    value: 'true'
+    value: 'false'
   - name: prefetch-input
-    value: |
-      [
-        {"type": "gomod", "path": "deps/go-submodules/kubernetes"},
-        {"type": "gomod", "path": "deps/go-submodules/oc"},
-        {"type": "gomod", "path": "deps/go-tools/buildah"},
-        {"type": "gomod", "path": "deps/go-tools/conftest"},
-        {"type": "gomod", "path": "deps/go-tools/cosign"},
-        {"type": "gomod", "path": "deps/go-tools/oras"},
-        {"type": "gomod", "path": "deps/go-tools/syft"},
-        {"type": "gomod", "path": "deps/go-tools/tkn"},
-        {"type": "gomod", "path": "deps/go-tools/yq"},
-        {"type": "pip", "path": "deps/pip", "requirements_files": ["requirements.txt"], "requirements_build_files": ["requirements-build.txt"]},
-        {"type": "rpm", "path": "deps/rpm"},
-        {"type": "rpm", "path": "deps/rpm/python-builddeps"},
-        {"type": "rpm", "path": "deps/rpm/go-builddeps"}
-      ]
+    value: ""
+      # [
+      #   {"type": "gomod", "path": "deps/go-submodules/kubernetes"},
+      #   {"type": "gomod", "path": "deps/go-submodules/oc"},
+      #   {"type": "gomod", "path": "deps/go-tools/buildah"},
+      #   {"type": "gomod", "path": "deps/go-tools/conftest"},
+      #   {"type": "gomod", "path": "deps/go-tools/cosign"},
+      #   {"type": "gomod", "path": "deps/go-tools/oras"},
+      #   {"type": "gomod", "path": "deps/go-tools/syft"},
+      #   {"type": "gomod", "path": "deps/go-tools/tkn"},
+      #   {"type": "gomod", "path": "deps/go-tools/yq"},
+      #   {"type": "pip", "path": "deps/pip", "requirements_files": ["requirements.txt"], "requirements_build_files": ["requirements-build.txt"]},
+      #   {"type": "rpm", "path": "deps/rpm"},
+      #   {"type": "rpm", "path": "deps/rpm/python-builddeps"},
+      #   {"type": "rpm", "path": "deps/rpm/go-builddeps"}
+      # ]
   pipelineRef:
     name: build-pipeline
   taskRunTemplate:
