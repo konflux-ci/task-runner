@@ -30,7 +30,7 @@ Re-generate with:
 | make                           | 4.4.1-9.el10                   | RPM                                      |
 | microdnf                       | 3.10.1-1.el10                  | RPM                                      |
 | oc                             | 4.22.0                         | Git submodule (Go)                       |
-| olot                           | 0.1.18                         | `pip install`                            |
+| olot                           | 1.1.0                          | `pip install`                            |
 | openssh-clients                | 9.9p1-23.el10_2                | RPM                                      |
 | openssl                        | 3.5.5-6.el10_2                 | RPM                                      |
 | oras                           | 1.3.3                          | `go install`                             |

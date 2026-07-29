@@ -99,9 +99,9 @@ jmespath==1.1.0 \
     --hash=sha256:472c87d80f36026ae83c6ddd0f1d05d4e510134ed462851fd5f754c8c3cbb88d \
     --hash=sha256:a5663118de4908c91729bea0acadca56526eb2698e83de10cd116ae0f4e97c64
     # via botocore
-olot==0.1.18 \
-    --hash=sha256:191b25e7f73afd1506564ee3472a5b246add7e5346e5fa23bc3836da73e9eb8f \
-    --hash=sha256:d261eeb382013cdf5d7228f3eb72bbab6eacdd2d7da3d4d2af2e8881922af81a
+olot==1.1.0 \
+    --hash=sha256:1b08762e7b8f9d3fdc95db93fc97bfcfe9bd7cec1226314b6520f2ec6c02bef2 \
+    --hash=sha256:508b1a243b8f4888af951f7b87e0887e2a859e4342e107efc09a45f71249c607
     # via -r deps/pip/requirements.in
 packaging==26.2 \
     --hash=sha256:5fc45236b9446107ff2415ce77c807cee2862cb6fac22b8a73826d0693b0980e \
