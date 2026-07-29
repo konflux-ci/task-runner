@@ -137,13 +137,12 @@ setuptools-scm==10.2.1 \
     #   anyio
     #   hatch-vcs
     #   pluggy
+    #   python-dateutil
     #   setuptools-rust
     #   tqdm
     #   urllib3
-setuptools-scm==7.1.0 \
-    --hash=sha256:6c508345a771aad7d56ebff0e70628bf2b0ec7573762be9960214730de278f27 \
-    --hash=sha256:73988b6d848709e2af142aa48c986ea29592bbcfca5375678064708205253d8e
-    # via python-dateutil
+    # note: pybuild-deps also emits setuptools-scm==7.1.0 via python-dateutil;
+    # keep the single newer pin so hermetic pip prefetch gets one exact version.
 trove-classifiers==2026.6.1.19 \
     --hash=sha256:ab4c4ec93cc4a4e7815fa759906e05e6bb3f2fbd92ea0f897288c6a43efd15b3 \
     --hash=sha256:c5132b4b61a829d11cfbd2d72e97f20a45ed6edb95e45c5efdeb5e00836b2745
