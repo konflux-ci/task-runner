@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+*Nothing yet*.
+
+## 3.0.0
+
+Date: 2026-07-29
+
 ### Installed Software
 
 - `olot` 0.1.18 => 1.1.0
