@@ -67,3 +67,6 @@ pip-requirements: .venv
 	uv run pybuild-deps compile \
 		--generate-hashes \
 		deps/pip/requirements.txt -o deps/pip/requirements-build.txt
+	# pybuild-deps can emit multiple exact pins for one package (seen with
+	# setuptools-scm). Hermetic prefetch needs a single pin — keep the newest.
+	python3 scripts/dedupe-requirements-build.py deps/pip/requirements-build.txt
