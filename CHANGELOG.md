@@ -9,6 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 *Nothing yet*.
 
+## 3.1.0
+
+Date: 2026-07-30
+
+### Installed Software
+
+- `olot` 1.1.0 => 1.2.0
+
 ## 3.0.0
 
 Date: 2026-07-29
