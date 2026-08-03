@@ -9,6 +9,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 *Nothing yet*.
 
+## 3.1.1
+
+Date: 2026-08-03
+
+### Fixed
+
+- Re-trigger the Konflux on-push release pipeline. After [#239](https://github.com/konflux-ci/task-runner/pull/239),
+  `VERSION` was already `3.1.0` on `main`, but the top commit only fixed the
+  `setuptools-scm` lockfile dedupe and did not change `VERSION`, so
+  `"VERSION".pathChanged()` did not fire and `quay.io/konflux-ci/task-runner:3.1.0`
+  was never published. Image contents are unchanged from 3.1.0 (`olot` 1.2.0).
+
 ## 3.1.0
 
 Date: 2026-07-30
