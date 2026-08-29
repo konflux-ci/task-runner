@@ -135,11 +135,18 @@ Date: 2026-06-05
     when the kernel-native overlay implementation is unavailable. Please see
     [docs/buildah.md](docs/buildah.md) for guidance on how to enable native overlay
     or alternatives.
+  - When running the task-runner container as root with `CAP_SYS_ADMIN` privileges,
+    buildah will fail to pull images with opaque whiteouts ([buildah#6903]).
+    The same applies when running buildah under `unshare --map-root-user` in an
+    otherwise unprivileged container, since this also grants `CAP_SYS_ADMIN` to buildah.
+    For the unshare case, a workaround can be to first `buildah pull` the required images
+    without using unshare before running `buildah build`.
 
 [containers.conf]: https://www.mankier.com/5/containers.conf
 [buildah#6890]: https://github.com/podman-container-tools/buildah/issues/6890
 [buildah#6891]: https://github.com/podman-container-tools/buildah/issues/6891
 [buildah#6892]: https://github.com/podman-container-tools/buildah/issues/6892
+[buildah#6903]: https://github.com/podman-container-tools/buildah/issues/6903
 
 ## 1.7.0
 
