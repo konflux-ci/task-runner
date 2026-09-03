@@ -48,8 +48,8 @@ RPM_LOCK_FILES = $(patsubst %/rpms.in.yaml,%/rpms.lock.yaml,$(RPM_IN_FILES))
 .PHONY: $(RPM_LOCK_FILES)
 $(RPM_LOCK_FILES):
 	# rpm-lockfile-prototype depends on dnf bindings (the python3-dnf package on fedora)
-	#   => need --system-site-packages
-	uv venv --allow-existing --system-site-packages .rpm-lock-venv
+	#   => need --system-site-packages --no-managed-python
+	uv venv --clear --system-site-packages --no-managed-python .rpm-lock-venv
 	UV_PROJECT_ENVIRONMENT=.rpm-lock-venv uv run --group rpm-lock \
 		rpm-lockfile-prototype $(@D)/rpms.in.yaml --outfile $@
 
