@@ -32,13 +32,13 @@ arches:
     name: libassuan
     evr: 2.5.6-6.el10
     sourcerpm: libassuan-2.5.6-6.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/l/libgcrypt-1.11.0-5.el10.aarch64.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/l/libgcrypt-1.11.0-7.el10_2.aarch64.rpm
     repoid: ubi-10-for-aarch64-baseos-rpms
-    size: 526700
-    checksum: sha256:c546b3ddc1d112c0dfadf5e6a1b4158e1dc16f8ea86341df15c6521fb13005d9
+    size: 529317
+    checksum: sha256:c44911b5b4dd7be6c2c23bd9afd9e7feab18d501cbf2a35bae5ac4107097d539
     name: libgcrypt
-    evr: 1.11.0-5.el10
-    sourcerpm: libgcrypt-1.11.0-5.el10.src.rpm
+    evr: 1.11.0-7.el10_2
+    sourcerpm: libgcrypt-1.11.0-7.el10_2.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/l/libksba-1.6.7-2.el10.aarch64.rpm
     repoid: ubi-10-for-aarch64-baseos-rpms
     size: 165309
@@ -99,13 +99,13 @@ arches:
     name: libassuan
     evr: 2.5.6-6.el10
     sourcerpm: libassuan-2.5.6-6.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/l/libgcrypt-1.11.0-5.el10.ppc64le.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/l/libgcrypt-1.11.0-7.el10_2.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-baseos-rpms
-    size: 626583
-    checksum: sha256:4439074a5b7bf168d7b9b64e2d438e70f6e38cef8756596862ca12eba858e071
+    size: 629365
+    checksum: sha256:2e9e2abe8d8f025bc767e2b30171da1e0bd53cd74bb3ab88e8ad87b405eaaefc
     name: libgcrypt
-    evr: 1.11.0-5.el10
-    sourcerpm: libgcrypt-1.11.0-5.el10.src.rpm
+    evr: 1.11.0-7.el10_2
+    sourcerpm: libgcrypt-1.11.0-7.el10_2.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/l/libksba-1.6.7-2.el10.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-baseos-rpms
     size: 182359
@@ -166,13 +166,13 @@ arches:
     name: libassuan
     evr: 2.5.6-6.el10
     sourcerpm: libassuan-2.5.6-6.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/l/libgcrypt-1.11.0-5.el10.s390x.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/l/libgcrypt-1.11.0-7.el10_2.s390x.rpm
     repoid: ubi-10-for-s390x-baseos-rpms
-    size: 571047
-    checksum: sha256:0825843e9abe8e3bd95b4e0a0d3b6ae4438a67951777d2fdbd7b913a867f16be
+    size: 573113
+    checksum: sha256:7e1badad4af3bc75029b06420093d1ee727e825237aeb25462a467fe3dc5acce
     name: libgcrypt
-    evr: 1.11.0-5.el10
-    sourcerpm: libgcrypt-1.11.0-5.el10.src.rpm
+    evr: 1.11.0-7.el10_2
+    sourcerpm: libgcrypt-1.11.0-7.el10_2.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/l/libksba-1.6.7-2.el10.s390x.rpm
     repoid: ubi-10-for-s390x-baseos-rpms
     size: 172502
@@ -233,13 +233,13 @@ arches:
     name: libassuan
     evr: 2.5.6-6.el10
     sourcerpm: libassuan-2.5.6-6.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/l/libgcrypt-1.11.0-5.el10.x86_64.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/l/libgcrypt-1.11.0-7.el10_2.x86_64.rpm
     repoid: ubi-10-for-x86_64-baseos-rpms
-    size: 603055
-    checksum: sha256:8df67cb1f6e950e27164a01879ab9ae28d61f88deba46d1f20ae9ccea94800c9
+    size: 606569
+    checksum: sha256:935fd4985b81c163c5963cf6e0664d241e713dae88699d838480e1da9960eeda
     name: libgcrypt
-    evr: 1.11.0-5.el10
-    sourcerpm: libgcrypt-1.11.0-5.el10.src.rpm
+    evr: 1.11.0-7.el10_2
+    sourcerpm: libgcrypt-1.11.0-7.el10_2.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/l/libksba-1.6.7-2.el10.x86_64.rpm
     repoid: ubi-10-for-x86_64-baseos-rpms
     size: 167004
