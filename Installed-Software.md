@@ -16,7 +16,7 @@ Re-generate with:
 | coreutils-single               | 9.5-8.el10_2                   | RPM                                      |
 | cosign                         | 3.1.1                          | `go install`                             |
 | crun                           | 1.27-2.el10_2                  | RPM                                      |
-| curl                           | 8.12.1-4.el10                  | RPM                                      |
+| curl                           | 8.12.1-4.el10_2.4              | RPM                                      |
 | findutils                      | 4.10.0-5.el10                  | RPM                                      |
 | fuse-overlayfs                 | 1.16-1.el10_1                  | RPM                                      |
 | gawk                           | 5.3.0-6.el10                   | RPM                                      |
@@ -31,10 +31,10 @@ Re-generate with:
 | microdnf                       | 3.10.1-1.el10                  | RPM                                      |
 | oc                             | 4.22.0                         | Git submodule (Go)                       |
 | olot                           | 1.2.1                          | `pip install`                            |
-| openssh-clients                | 9.9p1-23.el10_2                | RPM                                      |
+| openssh-clients                | 9.9p1-25.el10_2                | RPM                                      |
 | openssl                        | 3.5.5-6.el10_2                 | RPM                                      |
 | oras                           | 1.3.3                          | `go install`                             |
-| python3                        | 3.12.13-2.el10_2.1             | RPM                                      |
+| python3                        | 3.12.14-1.el10_2               | RPM                                      |
 | retry                          | 1.0.0                          | [local](./local-tools/retry)             |
 | rpm                            | 4.19.1.1-23.el10               | RPM                                      |
 | rsync                          | 3.4.4-1.el10_2                 | RPM                                      |
@@ -43,7 +43,7 @@ Re-generate with:
 | skopeo                         | 1.22.2-2.el10_2                | RPM                                      |
 | subscription-manager           | 1.30.12-1.el10                 | RPM                                      |
 | syft                           | 1.46.0                         | `go install`                             |
-| tar                            | 1.35-11.el10                   | RPM                                      |
+| tar                            | 1.35-13.el10_2                 | RPM                                      |
 | tkn                            | 0.44.2                         | `go install`                             |
 | yq                             | 4.53.3                         | `go install`                             |
 | zip                            | 3.0-45.el10                    | RPM                                      |
