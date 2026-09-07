@@ -25,6 +25,7 @@ def run_retry(
         cwd=SCRIPT_DIR,
         capture_output=True,
         text=True,
+        check=False,
     )
 
 

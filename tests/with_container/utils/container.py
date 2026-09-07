@@ -2,8 +2,9 @@ import logging
 import os
 import shlex
 import subprocess
+from collections.abc import Sequence
 from pathlib import Path
-from typing import Self, Sequence
+from typing import Self
 
 log = logging.getLogger(__name__)
 
@@ -91,7 +92,7 @@ class Container:
         podman_cmd.extend(cmd)
 
         log.debug("%s", shlex.join(map(str, podman_cmd)))
-        proc = subprocess.run(podman_cmd, capture_output=capture_output, text=True)
+        proc = subprocess.run(podman_cmd, capture_output=capture_output, text=True, check=False)
 
         if capture_output:
             if stdout := proc.stdout.rstrip("\n"):
