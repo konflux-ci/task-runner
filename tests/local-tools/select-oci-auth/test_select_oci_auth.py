@@ -35,7 +35,7 @@ def run_script(*args, auth_file: str | None = None) -> CompletedProcess:
     cmd = ["bash", SCRIPT_FILE, *args]
     # IMPORTANT: do not read auths from normal auth file.
     env = {"AUTHFILE": auth_file} if auth_file else None
-    return run(cmd, env=env, cwd=SCRIPT_DIR, capture_output=True, text=True)
+    return run(cmd, env=env, cwd=SCRIPT_DIR, capture_output=True, text=True, check=False)
 
 
 def test_print_usage_by_default():

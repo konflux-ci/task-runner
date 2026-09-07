@@ -56,6 +56,7 @@ def diff_software(
             stdout=subprocess.PIPE,
             text=True,
             cwd=repo_root,
+            check=False,
         )
         proc.check_returncode()
         return proc.stdout
@@ -92,6 +93,7 @@ def _fetch_version_tag_if_needed(repo_root: Path, ref: str) -> None:
         stdout=subprocess.DEVNULL,
         stderr=subprocess.DEVNULL,
         cwd=repo_root,
+        check=False,
     )
     if proc.returncode == 0:
         # already have the tag

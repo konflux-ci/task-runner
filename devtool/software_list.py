@@ -3,9 +3,10 @@ from __future__ import annotations
 import json
 import re
 import subprocess
+from collections.abc import Iterable
 from dataclasses import asdict, dataclass
 from pathlib import Path
-from typing import Any, Iterable, Literal, NotRequired, TypedDict
+from typing import Any, Literal, NotRequired, TypedDict
 
 import yaml
 
@@ -203,6 +204,7 @@ def _fetch_remote_tags(submodule_path: Path) -> list[str]:
             subprocess.run(
                 ["git", "fetch", "origin", f"{tag}:{tag}"],
                 cwd=submodule_path,
+                check=False,
             )
             matching_tags.append(tag.removeprefix("refs/tags/"))
 
@@ -351,7 +353,7 @@ def list_pip_packages(project_root: Path) -> list[PipPackage]:
     for line in requirements_txt.read_text().splitlines():
         line = line.strip()
         # Skip empty lines, comments, and indented lines (dependency annotations)
-        if not line or line.startswith("#") or line.startswith(" "):
+        if not line or line.startswith(("#", " ")):
             continue
         # Strip inline comments
         if " #" in line:
