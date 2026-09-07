@@ -368,13 +368,6 @@ arches:
     name: libassuan
     evr: 2.5.6-6.el10
     sourcerpm: libassuan-2.5.6-6.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/l/libattr-2.6.0-1.el10_2.aarch64.rpm
-    repoid: ubi-10-for-aarch64-baseos-rpms
-    size: 23860
-    checksum: sha256:e9a1c3b6f1a27abb914814f708db75c6d10e6abb28a94d717916ac601993415c
-    name: libattr
-    evr: 2.6.0-1.el10_2
-    sourcerpm: attr-2.6.0-1.el10_2.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/l/libbpf-1.7.0-1.el10.aarch64.rpm
     repoid: ubi-10-for-aarch64-baseos-rpms
     size: 197607
@@ -396,13 +389,6 @@ arches:
     name: libcomps
     evr: 0.1.21-3.el10
     sourcerpm: libcomps-0.1.21-3.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/l/libcurl-minimal-8.12.1-4.el10_2.4.aarch64.rpm
-    repoid: ubi-10-for-aarch64-baseos-rpms
-    size: 302011
-    checksum: sha256:cd3c77baec969ef61868dec0f72fbdc90f832d4d798ffe1b088da2d22665d895
-    name: libcurl-minimal
-    evr: 8.12.1-4.el10_2.4
-    sourcerpm: curl-8.12.1-4.el10_2.4.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/l/libdnf-plugin-subscription-manager-1.30.12-1.el10.aarch64.rpm
     repoid: ubi-10-for-aarch64-baseos-rpms
     size: 49896
@@ -599,25 +585,11 @@ arches:
     name: openssl
     evr: 1:3.5.5-6.el10_2
     sourcerpm: openssl-3.5.5-6.el10_2.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/o/openssl-libs-3.5.5-6.el10_2.aarch64.rpm
-    repoid: ubi-10-for-aarch64-baseos-rpms
-    size: 2232956
-    checksum: sha256:43acf9a719a9784110d66329b55b257924327c9d165c123252d5fccd9b087d68
-    name: openssl-libs
-    evr: 1:3.5.5-6.el10_2
-    sourcerpm: openssl-3.5.5-6.el10_2.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/p/pam-1.6.1-9.el10_2.1.aarch64.rpm
     repoid: ubi-10-for-aarch64-baseos-rpms
     size: 611166
     checksum: sha256:6c0f13a2734c624b97e6d11d255f7e83976fc8eb327f5e97dcb6089c2a924f76
     name: pam
-    evr: 1.6.1-9.el10_2.1
-    sourcerpm: pam-1.6.1-9.el10_2.1.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/p/pam-libs-1.6.1-9.el10_2.1.aarch64.rpm
-    repoid: ubi-10-for-aarch64-baseos-rpms
-    size: 63446
-    checksum: sha256:6300f006fd59db4b2d2ffd8f8a2f829b251738aa68bf0a6b1611140939190e01
-    name: pam-libs
     evr: 1.6.1-9.el10_2.1
     sourcerpm: pam-1.6.1-9.el10_2.1.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/p/psmisc-23.6-8.el10.aarch64.rpm
@@ -1303,13 +1275,6 @@ arches:
     name: libassuan
     evr: 2.5.6-6.el10
     sourcerpm: libassuan-2.5.6-6.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/l/libattr-2.6.0-1.el10_2.ppc64le.rpm
-    repoid: ubi-10-for-ppc64le-baseos-rpms
-    size: 25165
-    checksum: sha256:ae7797cc75b27b04ae15d29a179a6d5728964decfc5ecda885cc0c630fd6ea9d
-    name: libattr
-    evr: 2.6.0-1.el10_2
-    sourcerpm: attr-2.6.0-1.el10_2.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/l/libbpf-1.7.0-1.el10.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-baseos-rpms
     size: 231717
@@ -1331,13 +1296,6 @@ arches:
     name: libcomps
     evr: 0.1.21-3.el10
     sourcerpm: libcomps-0.1.21-3.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/l/libcurl-minimal-8.12.1-4.el10_2.4.ppc64le.rpm
-    repoid: ubi-10-for-ppc64le-baseos-rpms
-    size: 343036
-    checksum: sha256:07480dacc1d0ba20c370514cc7c407c2b318ac7295ca2d0e5cc0e1f4a475af44
-    name: libcurl-minimal
-    evr: 8.12.1-4.el10_2.4
-    sourcerpm: curl-8.12.1-4.el10_2.4.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/l/libdnf-plugin-subscription-manager-1.30.12-1.el10.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-baseos-rpms
     size: 51329
@@ -1541,25 +1499,11 @@ arches:
     name: openssl
     evr: 1:3.5.5-6.el10_2
     sourcerpm: openssl-3.5.5-6.el10_2.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/o/openssl-libs-3.5.5-6.el10_2.ppc64le.rpm
-    repoid: ubi-10-for-ppc64le-baseos-rpms
-    size: 2499031
-    checksum: sha256:d46f6495bbd7a5aab17ce4e8428be686e3afc053243cd24058d327bada57eb99
-    name: openssl-libs
-    evr: 1:3.5.5-6.el10_2
-    sourcerpm: openssl-3.5.5-6.el10_2.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/p/pam-1.6.1-9.el10_2.1.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-baseos-rpms
     size: 643479
     checksum: sha256:c32aa13af5d9f98c7605f76bed65238ebdac6619e0f9a93d820ba0f2684c100a
     name: pam
-    evr: 1.6.1-9.el10_2.1
-    sourcerpm: pam-1.6.1-9.el10_2.1.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/p/pam-libs-1.6.1-9.el10_2.1.ppc64le.rpm
-    repoid: ubi-10-for-ppc64le-baseos-rpms
-    size: 69679
-    checksum: sha256:e836e681d069ff465e9e860ccbcdd7b4abf2a9e54f10862c3963fcba0c2e63f4
-    name: pam-libs
     evr: 1.6.1-9.el10_2.1
     sourcerpm: pam-1.6.1-9.el10_2.1.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/p/psmisc-23.6-8.el10.ppc64le.rpm
@@ -2245,13 +2189,6 @@ arches:
     name: libassuan
     evr: 2.5.6-6.el10
     sourcerpm: libassuan-2.5.6-6.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/l/libattr-2.6.0-1.el10_2.s390x.rpm
-    repoid: ubi-10-for-s390x-baseos-rpms
-    size: 24341
-    checksum: sha256:6ac0bee96e2f4c80e4749e0ac3fd73b9a760791c0a06f1633dacef7cf541eded
-    name: libattr
-    evr: 2.6.0-1.el10_2
-    sourcerpm: attr-2.6.0-1.el10_2.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/l/libbpf-1.7.0-1.el10.s390x.rpm
     repoid: ubi-10-for-s390x-baseos-rpms
     size: 208819
@@ -2273,13 +2210,6 @@ arches:
     name: libcomps
     evr: 0.1.21-3.el10
     sourcerpm: libcomps-0.1.21-3.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/l/libcurl-minimal-8.12.1-4.el10_2.4.s390x.rpm
-    repoid: ubi-10-for-s390x-baseos-rpms
-    size: 322804
-    checksum: sha256:62bbc4d32d58abbf586b20093461555202cda5da7eccea943fb314a6dea0d5fc
-    name: libcurl-minimal
-    evr: 8.12.1-4.el10_2.4
-    sourcerpm: curl-8.12.1-4.el10_2.4.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/l/libdnf-plugin-subscription-manager-1.30.12-1.el10.s390x.rpm
     repoid: ubi-10-for-s390x-baseos-rpms
     size: 50324
@@ -2476,25 +2406,11 @@ arches:
     name: openssl
     evr: 1:3.5.5-6.el10_2
     sourcerpm: openssl-3.5.5-6.el10_2.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/o/openssl-libs-3.5.5-6.el10_2.s390x.rpm
-    repoid: ubi-10-for-s390x-baseos-rpms
-    size: 2126502
-    checksum: sha256:adfbebdc6cc018c47f075d497a39813c79d149a6431a69bd7a0af512fe722131
-    name: openssl-libs
-    evr: 1:3.5.5-6.el10_2
-    sourcerpm: openssl-3.5.5-6.el10_2.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/p/pam-1.6.1-9.el10_2.1.s390x.rpm
     repoid: ubi-10-for-s390x-baseos-rpms
     size: 615615
     checksum: sha256:2ae60c285cbb73027cc9e20eedc77ac3e6aa5a36e2c0da4d2ef0bf879faf9f83
     name: pam
-    evr: 1.6.1-9.el10_2.1
-    sourcerpm: pam-1.6.1-9.el10_2.1.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/p/pam-libs-1.6.1-9.el10_2.1.s390x.rpm
-    repoid: ubi-10-for-s390x-baseos-rpms
-    size: 65178
-    checksum: sha256:bfe0c20a72969ab05b370b8e1cefd5c311b8e4c201fb5000f12c01fbc0447c43
-    name: pam-libs
     evr: 1.6.1-9.el10_2.1
     sourcerpm: pam-1.6.1-9.el10_2.1.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/p/psmisc-23.6-8.el10.s390x.rpm
@@ -3187,13 +3103,6 @@ arches:
     name: libassuan
     evr: 2.5.6-6.el10
     sourcerpm: libassuan-2.5.6-6.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/l/libattr-2.6.0-1.el10_2.x86_64.rpm
-    repoid: ubi-10-for-x86_64-baseos-rpms
-    size: 24436
-    checksum: sha256:54955655d65785b1b1cccebccb47fa460c72741bc077b6aa8b41b0b406877939
-    name: libattr
-    evr: 2.6.0-1.el10_2
-    sourcerpm: attr-2.6.0-1.el10_2.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/l/libbpf-1.7.0-1.el10.x86_64.rpm
     repoid: ubi-10-for-x86_64-baseos-rpms
     size: 197769
@@ -3215,13 +3124,6 @@ arches:
     name: libcomps
     evr: 0.1.21-3.el10
     sourcerpm: libcomps-0.1.21-3.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/l/libcurl-minimal-8.12.1-4.el10_2.4.x86_64.rpm
-    repoid: ubi-10-for-x86_64-baseos-rpms
-    size: 308310
-    checksum: sha256:69d56315511cef046015b7815c7ceb2d82d20d9728c90e1f19860be385f0ecb1
-    name: libcurl-minimal
-    evr: 8.12.1-4.el10_2.4
-    sourcerpm: curl-8.12.1-4.el10_2.4.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/l/libdnf-plugin-subscription-manager-1.30.12-1.el10.x86_64.rpm
     repoid: ubi-10-for-x86_64-baseos-rpms
     size: 50067
@@ -3418,25 +3320,11 @@ arches:
     name: openssl
     evr: 1:3.5.5-6.el10_2
     sourcerpm: openssl-3.5.5-6.el10_2.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/o/openssl-libs-3.5.5-6.el10_2.x86_64.rpm
-    repoid: ubi-10-for-x86_64-baseos-rpms
-    size: 2371880
-    checksum: sha256:bbe0824de7b90352539d2a964e1cec3b5a1fbdbcb0a2539df9ef85b8d8f15798
-    name: openssl-libs
-    evr: 1:3.5.5-6.el10_2
-    sourcerpm: openssl-3.5.5-6.el10_2.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/p/pam-1.6.1-9.el10_2.1.x86_64.rpm
     repoid: ubi-10-for-x86_64-baseos-rpms
     size: 606013
     checksum: sha256:bb4410454b465a1fca90ffe22816b811c9b09f3bc451ea945332d8a4a5203823
     name: pam
-    evr: 1.6.1-9.el10_2.1
-    sourcerpm: pam-1.6.1-9.el10_2.1.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/p/pam-libs-1.6.1-9.el10_2.1.x86_64.rpm
-    repoid: ubi-10-for-x86_64-baseos-rpms
-    size: 64026
-    checksum: sha256:3344c1cbb8ab88cf9cc94f9ea0588ee4cdfa4701299d907dd1f44e4864bf95ba
-    name: pam-libs
     evr: 1.6.1-9.el10_2.1
     sourcerpm: pam-1.6.1-9.el10_2.1.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/p/psmisc-23.6-8.el10.x86_64.rpm
