@@ -9,6 +9,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 *Nothing yet*.
 
+## 3.2.0
+
+Date: 2026-09-08
+
+### Installed Software
+
+- `awscli` 1.45.46 => 1.46.1
+- `buildah` 1.44.0 => 1.45.0
+- `conftest` 0.68.2 => 0.69.0
+- `huggingface-hub` 1.23.0 => 1.29.0
+- `kubectl` 1.36.2 => 1.37.0
+- `syft` 1.46.0 => 1.51.1
+- `tkn` 0.44.2 => 0.46.0
+- `cosign` 3.1.1 => 3.1.3
+- `curl` 8.12.1-4.el10 => 8.12.1-4.el10_2.4
+- `openssh-clients` 9.9p1-23.el10_2 => 9.9p1-25.el10_2
+- `oras` 1.3.3 => 1.3.4
+- `python3` 3.12.13-2.el10_2.1 => 3.12.14-1.el10_2
+- `tar` 1.35-11.el10 => 1.35-13.el10_2
+- `yq` 4.53.3 => 4.53.6
+
 ## 3.1.2
 
 Date: 2026-08-13
