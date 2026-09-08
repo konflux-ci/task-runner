@@ -44,6 +44,26 @@ shellcheck:
 RPM_IN_FILES = $(shell find . -name rpms.in.yaml)
 RPM_LOCK_FILES = $(patsubst %/rpms.in.yaml,%/rpms.lock.yaml,$(RPM_IN_FILES))
 
+RPM_LOCKFILE_PROTOTYPE_FILES = $(RPM_LOCK_FILES:%=%-container)
+RPM_LOCKFILE_PROTOTYPE_IMAGE ?= localhost/rpm-lockfile-prototype
+
+.PHONY: rpm-lockfile-prototype-image
+rpm-lockfile-prototype-image:
+	curl -fsSL \
+		https://raw.githubusercontent.com/konflux-ci/rpm-lockfile-prototype/refs/heads/main/Containerfile \
+		| podman build -t $(RPM_LOCKFILE_PROTOTYPE_IMAGE) -
+
+.PHONY: $(RPM_LOCKFILE_PROTOTYPE_FILES)
+$(RPM_LOCKFILE_PROTOTYPE_FILES): rpm-lockfile-prototype-image
+	podman run --rm \
+		-v $(CURDIR):/work \
+		-w /work/$(@D) \
+		$(RPM_LOCKFILE_PROTOTYPE_IMAGE) \
+		--outfile=rpms.lock.yaml rpms.in.yaml
+
+.PHONY: all-rpm-locks-container
+all-rpm-locks-container: $(RPM_LOCKFILE_PROTOTYPE_FILES)
+
 # Defines separate targets for each individual **/rpms.lock.yaml file
 .PHONY: $(RPM_LOCK_FILES)
 $(RPM_LOCK_FILES):
