@@ -24,15 +24,10 @@ spec:
       - name: source-url
       - name: source-branch
       - name: pr-author
-    workspaces:
-      - name: git-auth
     tasks:
       - name: autogenerate
         taskRef:
           name: autogenerate
-        workspaces:
-          - name: git-auth
-            workspace: git-auth
         params:
           - name: source-url
             value: "$(params.source-url)"
@@ -40,9 +35,7 @@ spec:
             value: "$(params.source-branch)"
           - name: pr-author
             value: "$(params.pr-author)"
+          - name: git-auth-secret-name
+            value: "{{ git_auth_secret }}"
   taskRunTemplate:
     serviceAccountName: build-pipeline-task-runner
-  workspaces:
-    - name: git-auth
-      secret:
-        secretName: "{{ git_auth_secret }}"
