@@ -1,0 +1,137 @@
+apiVersion: tekton.dev/v1
+kind: Task
+metadata:
+  name: autogenerate
+spec:
+  params:
+    - name: source-url
+    - name: source-branch
+    - name: pr-author
+    - name: git-auth-secret-name
+    - name: generateable-files
+      type: array
+      # Keep in sync with devtool/__main__.py
+      default: ["Installed-Software.md", "renovate.json5"]
+
+  volumes:
+    - name: pristine-repo
+      emptyDir: {}
+    - name: processed-repo
+      emptyDir: {}
+    - name: git-auth-secret
+      secret:
+        secretName: $(params.git-auth-secret-name)
+  steps:
+    - name: clone
+      image: quay.io/konflux-ci/task-runner:3.1.2@sha256:e272c1e1c60a4ecc72ff9c8d65bc48da534de6f1ce0d5aba79db3ac532d11c35
+      env:
+        - name: SOURCE_URL
+          value: "$(params.source-url)"
+        - name: SOURCE_BRANCH
+          value: "$(params.source-branch)"
+      volumeMounts:
+        - name: pristine-repo
+          mountPath: /pristine-repo
+        - name: processed-repo
+          mountPath: /processed-repo
+      script: |
+        #!/bin/bash
+        set -o errexit -o nounset -o pipefail
+
+        git clone --branch "$SOURCE_BRANCH" "$SOURCE_URL" /pristine-repo/src
+        # Make a copy to be processed by the generator
+        cp -dR --preserve=all /pristine-repo/src /processed-repo/src
+
+    - name: autogenerate
+      image: quay.io/konflux-ci/task-runner:3.1.2@sha256:e272c1e1c60a4ecc72ff9c8d65bc48da534de6f1ce0d5aba79db3ac532d11c35
+      volumeMounts:
+        # Doesn't get access to /pristine-repo to ensure the generator cannot touch it
+        - name: processed-repo
+          mountPath: /processed-repo
+      securityContext:
+        runAsUser: 0
+      args:
+        - $(params.generateable-files[*])
+      script: |
+        #!/bin/bash
+        set -o errexit -o nounset -o pipefail
+
+        # Install additional dependencies
+        microdnf -y install golang python3-pip
+        pip install uv
+
+        # We cloned the repo as a different user, so mark it trusted
+        git config --global --add safe.directory "/processed-repo/src"
+        # (submodules too)
+        git config --global --add safe.directory "/processed-repo/src/*"
+
+        # Prepare the repo
+        cd /processed-repo/src
+        make submodules
+        make .venv
+        source .venv/bin/activate
+
+        # Run the generator
+        devtool gen "$@"
+
+    - name: push-generated-changes
+      image: quay.io/konflux-ci/task-runner:3.1.2@sha256:e272c1e1c60a4ecc72ff9c8d65bc48da534de6f1ce0d5aba79db3ac532d11c35
+      env:
+        - name: SOURCE_BRANCH
+          value: "$(params.source-branch)"
+        - name: PR_AUTHOR
+          value: "$(params.pr-author)"
+      volumeMounts:
+        - name: pristine-repo
+          mountPath: /pristine-repo
+        - name: processed-repo
+          mountPath: /processed-repo
+        # This is the only step with access to the git credentials.
+        # Critically, the autogenerate step must not have it,
+        # because it runs "untrusted" generator code.
+        - name: git-auth-secret
+          mountPath: /git-auth
+      args:
+        - $(params.generateable-files[*])
+      script: |
+        #!/bin/bash
+        set -o errexit -o nounset -o pipefail
+
+        GENERATEABLE_FILES=("$@")
+
+        cd /pristine-repo/src
+
+        # Copy the generateable files to the pristine repo
+        for f in "${GENERATEABLE_FILES[@]}"; do
+          if [[ -L "/processed-repo/src/$f" ]]; then
+            target=$(readlink "/processed-repo/src/$f")
+            echo "Error: the generator replaced $f with a symlink to $target, refusing to proceed"
+            exit 1
+          fi
+          cp "/processed-repo/src/$f" "$f"
+        done
+
+        # Check for changes
+        if git diff --quiet -- "${GENERATEABLE_FILES[@]}"; then
+          echo "No changes detected, nothing to do."
+          exit 0
+        fi
+
+        # If the author isn't Renovate/MintMaker, show the diff and fail
+        if ! [[ "$PR_AUTHOR" == *renovate* || "$PR_AUTHOR" == *red-hat-konflux* ]]; then
+          echo "Error: generated files are out of date"
+          echo "Please run locally:"
+          echo "  make venv && .venv/bin/devtool gen --all"
+          exit 1
+        fi
+
+        # Set up git credentials
+        cp /git-auth/.gitconfig "${HOME}/.gitconfig"
+        cp /git-auth/.git-credentials "${HOME}/.git-credentials"
+
+        # Commit the changes to the PR
+        git config user.name "autogenerator[bot]"
+        git config user.email "autogenerator[bot]@noreply.konflux-ci.dev"
+        git add -- "${GENERATEABLE_FILES[@]}"
+        git commit -m "Update generated files"
+        git push origin "$SOURCE_BRANCH"

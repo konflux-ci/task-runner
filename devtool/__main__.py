@@ -13,6 +13,7 @@ from devtool.renovate import renovate_json
 from devtool.software_list import Package, list_go_tools, list_packages
 from devtool.version import Version
 
+# Keep in sync with .tekton/generator-tasks/autogenerate.yaml
 GENERATEABLE_FILES = ["Installed-Software.md", "renovate.json5"]
 
 
