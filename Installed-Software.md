@@ -22,7 +22,7 @@ Re-generate with:
 | gawk                           | 5.3.0-6.el10                   | RPM                                      |
 | gettext-envsubst               | 0.22.5-6.el10                  | RPM                                      |
 | git-core                       | 2.52.0-1.el10                  | RPM                                      |
-| git-lfs                        | 3.7.1-5.el10_2.6               | RPM                                      |
+| git-lfs                        | 3.7.1-5.el10_2.7               | RPM                                      |
 | grep                           | 3.11-10.el10                   | RPM                                      |
 | huggingface-hub                | 1.29.0                         | `pip install`                            |
 | jq                             | 1.7.1-11.el10_2.2              | RPM                                      |
@@ -40,7 +40,7 @@ Re-generate with:
 | rsync                          | 3.4.4-1.el10_2                 | RPM                                      |
 | sed                            | 4.9-5.el10                     | RPM                                      |
 | select-oci-auth                | 1.0.0                          | [local](./local-tools/select-oci-auth)   |
-| skopeo                         | 1.22.2-2.el10_2                | RPM                                      |
+| skopeo                         | 1.22.2-5.el10_2                | RPM                                      |
 | subscription-manager           | 1.30.12-1.el10                 | RPM                                      |
 | syft                           | 1.51.1                         | `go install`                             |
 | tar                            | 1.35-13.el10_2                 | RPM                                      |
