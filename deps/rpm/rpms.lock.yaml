@@ -46,13 +46,13 @@ arches:
     name: git-core
     evr: 2.52.0-1.el10
     sourcerpm: git-2.52.0-1.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/appstream/os/Packages/g/git-lfs-3.7.1-5.el10_2.6.aarch64.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/appstream/os/Packages/g/git-lfs-3.7.1-5.el10_2.7.aarch64.rpm
     repoid: ubi-10-for-aarch64-appstream-rpms
-    size: 4331295
-    checksum: sha256:f7f90785bc40f23c43faa037a73bf2451464ad41888cd5db756152ae67d7e0af
+    size: 4333215
+    checksum: sha256:6696f7460f93d5014645a4d7d420fc4a05992a66098c3f9ce89e270efad5b1bc
     name: git-lfs
-    evr: 3.7.1-5.el10_2.6
-    sourcerpm: git-lfs-3.7.1-5.el10_2.6.src.rpm
+    evr: 3.7.1-5.el10_2.7
+    sourcerpm: git-lfs-3.7.1-5.el10_2.7.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/appstream/os/Packages/n/netavark-1.17.2-1.el10.aarch64.rpm
     repoid: ubi-10-for-aarch64-appstream-rpms
     size: 3050335
@@ -74,13 +74,13 @@ arches:
     name: podman-sequoia
     evr: 0.4.0~pqc.3-1.el10_2
     sourcerpm: rust-podman-sequoia-0.4.0~pqc.3-1.el10_2.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/appstream/os/Packages/s/skopeo-1.22.2-2.el10_2.aarch64.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/appstream/os/Packages/s/skopeo-1.22.2-5.el10_2.aarch64.rpm
     repoid: ubi-10-for-aarch64-appstream-rpms
-    size: 7379131
-    checksum: sha256:c2c941acd05b08e6349f009478f71ef263359ef7c88b56376d875a41e1f85884
+    size: 7391380
+    checksum: sha256:bb6f8e58e40f9abed5903c0cb3478d92fb1beb334a70c7b80d89e991e7a32690
     name: skopeo
-    evr: 2:1.22.2-2.el10_2
-    sourcerpm: skopeo-1.22.2-2.el10_2.src.rpm
+    evr: 2:1.22.2-5.el10_2
+    sourcerpm: skopeo-1.22.2-5.el10_2.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/a/attr-2.6.0-1.el10_2.aarch64.rpm
     repoid: ubi-10-for-aarch64-baseos-rpms
     size: 74272
@@ -207,13 +207,13 @@ arches:
     name: elfutils-libs
     evr: 0.194-2.el10_2
     sourcerpm: elfutils-0.194-2.el10_2.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/e/expat-2.7.3-1.el10_2.1.aarch64.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/e/expat-2.7.3-1.el10_2.3.aarch64.rpm
     repoid: ubi-10-for-aarch64-baseos-rpms
-    size: 123527
-    checksum: sha256:0dcfff5c701c572248fb431cc2b7f7c46b5e56365e7eab5b9da6e0155950c4b8
+    size: 124545
+    checksum: sha256:c2cc96badf054560d11e4d5041e10e51b38dedca132d3ebeb0cb219b4f1f9955
     name: expat
-    evr: 2.7.3-1.el10_2.1
-    sourcerpm: expat-2.7.3-1.el10_2.1.src.rpm
+    evr: 2.7.3-1.el10_2.3
+    sourcerpm: expat-2.7.3-1.el10_2.3.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/f/file-libs-5.45-9.el10.aarch64.rpm
     repoid: ubi-10-for-aarch64-baseos-rpms
     size: 785886
@@ -960,13 +960,13 @@ arches:
     name: git-core
     evr: 2.52.0-1.el10
     sourcerpm: git-2.52.0-1.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/appstream/os/Packages/g/git-lfs-3.7.1-5.el10_2.6.ppc64le.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/appstream/os/Packages/g/git-lfs-3.7.1-5.el10_2.7.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-appstream-rpms
-    size: 4387939
-    checksum: sha256:bc11d75368ab76d95c6593075c073bb6469166548e2a86267295605962ec3080
+    size: 4392190
+    checksum: sha256:2e4e08c55070202428c1b1af0818bbaf77665f4556b9e0e2f49edc6ce231f442
     name: git-lfs
-    evr: 3.7.1-5.el10_2.6
-    sourcerpm: git-lfs-3.7.1-5.el10_2.6.src.rpm
+    evr: 3.7.1-5.el10_2.7
+    sourcerpm: git-lfs-3.7.1-5.el10_2.7.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/appstream/os/Packages/n/netavark-1.17.2-1.el10.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-appstream-rpms
     size: 3889276
@@ -988,13 +988,13 @@ arches:
     name: podman-sequoia
     evr: 0.4.0~pqc.3-1.el10_2
     sourcerpm: rust-podman-sequoia-0.4.0~pqc.3-1.el10_2.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/appstream/os/Packages/s/skopeo-1.22.2-2.el10_2.ppc64le.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/appstream/os/Packages/s/skopeo-1.22.2-5.el10_2.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-appstream-rpms
-    size: 7463202
-    checksum: sha256:1a9b0e501b61416de33101f9ffb8e0eae9513e5bfc51def738dc814a50b2b55e
+    size: 7474861
+    checksum: sha256:b889ea4588787b869409fd5850b52c190a5cf880a39664c41c1f8d9138f3a192
     name: skopeo
-    evr: 2:1.22.2-2.el10_2
-    sourcerpm: skopeo-1.22.2-2.el10_2.src.rpm
+    evr: 2:1.22.2-5.el10_2
+    sourcerpm: skopeo-1.22.2-5.el10_2.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/a/attr-2.6.0-1.el10_2.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-baseos-rpms
     size: 75992
@@ -1114,13 +1114,13 @@ arches:
     name: elfutils-libs
     evr: 0.194-2.el10_2
     sourcerpm: elfutils-0.194-2.el10_2.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/e/expat-2.7.3-1.el10_2.1.ppc64le.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/e/expat-2.7.3-1.el10_2.3.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-baseos-rpms
-    size: 133834
-    checksum: sha256:3f4e04b4f25c9d8b4cca898dc7b9bd584521dd4040dd0c5717e82686e8539685
+    size: 135012
+    checksum: sha256:cecdd37c2c96065fea038fbaedfc023c5ebcaad18173f83a18ae8e66d3cb9b09
     name: expat
-    evr: 2.7.3-1.el10_2.1
-    sourcerpm: expat-2.7.3-1.el10_2.1.src.rpm
+    evr: 2.7.3-1.el10_2.3
+    sourcerpm: expat-2.7.3-1.el10_2.3.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/f/file-libs-5.45-9.el10.ppc64le.rpm
     repoid: ubi-10-for-ppc64le-baseos-rpms
     size: 798366
@@ -1881,13 +1881,13 @@ arches:
     name: git-core
     evr: 2.52.0-1.el10
     sourcerpm: git-2.52.0-1.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/appstream/os/Packages/g/git-lfs-3.7.1-5.el10_2.6.s390x.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/appstream/os/Packages/g/git-lfs-3.7.1-5.el10_2.7.s390x.rpm
     repoid: ubi-10-for-s390x-appstream-rpms
-    size: 4754161
-    checksum: sha256:a72501726f1dfe69fda299a9113d420ebbd2b452d9e57ca30b7a23970209e3b6
+    size: 4761374
+    checksum: sha256:ee90cfaf10a23c4e6c6f20511c6b86dbf3ca53508f66ab97d1ba97bc3f03cd4d
     name: git-lfs
-    evr: 3.7.1-5.el10_2.6
-    sourcerpm: git-lfs-3.7.1-5.el10_2.6.src.rpm
+    evr: 3.7.1-5.el10_2.7
+    sourcerpm: git-lfs-3.7.1-5.el10_2.7.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/appstream/os/Packages/n/netavark-1.17.2-1.el10.s390x.rpm
     repoid: ubi-10-for-s390x-appstream-rpms
     size: 3151045
@@ -1909,13 +1909,13 @@ arches:
     name: podman-sequoia
     evr: 0.4.0~pqc.3-1.el10_2
     sourcerpm: rust-podman-sequoia-0.4.0~pqc.3-1.el10_2.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/appstream/os/Packages/s/skopeo-1.22.2-2.el10_2.s390x.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/appstream/os/Packages/s/skopeo-1.22.2-5.el10_2.s390x.rpm
     repoid: ubi-10-for-s390x-appstream-rpms
-    size: 8198436
-    checksum: sha256:811596d29187d30dc698c256c04744f8352e7f5659df7df92025ad5a564a1964
+    size: 8209420
+    checksum: sha256:1740c9d03d4c250e846ca225f63a525f20bbe185faac6056f3aa052e752865ae
     name: skopeo
-    evr: 2:1.22.2-2.el10_2
-    sourcerpm: skopeo-1.22.2-2.el10_2.src.rpm
+    evr: 2:1.22.2-5.el10_2
+    sourcerpm: skopeo-1.22.2-5.el10_2.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/a/attr-2.6.0-1.el10_2.s390x.rpm
     repoid: ubi-10-for-s390x-baseos-rpms
     size: 75278
@@ -2035,13 +2035,13 @@ arches:
     name: elfutils-libs
     evr: 0.194-2.el10_2
     sourcerpm: elfutils-0.194-2.el10_2.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/e/expat-2.7.3-1.el10_2.1.s390x.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/e/expat-2.7.3-1.el10_2.3.s390x.rpm
     repoid: ubi-10-for-s390x-baseos-rpms
-    size: 132293
-    checksum: sha256:11d8cb024f5c999898bd2d64a3b81de6273cf301c51409ee95ad1c2c23c8c070
+    size: 133554
+    checksum: sha256:f5d72cf7d21c64f80a1e836623537aee60087b4351ec5e5134fe631c68b8ee29
     name: expat
-    evr: 2.7.3-1.el10_2.1
-    sourcerpm: expat-2.7.3-1.el10_2.1.src.rpm
+    evr: 2.7.3-1.el10_2.3
+    sourcerpm: expat-2.7.3-1.el10_2.3.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/f/file-libs-5.45-9.el10.s390x.rpm
     repoid: ubi-10-for-s390x-baseos-rpms
     size: 793815
@@ -2781,13 +2781,13 @@ arches:
     name: git-core
     evr: 2.52.0-1.el10
     sourcerpm: git-2.52.0-1.el10.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/appstream/os/Packages/g/git-lfs-3.7.1-5.el10_2.6.x86_64.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/appstream/os/Packages/g/git-lfs-3.7.1-5.el10_2.7.x86_64.rpm
     repoid: ubi-10-for-x86_64-appstream-rpms
-    size: 4825420
-    checksum: sha256:5093c38079ce664782b4437ad85446b8e7111a03a5c63bcb4ac1c46fece9a0f1
+    size: 4827727
+    checksum: sha256:9d677049456d28a92e62c5a168ea3e824c031030acadf716331d455de89e5cd9
     name: git-lfs
-    evr: 3.7.1-5.el10_2.6
-    sourcerpm: git-lfs-3.7.1-5.el10_2.6.src.rpm
+    evr: 3.7.1-5.el10_2.7
+    sourcerpm: git-lfs-3.7.1-5.el10_2.7.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/appstream/os/Packages/n/netavark-1.17.2-1.el10.x86_64.rpm
     repoid: ubi-10-for-x86_64-appstream-rpms
     size: 3233888
@@ -2809,13 +2809,13 @@ arches:
     name: podman-sequoia
     evr: 0.4.0~pqc.3-1.el10_2
     sourcerpm: rust-podman-sequoia-0.4.0~pqc.3-1.el10_2.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/appstream/os/Packages/s/skopeo-1.22.2-2.el10_2.x86_64.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/appstream/os/Packages/s/skopeo-1.22.2-5.el10_2.x86_64.rpm
     repoid: ubi-10-for-x86_64-appstream-rpms
-    size: 8264787
-    checksum: sha256:8f0b79b94b33b636ad3822b6022f23bcc833754543d12a5b54b14b39d04207c6
+    size: 8276531
+    checksum: sha256:dfb167e63565b36560441e7284982682b348432c3fdd9f370f12adb832fb0dbf
     name: skopeo
-    evr: 2:1.22.2-2.el10_2
-    sourcerpm: skopeo-1.22.2-2.el10_2.src.rpm
+    evr: 2:1.22.2-5.el10_2
+    sourcerpm: skopeo-1.22.2-5.el10_2.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/a/attr-2.6.0-1.el10_2.x86_64.rpm
     repoid: ubi-10-for-x86_64-baseos-rpms
     size: 74612
@@ -2942,13 +2942,13 @@ arches:
     name: elfutils-libs
     evr: 0.194-2.el10_2
     sourcerpm: elfutils-0.194-2.el10_2.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/e/expat-2.7.3-1.el10_2.1.x86_64.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/e/expat-2.7.3-1.el10_2.3.x86_64.rpm
     repoid: ubi-10-for-x86_64-baseos-rpms
-    size: 129412
-    checksum: sha256:77280b9f04b396003ad79ad918f164c8f05ac55998ba9663906045ada679ce5b
+    size: 130336
+    checksum: sha256:2f0c525858f8a52069796979aff0d064d81225641f00de54eb40e5eacf211735
     name: expat
-    evr: 2.7.3-1.el10_2.1
-    sourcerpm: expat-2.7.3-1.el10_2.1.src.rpm
+    evr: 2.7.3-1.el10_2.3
+    sourcerpm: expat-2.7.3-1.el10_2.3.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/f/file-libs-5.45-9.el10.x86_64.rpm
     repoid: ubi-10-for-x86_64-baseos-rpms
     size: 787330
