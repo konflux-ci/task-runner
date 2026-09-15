@@ -71,9 +71,9 @@ httpx==0.28.1 \
     --hash=sha256:75e98c5f16b0f35b567856f597f06ff2270a374470a5c2392242528e3e3e42fc \
     --hash=sha256:d909fcccc110f8c7faf814ca82a9a4d816bc5a6dbfea25d6591d6985b8ba59ad
     # via huggingface-hub
-huggingface-hub==1.29.0 \
-    --hash=sha256:6ebb385a581435325cf6d5c5b233d5d4bc91175834d99fd65dae14379b36e9ad \
-    --hash=sha256:b00f7782afc14db4bc6572763810a635bdfbab8623d957bfb553bd18e03852cd
+huggingface-hub==1.31.0 \
+    --hash=sha256:9dbb6a503cbe2494ea666695207e7262d410659e09134059deb83e5480864667 \
+    --hash=sha256:f8e9e710a210613fa5d0f26bba6da05ef4aef9fba5a0f23f508f5ac4d08b6f90
     # via -r deps/pip/requirements.in
 idna==3.17 \
     --hash=sha256:466e48829084efe2548012b855df21540b96f2e20e51bd124c851536556a592c \
