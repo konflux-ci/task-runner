@@ -88,6 +88,19 @@
           "gomod"
         ],
         "matchFileNames": [
+          "deps/go-tools/opm/*"
+        ],
+        "matchPackageNames": [
+          "github.com/operator-framework/operator-registry"
+        ],
+        "enabled": true,
+        "groupName": "Non-RPM dependencies"
+      },
+      {
+        "matchManagers": [
+          "gomod"
+        ],
+        "matchFileNames": [
           "deps/go-tools/oras/*"
         ],
         "matchPackageNames": [
