@@ -11,8 +11,8 @@ Re-generate with:
 | awscli                         | 1.46.1                         | `pip install`                            |
 | bash                           | 5.2.26-6.el10                  | RPM                                      |
 | bc                             | 1.07.1-23.el10                 | RPM                                      |
-| buildah                        | 1.45.0                         | `go install`                             |
-| conftest                       | 0.69.0                         | `go install`                             |
+| buildah                        | 1.45.1                         | `go install`                             |
+| conftest                       | 0.70.1                         | `go install`                             |
 | coreutils-single               | 9.5-8.el10_2                   | RPM                                      |
 | cosign                         | 3.1.3                          | `go install`                             |
 | crun                           | 1.27-2.el10_2                  | RPM                                      |
@@ -24,9 +24,9 @@ Re-generate with:
 | git-core                       | 2.52.0-1.el10                  | RPM                                      |
 | git-lfs                        | 3.7.1-5.el10_2.6               | RPM                                      |
 | grep                           | 3.11-10.el10                   | RPM                                      |
-| huggingface-hub                | 1.29.0                         | `pip install`                            |
+| huggingface-hub                | 1.33.0                         | `pip install`                            |
 | jq                             | 1.7.1-11.el10_2.2              | RPM                                      |
-| kubectl                        | 1.37.0                         | Git submodule (Go)                       |
+| kubectl                        | 1.37.1                         | Git submodule (Go)                       |
 | make                           | 4.4.1-9.el10                   | RPM                                      |
 | microdnf                       | 3.10.1-1.el10                  | RPM                                      |
 | oc                             | 4.22.0                         | Git submodule (Go)                       |
@@ -43,8 +43,8 @@ Re-generate with:
 | select-oci-auth                | 1.0.0                          | [local](./local-tools/select-oci-auth)   |
 | skopeo                         | 1.22.2-2.el10_2                | RPM                                      |
 | subscription-manager           | 1.30.12-1.el10                 | RPM                                      |
-| syft                           | 1.51.1                         | `go install`                             |
+| syft                           | 1.52.0                         | `go install`                             |
 | tar                            | 1.35-13.el10_2                 | RPM                                      |
-| tkn                            | 0.46.0                         | `go install`                             |
+| tkn                            | 0.46.1                         | `go install`                             |
 | yq                             | 4.53.6                         | `go install`                             |
 | zip                            | 3.0-45.el10                    | RPM                                      |
