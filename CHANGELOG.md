@@ -9,6 +9,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 *Nothing yet*.
 
+## 3.3.0
+
+Date: 2026-10-02
+
+### Installed Software
+
+- `opm` added (1.74.0)
+
+### Added
+
+- Added `opm` (Operator Package Manager) for building and managing OLM operator catalogs.
+
 ## 3.2.0
 
 Date: 2026-09-08

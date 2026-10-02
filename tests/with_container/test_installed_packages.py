@@ -19,6 +19,7 @@ package_name_to_executable_name = {
 version_arg_overrides = {
     "tkn": ["version", "--component", "client"],
     "cosign": ["version"],
+    "opm": ["version"],
     "oras": ["version"],
     "kubectl": ["version", "--client"],
     "oc": ["version", "--client"],

@@ -10,6 +10,9 @@ __pycache__/
 # virtualenv
 .venv/
 
+# idea
+.idea/
+
 # misc tmp files
 *.swp
 *.swo

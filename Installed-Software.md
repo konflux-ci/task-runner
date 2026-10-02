@@ -33,6 +33,7 @@ Re-generate with:
 | olot                           | 1.2.1                          | `pip install`                            |
 | openssh-clients                | 9.9p1-25.el10_2                | RPM                                      |
 | openssl                        | 3.5.5-6.el10_2                 | RPM                                      |
+| opm                            | 1.74.0                         | `go install`                             |
 | oras                           | 1.3.4                          | `go install`                             |
 | python3                        | 3.12.14-1.el10_2               | RPM                                      |
 | retry                          | 1.0.0                          | [local](./local-tools/retry)             |

@@ -52,6 +52,7 @@ spec:
         {"type": "gomod", "path": "deps/go-tools/buildah"},
         {"type": "gomod", "path": "deps/go-tools/conftest"},
         {"type": "gomod", "path": "deps/go-tools/cosign"},
+        {"type": "gomod", "path": "deps/go-tools/opm"},
         {"type": "gomod", "path": "deps/go-tools/oras"},
         {"type": "gomod", "path": "deps/go-tools/syft"},
         {"type": "gomod", "path": "deps/go-tools/tkn"},
