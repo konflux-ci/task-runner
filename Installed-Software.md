@@ -13,16 +13,16 @@ Re-generate with:
 | bc                             | 1.07.1-23.el10                 | RPM                                      |
 | buildah                        | 1.45.0                         | `go install`                             |
 | conftest                       | 0.69.0                         | `go install`                             |
-| coreutils-single               | 9.5-8.el10_2                   | RPM                                      |
+| coreutils-single               | 9.5-8.el10_2.1                 | RPM                                      |
 | cosign                         | 3.1.3                          | `go install`                             |
 | crun                           | 1.27-2.el10_2                  | RPM                                      |
-| curl                           | 8.12.1-4.el10_2.4              | RPM                                      |
+| curl                           | 8.12.1-4.el10_2.6              | RPM                                      |
 | findutils                      | 4.10.0-5.el10                  | RPM                                      |
 | fuse-overlayfs                 | 1.16-1.el10_1                  | RPM                                      |
-| gawk                           | 5.3.0-6.el10                   | RPM                                      |
+| gawk                           | 5.3.0-6.el10_2.1               | RPM                                      |
 | gettext-envsubst               | 0.22.5-6.el10                  | RPM                                      |
 | git-core                       | 2.52.0-1.el10                  | RPM                                      |
-| git-lfs                        | 3.7.1-5.el10_2.6               | RPM                                      |
+| git-lfs                        | 3.7.1-5.el10_2.7               | RPM                                      |
 | grep                           | 3.11-10.el10                   | RPM                                      |
 | huggingface-hub                | 1.29.0                         | `pip install`                            |
 | jq                             | 1.7.1-11.el10_2.2              | RPM                                      |
@@ -31,17 +31,17 @@ Re-generate with:
 | microdnf                       | 3.10.1-1.el10                  | RPM                                      |
 | oc                             | 4.22.0                         | Git submodule (Go)                       |
 | olot                           | 1.2.1                          | `pip install`                            |
-| openssh-clients                | 9.9p1-25.el10_2                | RPM                                      |
-| openssl                        | 3.5.5-6.el10_2                 | RPM                                      |
+| openssh-clients                | 9.9p1-28.el10_2                | RPM                                      |
+| openssl                        | 3.5.8-1.el10_2                 | RPM                                      |
 | opm                            | 1.74.0                         | `go install`                             |
 | oras                           | 1.3.4                          | `go install`                             |
 | python3                        | 3.12.14-1.el10_2               | RPM                                      |
 | retry                          | 1.0.0                          | [local](./local-tools/retry)             |
 | rpm                            | 4.19.1.1-23.el10               | RPM                                      |
-| rsync                          | 3.4.4-1.el10_2                 | RPM                                      |
+| rsync                          | 3.5.0-3.el10_2                 | RPM                                      |
 | sed                            | 4.9-5.el10                     | RPM                                      |
 | select-oci-auth                | 1.0.0                          | [local](./local-tools/select-oci-auth)   |
-| skopeo                         | 1.22.2-2.el10_2                | RPM                                      |
+| skopeo                         | 1.22.2-5.el10_2                | RPM                                      |
 | subscription-manager           | 1.30.12-1.el10                 | RPM                                      |
 | syft                           | 1.51.1                         | `go install`                             |
 | tar                            | 1.35-13.el10_2                 | RPM                                      |
