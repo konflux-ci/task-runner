@@ -23,7 +23,7 @@ spec:
         - $(params.SOURCE_ARTIFACT)=/tekton/home/source
 
     - name: set-results
-      image: registry.access.redhat.com/ubi10/ubi-minimal:10.2-1782798957@sha256:b217fa65d8c21058887b18f005f587e47a17dd1281a5196ac88d01724a273dbd
+      image: registry.access.redhat.com/ubi10/ubi-minimal:10.2-1792742351@sha256:ab67cd02caf8706e34a695a1432ebe965934f6128ec352a6c3f4048b43a4fb5e
       env:
         - name: ANNOTATIONS_RESULT
           value: $(results.annotations.path)
