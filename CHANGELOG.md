@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 *Nothing yet*.
 
+- Updated go toolset to 1.26.10
+- Updated base UBI image
+
 ## 3.3.0
 
 Date: 2026-10-02
