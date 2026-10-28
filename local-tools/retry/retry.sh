@@ -86,11 +86,19 @@ retry() {
 
         log "executing:%s" "$(printf ' %q' "${@}")"
 
-        # Print stderr while executing but also write it to $error_file
-        if "$@" 2> >(tee "$error_file" >&2); then
+        # Capture stderr to file, then display it.
+        # Don't use process substitution (tee) to avoid race conditions when checking the error file content.
+        set +o errexit
+        "$@" 2>"$error_file"
+        status=$?
+        set -o errexit
+
+        if [[ -s "$error_file" ]]; then
+            cat "$error_file" >&2
+        fi
+
+        if [[ $status -eq 0 ]]; then
             return 0
-        else
-            status=$?
         fi
 
         for stop_on_code in "${stop_on_exit_codes[@]}"; do
