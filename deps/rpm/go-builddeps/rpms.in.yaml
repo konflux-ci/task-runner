@@ -23,6 +23,6 @@ arches:
   - ppc64le
 
 context:
-  image: registry.access.redhat.com/ubi10/go-toolset:1.26.7@sha256:4240036fd19bdad5d72ad15062d80b71cac9bc6b7789a45e53d6cc3e43167165
+  image: registry.access.redhat.com/ubi10/go-toolset:1.26.10@sha256:5d2ab83e88506afee6bcc909fdab425ab979725ab30d6ad43a02aaa77e2258ff
 
 installWeakDeps: false
