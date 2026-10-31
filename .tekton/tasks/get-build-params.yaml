@@ -17,7 +17,7 @@ spec:
       description: LABELS array for buildah
   steps:
     - name: use-trusted-artifact
-      image: quay.io/konflux-ci/build-trusted-artifacts:latest@sha256:de598135beab3bfb3e7902e59c9f656f92b6147c4bfd76ad1fc92fbb237abfa4
+      image: quay.io/konflux-ci/build-trusted-artifacts:latest@sha256:d572a66b49f041fc9fa7334bdc78ce8d416ad4b438a5b0105aa9187698faf814
       args:
         - use
         - $(params.SOURCE_ARTIFACT)=/tekton/home/source
