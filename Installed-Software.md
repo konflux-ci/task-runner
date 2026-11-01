@@ -14,7 +14,7 @@ Re-generate with:
 | buildah                        | 1.46.0                         | `go install`                             |
 | conftest                       | 0.71.1                         | `go install`                             |
 | coreutils-single               | 9.5-8.el10_2.1                 | RPM                                      |
-| cosign                         | 3.1.4                          | `go install`                             |
+| cosign                         | 3.1.3                          | `go install`                             |
 | crun                           | 1.30.1-2.el10_2                | RPM                                      |
 | curl                           | 8.12.1-4.el10_2.7              | RPM                                      |
 | findutils                      | 4.10.0-5.el10                  | RPM                                      |
@@ -26,7 +26,7 @@ Re-generate with:
 | grep                           | 3.11-10.el10                   | RPM                                      |
 | huggingface-hub                | 2.3.0                          | `pip install`                            |
 | jq                             | 1.7.1-11.el10_2.2              | RPM                                      |
-| kubectl                        | 1.37.1                         | Git submodule (Go)                       |
+| kubectl                        | 1.37.2                         | Git submodule (Go)                       |
 | make                           | 4.4.1-9.el10                   | RPM                                      |
 | microdnf                       | 3.10.1-1.el10                  | RPM                                      |
 | oc                             | 4.22.0                         | Git submodule (Go)                       |
