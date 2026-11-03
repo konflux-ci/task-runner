@@ -9,6 +9,6 @@
 # Always pin to specific versions, this gives Renovate something to update
 # (else the resolved requirements.txt would never get updated).
 
-awscli==1.46.1
+awscli==1.46.2
 huggingface-hub==2.3.0
 olot==1.2.1
