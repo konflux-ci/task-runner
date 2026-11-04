@@ -9,6 +9,38 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 *Nothing yet*.
 
+## 4.0.0
+
+Date: 2026-11-03
+
+### Installed Software
+
+- BREAKING: `huggingface-hub` 1.29.0 => 2.3.0
+- `buildah` 1.45.0 => 1.46.0
+- `conftest` 0.69.0 => 0.71.1
+- `crun` 1.27-2.el10_2 => 1.30.1-2.el10_2
+- `rsync` 3.4.4-1.el10_2 => 3.5.0-3.el10_2
+- `syft` 1.51.1 => 1.55.0
+- `yq` 4.53.6 => 4.54.1
+- `awscli` 1.46.1 => 1.46.2
+- `coreutils-single` 9.5-8.el10_2 => 9.5-8.el10_2.1
+- `curl` 8.12.1-4.el10_2.4 => 8.12.1-4.el10_2.7
+- `gawk` 5.3.0-6.el10 => 5.3.0-6.el10_2.1
+- `git-lfs` 3.7.1-5.el10_2.6 => 3.7.1-5.el10_2.7
+- `kubectl` 1.37.0 => 1.37.2
+- `openssh-clients` 9.9p1-25.el10_2 => 9.9p1-29.el10_2
+- `openssl` 3.5.5-6.el10_2 => 3.5.8-2.el10_2
+- `oras` 1.3.4 => 1.3.6
+- `python3` 3.12.14-1.el10_2 => 3.12.15-1.el10_2
+- `skopeo` 1.22.2-2.el10_2 => 1.22.2-6.el10_2
+- `tkn` 0.46.0 => 0.46.2
+
+### Fixed
+
+- Fixed race condition in `retry.sh` where stderr pattern matching could run before output was fully written.([#270](https://github.com/konflux-ci/task-runner/pull/270))
+- Fixed broken `make pip-requirements` Makefile target that referenced a deleted script (`scripts/dedupe-requirements-build.py`).([#281](https://github.com/konflux-ci/task-runner/pull/281))
+
+
 ## 3.3.0
 
 Date: 2026-10-02
