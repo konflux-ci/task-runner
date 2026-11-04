@@ -36,7 +36,7 @@ Re-generate with:
 | opm                            | 1.74.0                         | `go install`                             |
 | oras                           | 1.3.6                          | `go install`                             |
 | python3                        | 3.12.15-1.el10_2               | RPM                                      |
-| retry                          | 1.0.0                          | [local](./local-tools/retry)             |
+| retry                          | 1.0.1                          | [local](./local-tools/retry)             |
 | rpm                            | 4.19.1.1-23.el10               | RPM                                      |
 | rsync                          | 3.5.0-3.el10_2                 | RPM                                      |
 | sed                            | 4.9-5.el10                     | RPM                                      |
