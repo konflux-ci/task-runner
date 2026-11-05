@@ -33,8 +33,8 @@ install_tool() {
 
     cd "$name"
 
-    # 'go tool' also lists builtin tools, filter them out by looking for the '.' in domain names
-    go tool | grep -F . | while read -r tool_pkg; do
+    # The 'tool' pattern selects packages declared by tool directives in go.mod.
+    go list -find tool | while read -r tool_pkg; do
         local ldflags=$COMMON_LDFLAGS
         if [[ -n "$version_attribute" ]]; then
             version=$(go list -f '{{.Module.Version}}' "$tool_pkg")
