@@ -25,13 +25,13 @@ arches:
     name: glibc-devel
     evr: 2.39-145.el10_2
     sourcerpm: glibc-2.39-145.el10_2.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/appstream/os/Packages/k/kernel-headers-6.12.0-211.73.1.el10_2.aarch64.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/appstream/os/Packages/k/kernel-headers-6.12.0-211.74.1.el10_2.aarch64.rpm
     repoid: ubi-10-for-aarch64-appstream-rpms
-    size: 3749793
-    checksum: sha256:1c2410c5fc558e82f1067be519dc5d376645066f4f108132bf561cb65b3272c2
+    size: 3750873
+    checksum: sha256:0188c5c2daa4feb1dfa96c147748f2dfdb928cf94e9e889d7fc1794475f56d0a
     name: kernel-headers
-    evr: 6.12.0-211.73.1.el10_2
-    sourcerpm: kernel-6.12.0-211.73.1.el10_2.src.rpm
+    evr: 6.12.0-211.74.1.el10_2
+    sourcerpm: kernel-6.12.0-211.74.1.el10_2.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/appstream/os/Packages/l/libasan-14.3.1-4.4.el10.aarch64.rpm
     repoid: ubi-10-for-aarch64-appstream-rpms
     size: 543502
@@ -221,13 +221,13 @@ arches:
     name: python3-pip-wheel
     evr: 23.3.2-11.el10_2
     sourcerpm: python-pip-23.3.2-11.el10_2.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/t/tzdata-2026e-1.el10_2.noarch.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/aarch64/baseos/os/Packages/t/tzdata-2026f-1.el10_2.noarch.rpm
     repoid: ubi-10-for-aarch64-baseos-rpms
-    size: 936696
-    checksum: sha256:d0ce19e2ee66af9dc7b9b5c78fcbc79b0463997dcf9fbf7a63b4cd5157c41191
+    size: 937604
+    checksum: sha256:3f7e1eb06e0fdccdc43224b352853a59c7f26b9fd15e4ac21007f1003d914ee1
     name: tzdata
-    evr: 2026e-1.el10_2
-    sourcerpm: tzdata-2026e-1.el10_2.src.rpm
+    evr: 2026f-1.el10_2
+    sourcerpm: tzdata-2026f-1.el10_2.src.rpm
   source: []
   module_metadata: []
 - arch: ppc64le
@@ -449,13 +449,13 @@ arches:
     name: python3-pip-wheel
     evr: 23.3.2-11.el10_2
     sourcerpm: python-pip-23.3.2-11.el10_2.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/t/tzdata-2026e-1.el10_2.noarch.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/ppc64le/baseos/os/Packages/t/tzdata-2026f-1.el10_2.noarch.rpm
     repoid: ubi-10-for-ppc64le-baseos-rpms
-    size: 936696
-    checksum: sha256:d0ce19e2ee66af9dc7b9b5c78fcbc79b0463997dcf9fbf7a63b4cd5157c41191
+    size: 937604
+    checksum: sha256:3f7e1eb06e0fdccdc43224b352853a59c7f26b9fd15e4ac21007f1003d914ee1
     name: tzdata
-    evr: 2026e-1.el10_2
-    sourcerpm: tzdata-2026e-1.el10_2.src.rpm
+    evr: 2026f-1.el10_2
+    sourcerpm: tzdata-2026f-1.el10_2.src.rpm
   source: []
   module_metadata: []
 - arch: s390x
@@ -481,13 +481,13 @@ arches:
     name: glibc-devel
     evr: 2.39-145.el10_2
     sourcerpm: glibc-2.39-145.el10_2.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/appstream/os/Packages/k/kernel-headers-6.12.0-211.73.1.el10_2.s390x.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/appstream/os/Packages/k/kernel-headers-6.12.0-211.74.1.el10_2.s390x.rpm
     repoid: ubi-10-for-s390x-appstream-rpms
-    size: 3779093
-    checksum: sha256:aecb4cdbb9f35cda71f8dd89b3d430582109ae3f583fea436dfbff51eebfc138
+    size: 3780141
+    checksum: sha256:e121ea4014b2ce9a5583da116203cf67323636f05dee5270c0dcc79e119e1e0f
     name: kernel-headers
-    evr: 6.12.0-211.73.1.el10_2
-    sourcerpm: kernel-6.12.0-211.73.1.el10_2.src.rpm
+    evr: 6.12.0-211.74.1.el10_2
+    sourcerpm: kernel-6.12.0-211.74.1.el10_2.src.rpm
   - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/appstream/os/Packages/l/libasan-14.3.1-4.4.el10.s390x.rpm
     repoid: ubi-10-for-s390x-appstream-rpms
     size: 573505
@@ -677,13 +677,13 @@ arches:
     name: python3-pip-wheel
     evr: 23.3.2-11.el10_2
     sourcerpm: python-pip-23.3.2-11.el10_2.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/t/tzdata-2026e-1.el10_2.noarch.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/s390x/baseos/os/Packages/t/tzdata-2026f-1.el10_2.noarch.rpm
     repoid: ubi-10-for-s390x-baseos-rpms
-    size: 936696
-    checksum: sha256:d0ce19e2ee66af9dc7b9b5c78fcbc79b0463997dcf9fbf7a63b4cd5157c41191
+    size: 937604
+    checksum: sha256:3f7e1eb06e0fdccdc43224b352853a59c7f26b9fd15e4ac21007f1003d914ee1
     name: tzdata
-    evr: 2026e-1.el10_2
-    sourcerpm: tzdata-2026e-1.el10_2.src.rpm
+    evr: 2026f-1.el10_2
+    sourcerpm: tzdata-2026f-1.el10_2.src.rpm
   source: []
   module_metadata: []
 - arch: x86_64
@@ -884,12 +884,12 @@ arches:
     name: python3-pip-wheel
     evr: 23.3.2-11.el10_2
     sourcerpm: python-pip-23.3.2-11.el10_2.src.rpm
-  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/t/tzdata-2026e-1.el10_2.noarch.rpm
+  - url: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/x86_64/baseos/os/Packages/t/tzdata-2026f-1.el10_2.noarch.rpm
     repoid: ubi-10-for-x86_64-baseos-rpms
-    size: 936696
-    checksum: sha256:d0ce19e2ee66af9dc7b9b5c78fcbc79b0463997dcf9fbf7a63b4cd5157c41191
+    size: 937604
+    checksum: sha256:3f7e1eb06e0fdccdc43224b352853a59c7f26b9fd15e4ac21007f1003d914ee1
     name: tzdata
-    evr: 2026e-1.el10_2
-    sourcerpm: tzdata-2026e-1.el10_2.src.rpm
+    evr: 2026f-1.el10_2
+    sourcerpm: tzdata-2026f-1.el10_2.src.rpm
   source: []
   module_metadata: []
