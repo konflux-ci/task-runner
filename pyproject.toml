@@ -3,7 +3,8 @@ name = "devtool"
 version = "0.1.0"
 description = "Helper tool for development in this project."
 requires-python = ">=3.12"
-license = {text = "Apache-2.0"}
+license = "Apache-2.0"
+license-files = ["LICENSE"]
 dependencies = [
     "pyyaml>=6.0.3",
 ]
@@ -43,7 +44,7 @@ packages = ["devtool"]
 pythonpath = ["."]  # needed so that tests can import from 'tests.*'
 testpaths = ["tests"]
 addopts = ["-vv"]
-log_level = "debug"
+log_level = "DEBUG"
 
 
 [tool.ruff]
