@@ -10,7 +10,8 @@ RUN dnf -y install \
         glib2-devel \
         gpgme-devel \
         libassuan-devel \
-        libseccomp-devel
+        libseccomp-devel \
+        sqlite-devel
 
 WORKDIR /deps/golang/tools
 COPY deps/go-tools/ .
