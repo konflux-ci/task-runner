@@ -9,7 +9,14 @@ export GOTOOLCHAIN=local
 
 cd kubernetes
 make kubectl
-cp _output/bin/kubectl "$OUTPUT_DIR/kubectl"
+if [[ -f _output/bin/kubectl ]]; then
+    cp _output/bin/kubectl "$OUTPUT_DIR/kubectl"
+elif [[ -f _output/local/go/bin/kubectl ]]; then
+    cp _output/local/go/bin/kubectl "$OUTPUT_DIR/kubectl"
+else
+    echo "Error: built kubectl not found in _output/bin nor _output/local/go/bin" >&2
+    exit 1
+fi
 cd ..
 
 cd oc
