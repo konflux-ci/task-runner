@@ -4,14 +4,17 @@ FROM registry.access.redhat.com/ubi10/go-toolset:1.26.10@sha256:5d2ab83e88506afe
 
 USER 0
 
-# Install dependencies for compiling buildah
+# Install dependencies for compiling go dependencies.
 RUN dnf -y install \
+        # buildah
         bzip2 \
         glib2-devel \
         gpgme-devel \
         libassuan-devel \
         libseccomp-devel \
-        sqlite-devel
+        sqlite-devel \
+        # oc
+        krb5-devel
 
 WORKDIR /deps/golang/tools
 COPY deps/go-tools/ .
