@@ -8,6 +8,11 @@ import pytest
 
 from tests.with_container.utils.container import Container
 
+pytestmark = pytest.mark.skipif(
+    platform.system() == "Darwin",
+    reason="Buildah container tests require Linux; buildah configuration is not supported on macOS",
+)
+
 
 @pytest.fixture(scope="module")
 def context_dir(tmp_path_factory: pytest.TempPathFactory) -> Path:
@@ -76,10 +81,6 @@ def test_buildah_uses_native_overlay_as_root(task_runner_container: Container) -
 
 
 @pytest.mark.parametrize("user", ["taskuser", "root"])
-@pytest.mark.skipif(
-    platform.system() == "Darwin",
-    reason="Claims to somehow use the native overlay even without the volume mount",
-)
 def test_buildah_falls_back_to_fuse_overlayfs(user: str, task_runner_container: Container) -> None:
     proc = task_runner_container.run_cmd(
         ["buildah", "info", "--log-level=debug"],
