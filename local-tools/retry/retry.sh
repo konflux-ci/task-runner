@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -o errexit -o nounset -o pipefail
 
-VERSION="1.0.0"
+VERSION="1.0.1"
 SCRIPT_NAME=$(basename "${BASH_SOURCE[0]}")
 
 # Configuration
