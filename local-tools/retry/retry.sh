@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -o errexit -o nounset -o pipefail
 
-VERSION="1.0.0"
+VERSION="1.0.1"
 SCRIPT_NAME=$(basename "${BASH_SOURCE[0]}")
 
 # Configuration
@@ -101,7 +101,7 @@ retry() {
             return 0
         fi
 
-        for stop_on_code in "${stop_on_exit_codes[@]}"; do
+        for stop_on_code in ${stop_on_exit_codes[@]+"${stop_on_exit_codes[@]}"}; do
             if [[ $status -eq "$stop_on_code" ]]; then
                 log "giving up after %d attempts: exit code is %d" "$i" "$status"
                 return "$status"
