@@ -118,7 +118,7 @@ spec:
         fi
 
         # If the author isn't Renovate/MintMaker, show the diff and fail
-        if ! [[ "$PR_AUTHOR" == *renovate* || "$PR_AUTHOR" == *red-hat-konflux* ]]; then
+        if ! [[ "$PR_AUTHOR" == "renovate[bot]" || "$PR_AUTHOR" == "red-hat-konflux[bot]" ]]; then
           echo "Error: generated files are out of date"
           echo "Please run locally:"
           echo "  make venv && .venv/bin/devtool gen --all"
