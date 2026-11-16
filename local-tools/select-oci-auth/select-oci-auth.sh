@@ -4,7 +4,7 @@ set -o errexit
 set -o nounset
 set -o pipefail
 
-VERSION="1.0.0"
+VERSION="1.0.1"
 declare -r VERSION
 
 AUTHFILE="${AUTHFILE:-$HOME/.docker/config.json}"
@@ -80,7 +80,7 @@ select_auth() {
 
     if [[ -f "$AUTHFILE" ]]; then
         while true; do
-            token=$(< "$AUTHFILE" yq ".auths[\"$repo\"]")
+            token=$(< "$AUTHFILE" repo="$repo" yq ".auths[strenv(repo)]")
             if [[ "$token" != "null" ]]; then
                 >&2 printf "Using token for %s\n" "$repo"
                 print_auth "$registry" "$token" | yq .
@@ -98,7 +98,7 @@ select_auth() {
         # oras-login writes this key.
         if [ "$registry" = "docker.io" ]; then
             registry="https://index.docker.io/v1/"
-            token=$(< "$AUTHFILE" yq '.auths["'$registry'"]')
+            token=$(< "$AUTHFILE" registry="$registry" yq '.auths[strenv(registry)]')
             if [[ "$token" != "null" ]]; then
                 >&2 printf "Using token for %s\n" "$registry"
                 print_auth "$registry" "$token" | yq .

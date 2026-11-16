@@ -40,7 +40,7 @@ Re-generate with:
 | rpm                            | 4.19.1.1-23.el10               | RPM                                      |
 | rsync                          | 3.5.0-3.el10_2                 | RPM                                      |
 | sed                            | 4.9-5.el10                     | RPM                                      |
-| select-oci-auth                | 1.0.0                          | [local](./local-tools/select-oci-auth)   |
+| select-oci-auth                | 1.0.1                          | [local](./local-tools/select-oci-auth)   |
 | skopeo                         | 1.22.2-6.el10_2                | RPM                                      |
 | subscription-manager           | 1.30.12-1.el10                 | RPM                                      |
 | syft                           | 1.55.0                         | `go install`                             |
