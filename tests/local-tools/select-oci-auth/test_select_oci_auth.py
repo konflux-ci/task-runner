@@ -1,4 +1,5 @@
 import json
+import os
 import re
 from pathlib import Path
 from subprocess import CompletedProcess, run
@@ -34,7 +35,7 @@ def auth_file(tmp_path) -> str:
 def run_script(*args, auth_file: str | None = None) -> CompletedProcess:
     cmd = ["bash", SCRIPT_FILE, *args]
     # IMPORTANT: do not read auths from normal auth file.
-    env = {"AUTHFILE": auth_file} if auth_file else None
+    env = {"AUTHFILE": auth_file, "PATH": os.environ["PATH"]} if auth_file else None
     return run(cmd, env=env, cwd=SCRIPT_DIR, capture_output=True, text=True, check=False)
 
 
